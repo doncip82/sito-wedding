@@ -48,9 +48,8 @@ export default function NavBar() {
         <Link
           to="/"
           className={`font-serif italic font-light text-[1.15rem] tracking-[.04em] no-underline transition-colors duration-500 ${logoColor}`}
-          aria-label="Amalfi Strings — Home"
+          aria-label="Home"
         >
-          Amalfi Strings
         </Link>
 
         {/* Desktop links */}
