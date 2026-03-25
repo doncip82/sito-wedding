@@ -1,0 +1,67 @@
+// data/ensembles.js
+// Single source of truth for all ensemble content.
+// Used by: Services section, Occasions section, individual pages, Schema.org generator.
+
+export const ensembles = [
+  {
+    id: 'evostrings',
+    slug: '/evostrings',
+    index: '01',
+    name: 'EvoStrings',
+    subLabel: 'String Duo · Trio · Quartet',
+    officialUrl: 'https://www.evostrings.it/',
+    youtubeUrl: null,
+    // YouTube embed: replace null with 'https://www.youtube.com/embed/YOUR_ID'
+    photo: '/images/evostrings.jpg',
+    photoAlt: 'EvoStrings string ensemble by Donato Cipriano at Villa Cimbrone, Ravello',
+    moment: null,
+    viralBadge: null,
+    description: `Italy's reference string ensemble for the luxury wedding sector. EvoStrings — conceived and directed by Donato Cipriano — performs in configurations of two, three or four musicians, each arrangement calibrated to the acoustics and atmosphere of the venue. On the Terrace of Infinity at Villa Cimbrone, four strings fill the silence between the vows; in the intimate loggia of Palazzo Avino, a duo suffices to change the temperature of a room. The repertoire moves with intention between classical rigour and contemporary tenderness: Vivaldi, Morricone, Einaudi, Max Richter — always curated, never arbitrary.`,
+    occasionDescription: `The ceremony calls for strings. EvoStrings performs processionals and recessionals with the precision of a chamber group and the warmth of a Southern Italian musical tradition. Available as a duo for the most intimate garden ceremonies in Ravello, a trio for celebrations at Villa Treville, or a full quartet for grand ceremonies in the salons of Palazzo Avino or the Belmond Hotel Caruso.`,
+    occasionMoment: 'Ceremony & Cocktail Hour',
+    tags: ['Ceremony', 'Cocktail Reception', 'Signing', 'Villa & Garden'],
+    schemaType: 'MusicGroup',
+    genre: ['Classical', 'Contemporary', 'Cinematic'],
+  },
+  {
+    id: 'trilogy-trio',
+    slug: '/trilogy-trio',
+    index: '02',
+    name: 'Trilogy Trio',
+    subLabel: 'Violin · Cello · Piano — Pop, Rock & Cinematic',
+    officialUrl: null,
+    youtubeUrl: 'https://www.youtube.com/@trilogytrio',
+    // YouTube embed: replace null with 'https://www.youtube.com/embed/YOUR_ID'
+    photo: '/images/trilogy-trio.jpg',
+    photoAlt: 'Trilogy Trio — Violin, Cello and Piano by Donato Cipriano, Amalfi Coast wedding',
+    moment: null,
+    viralBadge: 'A Global Viral Sensation · 1M+ Views on YouTube',
+    description: `Three instruments, one unexpected conversation. The Trilogy Trio — violin, cello and piano under the artistic direction of Donato Cipriano — occupies the rare territory where classical formation meets cinematic emotion. Coldplay rendered with the weight of a chamber piece, Nino Rota with the lightness of a summer evening on the Amalfi terraces, Hans Zimmer recomposed for three acoustic voices. For couples who want their reception to feel like the score of a film they have not yet seen. Over one million views on YouTube confirm what every audience already knows: this is not background music.`,
+    occasionDescription: `Violin, cello and piano: the architecture of emotion. As dinner begins and the lights of the coast multiply on the sea below, the Trilogy Trio creates an atmosphere that is neither classical nor contemporary, but unmistakably cinematic. Hans Zimmer, Ennio Morricone, Nino Rota, Radiohead — repertoire chosen to feel like the score of this precise evening, in this precise place.`,
+    occasionMoment: 'Dinner & Cinematic Atmosphere',
+    tags: ['Wedding Dinner', 'Evening Reception', 'Aperitivo', 'Candlelit Interior'],
+    schemaType: 'MusicGroup',
+    interactionCount: 1000000,
+    genre: ['Cinematic', 'Pop', 'Rock', 'Contemporary Classical'],
+  },
+  {
+    id: 'violino-solo',
+    slug: '/violin-solo',
+    index: '03',
+    name: 'Violino Solo',
+    subLabel: 'Solo Performance · Intimate & Ceremonial',
+    officialUrl: 'https://www.donatocipriano.com/en/wedding#services',
+    youtubeUrl: null,
+    // YouTube embed: replace null with 'https://www.youtube.com/embed/YOUR_ID'
+    photo: '/images/donato-cipriano-solo.jpg',
+    photoAlt: 'Donato Cipriano performing violin solo at a luxury wedding on the Amalfi Coast',
+    moment: null,
+    viralBadge: null,
+    description: `There are moments within a wedding that belong to a single voice. The processional walk. The signing. The first instants of silence after the ceremony closes. For these — the moments that need no accompaniment, no arrangement, no commentary — Donato Cipriano performs alone. A professional violinist with over two decades of experience on the stages of Southern Italy, his solo performance distils an entire ceremony into a single sustained note, held above the cliffs of Ravello or the sea-facing terraces of Positano, until the room holds its breath.`,
+    occasionDescription: `A single violin, held at altitude above the Tyrrhenian Sea. Donato Cipriano performs solo for the moments that need no arrangement — the walk down the aisle, the pause before the first vow. A professional violinist whose playing has graced the most distinguished private events on the Amalfi Coast, from the cliffside terraces of Positano to the gardens of Villa Cimbrone in Ravello.`,
+    occasionMoment: 'Intimate & Ceremonial Moments',
+    tags: ['Processional', 'Signing', 'Intimate Ceremony', 'Private Moment'],
+    schemaType: 'MusicGroup',
+    genre: ['Classical', 'Contemporary'],
+  },
+]

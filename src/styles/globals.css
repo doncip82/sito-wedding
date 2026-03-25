@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@200;300;400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+:root {
+  --white:  #F9F8F7;
+  --ink:    #1A1A1A;
+  --mid:    #404040;
+  --gold:   #B8A882;
+  --gold-dark: #8A7A5A;
+  --border: rgba(26, 26, 26, 0.09);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--white);
+  color: var(--ink);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Section eyebrow */
+.eyebrow {
+  font-size: 0.56rem;
+  font-weight: 300;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--mid);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.eyebrow::before {
+  content: '';
+  width: 22px;
+  height: 0.5px;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+/* Editorial section title */
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: clamp(2rem, 4.5vw, 3.6rem);
+  line-height: 1.1;
+  color: var(--ink);
+}
+
+/* Text link — underline style */
+.link-underline {
+  font-size: 0.58rem;
+  font-weight: 300;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink);
+  padding-bottom: 3px;
+  border-bottom: 0.5px solid var(--ink);
+  transition: color 0.3s, border-color 0.3s;
+  display: inline-block;
+}
+.link-underline:hover { color: var(--gold-dark); border-color: var(--gold-dark); }
+
+/* External link */
+.link-ext {
+  font-size: 0.54rem;
+  font-weight: 200;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--mid);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: color 0.3s;
+}
+.link-ext:hover { color: var(--gold-dark); }
+
+/* Gold horizontal rule */
+.gold-rule {
+  width: 36px;
+  height: 0.5px;
+  background: var(--gold);
+  display: block;
+}
+
+/* Fade-up animation for hero elements */
+@keyframes up {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
