@@ -47,8 +47,8 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col justify-end
-        px-[clamp(1.5rem,6vw,5rem)] pb-[clamp(2.5rem,5vw,4.5rem)] h-full">
+      <div className="relative z-10 flex flex-col justify-start
+        px-[clamp(1.5rem,6vw,5rem)] pt-[clamp(5rem,12vw,9rem)] h-full">
 
         <p className="text-[.56rem] font-light tracking-[.28em] uppercase text-white/56
           mb-[1.1rem]"
