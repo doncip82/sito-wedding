@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite-ssg build",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -17,8 +17,7 @@
     "react-router-dom": "^6.23.1",
     "stream-browserify": "^3.0.0",
     "util": "^0.12.5",
-    "vite-ssg-react": "^0.1.8",
-    "vite-ssg": "^0.23.5"
+    "vite-ssg-react": "^0.1.8"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.1",

@@ -4,7 +4,6 @@ import NavBar  from '@/components/layout/NavBar.jsx'
 import Footer  from '@/components/layout/Footer.jsx'
 import Home    from '@/pages/Home.jsx'
 
-// Lazy-loaded pages (code split per route)
 import { lazy, Suspense } from 'react'
 const EvoStrings   = lazy(() => import('@/pages/EvoStrings.jsx'))
 const TrilogyTrio  = lazy(() => import('@/pages/TrilogyTrio.jsx'))
