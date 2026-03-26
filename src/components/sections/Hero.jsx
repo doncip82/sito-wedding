@@ -26,7 +26,7 @@ export default function Hero() {
           className="absolute inset-0"
           style={{
             background:
-              'linear-gradient(to bottom, rgba(26,26,26,.18) 0%, transparent 42%, rgba(26,26,26,.68) 100%)',
+              'linear-gradient(to bottom, rgba(26,26,26,.25) 0%, rgba(26,26,26,.42) 45%, rgba(26,26,26,.72) 100%)',
           }}
         />
       </div>
@@ -50,7 +50,7 @@ export default function Hero() {
       <div className="relative z-10 flex flex-col justify-start
         px-[clamp(1.5rem,6vw,5rem)] pt-[clamp(5rem,12vw,9rem)] h-full">
 
-        <p className="text-[.56rem] font-light tracking-[.28em] uppercase text-white/56
+        <p className="text-[.56rem] font-normal tracking-[.28em] uppercase text-white/85
           mb-[1.1rem]"
           style={{ opacity: 0, animation: 'up .9s ease .3s forwards' }}>
           Bespoke Wedding Music · Southern Italy
@@ -71,7 +71,7 @@ export default function Hero() {
           className="w-9 h-[.5px] bg-[#B8A882] my-7"
           style={{ opacity: 0, animation: 'up .9s ease .8s forwards' }} />
 
-        <h2 className="text-[.68rem] font-light tracking-[.14em] text-white/66 max-w-[44ch] leading-[1.95]"
+        <h2 className="text-[.68rem] font-normal tracking-[.14em] text-white/85 max-w-[44ch] leading-[1.95]"
           style={{ opacity: 0, animation: 'up .9s ease 1s forwards' }}>
           Live music for destination weddings — Ravello, Positano &amp; Sorrento
         </h2>
@@ -87,7 +87,7 @@ export default function Hero() {
           </a>
 
           <a href="/#services"
-            className="text-[.6rem] font-light tracking-[.2em] uppercase text-white/38
+            className="text-[.6rem] font-normal tracking-[.2em] uppercase text-white/85
               no-underline flex items-center gap-3 hover:text-white/75 transition-colors group">
             <span className="inline-block w-7 h-[.5px] bg-current relative
               group-hover:w-10 transition-all duration-300">

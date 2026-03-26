@@ -31,10 +31,12 @@ export default function NavBar() {
     : ''
 
   const logoColor  = scrolled || !isHome ? 'text-[#1A1A1A]' : 'text-[#F9F8F7]'
-  const linkColor  = scrolled || !isHome ? 'text-[#404040] hover:text-[#8A7A5A]' : 'text-white/55 hover:text-[#B8A882]'
+  const linkColor  = scrolled || !isHome ? 'text-[#404040] hover:text-[#8A7A5A]' : 'text-white/85 hover:text-[#B8A882]'
+  const linkWeight = scrolled || !isHome ? 'font-light' : 'font-normal'
   const ctaColor   = scrolled || !isHome
     ? 'text-[#1A1A1A] border-black/30 hover:text-[#8A7A5A] hover:border-[#8A7A5A]'
-    : 'text-white/55 border-white/25 hover:text-[#B8A882] hover:border-[#B8A882]'
+    : 'text-white/85 border-white/60 hover:text-[#B8A882] hover:border-[#B8A882]'
+  const ctaWeight  = scrolled || !isHome ? 'font-light' : 'font-normal'
   const hamColor   = scrolled || !isHome ? 'bg-[#1A1A1A]' : 'bg-[#F9F8F7]'
 
   return (
@@ -58,7 +60,7 @@ export default function NavBar() {
             <li key={label}>
               <a
                 href={href}
-                className={`text-[.58rem] font-light tracking-[.2em] uppercase no-underline transition-colors duration-300 ${linkColor}`}
+                className={`text-[.58rem] tracking-[.2em] uppercase no-underline transition-colors duration-300 ${linkWeight} ${linkColor}`}
               >
                 {label}
               </a>
@@ -69,8 +71,8 @@ export default function NavBar() {
         {/* Desktop CTA */}
         <a
           href="/#contact"
-          className={`hidden md:inline-block text-[.56rem] font-light tracking-[.22em] uppercase no-underline
-            pb-[2px] border-b-[.5px] transition-all duration-300 ${ctaColor}`}
+          className={`hidden md:inline-block text-[.56rem] tracking-[.22em] uppercase no-underline
+            pb-[2px] border-b-[.5px] transition-all duration-300 ${ctaWeight} ${ctaColor}`}
         >
           Enquire
         </a>
