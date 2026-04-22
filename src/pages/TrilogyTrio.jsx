@@ -40,7 +40,7 @@ export default function TrilogyTrio() {
           <p className="text-[.72rem] font-light tracking-[.06em] leading-[2]
             text-white/55 max-w-[60ch]">
             The ensemble where classical formation meets cinematic emotion —
-            directed by Donato Cipriano from Pompei, Campania.
+            directed by Donato Cipriano.
           </p>
         </div>
       </section>

@@ -10,6 +10,21 @@ const TrilogyTrio  = lazy(() => import('@/pages/TrilogyTrio.jsx'))
 const ViolinSolo   = lazy(() => import('@/pages/ViolinSolo.jsx'))
 const Contact      = lazy(() => import('@/pages/Contact.jsx'))
 
+const LocationRavello     = lazy(() => import('@/pages/locations/Ravello.jsx'))
+const LocationPositano    = lazy(() => import('@/pages/locations/Positano.jsx'))
+const LocationSorrento    = lazy(() => import('@/pages/locations/Sorrento.jsx'))
+const MusicIndex          = lazy(() => import('@/pages/music/MusicIndex.jsx'))
+const MusicSaxophone      = lazy(() => import('@/pages/music/Saxophone.jsx'))
+const MusicDJ             = lazy(() => import('@/pages/music/DJ.jsx'))
+const MusicVocalist       = lazy(() => import('@/pages/music/Vocalist.jsx'))
+const MusicPosteggia      = lazy(() => import('@/pages/music/Posteggia.jsx'))
+const MusicOpera          = lazy(() => import('@/pages/music/Opera.jsx'))
+const VendorPhotographers = lazy(() => import('@/pages/vendors/Photographers.jsx'))
+const VendorFlorists      = lazy(() => import('@/pages/vendors/Florists.jsx'))
+const VendorVintageCars   = lazy(() => import('@/pages/vendors/VintageCars.jsx'))
+const VendorPlanners      = lazy(() => import('@/pages/vendors/WeddingPlanners.jsx'))
+const VendorCelebrant     = lazy(() => import('@/pages/vendors/Celebrant.jsx'))
+
 function PageLoader() {
   return (
     <div className="min-h-screen bg-[#F9F8F7] flex items-center justify-center">
@@ -27,11 +42,25 @@ export default function App() {
       <main>
         <Suspense fallback={<PageLoader />}>
           <Routes>
-            <Route path="/"              element={<Home />} />
-            <Route path="/evostrings"    element={<EvoStrings />} />
-            <Route path="/trilogy-trio"  element={<TrilogyTrio />} />
-            <Route path="/violin-solo"   element={<ViolinSolo />} />
-            <Route path="/contact"       element={<Contact />} />
+            <Route path="/"                       element={<Home />} />
+            <Route path="/evostrings"             element={<EvoStrings />} />
+            <Route path="/trilogy-trio"           element={<TrilogyTrio />} />
+            <Route path="/violin-solo"            element={<ViolinSolo />} />
+            <Route path="/contact"                element={<Contact />} />
+            <Route path="/locations/ravello"      element={<LocationRavello />} />
+            <Route path="/locations/positano"     element={<LocationPositano />} />
+            <Route path="/locations/sorrento"     element={<LocationSorrento />} />
+            <Route path="/music"                  element={<MusicIndex />} />
+            <Route path="/music/saxophone"        element={<MusicSaxophone />} />
+            <Route path="/music/dj"               element={<MusicDJ />} />
+            <Route path="/music/vocalist"         element={<MusicVocalist />} />
+            <Route path="/music/posteggia"        element={<MusicPosteggia />} />
+            <Route path="/music/opera"            element={<MusicOpera />} />
+            <Route path="/vendors/photographers"  element={<VendorPhotographers />} />
+            <Route path="/vendors/florists"       element={<VendorFlorists />} />
+            <Route path="/vendors/vintage-cars"   element={<VendorVintageCars />} />
+            <Route path="/vendors/wedding-planners" element={<VendorPlanners />} />
+            <Route path="/vendors/celebrant"      element={<VendorCelebrant />} />
           </Routes>
         </Suspense>
       </main>

@@ -57,7 +57,15 @@ export const ensembles = [
     photoAlt: 'Donato Cipriano performing violin solo at a luxury wedding on the Amalfi Coast',
     moment: null,
     viralBadge: null,
-    description: `There are moments within a wedding that belong to a single voice. The processional walk. The signing. The first instants of silence after the ceremony closes. For these — the moments that need no accompaniment, no arrangement, no commentary — Donato Cipriano performs alone. A professional violinist with over two decades of experience on the stages of Southern Italy, his solo performance distils an entire ceremony into a single sustained note, held above the cliffs of Ravello or the sea-facing terraces of Positano, until the room holds its breath.`,
+    description: `There are moments in a wedding that belong to a single voice.
+The entrance. The signing. The suspended silence just after the ceremony.
+
+For these moments — which require no accompaniment or arrangement — Donato Cipriano performs alone.
+
+His violin does not accompany; it defines.
+A presence reduced to its essence, capable of turning a gesture into memory.
+
+With over twenty years of experience, his solo performance distills emotion into a single, pure line — carried through the air above the cliffs of Ravello and the terraces of Positano, leaving time itself suspended.`,
     occasionDescription: `A single violin, held at altitude above the Tyrrhenian Sea. Donato Cipriano performs solo for the moments that need no arrangement — the walk down the aisle, the pause before the first vow. A professional violinist whose playing has graced the most distinguished private events on the Amalfi Coast, from the cliffside terraces of Positano to the gardens of Villa Cimbrone in Ravello.`,
     occasionMoment: 'Intimate & Ceremonial Moments',
     tags: ['Processional', 'Signing', 'Intimate Ceremony', 'Private Moment'],

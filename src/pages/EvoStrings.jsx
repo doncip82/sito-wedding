@@ -38,7 +38,7 @@ export default function EvoStrings() {
           <p className="text-[.72rem] font-light tracking-[.06em] leading-[2]
             text-white/55 max-w-[60ch]">
             Italy's reference string ensemble for the luxury wedding sector —
-            conceived and directed by Donato Cipriano from Pompei, Campania.
+            conceived and directed by Donato Cipriano.
           </p>
         </div>
       </section>

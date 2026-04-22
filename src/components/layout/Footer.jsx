@@ -23,7 +23,7 @@ export default function Footer() {
           <a href="/"
             className="font-serif italic font-light text-[1.1rem] tracking-[.04em]
               text-white/75 no-underline block mb-2 hover:text-[#B8A882] transition-colors">
-            Amalfi Strings
+            Wedding Music Ravello
           </a>
           <p className="text-[.52rem] font-light tracking-[.16em] uppercase text-white/25 leading-[1.7]">
             Bespoke Wedding Music · Amalfi Coast · Southern Italy
@@ -69,7 +69,7 @@ export default function Footer() {
       {/* Legal */}
       <div className="flex items-center gap-4 flex-wrap
         text-[.5rem] font-light tracking-[.14em] text-white/20">
-        <span>© {new Date().getFullYear()} Amalfi Strings. All rights reserved.</span>
+        <span>© {new Date().getFullYear()} Wedding Music Ravello. All rights reserved.</span>
         <span className="text-[#B8A882]/20" aria-hidden="true">·</span>
         <span>Ravello, Campania, Italy</span>
       </div>

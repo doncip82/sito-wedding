@@ -1,12 +1,32 @@
 // pages/Home.jsx
-import { useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { baseSchema } from '@/data/schema.js'
 import Hero      from '@/components/sections/Hero.jsx'
 import Services  from '@/components/sections/Services.jsx'
 import Locations from '@/components/sections/Locations.jsx'
 import About     from '@/components/sections/About.jsx'
 
-// Contact strip (inline — simple enough not to warrant a separate file)
+function GeoIntro() {
+  return (
+    <section className="px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3rem,6vw,5rem)] bg-[#F9F8F7] border-b border-black/[.06]">
+      <h1 className="font-serif italic font-light leading-[1.08] text-[#1A1A1A] mb-6"
+        style={{ fontSize: 'clamp(1.6rem,3vw,2.4rem)', maxWidth: '32ch' }}>
+        Wedding Music on the Amalfi Coast
+      </h1>
+      <p className="text-[.72rem] font-light tracking-[.05em] leading-[2] text-[#404040] max-w-[65ch]">
+        Donato Cipriano is a professional violinist and artistic director based in Campania,
+        Italy, offering complete wedding music coordination along the Amalfi Coast. He leads
+        a roster of ensembles — EvoStrings (string quartet and trio), Trilogy Trio (strings
+        and piano), and Violino Solo — alongside saxophone, vocal, and DJ services. Beyond
+        music, he curates a selection of trusted local partners: photographers with direct
+        experience at Villa Cimbrone and Palazzo Avino, florists specialising in Amalfi Coast
+        seasonal flora, vintage car hire, and wedding planners with permanent Campania presence.
+        He performs and coordinates regularly at venues in Ravello, Positano, and Sorrento.
+      </p>
+    </section>
+  )
+}
+
 function ContactStrip() {
   return (
     <section id="contact" aria-labelledby="enq-head"
@@ -27,85 +47,158 @@ function ContactStrip() {
   )
 }
 
-// Occasions strip (For Every Moment section — inline data for brevity)
-import { ensembles } from '@/data/ensembles.js'
+const MOMENTS = [
+  {
+    numeral:     'I',
+    label:       'Ceremony',
+    description: 'The most sacred moment of your day. A single instrument or an ensemble — strings, voice, or solo violin — holds the space between the world outside and the vows you are about to speak.',
+    img:         '/images/Ceremony.png',
+    options: [
+      { label: 'EvoStrings',  href: '/evostrings'   },
+      { label: 'Violin Solo', href: '/violin-solo'  },
+      { label: 'Opera',       href: '/music/opera'  },
+    ],
+  },
+  {
+    numeral:     'II',
+    label:       'Cocktail',
+    description: 'As the ceremony draws to a close and the light shifts golden, your guests move to the terrace. An ensemble that converses — present but never intrusive.',
+    img:         '/images/Cocktail.png',
+    options: [
+      { label: 'EvoStrings', href: '/evostrings'       },
+      { label: 'Saxophone',  href: '/music/saxophone'  },
+      { label: 'Posteggia',  href: '/music/posteggia'  },
+    ],
+  },
+  {
+    numeral:     'III',
+    label:       'Dinner',
+    description: 'The table is set, the candles lit, the sea visible through every window. Music that feels like the score of this precise evening, in this precise place.',
+    img:         '/images/Dinner.png',
+    options: [
+      { label: 'Trilogy Trio', href: '/trilogy-trio'   },
+      { label: 'Violin Solo',  href: '/violin-solo'    },
+      { label: 'Vocalist',     href: '/music/vocalist' },
+    ],
+  },
+  {
+    numeral:     'IV',
+    label:       'Party',
+    description: 'When formality dissolves and the evening opens. Energy, movement, and a floor that should be danced on.',
+    img:         '/images/Party.png',
+    options: [
+      { label: 'DJ',          href: '/music/dj' },
+      { label: 'DJ + Sax',   href: '/#contact' },
+      { label: 'DJ + Violin', href: '/#contact' },
+    ],
+  },
+]
+
 function Occasions() {
   return (
-    <section id="occasions" aria-labelledby="ms-title"
-      className="px-[clamp(1.5rem,6vw,5rem)] py-[clamp(5rem,12vw,10rem)] bg-[#F9F8F7]">
-      <div className="flex justify-between items-start gap-8 mb-[clamp(3.5rem,8vw,7rem)] flex-wrap">
+    <section id="occasions" aria-labelledby="occ-title" className="bg-[#F9F8F7]">
+
+      {/* Section header */}
+      <div className="px-[clamp(1.5rem,6vw,5rem)] pt-[clamp(5rem,12vw,9rem)] pb-[clamp(3rem,6vw,5rem)]
+        flex justify-between items-end gap-8 flex-wrap border-b border-black/[.06]">
         <div>
           <p className="eyebrow mb-[1.1rem]">For Every Moment of Your Day</p>
-          <h2 id="ms-title" className="section-title" style={{ maxWidth: '18ch' }}>
-            Three Formations,<br />One Artistic Vision
+          <h2 id="occ-title" className="section-title" style={{ maxWidth: '22ch' }}>
+            Four Moments,<br />One Vision
           </h2>
         </div>
-        <p className="text-[.64rem] font-light tracking-[.1em] leading-[1.95] text-[#404040]
-          max-w-[30ch] self-end text-right">
-          Each ensemble is personally directed<br />
-          by Donato Cipriano — curated for your day alone.
+        <p className="text-[.63rem] font-light tracking-[.08em] leading-[2] text-[#404040] max-w-[28ch] text-right">
+          Each formation is personally selected<br />
+          and directed by Donato Cipriano.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 border-t border-black/[.09]" role="list">
-        {ensembles.map((e, i) => (
-          <article key={e.id} role="listitem"
-            className="flex flex-col border-r border-b border-black/[.09] last:border-r-0">
-            <p className="text-[.5rem] font-light tracking-[.22em] uppercase text-[#B8A882]
-              px-7 pt-5">
-              {e.occasionMoment}
-            </p>
-            {/* Photo placeholder */}
-            <div className="w-full mt-4 overflow-hidden" style={{ aspectRatio: '4/5' }}>
-              <div className={`w-full h-full
-                ${i===0?'bg-gradient-to-br from-[#1C2430] to-[#2A3040]':
-                  i===1?'bg-gradient-to-br from-[#1A2220] to-[#253028]':
-                        'bg-gradient-to-br from-[#1E1628] to-[#2A1E38]'}`} />
-            </div>
-            <div className="px-7 pt-6 pb-8 flex flex-col gap-3 flex-1">
-              <div className="font-serif italic font-light text-[.9rem]
-                tracking-[.1em] text-[#B8A882] opacity-70">
-                {['I','II','III'][i]}
-              </div>
-              <h3 className="font-serif italic font-light text-[clamp(1.5rem,2.2vw,1.9rem)]
-                leading-[1.15] text-[#1A1A1A]">
-                {e.name}
+      {/* Moment strips */}
+      {MOMENTS.map((moment) => (
+        <article
+          key={moment.label}
+          className="group flex flex-col md:flex-row border-b border-black/[.06] last:border-b-0"
+        >
+          {/* Image */}
+          <div className="md:w-[38%] min-h-[240px] md:min-h-[320px] flex-shrink-0 overflow-hidden bg-[#1A1A1A]">
+            <img
+              src={moment.img}
+              alt={moment.label}
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          {/* Content */}
+          <div className="flex-1 px-[clamp(1.5rem,6vw,4rem)] py-[clamp(2.5rem,5vw,4rem)]
+            flex flex-col justify-between gap-8">
+
+            {/* Top: numeral + title + description */}
+            <div className="flex flex-col gap-4">
+              <span className="font-serif italic font-light text-[.95rem] text-[#B8A882]/60 tracking-[.06em]">
+                {moment.numeral}
+              </span>
+              <h3 className="font-serif italic font-light text-[clamp(2rem,4vw,3rem)]
+                leading-[1.1] text-[#1A1A1A]">
+                {moment.label}
               </h3>
-              <p className="text-[.63rem] font-light tracking-[.06em] leading-[1.95]
-                text-[#404040] flex-1">
-                {e.occasionDescription}
+              <p className="text-[.63rem] font-light tracking-[.06em] leading-[2]
+                text-[#404040] max-w-[42ch]">
+                {moment.description}
               </p>
-              <div className="flex gap-[.5rem] flex-wrap my-1">
-                {e.tags.map(t => (
-                  <span key={t}
-                    className="text-[.46rem] font-light tracking-[.18em] uppercase
-                      text-[#404040] border border-black/[.09] px-[.55rem] py-[.22rem]">
-                    {t}
-                  </span>
-                ))}
-              </div>
-              <a href="/#contact" className="link-underline self-start">Enquire</a>
             </div>
-          </article>
-        ))}
-      </div>
+
+            {/* Options */}
+            <div className="flex flex-col gap-0 border-t border-black/[.06]">
+              {moment.options.map(({ label, href }) => (
+                <a
+                  key={label}
+                  href={href}
+                  className="group/opt flex items-center justify-between
+                    py-4 border-b border-black/[.06] last:border-b-0
+                    no-underline transition-colors duration-300"
+                >
+                  <span className="font-serif italic font-light
+                    text-[clamp(1rem,2vw,1.25rem)] text-[#1A1A1A]/70
+                    group-hover/opt:text-[#1A1A1A] transition-colors duration-300">
+                    {label}
+                  </span>
+                  <span className="text-[.46rem] tracking-[.2em] uppercase font-light
+                    text-[#B8A882] opacity-0 group-hover/opt:opacity-100
+                    transition-opacity duration-300">
+                    Discover
+                  </span>
+                </a>
+              ))}
+            </div>
+
+          </div>
+        </article>
+      ))}
+
     </section>
   )
 }
 
 export default function Home() {
-  // Inject JSON-LD into <head> on mount
-  useEffect(() => {
-    const script = document.createElement('script')
-    script.type = 'application/ld+json'
-    script.text = JSON.stringify(baseSchema)
-    document.head.appendChild(script)
-    return () => document.head.removeChild(script)
-  }, [])
-
   return (
     <>
+      <Helmet>
+        <title>Wedding Music Ravello — Bespoke Wedding Music by Donato Cipriano | Amalfi Coast</title>
+        <meta name="description" content="EvoStrings, Trilogy Trio and solo violin for luxury destination weddings in Ravello, Positano and Sorrento. Artistic direction by Donato Cipriano." />
+        <link rel="canonical" href="https://www.weddingmusicravello.com/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.weddingmusicravello.com/" />
+        <meta property="og:title" content="Wedding Music Ravello — Bespoke Wedding Music by Donato Cipriano" />
+        <meta property="og:description" content="EvoStrings, Trilogy Trio and solo violin for luxury destination weddings on the Amalfi Coast." />
+        <meta property="og:image" content="https://www.weddingmusicravello.com/images/og-cover.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Wedding Music Ravello — Bespoke Wedding Music by Donato Cipriano" />
+        <meta name="twitter:description" content="EvoStrings, Trilogy Trio and solo violin for luxury destination weddings on the Amalfi Coast." />
+        <meta name="twitter:image" content="https://www.weddingmusicravello.com/images/og-cover.jpg" />
+        <script type="application/ld+json">{JSON.stringify(baseSchema)}</script>
+      </Helmet>
       <Hero />
+      <GeoIntro />
       <Services />
       <ContactStrip />
       <Occasions />
@@ -113,11 +206,4 @@ export default function Home() {
       <About />
     </>
   )
-}
-
-// vite-ssg: export head meta for static pre-rendering
-export const frontmatter = {
-  title: 'Amalfi Strings — Bespoke Wedding Music by Donato Cipriano | Amalfi Coast',
-  description:
-    'EvoStrings, Trilogy Trio and solo violin performances for luxury destination weddings in Ravello, Positano and Sorrento. Artistic direction by Donato Cipriano.',
 }

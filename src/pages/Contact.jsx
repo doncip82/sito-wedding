@@ -9,7 +9,7 @@ const ensembles = ['EvoStrings', 'Trilogy Trio', 'Violino Solo', 'Not sure yet']
 
 export default function Contact() {
   useEffect(() => {
-    document.title = 'Enquire — Amalfi Strings | Bespoke Wedding Music'
+    document.title = 'Enquire — Wedding Music Ravello | Bespoke Wedding Music'
   }, [])
 
   const [form, setForm] = useState({
