@@ -44,7 +44,7 @@ export default function EvoStrings() {
       </section>
 
       {/* Photo / video placeholder */}
-      <section className="w-full" style={{ aspectRatio: '16/6', background: '#1D2535' }}>
+      <section className="w-full" style={{ height: 'clamp(8rem,14vw,12rem)', background: '#1D2535' }}>
         {/*
           PHOTO: Replace with:
           <img src="/images/evostrings-hero.jpg"
@@ -69,7 +69,7 @@ export default function EvoStrings() {
           <div>
             <p className="eyebrow mb-5">About the Ensemble</p>
             <h2 className="section-title mb-8" style={{ maxWidth: '20ch' }}>
-              Four Voices,<br />One Silence Broken
+              Three Voices,<br />One Silence Broken
             </h2>
             <div className="w-9 h-[.5px] bg-[#B8A882] mb-8" />
             <p className="text-[.72rem] font-light tracking-[.05em] leading-[2]
@@ -88,8 +88,8 @@ export default function EvoStrings() {
           {/* Configurations */}
           <div className="flex flex-col gap-0 border-t border-black/[.09]">
             {[
-              { label: 'Duo',     desc: 'Two violins. For intimate garden ceremonies and cocktail receptions in smaller venues.' },
-              { label: 'Trio',    desc: 'Violin, viola and cello. The ideal balance of presence and delicacy for terraces and loggias.' },
+              { label: 'Duo',     desc: 'Violin and cello. For intimate garden ceremonies and cocktail receptions in smaller venues.' },
+              { label: 'Trio',    desc: 'Two violins and cello. The ideal balance of presence and delicacy for terraces and loggias.' },
               { label: 'Quartet', desc: 'The full string quartet. For grand ceremonies in historic salons and open-air amphitheatres.' },
             ].map(({ label, desc }) => (
               <div key={label}
@@ -107,6 +107,57 @@ export default function EvoStrings() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Video Section */}
+      <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(4rem,10vw,8rem)]">
+        <p className="text-[.56rem] font-light tracking-[.25em] uppercase text-[#B8A882]
+          flex items-center gap-3 mb-5">
+          <span className="inline-block w-[22px] h-[.5px] bg-[#B8A882]" />
+          Live Performances
+        </p>
+        <h2 className="font-serif italic font-light leading-[1.08] text-[#F9F8F7] mb-[clamp(2.5rem,6vw,5rem)]"
+          style={{ fontSize: 'clamp(2rem,4.5vw,3.6rem)', maxWidth: '18ch' }}>
+          Watch EvoStrings Live
+        </h2>
+
+        {/* Hero video */}
+        <div className="w-full mb-4 overflow-hidden rounded-sm
+          transition-shadow duration-500 hover:shadow-[0_8px_40px_rgba(0,0,0,.5)]"
+          style={{ aspectRatio: '16/9' }}>
+          <iframe
+            src="https://www.youtube.com/embed/35YL651-TtU"
+            title="EvoStrings - Live Performance"
+            frameBorder="0"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="w-full h-full"
+          />
+        </div>
+
+        {/* Two secondary videos */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {[
+            { id: 'emeweWCEfJw', title: 'EvoStrings - Wedding Performance' },
+            { id: 'yKYFvmn9Jpc', title: 'EvoStrings - Live Music Experience' },
+          ].map(({ id, title }) => (
+            <div key={id}
+              className="overflow-hidden rounded-sm
+                transition-shadow duration-500 hover:shadow-[0_8px_40px_rgba(0,0,0,.5)]"
+              style={{ aspectRatio: '16/9' }}>
+              <iframe
+                src={`https://www.youtube.com/embed/${id}`}
+                title={title}
+                frameBorder="0"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
+          ))}
         </div>
       </section>
 

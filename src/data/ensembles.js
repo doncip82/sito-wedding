@@ -16,7 +16,17 @@ export const ensembles = [
     photoAlt: 'EvoStrings string ensemble by Donato Cipriano at Villa Cimbrone, Ravello',
     moment: null,
     viralBadge: null,
-    description: `Italy's reference string ensemble for the luxury wedding sector. EvoStrings — conceived and directed by Donato Cipriano — performs in configurations of two, three or four musicians, each arrangement calibrated to the acoustics and atmosphere of the venue. On the Terrace of Infinity at Villa Cimbrone, four strings fill the silence between the vows; in the intimate loggia of Palazzo Avino, a duo suffices to change the temperature of a room. The repertoire moves with intention between classical rigour and contemporary tenderness: Vivaldi, Morricone, Einaudi, Max Richter — always curated, never arbitrary.`,
+    description: `EvoStrings was conceived as a string trio — its most authentic and defining form.
+A refined dialogue between instruments, where each voice moves with intention, creating a sound that is both rich and perfectly balanced.
+
+Founded and directed by Donato Cipriano, EvoStrings has become a reference point in Italy’s luxury wedding scene.
+The ensemble adapts seamlessly to each setting — evolving into a duo for more intimate atmospheres, or expanding into a full string quartet with the addition of viola — while preserving its distinctive identity.
+
+On the Terrace of Infinity at Villa Cimbrone, three strings suspend time between wedding vows; within the intimate spaces of Palazzo Avino, a smaller ensemble reshapes the atmosphere with quiet elegance.
+
+The repertoire moves effortlessly between classical rigor and contemporary sensitivity:
+Vivaldi, Morricone, Einaudi, Max Richter.
+Always curated with intention, never by chance.`,
     occasionDescription: `The ceremony calls for strings. EvoStrings performs processionals and recessionals with the precision of a chamber group and the warmth of a Southern Italian musical tradition. Available as a duo for the most intimate garden ceremonies in Ravello, a trio for celebrations at Villa Treville, or a full quartet for grand ceremonies in the salons of Palazzo Avino or the Belmond Hotel Caruso.`,
     occasionMoment: 'Ceremony & Cocktail Hour',
     tags: ['Ceremony', 'Cocktail Reception', 'Signing', 'Villa & Garden'],
