@@ -161,7 +161,7 @@ export default function Occasions() {
         </div>
         <p className="text-[.63rem] font-light tracking-[.08em] leading-[2] text-[#404040] max-w-[28ch] text-right">
           Each formation is personally selected<br />
-          and directed by Donato Cipriano.
+          and carefully curated for your celebration.
         </p>
       </div>
 
