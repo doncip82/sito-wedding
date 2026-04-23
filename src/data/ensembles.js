@@ -14,14 +14,13 @@ export const ensembles = [
     // YouTube embed: replace null with 'https://www.youtube.com/embed/YOUR_ID'
     photo: '/images/EvoStrings/EvoStrings.jpg',
     photoFit: 'contain',
-    photoAlt: 'EvoStrings string ensemble by Donato Cipriano at Villa Cimbrone, Ravello',
+    photoAlt: 'EvoStrings string ensemble at Villa Cimbrone, Ravello',
     moment: null,
     viralBadge: null,
     description: `EvoStrings was conceived as a string trio — its most authentic and defining form.
 A refined dialogue between instruments, where each voice moves with intention, creating a sound that is both rich and perfectly balanced.
 
-Founded and directed by Donato Cipriano, EvoStrings has become a reference point in Italy’s luxury wedding scene.
-The ensemble adapts seamlessly to each setting — evolving into a duo for more intimate atmospheres, or expanding into a full string quartet with the addition of viola — while preserving its distinctive identity.
+A reference point in Italy’s luxury wedding scene, EvoStrings adapts seamlessly to each setting — evolving into a duo for more intimate atmospheres, or expanding into a full string quartet with the addition of viola — while preserving its distinctive identity.
 
 On the Terrace of Infinity at Villa Cimbrone, three strings suspend time between wedding vows; within the intimate spaces of Palazzo Avino, a smaller ensemble reshapes the atmosphere with quiet elegance.
 
@@ -45,10 +44,10 @@ Always curated with intention, never by chance.`,
     // YouTube embed: replace null with 'https://www.youtube.com/embed/YOUR_ID'
     photo: '/images/Trilogy%20Trio/Trilogy%20Trio.jpg',
     photoFit: 'contain',
-    photoAlt: 'Trilogy Trio — Violin, Cello and Piano by Donato Cipriano, Amalfi Coast wedding',
+    photoAlt: 'Trilogy Trio — Violin, Cello and Piano, Amalfi Coast wedding',
     moment: null,
     viralBadge: 'A Global Viral Sensation · 1M+ Views on YouTube',
-    description: `Three instruments, one unexpected conversation. The Trilogy Trio — violin, cello and piano under the artistic direction of Donato Cipriano — occupies the rare territory where classical formation meets cinematic emotion. Coldplay rendered with the weight of a chamber piece, Nino Rota with the lightness of a summer evening on the Amalfi terraces, Hans Zimmer recomposed for three acoustic voices. For couples who want their reception to feel like the score of a film they have not yet seen. Over one million views on YouTube confirm what every audience already knows: this is not background music.`,
+    description: `Three instruments, one unexpected conversation. The Trilogy Trio — violin, cello and piano — occupies the rare territory where classical formation meets cinematic emotion. Coldplay rendered with the weight of a chamber piece, Nino Rota with the lightness of a summer evening on the Amalfi terraces, Hans Zimmer recomposed for three acoustic voices. For couples who want their reception to feel like the score of a film they have not yet seen. Over one million views on YouTube confirm what every audience already knows: this is not background music.`,
     occasionDescription: `Violin, cello and piano: the architecture of emotion. As dinner begins and the lights of the coast multiply on the sea below, the Trilogy Trio creates an atmosphere that is neither classical nor contemporary, but unmistakably cinematic. Hans Zimmer, Ennio Morricone, Nino Rota, Radiohead — repertoire chosen to feel like the score of this precise evening, in this precise place.`,
     occasionMoment: 'Dinner & Cinematic Atmosphere',
     tags: ['Wedding Dinner', 'Evening Reception', 'Aperitivo', 'Candlelit Interior'],
