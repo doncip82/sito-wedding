@@ -64,7 +64,7 @@ export default function Hero() {
             opacity: 0,
             animation: 'up 1s ease .55s forwards',
           }}>
-          The Sound of an<br />Unforgettable Day
+          The Sound That Defines<br />Every Moment
         </h1>
 
         <div aria-hidden="true"
@@ -73,28 +73,17 @@ export default function Hero() {
 
         <h2 className="text-[.68rem] font-normal tracking-[.14em] text-white/85 max-w-[44ch] leading-[1.95]"
           style={{ opacity: 0, animation: 'up .9s ease 1s forwards' }}>
-          Live music for destination weddings — Ravello, Positano &amp; Sorrento
+          From weddings to proposals and private celebrations on the Amalfi Coast — every experience begins with music, carefully selected and brought to life through a curated network of artists.
         </h2>
 
         <div className="flex items-center gap-10 mt-9 flex-wrap"
           style={{ opacity: 0, animation: 'up .9s ease 1.2s forwards' }}>
 
-          <a href="/#contact"
+          <a href="/#services"
             className="text-[.6rem] font-light tracking-[.22em] uppercase text-[#F9F8F7]
               pb-1 border-b border-white/45 no-underline
               hover:text-[#B8A882] hover:border-[#B8A882] transition-all">
-            Enquire About Your Date
-          </a>
-
-          <a href="/#services"
-            className="text-[.6rem] font-normal tracking-[.2em] uppercase text-white/85
-              no-underline flex items-center gap-3 hover:text-white/75 transition-colors group">
-            <span className="inline-block w-7 h-[.5px] bg-current relative
-              group-hover:w-10 transition-all duration-300">
-              <span className="absolute right-0 top-[-3px] w-[6px] h-[6px]
-                border-r-[.5px] border-t-[.5px] border-current rotate-45" />
-            </span>
-            Discover Our Music
+            Explore our partners ↓
           </a>
         </div>
       </div>
