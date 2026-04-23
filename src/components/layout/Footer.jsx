@@ -2,20 +2,11 @@
 
 export default function Footer() {
   const navLinks = [
-    { label: 'Occasions', href: '/#occasions' },
-    { label: 'Locations', href: '/#locations' },
-    { label: 'About',     href: '/#about'     },
-    { label: 'Enquire',   href: '/#contact'   },
-  ]
-
-  const partnerLinks = [
-    { label: 'Music',            href: '/#services'                },
-    { label: 'Photographers',    href: '/vendors/photographers'    },
-    { label: 'Wedding Planners', href: '/vendors/wedding-planners' },
-    { label: 'Vintage Cars',     href: '/vendors/vintage-cars'     },
-    { label: 'Florists',         href: '/vendors/florists'         },
-    { label: 'Celebrants',       href: '/vendors/celebrants'       },
-    { label: 'Boat Rental',      href: '/vendors/boat-rental'      },
+    { label: 'Music',     href: '/music'       },
+    { label: 'Occasions', href: '/#occasions'  },
+    { label: 'Locations', href: '/#locations'  },
+    { label: 'About',     href: '/#about'      },
+    { label: 'Enquire',   href: '/#contact'    },
   ]
 
   return (
@@ -24,7 +15,7 @@ export default function Footer() {
         px-[clamp(1.5rem,6vw,5rem)] pt-[clamp(3rem,7vw,5rem)] pb-[clamp(1.5rem,3vw,2.5rem)]">
 
       {/* Main row */}
-      <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_auto] gap-[clamp(2rem,5vw,5rem)]
+      <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-[clamp(2rem,5vw,5rem)]
         pb-[clamp(2rem,4vw,3rem)] border-b border-white/[.08] mb-6">
 
         {/* Brand */}
@@ -50,19 +41,6 @@ export default function Footer() {
           ))}
         </nav>
 
-        {/* Partners */}
-        <div className="flex flex-col gap-3">
-          <p className="text-[.5rem] font-light tracking-[.2em] uppercase text-white/20">
-            Partners
-          </p>
-          {partnerLinks.map(({ label, href }) => (
-            <a key={label} href={href}
-              className="text-[.56rem] font-light tracking-[.18em] uppercase no-underline
-                text-white/40 hover:text-[#B8A882] transition-colors">
-              {label}
-            </a>
-          ))}
-        </div>
       </div>
 
       {/* Legal */}

@@ -5,17 +5,7 @@ import { Link, useLocation } from 'react-router-dom'
 const NAV_ITEMS = [
   { label: 'Home',      href: '/'           },
   { label: 'Occasions', href: '/#occasions' },
-  {
-    label: 'Partners',
-    items: [
-      { label: 'Music',         href: '/music'                    },
-      { label: 'Photographers', href: '/vendors/photographers'    },
-      { label: 'Florists',      href: '/vendors/florists'         },
-      { label: 'Vintage Cars',  href: '/vendors/vintage-cars'     },
-      { label: 'Planners',      href: '/vendors/wedding-planners' },
-      { label: 'Celebrant',     href: '/vendors/celebrant'        },
-    ],
-  },
+  { label: 'Music',     href: '/music'      },
   { label: 'Locations', href: '/#locations' },
   {
     label: 'Venues',

@@ -19,11 +19,6 @@ const MusicDJ             = lazy(() => import('@/pages/music/DJ.jsx'))
 const MusicVocalist       = lazy(() => import('@/pages/music/Vocalist.jsx'))
 const MusicPosteggia      = lazy(() => import('@/pages/music/Posteggia.jsx'))
 const MusicOpera          = lazy(() => import('@/pages/music/Opera.jsx'))
-const VendorPhotographers = lazy(() => import('@/pages/vendors/Photographers.jsx'))
-const VendorFlorists      = lazy(() => import('@/pages/vendors/Florists.jsx'))
-const VendorVintageCars   = lazy(() => import('@/pages/vendors/VintageCars.jsx'))
-const VendorPlanners      = lazy(() => import('@/pages/vendors/WeddingPlanners.jsx'))
-const VendorCelebrant     = lazy(() => import('@/pages/vendors/Celebrant.jsx'))
 
 function PageLoader() {
   return (
@@ -56,11 +51,7 @@ export default function App() {
             <Route path="/music/vocalist"         element={<MusicVocalist />} />
             <Route path="/music/posteggia"        element={<MusicPosteggia />} />
             <Route path="/music/opera"            element={<MusicOpera />} />
-            <Route path="/vendors/photographers"  element={<VendorPhotographers />} />
-            <Route path="/vendors/florists"       element={<VendorFlorists />} />
-            <Route path="/vendors/vintage-cars"   element={<VendorVintageCars />} />
-            <Route path="/vendors/wedding-planners" element={<VendorPlanners />} />
-            <Route path="/vendors/celebrant"      element={<VendorCelebrant />} />
+
           </Routes>
         </Suspense>
       </main>
