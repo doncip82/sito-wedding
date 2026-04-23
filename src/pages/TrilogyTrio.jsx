@@ -12,7 +12,15 @@ export default function TrilogyTrio() {
     meta.content = 'Trilogy Trio — violin, cello and piano — performs cinematic, pop and classical repertoire for weddings and private events along the Amalfi Coast.'
     const script = document.createElement('script')
     script.type = 'application/ld+json'
-    script.text = JSON.stringify(ensembleSchema(ensemble))
+    script.text = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'MusicGroup',
+      name: 'Trilogy Trio',
+      description: 'Violin, cello and piano trio performing cinematic, pop and classical repertoire for weddings and private events on the Amalfi Coast.',
+      genre: ['Cinematic', 'Pop', 'Classical'],
+      areaServed: { '@type': 'AdministrativeArea', name: 'Amalfi Coast' },
+      url: 'https://www.weddingmusicravello.com/music/trilogy-trio',
+    })
     document.head.appendChild(script)
     return () => document.head.removeChild(script)
   }, [])

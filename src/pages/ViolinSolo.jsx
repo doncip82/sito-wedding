@@ -12,7 +12,15 @@ export default function ViolinSolo() {
     meta.content = 'Solo violin for wedding ceremonies in Ravello, Positano and Sorrento. Classical and contemporary repertoire, performed without amplification at cliff-edge venues.'
     const script = document.createElement('script')
     script.type = 'application/ld+json'
-    script.text = JSON.stringify(ensembleSchema(ensemble))
+    script.text = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'MusicGroup',
+      name: 'Violin Solo — Donato Cipriano',
+      description: 'Solo violin for wedding ceremonies in Ravello, Positano and Sorrento. Classical and contemporary repertoire performed without amplification at cliff-edge venues including Villa Cimbrone.',
+      genre: ['Classical', 'Contemporary'],
+      areaServed: { '@type': 'AdministrativeArea', name: 'Amalfi Coast' },
+      url: 'https://www.weddingmusicravello.com/music/violin-solo',
+    })
     document.head.appendChild(script)
     return () => document.head.removeChild(script)
   }, [])

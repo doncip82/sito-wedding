@@ -1,5 +1,15 @@
 import { Helmet } from 'react-helmet-async'
 
+const operaSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'MusicGroup',
+  name: 'Opera — Wedding Music Ravello',
+  description: 'Lyric soprano and tenor for wedding ceremonies and dinner interludes on the Amalfi Coast. Puccini, Verdi and Neapolitan repertoire at venues in Ravello and Positano.',
+  genre: ['Opera', 'Classical', 'Neapolitan'],
+  areaServed: { '@type': 'AdministrativeArea', name: 'Amalfi Coast' },
+  url: 'https://www.weddingmusicravello.com/music/opera',
+}
+
 export default function MusicOpera() {
   return (
     <div className="bg-[#F9F8F7] pt-[68px]">
@@ -13,6 +23,7 @@ export default function MusicOpera() {
         <meta property="og:description" content="Lyric soprano and tenor for wedding ceremonies and dinner interludes on the Amalfi Coast. Puccini, Verdi and Neapolitan repertoire at venues in Ravello and Positano." />
         <meta property="og:image" content="https://www.weddingmusicravello.com/images/og-cover.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
+        <script type="application/ld+json">{JSON.stringify(operaSchema)}</script>
       </Helmet>
 
       <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(5rem,12vw,9rem)]">

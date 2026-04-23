@@ -1,5 +1,15 @@
 import { Helmet } from 'react-helmet-async'
 
+const vocalistSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'MusicGroup',
+  name: 'Vocalist — Wedding Music Ravello',
+  description: 'Live vocal performance for weddings and private events in Ravello and Positano. Jazz, pop and classical repertoire, solo or with ensemble.',
+  genre: ['Jazz', 'Pop', 'Classical'],
+  areaServed: { '@type': 'AdministrativeArea', name: 'Amalfi Coast' },
+  url: 'https://www.weddingmusicravello.com/music/vocalist',
+}
+
 export default function MusicVocalist() {
   return (
     <div className="bg-[#F9F8F7] pt-[68px]">
@@ -13,6 +23,7 @@ export default function MusicVocalist() {
         <meta property="og:description" content="Live vocal performance for weddings and private events in Ravello and Positano. Jazz, pop and classical repertoire, solo or with ensemble." />
         <meta property="og:image" content="https://www.weddingmusicravello.com/images/og-cover.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
+        <script type="application/ld+json">{JSON.stringify(vocalistSchema)}</script>
       </Helmet>
 
       <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(5rem,12vw,9rem)]">

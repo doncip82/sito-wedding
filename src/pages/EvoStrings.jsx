@@ -12,7 +12,15 @@ export default function EvoStrings() {
     meta.content = 'EvoStrings performs as duo, trio and quartet at Villa Cimbrone, Palazzo Avino and Belmond Hotel Caruso. Classical and contemporary repertoire for ceremonies and receptions on the Amalfi Coast.'
     const script = document.createElement('script')
     script.type = 'application/ld+json'
-    script.text = JSON.stringify(ensembleSchema(ensemble))
+    script.text = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'MusicGroup',
+      name: 'EvoStrings',
+      description: 'String ensemble available as duo, trio and quartet for wedding ceremonies and receptions on the Amalfi Coast. Performs at Villa Cimbrone, Palazzo Avino and Belmond Hotel Caruso in Ravello.',
+      genre: ['Classical', 'Contemporary', 'Cinematic'],
+      areaServed: { '@type': 'AdministrativeArea', name: 'Amalfi Coast' },
+      url: 'https://www.weddingmusicravello.com/music/evostrings',
+    })
     document.head.appendChild(script)
     return () => document.head.removeChild(script)
   }, [])

@@ -1,5 +1,15 @@
 import { Helmet } from 'react-helmet-async'
 
+const saxophoneSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'MusicGroup',
+  name: 'Saxophone — Wedding Music Ravello',
+  description: 'Live saxophone for wedding cocktail hours, receptions and private dinners in Ravello and Positano. Jazz, soul and contemporary repertoire.',
+  genre: ['Jazz', 'Soul', 'Contemporary'],
+  areaServed: { '@type': 'AdministrativeArea', name: 'Amalfi Coast' },
+  url: 'https://www.weddingmusicravello.com/music/saxophone',
+}
+
 export default function MusicSaxophone() {
   return (
     <div className="bg-[#F9F8F7] pt-[68px]">
@@ -13,6 +23,7 @@ export default function MusicSaxophone() {
         <meta property="og:description" content="Live saxophone for wedding cocktail hours, receptions and private dinners in Ravello and Positano. Jazz, soul and contemporary repertoire." />
         <meta property="og:image" content="https://www.weddingmusicravello.com/images/og-cover.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
+        <script type="application/ld+json">{JSON.stringify(saxophoneSchema)}</script>
       </Helmet>
 
       <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(5rem,12vw,9rem)]">

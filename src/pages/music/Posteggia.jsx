@@ -1,5 +1,15 @@
 import { Helmet } from 'react-helmet-async'
 
+const posteggiaSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'MusicGroup',
+  name: 'Posteggia Napoletana — Wedding Music Ravello',
+  description: 'Traditional Neapolitan posteggia — mandolin, guitar and voice — for wedding cocktail hours and receptions in Ravello, Positano and Sorrento. Repertoire includes O Sole Mio (1898), Funiculì Funiculà (1885) and Torna a Surriento (1902).',
+  genre: ['Neapolitan', 'Traditional', 'Folk'],
+  areaServed: { '@type': 'AdministrativeArea', name: 'Amalfi Coast' },
+  url: 'https://www.weddingmusicravello.com/music/posteggia',
+}
+
 export default function MusicPosteggia() {
   return (
     <div className="bg-[#F9F8F7] pt-[68px]">
@@ -13,6 +23,7 @@ export default function MusicPosteggia() {
         <meta property="og:description" content="Traditional Neapolitan posteggia — mandolin, guitar and voice — for wedding cocktail hours and receptions in Ravello, Positano and Sorrento." />
         <meta property="og:image" content="https://www.weddingmusicravello.com/images/og-cover.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
+        <script type="application/ld+json">{JSON.stringify(posteggiaSchema)}</script>
       </Helmet>
 
       <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(5rem,12vw,9rem)]">

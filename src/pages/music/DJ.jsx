@@ -1,5 +1,15 @@
 import { Helmet } from 'react-helmet-async'
 
+const djSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'MusicGroup',
+  name: 'DJ Service — Wedding Music Ravello',
+  description: 'Professional DJ service for wedding receptions and private celebrations at luxury venues in Ravello, Positano and Sorrento.',
+  genre: ['Electronic', 'Pop', 'House'],
+  areaServed: { '@type': 'AdministrativeArea', name: 'Amalfi Coast' },
+  url: 'https://www.weddingmusicravello.com/music/dj',
+}
+
 export default function MusicDJ() {
   return (
     <div className="bg-[#F9F8F7] pt-[68px]">
@@ -13,6 +23,7 @@ export default function MusicDJ() {
         <meta property="og:description" content="Professional DJ service for wedding receptions and private celebrations on the Amalfi Coast. Curated sets for luxury venues in Ravello, Positano and Sorrento." />
         <meta property="og:image" content="https://www.weddingmusicravello.com/images/og-cover.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
+        <script type="application/ld+json">{JSON.stringify(djSchema)}</script>
       </Helmet>
 
       <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(5rem,12vw,9rem)]">

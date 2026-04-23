@@ -3,15 +3,17 @@ import { Helmet } from 'react-helmet-async'
 const ravelloSchema = {
   '@context': 'https://schema.org',
   '@type': 'TouristDestination',
-  name: 'Ravello — Wedding Music & Services',
-  description: 'Luxury wedding music and vendor coordination in Ravello, Campania. Donato Cipriano performs at Villa Cimbrone, Palazzo Avino, Belmond Hotel Caruso, and Villa Eva.',
+  name: 'Ravello',
+  description: 'Ravello is a hill town on the Amalfi Coast, 350 metres above sea level, UNESCO World Heritage Site since 1997. Known as the city of music, it hosted Richard Wagner in 1880 and is home to the Ravello Festival (founded 1953). Principal wedding venues include Villa Cimbrone, Palazzo Avino, Belmond Hotel Caruso and Villa Eva.',
   url: 'https://www.weddingmusicravello.com/locations/ravello',
-  touristType: { '@type': 'Audience', audienceType: 'Couples planning destination weddings' },
+  touristType: ['Wedding Couples', 'Luxury Travellers'],
   includesAttraction: [
-    { '@type': 'TouristAttraction', name: 'Villa Cimbrone', description: '11th-century villa with the Terrazza dell\'Infinito at 330 metres above sea level. No PA amplification required for chamber ensembles due to natural acoustic reflection.' },
-    { '@type': 'TouristAttraction', name: 'Palazzo Avino', description: 'Former 12th-century bishop\'s palace, now a 5-star Relais & Châteaux with interior courtyard and terrace views toward Minori.' },
-    { '@type': 'TouristAttraction', name: 'Belmond Hotel Caruso', description: 'Converted 11th-century palace with infinity pool terrace at 300 metres. Frequently cited in Condé Nast Traveller as one of the world\'s best wedding venues.' },
-    { '@type': 'TouristAttraction', name: 'Villa Eva', description: 'Private villa with 3,000 sqm of gardens, owned by the Vuotto family for over 50 years. Known for intimate ceremonies under the wisteria pergola.' },
+    { '@type': 'TouristAttraction', name: 'Villa Cimbrone' },
+    { '@type': 'TouristAttraction', name: 'Palazzo Avino' },
+    { '@type': 'TouristAttraction', name: 'Belmond Hotel Caruso' },
+    { '@type': 'TouristAttraction', name: 'Villa Eva' },
+    { '@type': 'TouristAttraction', name: 'Villa Rufolo' },
+    { '@type': 'TouristAttraction', name: 'Ravello Festival' },
   ],
 }
 

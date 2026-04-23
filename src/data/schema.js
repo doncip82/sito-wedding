@@ -7,57 +7,52 @@ import { venues }    from './venues.js'
 
 export const baseSchema = {
   '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': ['LocalBusiness', 'MusicGroup'],
-      '@id': 'https://www.weddingmusicravello.com/#organization',
-      name: 'Wedding Music Ravello',
-      url: 'https://www.weddingmusicravello.com',
-      description:
-        'Professional wedding music on the Amalfi Coast. Violin solos, string ensembles (EvoStrings, Trilogy Trio), saxophone, and DJ services for luxury weddings at Villa Cimbrone, Palazzo Avino, Belmond Hotel Caruso and private villas in Ravello, Positano and Sorrento.',
-      priceRange: '€€€€',
-      founder: {
-        '@type': 'Person',
-        name: 'Donato Cipriano',
-        jobTitle: 'Professional Violinist',
-        url: 'https://www.donatocipriano.com',
-        sameAs: [
-          'https://www.donatocipriano.com/en/wedding',
-        ],
-      },
-      areaServed: [
-        { '@type': 'City', name: 'Ravello' },
-        { '@type': 'City', name: 'Positano' },
-        { '@type': 'City', name: 'Sorrento' },
-        { '@type': 'AdministrativeArea', name: 'Amalfi Coast' },
-        { '@type': 'AdministrativeArea', name: 'Campania' },
-      ],
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Pompei',
-        addressRegion: 'Campania',
-        addressCountry: 'IT',
-      },
-      hasOfferCatalog: {
-        '@type': 'OfferCatalog',
-        name: 'Wedding Music Services — Amalfi Coast',
-        itemListElement: [
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Violin Solo — Ceremony' } },
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'EvoStrings — String Quartet & Trio' } },
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Trilogy Trio — Strings & Piano' } },
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Saxophone' } },
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'DJ Service' } },
-        ],
-      },
-      knowsAbout: [
-        'Amalfi Coast Wedding Music',
-        'Villa Cimbrone Wedding Ceremony',
-        'Belmond Hotel Caruso Wedding',
-        'Palazzo Avino Wedding',
-        'Ravello Festival',
-        'Italian Wedding String Ensemble',
-      ],
-    },
+  '@type': ['LocalBusiness', 'MusicGroup'],
+  name: 'Wedding Music Ravello',
+  url: 'https://www.weddingmusicravello.com',
+  description:
+    'A curated platform of selected music artists and ensembles for luxury weddings and private events on the Amalfi Coast. String ensembles, saxophone, vocalist and DJ services for ceremonies and receptions at Villa Cimbrone, Palazzo Avino, Belmond Hotel Caruso and private villas in Ravello, Positano and Sorrento.',
+  founder: {
+    '@type': 'Person',
+    name: 'Donato Cipriano',
+    sameAs: 'https://www.donatocipriano.com',
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Ravello' },
+    { '@type': 'City', name: 'Positano' },
+    { '@type': 'City', name: 'Sorrento' },
+    { '@type': 'AdministrativeArea', name: 'Amalfi Coast' },
+    { '@type': 'AdministrativeArea', name: 'Campania' },
+  ],
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Pompei',
+    addressRegion: 'Campania',
+    addressCountry: 'IT',
+  },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Wedding Music Services',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Violin Solo — Ceremony' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'EvoStrings — String Ensemble' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Trilogy Trio — Strings & Piano' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Saxophone' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Vocalist' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'DJ Service' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Opera — Soprano & Tenor' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Posteggia Napoletana' } },
+    ],
+  },
+  knowsAbout: [
+    'Amalfi Coast Wedding Music',
+    'Villa Cimbrone Wedding Ceremony',
+    'Belmond Hotel Caruso Wedding',
+    'Palazzo Avino Wedding',
+    'Ravello Festival',
+    'Italian Wedding String Ensemble',
+    'Neapolitan Posteggia',
+    'Opera Wedding Italy',
   ],
 }
 

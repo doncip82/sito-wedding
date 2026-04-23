@@ -3,9 +3,14 @@ import { Helmet } from 'react-helmet-async'
 const sorrentoSchema = {
   '@context': 'https://schema.org',
   '@type': 'TouristDestination',
-  name: 'Sorrento — Wedding Music & Services',
-  description: 'Wedding music in Sorrento and the Sorrentine Peninsula. Donato Cipriano performs at Grand Hotel Excelsior Vittoria, Villa Astor and hotel terraces overlooking the Bay of Naples.',
+  name: 'Sorrento',
+  description: 'Sorrento is a clifftop town on the Sorrentine Peninsula overlooking the Bay of Naples, a popular base for destination weddings on the Amalfi Coast. Known as the birthplace of Torna a Surriento (1902).',
   url: 'https://www.weddingmusicravello.com/locations/sorrento',
+  touristType: ['Wedding Couples', 'Luxury Travellers'],
+  includesAttraction: [
+    { '@type': 'TouristAttraction', name: 'Piazza Tasso' },
+    { '@type': 'TouristAttraction', name: 'Villa Comunale' },
+  ],
 }
 
 export default function LocationSorrento() {

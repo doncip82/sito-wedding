@@ -3,12 +3,13 @@ import { Helmet } from 'react-helmet-async'
 const positanoSchema = {
   '@context': 'https://schema.org',
   '@type': 'TouristDestination',
-  name: 'Positano — Wedding Music & Services',
-  description: 'Luxury wedding music in Positano. Donato Cipriano performs at Villa Treville, Le Sirenuse and cliff-edge private villas above the Tyrrhenian Sea.',
+  name: 'Positano',
+  description: 'Positano is a cliffside village on the Amalfi Coast, one of the most requested destinations for luxury destination weddings in Italy. Principal wedding venues include Villa Treville, formerly the private residence of Franco Zeffirelli, and Le Sirenuse.',
   url: 'https://www.weddingmusicravello.com/locations/positano',
+  touristType: ['Wedding Couples', 'Luxury Travellers'],
   includesAttraction: [
-    { '@type': 'TouristAttraction', name: 'Villa Treville', description: 'Private villa and hotel on the cliff face of Positano, formerly the residence of Franco Zeffirelli. Its terraces descend in layers toward the sea.' },
-    { '@type': 'TouristAttraction', name: 'Le Sirenuse', description: 'Five-star hotel with direct sea views over the Li Galli islands. Ceremony access via the hotel\'s private lift from the lower coastal road.' },
+    { '@type': 'TouristAttraction', name: 'Villa Treville' },
+    { '@type': 'TouristAttraction', name: 'Le Sirenuse' },
   ],
 }
 
