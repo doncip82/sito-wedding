@@ -18,23 +18,21 @@ export default function About() {
           <div className="w-9 h-[.5px] bg-[#B8A882] mb-7" aria-hidden="true" />
 
           <p className="text-[.72rem] font-light tracking-[.05em] leading-[2] text-[#404040] mb-5 max-w-[58ch]">
-            Wedding Music Ravello is a curated selection of live music for destination
-            weddings and exclusive events on the Amalfi Coast.
+            Wedding Music Ravello is not an agency. It is a curatorial platform — a deliberate
+            selection of musicians, ensembles, and artists who understand that performance, in
+            these places, carries a different weight.
           </p>
           <p className="text-[.72rem] font-light tracking-[.05em] leading-[2] text-[#404040] mb-5 max-w-[58ch]">
-            Every artist and ensemble in our network has been personally evaluated for
-            their ability to perform at the highest level — in the acoustics of clifftop
-            terraces, within historic villas, across the open-air venues of a coast that
-            demands as much from its music as it does from everything else.
+            The Amalfi Coast is among the most requested destinations for luxury weddings in
+            Europe. Each year, thousands of couples choose venues between Ravello, Positano,
+            Sorrento, and Praiano. Most of them plan from abroad. Many of them underestimate
+            the role that music plays in the coherence of an event — how it bridges ceremony
+            and reception, how it holds silence before the first note, how it extends the
+            emotional life of a day long after the photographs are taken.
           </p>
           <p className="text-[.72rem] font-light tracking-[.05em] leading-[2] text-[#404040] mb-5 max-w-[58ch]">
-            We do not list. We curate. Every recommendation we make carries our name,
-            and our standard is non-negotiable.
-          </p>
-          <p className="text-[.72rem] font-light tracking-[.05em] leading-[2] text-[#404040] mb-5 max-w-[58ch]">
-            From ceremony to cocktail hour, from the dinner score to the final dance —
-            we match each moment of your celebration to the right sound, the right
-            formation, the right artist.
+            Every artist and ensemble in our network has been selected not by availability,
+            but by judgment. We do not list. We choose.
           </p>
         </div>
 
