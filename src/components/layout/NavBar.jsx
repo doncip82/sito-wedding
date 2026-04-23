@@ -6,9 +6,8 @@ const NAV_ITEMS = [
   { label: 'Home',      href: '/'           },
   { label: 'Occasions', href: '/#occasions' },
   { label: 'Music',     href: '/music'      },
-  { label: 'Locations', href: '/#locations' },
   {
-    label: 'Venues',
+    label: 'Locations',
     items: [
       { label: 'Ravello',  href: '/locations/ravello'  },
       { label: 'Positano', href: '/locations/positano' },
