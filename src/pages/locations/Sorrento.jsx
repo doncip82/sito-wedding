@@ -43,8 +43,8 @@ export default function LocationSorrento() {
           <p className="text-[.72rem] font-light tracking-[.06em] leading-[2] text-white/55 max-w-[60ch]">
             Sorrento faces north across the Bay of Naples toward Vesuvius — the only major
             resort on the peninsula where the volcano forms the visual backdrop to every
-            ceremony. Donato Cipriano performs at the clifftop hotels and private villas
-            of the Sorrentine coast.
+            ceremony. A carefully selected roster of artists performs at the clifftop
+            hotels and private villas of the Sorrentine coast.
           </p>
         </div>
       </section>
@@ -66,10 +66,9 @@ export default function LocationSorrento() {
             </p>
             <p>
               Sorrento is the cultural origin of <em>Torna a Surriento</em> (1902) and the
-              broader tradition of Neapolitan art song — the same musical lineage that Donato
-              draws upon when programming{' '}
+              broader tradition of Neapolitan art song — the same musical lineage that informs the{' '}
               <a href="/music/posteggia" className="link-underline">posteggia</a>
-              {' '}for cocktail hours on the peninsula. Performing this repertoire here is an
+              {' '}programming for cocktail hours on the peninsula. Performing this repertoire here is an
               act of geographic and cultural specificity, not decoration.
             </p>
             <p>
@@ -77,7 +76,7 @@ export default function LocationSorrento() {
               {' '}performs regularly in Sorrento for ceremony music, transitioning to the{' '}
               <a href="/trilogy-trio" className="link-underline">Trilogy Trio</a>
               {' '}for dinner reception — a programme that has become the standard format for
-              full-day wedding coordination on the Sorrentine peninsula.
+              full-day events on the Sorrentine peninsula.
             </p>
           </div>
         </div>
