@@ -18,6 +18,7 @@ export default function PageHead({ title, description, path = '', ogImage = '/im
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={`${SITE}${ogImage}`} />
+      <link rel="author" href="https://www.donatocipriano.com" />
     </Helmet>
   )
 }
