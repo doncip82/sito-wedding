@@ -142,9 +142,9 @@ export default function ViolinSolo() {
         flex items-center justify-between gap-8 flex-wrap">
         <p className="font-serif italic font-light leading-[1.18] text-white/82 max-w-[24ch]"
           style={{ fontSize: 'clamp(1.7rem,3.5vw,2.8rem)' }}>
-          Book Donato Cipriano<br />for Your Ceremony.
+          Enquire About<br />This Performance.
         </p>
-        <a href="mailto:info@donatocipriano.com"
+        <a href="/#contact"
           className="text-[.6rem] font-light tracking-[.22em] uppercase no-underline
             text-[#B8A882] border-b border-[rgba(184,168,130,.35)] pb-1
             hover:border-[#B8A882] transition-colors">
