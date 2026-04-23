@@ -33,7 +33,7 @@ export default function ViolinSolo() {
           <div className="w-9 h-[.5px] bg-[#B8A882] mb-8" />
           <p className="text-[.8rem] font-serif italic font-light text-white/50
             max-w-[36ch] leading-[1.8]">
-            "There sss are moments within a wedding that belong to a single voice."
+            "There are moments within a wedding that belong to a single voice."
           </p>
         </div>
       </section>

@@ -4,27 +4,33 @@ import { Helmet } from 'react-helmet-async'
 
 const MUSIC_OPTIONS = [
   {
-    label: 'EvoStrings',
-    sub:   'String Ensemble',
-    href:  '/evostrings',
-    bg:    '#2A2520',
+    label:     'EvoStrings',
+    sub:       'String Ensemble',
+    href:      '/evostrings',
+    img:       '/images/EvoStrings/EvoStrings.jpg',
+    objectFit: 'contain',
+    bg:        '#2A2520',
   },
   {
-    label: 'Trilogy Trio',
-    sub:   'Violin · Cello · Piano',
-    href:  '/trilogy-trio',
-    bg:    '#1E2228',
+    label:     'Trilogy Trio',
+    sub:       'Violin · Cello · Piano',
+    href:      '/trilogy-trio',
+    img:       '/images/Trilogy%20Trio/Trilogy%20Trio.jpg',
+    objectFit: 'contain',
+    bg:        '#1E2228',
   },
   {
     label: 'Violin Solo',
     sub:   'Solo Performance',
     href:  '/violin-solo',
+    img:   '/images/Violin%20Solo/immagine_donato.JPG',
     bg:    '#201E28',
   },
   {
     label: 'Saxophone',
     sub:   'Jazz & Contemporary',
     href:  '/music/saxophone',
+    img:   '/images/Saxophone/Sabasax%202.jpg',
     bg:    '#1C2420',
   },
   {
@@ -82,14 +88,17 @@ export default function MusicIndex() {
       {/* Grid */}
       <section className="px-[clamp(1rem,4vw,3rem)] pb-24 bg-[#F9F8F7]">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-          {MUSIC_OPTIONS.map(({ label, sub, href, bg }) => (
+          {MUSIC_OPTIONS.map(({ label, sub, href, bg, img, objectFit }) => (
             <Link
               key={label}
               to={href}
               className="group relative no-underline overflow-hidden"
               style={{ aspectRatio: '4/5', backgroundColor: bg }}
             >
-              {/* Placeholder — replace bg with WebP image when available */}
+              {img && (
+                <img src={img} alt={label}
+                  className={`absolute inset-0 w-full h-full ${objectFit === 'contain' ? 'object-contain' : 'object-cover'}`} />
+              )}
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
               {/* Gold hover line */}

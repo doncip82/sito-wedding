@@ -31,13 +31,8 @@ function EnsembleCard({ ensemble, index }) {
     >
       {/* Photo */}
       <div className="w-full overflow-hidden bg-[#1A1A1A]" style={{ aspectRatio: '4/5' }}>
-        {/* Replace div with: <img src={ensemble.photo} alt={ensemble.photoAlt} className="w-full h-full object-cover" /> */}
-        <div className={`w-full h-full flex items-end p-4
-          ${index === 0 ? 'bg-[#1D2535]' : index === 1 ? 'bg-[#1A2830]' : 'bg-[#252018]'}`}>
-          <span className="text-[.45rem] tracking-[.18em] uppercase text-white/15 font-light">
-            {ensemble.name} — add photo
-          </span>
-        </div>
+        <img src={ensemble.photo} alt={ensemble.photoAlt}
+          className={`w-full h-full ${ensemble.photoFit === 'contain' ? 'object-contain' : 'object-cover'}`} />
       </div>
 
       {/* Video placeholder / embed */}
@@ -68,7 +63,7 @@ function EnsembleCard({ ensemble, index }) {
           {ensemble.name}
         </h3>
         <p className="text-[.56rem] font-light tracking-[.18em] uppercase text-[#8A7A5A]
-          -mt-[.4rem] mb-[.6rem] font-[300]">
+          -mt-[.4rem] mb-[.6rem]">
           {ensemble.subLabel}
         </p>
 

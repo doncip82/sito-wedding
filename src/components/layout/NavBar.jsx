@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
 const NAV_ITEMS = [
+  { label: 'Home',      href: '/'           },
   { label: 'Occasions', href: '/#occasions' },
   {
     label: 'Partners',
