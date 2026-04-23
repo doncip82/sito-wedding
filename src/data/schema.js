@@ -22,7 +22,6 @@ export const baseSchema = {
         jobTitle: 'Professional Violinist',
         url: 'https://www.donatocipriano.com',
         sameAs: [
-          'https://www.donatocipriano.com',
           'https://www.donatocipriano.com/en/wedding',
         ],
       },
