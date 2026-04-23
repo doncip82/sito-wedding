@@ -4,13 +4,13 @@ export default function MusicOpera() {
   return (
     <div className="bg-[#F9F8F7] pt-[68px]">
       <Helmet>
-        <title>Opera for Weddings on the Amalfi Coast | Donato Cipriano</title>
-        <meta name="description" content="Lyric soprano and tenor for wedding ceremonies and dinner in Ravello, Positano and Sorrento. Puccini, Verdi and Neapolitan art song. Curated by Donato Cipriano." />
+        <title>Opera for Weddings in Italy | Soprano &amp; Tenor | Wedding Music Ravello</title>
+        <meta name="description" content="Lyric soprano and tenor for wedding ceremonies and dinner interludes on the Amalfi Coast. Puccini, Verdi and Neapolitan repertoire at venues in Ravello and Positano." />
         <link rel="canonical" href="https://www.weddingmusicravello.com/music/opera" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.weddingmusicravello.com/music/opera" />
-        <meta property="og:title" content="Opera for Amalfi Coast Weddings — Donato Cipriano" />
-        <meta property="og:description" content="Lyric soprano and tenor — Puccini, Verdi, Neapolitan art song — for luxury weddings in Ravello, Positano and Sorrento." />
+        <meta property="og:title" content="Opera for Weddings in Italy | Soprano &amp; Tenor | Wedding Music Ravello" />
+        <meta property="og:description" content="Lyric soprano and tenor for wedding ceremonies and dinner interludes on the Amalfi Coast. Puccini, Verdi and Neapolitan repertoire at venues in Ravello and Positano." />
         <meta property="og:image" content="https://www.weddingmusicravello.com/images/og-cover.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>

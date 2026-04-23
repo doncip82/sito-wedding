@@ -19,13 +19,13 @@ export default function LocationRavello() {
   return (
     <div className="bg-[#F9F8F7] pt-[68px]">
       <Helmet>
-        <title>Wedding Music in Ravello | Donato Cipriano — Amalfi Coast</title>
-        <meta name="description" content="Violin, string ensembles, and complete wedding music coordination in Ravello. Donato Cipriano performs at Villa Cimbrone, Palazzo Avino, Belmond Hotel Caruso and Villa Eva." />
+        <title>Wedding Music in Ravello | Amalfi Coast | Wedding Music Ravello</title>
+        <meta name="description" content="Live music for weddings and events in Ravello — Villa Cimbrone, Palazzo Avino, Belmond Hotel Caruso and Villa Eva. String ensembles, violin, saxophone and DJ." />
         <link rel="canonical" href="https://www.weddingmusicravello.com/locations/ravello" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.weddingmusicravello.com/locations/ravello" />
-        <meta property="og:title" content="Wedding Music in Ravello — Donato Cipriano" />
-        <meta property="og:description" content="String ensembles, violin solo and complete wedding coordination at Villa Cimbrone, Palazzo Avino and Belmond Hotel Caruso in Ravello." />
+        <meta property="og:title" content="Wedding Music in Ravello | Amalfi Coast | Wedding Music Ravello" />
+        <meta property="og:description" content="Live music for weddings and events in Ravello — Villa Cimbrone, Palazzo Avino, Belmond Hotel Caruso and Villa Eva. String ensembles, violin, saxophone and DJ." />
         <meta property="og:image" content="https://www.weddingmusicravello.com/images/og-cover.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(ravelloSchema)}</script>

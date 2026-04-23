@@ -62,17 +62,17 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Wedding Music Ravello — Bespoke Live Music for Weddings | Amalfi Coast</title>
-        <meta name="description" content="Curated live music for destination weddings in Ravello, Positano and Sorrento. String ensembles, solo violin, saxophone, vocals and DJ — carefully selected for the Amalfi Coast." />
+        <title>Wedding Music on the Amalfi Coast | Wedding Music Ravello</title>
+        <meta name="description" content="A curated selection of music artists and ensembles for luxury weddings and private events in Ravello, Positano and Sorrento. String quartets, violin, saxophone, DJ and more." />
         <link rel="canonical" href="https://www.weddingmusicravello.com/" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.weddingmusicravello.com/" />
-        <meta property="og:title" content="Wedding Music Ravello — Bespoke Live Music for Weddings | Amalfi Coast" />
-        <meta property="og:description" content="Curated live music for destination weddings on the Amalfi Coast. String ensembles, solo violin, saxophone, vocals and DJ." />
+        <meta property="og:title" content="Wedding Music on the Amalfi Coast | Wedding Music Ravello" />
+        <meta property="og:description" content="A curated selection of music artists and ensembles for luxury weddings and private events in Ravello, Positano and Sorrento. String quartets, violin, saxophone, DJ and more." />
         <meta property="og:image" content="https://www.weddingmusicravello.com/images/og-cover.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Wedding Music Ravello — Bespoke Live Music for Weddings | Amalfi Coast" />
-        <meta name="twitter:description" content="Curated live music for destination weddings on the Amalfi Coast. String ensembles, solo violin, saxophone, vocals and DJ." />
+        <meta name="twitter:title" content="Wedding Music on the Amalfi Coast | Wedding Music Ravello" />
+        <meta name="twitter:description" content="A curated selection of music artists and ensembles for luxury weddings and private events in Ravello, Positano and Sorrento. String quartets, violin, saxophone, DJ and more." />
         <meta name="twitter:image" content="https://www.weddingmusicravello.com/images/og-cover.jpg" />
         <script type="application/ld+json">{JSON.stringify(baseSchema)}</script>
       </Helmet>

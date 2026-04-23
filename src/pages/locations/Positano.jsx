@@ -16,13 +16,13 @@ export default function LocationPositano() {
   return (
     <div className="bg-[#F9F8F7] pt-[68px]">
       <Helmet>
-        <title>Wedding Music in Positano | Donato Cipriano — Amalfi Coast</title>
-        <meta name="description" content="Live music for destination weddings in Positano. Donato Cipriano performs at Villa Treville, Le Sirenuse and cliff-edge private villas above the Tyrrhenian Sea." />
+        <title>Wedding Music in Positano | Amalfi Coast | Wedding Music Ravello</title>
+        <meta name="description" content="Curated music for weddings and private events in Positano. String quartets, violin and saxophone at cliff-edge venues including Villa Treville and Le Sirenuse." />
         <link rel="canonical" href="https://www.weddingmusicravello.com/locations/positano" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.weddingmusicravello.com/locations/positano" />
-        <meta property="og:title" content="Wedding Music in Positano — Donato Cipriano" />
-        <meta property="og:description" content="String ensembles and violin solo at Villa Treville, Le Sirenuse and private cliff villas in Positano." />
+        <meta property="og:title" content="Wedding Music in Positano | Amalfi Coast | Wedding Music Ravello" />
+        <meta property="og:description" content="Curated music for weddings and private events in Positano. String quartets, violin and saxophone at cliff-edge venues including Villa Treville and Le Sirenuse." />
         <meta property="og:image" content="https://www.weddingmusicravello.com/images/og-cover.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(positanoSchema)}</script>

@@ -4,13 +4,13 @@ export default function MusicSaxophone() {
   return (
     <div className="bg-[#F9F8F7] pt-[68px]">
       <Helmet>
-        <title>Saxophone for Weddings on the Amalfi Coast | Donato Cipriano</title>
-        <meta name="description" content="Professional saxophone for luxury weddings in Ravello, Positano and Sorrento. Cocktail hour, ceremony and dinner. Curated by Donato Cipriano." />
+        <title>Saxophone for Weddings on the Amalfi Coast | Wedding Music Ravello</title>
+        <meta name="description" content="Live saxophone for wedding cocktail hours, receptions and private dinners in Ravello and Positano. Jazz, soul and contemporary repertoire." />
         <link rel="canonical" href="https://www.weddingmusicravello.com/music/saxophone" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.weddingmusicravello.com/music/saxophone" />
-        <meta property="og:title" content="Saxophone for Amalfi Coast Weddings — Donato Cipriano" />
-        <meta property="og:description" content="Professional saxophone — jazz, contemporary and classical — for luxury wedding cocktail hours and ceremonies in Ravello and Positano." />
+        <meta property="og:title" content="Saxophone for Weddings on the Amalfi Coast | Wedding Music Ravello" />
+        <meta property="og:description" content="Live saxophone for wedding cocktail hours, receptions and private dinners in Ravello and Positano. Jazz, soul and contemporary repertoire." />
         <meta property="og:image" content="https://www.weddingmusicravello.com/images/og-cover.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>

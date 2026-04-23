@@ -4,13 +4,13 @@ export default function MusicDJ() {
   return (
     <div className="bg-[#F9F8F7] pt-[68px]">
       <Helmet>
-        <title>Wedding DJ on the Amalfi Coast — Luxury Service | Donato Cipriano</title>
-        <meta name="description" content="Professional DJ for luxury wedding receptions in Ravello, Positano and Sorrento. Curated by Donato Cipriano — not a generic booking service." />
+        <title>Wedding DJ Amalfi Coast | Luxury Events | Wedding Music Ravello</title>
+        <meta name="description" content="Professional DJ service for wedding receptions and private celebrations on the Amalfi Coast. Curated sets for luxury venues in Ravello, Positano and Sorrento." />
         <link rel="canonical" href="https://www.weddingmusicravello.com/music/dj" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.weddingmusicravello.com/music/dj" />
-        <meta property="og:title" content="Wedding DJ Amalfi Coast — Donato Cipriano" />
-        <meta property="og:description" content="Curated DJ service for luxury weddings in Ravello, Positano and Sorrento. Selected for direct venue experience, not volume of bookings." />
+        <meta property="og:title" content="Wedding DJ Amalfi Coast | Luxury Events | Wedding Music Ravello" />
+        <meta property="og:description" content="Professional DJ service for wedding receptions and private celebrations on the Amalfi Coast. Curated sets for luxury venues in Ravello, Positano and Sorrento." />
         <meta property="og:image" content="https://www.weddingmusicravello.com/images/og-cover.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>

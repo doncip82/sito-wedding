@@ -7,7 +7,9 @@ const ensemble = ensembles.find(e => e.id === 'evostrings')
 
 export default function EvoStrings() {
   useEffect(() => {
-    document.title = 'EvoStrings — Luxury String Ensemble | Amalfi Coast Weddings'
+    document.title = 'String Quartet & Ensemble for Weddings | EvoStrings | Wedding Music Ravello'
+    const meta = document.querySelector('meta[name="description"]') || (() => { const m = document.createElement('meta'); m.name = 'description'; document.head.appendChild(m); return m })()
+    meta.content = 'EvoStrings performs as duo, trio and quartet at Villa Cimbrone, Palazzo Avino and Belmond Hotel Caruso. Classical and contemporary repertoire for ceremonies and receptions on the Amalfi Coast.'
     const script = document.createElement('script')
     script.type = 'application/ld+json'
     script.text = JSON.stringify(ensembleSchema(ensemble))

@@ -7,7 +7,9 @@ const ensemble = ensembles.find(e => e.id === 'violino-solo')
 
 export default function ViolinSolo() {
   useEffect(() => {
-    document.title = 'Violino Solo — Donato Cipriano | Solo Violin for Weddings | Amalfi Coast'
+    document.title = 'Violin Solo for Wedding Ceremony | Amalfi Coast | Wedding Music Ravello'
+    const meta = document.querySelector('meta[name="description"]') || (() => { const m = document.createElement('meta'); m.name = 'description'; document.head.appendChild(m); return m })()
+    meta.content = 'Solo violin for wedding ceremonies in Ravello, Positano and Sorrento. Classical and contemporary repertoire, performed without amplification at cliff-edge venues.'
     const script = document.createElement('script')
     script.type = 'application/ld+json'
     script.text = JSON.stringify(ensembleSchema(ensemble))

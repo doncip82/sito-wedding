@@ -4,13 +4,13 @@ export default function MusicPosteggia() {
   return (
     <div className="bg-[#F9F8F7] pt-[68px]">
       <Helmet>
-        <title>Neapolitan Posteggia for Weddings | Donato Cipriano — Amalfi Coast</title>
-        <meta name="description" content="Authentic Neapolitan posteggia — mandolin, guitar and voice — for wedding cocktail hours in Ravello, Positano and Sorrento. Curated by Donato Cipriano." />
+        <title>Neapolitan Posteggia for Weddings | Amalfi Coast | Wedding Music Ravello</title>
+        <meta name="description" content="Traditional Neapolitan posteggia — mandolin, guitar and voice — for wedding cocktail hours and receptions in Ravello, Positano and Sorrento." />
         <link rel="canonical" href="https://www.weddingmusicravello.com/music/posteggia" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.weddingmusicravello.com/music/posteggia" />
-        <meta property="og:title" content="Neapolitan Posteggia for Weddings — Donato Cipriano" />
-        <meta property="og:description" content="Authentic Neapolitan serenade tradition for Amalfi Coast wedding cocktail hours. Mandolin, guitar and voice moving between guests." />
+        <meta property="og:title" content="Neapolitan Posteggia for Weddings | Amalfi Coast | Wedding Music Ravello" />
+        <meta property="og:description" content="Traditional Neapolitan posteggia — mandolin, guitar and voice — for wedding cocktail hours and receptions in Ravello, Positano and Sorrento." />
         <meta property="og:image" content="https://www.weddingmusicravello.com/images/og-cover.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>

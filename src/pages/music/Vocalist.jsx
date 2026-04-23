@@ -4,13 +4,13 @@ export default function MusicVocalist() {
   return (
     <div className="bg-[#F9F8F7] pt-[68px]">
       <Helmet>
-        <title>Wedding Singer Amalfi Coast | Donato Cipriano</title>
-        <meta name="description" content="Professional wedding vocalist for ceremonies and receptions in Ravello, Positano and Sorrento. Pop, soul and contemporary repertoire. Curated by Donato Cipriano." />
+        <title>Wedding Singer Amalfi Coast | Vocalist | Wedding Music Ravello</title>
+        <meta name="description" content="Live vocal performance for weddings and private events in Ravello and Positano. Jazz, pop and classical repertoire, solo or with ensemble." />
         <link rel="canonical" href="https://www.weddingmusicravello.com/music/vocalist" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.weddingmusicravello.com/music/vocalist" />
-        <meta property="og:title" content="Wedding Singer Amalfi Coast — Donato Cipriano" />
-        <meta property="og:description" content="Professional wedding vocalist — pop, soul, contemporary — for ceremonies and receptions in Ravello, Positano and Sorrento." />
+        <meta property="og:title" content="Wedding Singer Amalfi Coast | Vocalist | Wedding Music Ravello" />
+        <meta property="og:description" content="Live vocal performance for weddings and private events in Ravello and Positano. Jazz, pop and classical repertoire, solo or with ensemble." />
         <meta property="og:image" content="https://www.weddingmusicravello.com/images/og-cover.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>

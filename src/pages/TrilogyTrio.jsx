@@ -7,7 +7,9 @@ const ensemble = ensembles.find(e => e.id === 'trilogy-trio')
 
 export default function TrilogyTrio() {
   useEffect(() => {
-    document.title = 'Trilogy Trio — Violin, Cello & Piano | 1M+ Views | Amalfi Coast Weddings'
+    document.title = 'String Trio & Piano for Weddings in Italy | Trilogy Trio | Wedding Music Ravello'
+    const meta = document.querySelector('meta[name="description"]') || (() => { const m = document.createElement('meta'); m.name = 'description'; document.head.appendChild(m); return m })()
+    meta.content = 'Trilogy Trio — violin, cello and piano — performs cinematic, pop and classical repertoire for weddings and private events along the Amalfi Coast.'
     const script = document.createElement('script')
     script.type = 'application/ld+json'
     script.text = JSON.stringify(ensembleSchema(ensemble))

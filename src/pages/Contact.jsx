@@ -9,7 +9,9 @@ const ensembles = ['EvoStrings', 'Trilogy Trio', 'Violino Solo', 'Not sure yet']
 
 export default function Contact() {
   useEffect(() => {
-    document.title = 'Enquire — Wedding Music Ravello | Bespoke Wedding Music'
+    document.title = 'Enquire | Wedding Music Ravello'
+    const meta = document.querySelector('meta[name="description"]') || (() => { const m = document.createElement('meta'); m.name = 'description'; document.head.appendChild(m); return m })()
+    meta.content = 'Get in touch to discuss music for your wedding or private event on the Amalfi Coast. We will respond within 48 hours.'
   }, [])
 
   const [form, setForm] = useState({

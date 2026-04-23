@@ -12,13 +12,13 @@ export default function LocationSorrento() {
   return (
     <div className="bg-[#F9F8F7] pt-[68px]">
       <Helmet>
-        <title>Wedding Music in Sorrento | Donato Cipriano — Amalfi Coast</title>
-        <meta name="description" content="Live music for destination weddings in Sorrento. Donato Cipriano performs at Grand Hotel Excelsior Vittoria, Villa Astor and terraces overlooking the Bay of Naples and Vesuvius." />
+        <title>Wedding Music in Sorrento | Wedding Music Ravello</title>
+        <meta name="description" content="Live music for weddings and events in Sorrento and the Sorrentine Peninsula. Ensembles and soloists available for ceremonies, receptions and private celebrations." />
         <link rel="canonical" href="https://www.weddingmusicravello.com/locations/sorrento" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.weddingmusicravello.com/locations/sorrento" />
-        <meta property="og:title" content="Wedding Music in Sorrento — Donato Cipriano" />
-        <meta property="og:description" content="String ensembles, violin solo and complete wedding music in Sorrento, overlooking the Bay of Naples and Vesuvius." />
+        <meta property="og:title" content="Wedding Music in Sorrento | Wedding Music Ravello" />
+        <meta property="og:description" content="Live music for weddings and events in Sorrento and the Sorrentine Peninsula. Ensembles and soloists available for ceremonies, receptions and private celebrations." />
         <meta property="og:image" content="https://www.weddingmusicravello.com/images/og-cover.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(sorrentoSchema)}</script>
