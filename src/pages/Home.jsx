@@ -20,7 +20,7 @@ function GeoIntro() {
         musicians — string ensembles, solo performers, saxophone, vocalists and DJ — alongside
         trusted local partners: photographers with direct experience at Villa Cimbrone and
         Palazzo Avino, florists specialising in Amalfi Coast seasonal flora, vintage car hire,
-        and wedding planners with permanent Campania presence. Every supplier in our network
+        boat rental, and wedding planners with permanent Campania presence. Every supplier in our network
         has been personally evaluated. We serve couples celebrating at venues in Ravello,
         Positano, and Sorrento.
       </p>
