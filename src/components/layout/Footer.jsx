@@ -15,6 +15,7 @@ export default function Footer() {
     { label: 'Vintage Cars',     href: '/vendors/vintage-cars'     },
     { label: 'Florists',         href: '/vendors/florists'         },
     { label: 'Celebrants',       href: '/vendors/celebrants'       },
+    { label: 'Boat Rental',      href: '/vendors/boat-rental'      },
   ]
 
   return (
