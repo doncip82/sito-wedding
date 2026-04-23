@@ -15,14 +15,14 @@ function GeoIntro() {
         Wedding Music on the Amalfi Coast
       </h1>
       <p className="text-[.72rem] font-light tracking-[.05em] leading-[2] text-[#404040] max-w-[65ch]">
-        Donato Cipriano is a professional violinist and artistic director based in Campania,
-        Italy, offering complete wedding music coordination along the Amalfi Coast. He leads
-        a roster of ensembles — EvoStrings (string quartet and trio), Trilogy Trio (strings
-        and piano), and Violino Solo — alongside saxophone, vocal, and DJ services. Beyond
-        music, he curates a selection of trusted local partners: photographers with direct
-        experience at Villa Cimbrone and Palazzo Avino, florists specialising in Amalfi Coast
-        seasonal flora, vintage car hire, and wedding planners with permanent Campania presence.
-        He performs and coordinates regularly at venues in Ravello, Positano, and Sorrento.
+        Wedding Music Ravello is a curated platform for live music and event services along
+        the Amalfi Coast. We bring together a carefully selected network of professional
+        musicians — string ensembles, solo performers, saxophone, vocalists and DJ — alongside
+        trusted local partners: photographers with direct experience at Villa Cimbrone and
+        Palazzo Avino, florists specialising in Amalfi Coast seasonal flora, vintage car hire,
+        and wedding planners with permanent Campania presence. Every supplier in our network
+        has been personally evaluated. We serve couples celebrating at venues in Ravello,
+        Positano, and Sorrento.
       </p>
     </section>
   )
@@ -52,17 +52,17 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Wedding Music Ravello — Bespoke Wedding Music by Donato Cipriano | Amalfi Coast</title>
-        <meta name="description" content="EvoStrings, Trilogy Trio and solo violin for luxury destination weddings in Ravello, Positano and Sorrento. Artistic direction by Donato Cipriano." />
+        <title>Wedding Music Ravello — Bespoke Live Music for Weddings | Amalfi Coast</title>
+        <meta name="description" content="Curated live music for destination weddings in Ravello, Positano and Sorrento. String ensembles, solo violin, saxophone, vocals and DJ — carefully selected for the Amalfi Coast." />
         <link rel="canonical" href="https://www.weddingmusicravello.com/" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.weddingmusicravello.com/" />
-        <meta property="og:title" content="Wedding Music Ravello — Bespoke Wedding Music by Donato Cipriano" />
-        <meta property="og:description" content="EvoStrings, Trilogy Trio and solo violin for luxury destination weddings on the Amalfi Coast." />
+        <meta property="og:title" content="Wedding Music Ravello — Bespoke Live Music for Weddings | Amalfi Coast" />
+        <meta property="og:description" content="Curated live music for destination weddings on the Amalfi Coast. String ensembles, solo violin, saxophone, vocals and DJ." />
         <meta property="og:image" content="https://www.weddingmusicravello.com/images/og-cover.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Wedding Music Ravello — Bespoke Wedding Music by Donato Cipriano" />
-        <meta name="twitter:description" content="EvoStrings, Trilogy Trio and solo violin for luxury destination weddings on the Amalfi Coast." />
+        <meta name="twitter:title" content="Wedding Music Ravello — Bespoke Live Music for Weddings | Amalfi Coast" />
+        <meta name="twitter:description" content="Curated live music for destination weddings on the Amalfi Coast. String ensembles, solo violin, saxophone, vocals and DJ." />
         <meta name="twitter:image" content="https://www.weddingmusicravello.com/images/og-cover.jpg" />
         <script type="application/ld+json">{JSON.stringify(baseSchema)}</script>
       </Helmet>
