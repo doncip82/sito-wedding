@@ -105,13 +105,13 @@ export default function Locations() {
           <h2 id="loc-title"
             className="font-serif italic font-light leading-[1.1] text-white/88"
             style={{ fontSize: 'clamp(2rem,4.5vw,3.6rem)', maxWidth: '20ch' }}>
-            Exquisite Locations,<br />Each with Its Own Voice
+            The Venues We Know<br />by Heart
           </h2>
         </div>
         <p className="text-[.66rem] font-light tracking-[.08em] leading-[2]
           text-white/50 max-w-[34ch] self-end">
-          Stone walls, open terraces and gilded ballrooms each demand a different approach
-          to sound. We know these spaces — their acoustics, their silences, their light.
+          Each venue on the Amalfi Coast has its own acoustic signature, its own logistical
+          constraints, its own light at golden hour. We know them all.
         </p>
       </div>
 

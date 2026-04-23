@@ -10,7 +10,7 @@ export const venues = [
     schemaType: 'LandmarksOrHistoricalBuildings',
     addressLocality: 'Ravello',
     tags: ['EvoStrings', 'Ceremony', 'Open Terrace'],
-    description: `The Belvedere of Infinity is not merely a view — it is an acoustic phenomenon. Sound carries differently at altitude: the absence of urban noise, the breath of the Tyrrhenian wind between phrases. A string quartet here does not compete with the landscape; it completes it. EvoStrings has performed beneath its wisteria-draped pergola for ceremonies of singular intimacy.`,
+    description: `A 12th-century estate set at the southernmost point of Ravello's promontory. Its Belvedere of Infinity, perched at 300m above sea level, accommodates intimate ceremonies of up to 60 guests.`,
     recommendedEnsembles: ['evostrings', 'violino-solo'],
   },
   {
@@ -21,7 +21,7 @@ export const venues = [
     schemaType: 'Hotel',
     addressLocality: 'Ravello',
     tags: ['Trilogy Trio', 'Aperitivo', 'Indoor & Outdoor'],
-    description: `A twelfth-century villa converted into one of the coast's most distinguished hotels. Its pink marble terrace and intimate salons present two distinct acoustic environments — the terrace calls for a duo whose notes dissolve into the open air; the indoor ballroom rewards a fuller ensemble. Donato Cipriano adapts the arrangement to each space personally.`,
+    description: `A private 12th-century palazzo converted into a 5-star hotel. Its pink façade and panoramic terrace have hosted ceremonies for couples from over 40 countries.`,
     recommendedEnsembles: ['trilogy-trio', 'evostrings'],
   },
   {
@@ -32,7 +32,7 @@ export const venues = [
     schemaType: 'Hotel',
     addressLocality: 'Ravello',
     tags: ['Violino Solo', 'EvoStrings Quartet', 'Sunset Ceremony'],
-    description: `The infinity pool terrace of the Caruso carries a natural reverberation unlike any other on the coast — the limestone cliffside behind the property acts as a subtle reflector, lending live performance a warmth that no recording can replicate. We recommend Donato Cipriano in solo or the full EvoStrings quartet for sunset ceremonies on the main terrace.`,
+    description: `Former bishop's palace, now a Belmond property. Its infinity pool terrace offers an unobstructed view of the Gulf of Salerno — one of the most photographed ceremony settings on the coast.`,
     recommendedEnsembles: ['violino-solo', 'evostrings'],
   },
   {
@@ -43,7 +43,7 @@ export const venues = [
     schemaType: 'Hotel',
     addressLocality: 'Positano',
     tags: ['Trilogy Trio', 'EvoStrings', 'Multi-Terrace'],
-    description: `Franco Zeffirelli's former private residence perches directly above the sea. Its terraced gardens cascade across five levels, each requiring its own musical approach. The Trilogy Trio has performed on the lower terrace as the sun fell into the water; EvoStrings in the upper loggia during candlelit dinners. No other venue on the coast demands such intimate familiarity with its spaces.`,
+    description: `Once the private residence of Franco Zeffirelli. Four terraced gardens descend toward the sea; the lowest terrace accommodates ceremonies of up to 80 guests.`,
     recommendedEnsembles: ['trilogy-trio', 'evostrings'],
   },
   {
@@ -54,7 +54,7 @@ export const venues = [
     schemaType: 'Hotel',
     addressLocality: 'Conca dei Marini',
     tags: ['Violino Solo', 'EvoStrings Duo', 'Cloister Ceremony'],
-    description: `A seventeenth-century Dominican convent suspended between cliffs and sea. Its cloister creates a natural resonance chamber of rare quality. A solo violin or EvoStrings duo in this space achieves a depth of sound that neither amplification nor technology can approximate. Sacred, ancient, and entirely irreplaceable.`,
+    description: `An 17th-century Dominican monastery converted into a hotel in 2012. Its clifftop garden overlooks the Fiordo di Furore — one of the most acoustically sheltered outdoor settings on the coast.`,
     recommendedEnsembles: ['violino-solo', 'evostrings'],
   },
   {
@@ -65,7 +65,7 @@ export const venues = [
     schemaType: 'LandmarksOrHistoricalBuildings',
     addressLocality: 'Ravello',
     tags: ['EvoStrings', 'Garden Ceremony', 'Outdoor Reception'],
-    description: `Less known than its neighbours, Villa Eva rewards those who seek it. Its Art Nouveau gardens — wild, lush and largely untouched since the early twentieth century — frame a natural outdoor theatre of remarkable acoustic character. The canopy of ancient trees absorbs higher frequencies, leaving only warmth. EvoStrings performs here as though the garden itself were listening.`,
+    description: `Set at the highest point of Ravello, surrounded by terraced gardens and ancient lemon groves. Among the most atmospheric venues for evening receptions.`,
     recommendedEnsembles: ['evostrings'],
   },
 ]
