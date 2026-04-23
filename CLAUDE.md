@@ -21,13 +21,8 @@
 - Cantanti / Vocalist
 - DJ
 
-### Altri fornitori
-- Fotografi
-- Wedding Planners
-- Vintage Cars
-- Fioristi
-- Celebranti
-- Noleggio barche
+### Nota strategica — Solo musica
+Il sito propone **esclusivamente partner musicali**. L'aggiunta di fotografi, planner, vintage cars, fioristi, celebranti o altri fornitori non musicisti è stata valutata e scartata per preservare il posizionamento curatoriale. Qualsiasi futura espansione verso fornitori non musicali deve avvenire su dominio separato.
 
 ## Brand & Identità
 - **Nome progetto:** SITO WEDDING (repository: `doncip82/sito-wedding`)
@@ -76,7 +71,6 @@ src/
 │   ├── Home.jsx, EvoStrings.jsx, TrilogyTrio.jsx, ViolinSolo.jsx, Contact.jsx
 │   ├── music/       MusicIndex.jsx, Saxophone.jsx, DJ.jsx, Vocalist.jsx, Opera.jsx, Posteggia.jsx
 │   ├── locations/   Positano.jsx, Ravello.jsx, Sorrento.jsx
-│   └── vendors/     Photographers.jsx, WeddingPlanners.jsx, VintageCars.jsx, Florists.jsx, Celebrant.jsx
 ├── routes.js, App.jsx, main.jsx
 └── styles/          globals.css
 
@@ -100,7 +94,7 @@ Manifesto curatoriale della piattaforma. Nessun nome di persona. Foto placeholde
 
 ## Footer — stato attuale
 - Nav principale: Occasions · Locations · About · Enquire
-- Colonna Partners: Music · Photographers · Wedding Planners · Vintage Cars · Florists · Celebrants · Boat Rental
+- Colonna Partners rimossa — solo nav links: Music · Occasions · Locations · About · Enquire
 - Nessun link esterno, nessun riferimento a Donato o EvoStrings
 
 ## Venue principali (Our Playground)
@@ -117,7 +111,6 @@ Villa Cimbrone · Palazzo Avino · Belmond Hotel Caruso · Villa Treville · Mon
 - Aggiungere foto reale About (sostituire placeholder `bg-[#1C2030]`)
 - Aggiungere YouTube embed ID in src/data/ensembles.js
 - Collegare form Contact.jsx a Formspree
-- Creare pagina vendors/boat-rental
 - Aggiungere email piattaforma dedicata (sostituire info@donatocipriano.com)
 
 ## Comandi utili
