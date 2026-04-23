@@ -2,11 +2,19 @@
 
 export default function Footer() {
   const navLinks = [
-    { label: 'Music',     href: '/#services'  },
     { label: 'Occasions', href: '/#occasions' },
     { label: 'Locations', href: '/#locations' },
     { label: 'About',     href: '/#about'     },
     { label: 'Enquire',   href: '/#contact'   },
+  ]
+
+  const partnerLinks = [
+    { label: 'Music',            href: '/#services'                },
+    { label: 'Photographers',    href: '/vendors/photographers'    },
+    { label: 'Wedding Planners', href: '/vendors/wedding-planners' },
+    { label: 'Vintage Cars',     href: '/vendors/vintage-cars'     },
+    { label: 'Florists',         href: '/vendors/florists'         },
+    { label: 'Celebrants',       href: '/vendors/celebrants'       },
   ]
 
   return (
@@ -44,25 +52,15 @@ export default function Footer() {
         {/* Partners */}
         <div className="flex flex-col gap-3">
           <p className="text-[.5rem] font-light tracking-[.2em] uppercase text-white/20">
-            An artistic project by
+            Partners
           </p>
-          <div className="flex items-center gap-3">
-            <a href="https://www.donatocipriano.com/en/wedding#services"
-              target="_blank" rel="noopener noreferrer"
-              aria-label="Donato Cipriano — Official Website"
-              className="font-serif italic font-light text-[.95rem] tracking-[.03em]
-                text-white/55 no-underline hover:text-[#B8A882] transition-colors">
-              Donato Cipriano
+          {partnerLinks.map(({ label, href }) => (
+            <a key={label} href={href}
+              className="text-[.56rem] font-light tracking-[.18em] uppercase no-underline
+                text-white/40 hover:text-[#B8A882] transition-colors">
+              {label}
             </a>
-            <span className="text-[#B8A882]/30 text-[.6rem]" aria-hidden="true">·</span>
-            <a href="https://www.evostrings.it/"
-              target="_blank" rel="noopener noreferrer"
-              aria-label="EvoStrings — Official Website"
-              className="font-serif italic font-light text-[.95rem] tracking-[.03em]
-                text-white/55 no-underline hover:text-[#B8A882] transition-colors">
-              EvoStrings.it
-            </a>
-          </div>
+          ))}
         </div>
       </div>
 
