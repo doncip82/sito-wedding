@@ -124,15 +124,15 @@ export default function Services() {
 
       <div className="flex justify-between items-start gap-8 mb-[clamp(3.5rem,8vw,7rem)] flex-wrap">
         <div>
-          <p className="eyebrow mb-[1.1rem]">Our Music</p>
+          <p className="eyebrow mb-[1.1rem]">Our Partners</p>
           <h2 id="s-title" className="section-title" style={{ maxWidth: '18ch' }}>
-            Every Ensemble,<br />Composed for the Moment
+            A Curated Selection<br />of Artists
           </h2>
         </div>
         <p className="text-[.64rem] font-light tracking-[.1em] leading-[1.95] text-[#404040]
           max-w-[30ch] self-end text-right">
-          Exclusive bespoke planning for every celebration.<br />
-          Quality and detailed curation, without compromise.
+          Each ensemble and artist represented here has been selected for their ability to read
+          a room, adapt to a venue, and shape the emotional arc of an event — not merely to perform.
         </p>
       </div>
 
