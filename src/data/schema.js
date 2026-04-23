@@ -11,7 +11,7 @@ export const baseSchema = {
     {
       '@type': ['LocalBusiness', 'MusicGroup'],
       '@id': 'https://www.weddingmusicravello.com/#organization',
-      name: 'Donato Cipriano — Wedding Music Ravello',
+      name: 'Wedding Music Ravello',
       url: 'https://www.weddingmusicravello.com',
       description:
         'Professional wedding music on the Amalfi Coast. Violin solos, string ensembles (EvoStrings, Trilogy Trio), saxophone, and DJ services for luxury weddings at Villa Cimbrone, Palazzo Avino, Belmond Hotel Caruso and private villas in Ravello, Positano and Sorrento.',
@@ -19,8 +19,12 @@ export const baseSchema = {
       founder: {
         '@type': 'Person',
         name: 'Donato Cipriano',
-        jobTitle: 'Violinist & Artistic Director',
-        sameAs: 'https://www.donatocipriano.com',
+        jobTitle: 'Professional Violinist',
+        url: 'https://www.donatocipriano.com',
+        sameAs: [
+          'https://www.donatocipriano.com',
+          'https://www.donatocipriano.com/en/wedding',
+        ],
       },
       areaServed: [
         { '@type': 'City', name: 'Ravello' },
@@ -77,7 +81,7 @@ export const ensembleSchema = (ensemble) => ({
   member: {
     '@type': 'Person',
     name: 'Donato Cipriano',
-    jobTitle: 'Artistic Director & Professional Violinist',
+    jobTitle: 'Professional Violinist',
     url: 'https://www.donatocipriano.com/en/wedding#services',
   },
 })
