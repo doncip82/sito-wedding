@@ -10,20 +10,30 @@ import About     from '@/components/sections/About.jsx'
 function GeoIntro() {
   return (
     <section className="px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3rem,6vw,5rem)] bg-[#F9F8F7] border-b border-black/[.06]">
+      <p className="eyebrow mb-[1.1rem]">Ravello · Città della Musica</p>
       <h1 className="font-serif italic font-light leading-[1.08] text-[#1A1A1A] mb-6"
         style={{ fontSize: 'clamp(1.6rem,3vw,2.4rem)', maxWidth: '32ch' }}>
-        Wedding Music on the Amalfi Coast
+        Where Music Has Always Been the Centre of Everything
       </h1>
-      <p className="text-[.72rem] font-light tracking-[.05em] leading-[2] text-[#404040] max-w-[65ch]">
-        Wedding Music Ravello is a curated platform for live music and event services along
-        the Amalfi Coast. We bring together a carefully selected network of professional
-        musicians — string ensembles, solo performers, saxophone, vocalists and DJ — alongside
-        trusted local partners: photographers with direct experience at Villa Cimbrone and
-        Palazzo Avino, florists specialising in Amalfi Coast seasonal flora, vintage car hire,
-        boat rental, and wedding planners with permanent Campania presence. Every supplier in our network
-        has been personally evaluated. We serve couples celebrating at venues in Ravello,
-        Positano, and Sorrento.
-      </p>
+      <div className="flex flex-col gap-5 max-w-[65ch]">
+        <p className="text-[.72rem] font-light tracking-[.05em] leading-[2] text-[#404040]">
+          Ravello sits 365 metres above the Tyrrhenian Sea, on a promontory between Minori and
+          Atrani along the Amalfi Coast — a UNESCO World Heritage Site since 1997. It is one of
+          the few places in the world where music is not an ornament but a founding principle.
+          Richard Wagner composed parts of Parsifal here in 1880, inspired by the gardens of
+          Villa Rufolo. Giuseppe Verdi visited. The Ravello Festival, held every summer since
+          1953 on the clifftop stage of Villa Rufolo, has hosted conductors and soloists from
+          across the world.
+        </p>
+        <p className="text-[.72rem] font-light tracking-[.05em] leading-[2] text-[#404040]">
+          This history is not incidental. It shapes the way music is chosen, placed, and
+          performed here. Wedding Music Ravello was built on that same principle: that the right
+          music, in the right space, at the right moment, does not accompany an event — it
+          defines it. Whether at Villa Cimbrone's Belvedere of Infinity, beneath the vaulted
+          ceilings of Palazzo Avino, or on the open terrace of Belmond Hotel Caruso overlooking
+          the coast, every performance is curated with the precision that this landscape demands.
+        </p>
+      </div>
     </section>
   )
 }
