@@ -46,13 +46,13 @@ function ContactStrip() {
       <p id="enq-head"
         className="font-serif italic font-light leading-[1.18] text-white/82 max-w-[24ch]"
         style={{ fontSize: 'clamp(1.7rem,3.5vw,2.8rem)' }}>
-        Every celebration is singular.<br />Let us compose yours.
+        Every event is different.<br />Tell us about yours.
       </p>
       <a href="mailto:info@donatocipriano.com"
         className="text-[.6rem] font-light tracking-[.22em] uppercase no-underline
           text-[#B8A882] border-b border-[rgba(184,168,130,.35)] pb-1 whitespace-nowrap
           hover:border-[#B8A882] transition-colors">
-        Begin Your Enquiry
+        Get in touch →
       </a>
     </section>
   )
