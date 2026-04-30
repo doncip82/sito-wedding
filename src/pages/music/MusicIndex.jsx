@@ -43,7 +43,8 @@ const MUSIC_OPTIONS = [
     label: 'Vocalist',
     sub:   'Live Voice',
     href:  '/music/vocalist',
-    bg:    '#201C24',
+    img:   '/images/Vocalist/Momo%20Vocalist.jpeg',
+    bg:    '#160F1A',
   },
   {
     label: 'Posteggia',
