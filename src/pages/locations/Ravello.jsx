@@ -46,9 +46,9 @@ export default function LocationRavello() {
             Wedding Music<br />in Ravello
           </h1>
           <p className="text-[.72rem] font-light tracking-[.06em] leading-[2] text-white/55 max-w-[60ch]">
-            Donato Cipriano coordinates live music for destination weddings in Ravello —
-            at an altitude of 350 metres above the Gulf of Salerno, in venues that have
-            defined the benchmark for the Italian luxury wedding for over a century.
+            Live music for destination weddings in Ravello — at an altitude of 350 metres
+            above the Gulf of Salerno, in venues that have defined the benchmark for the
+            Italian luxury wedding for over a century.
           </p>
         </div>
       </section>
@@ -75,13 +75,13 @@ export default function LocationRavello() {
               approximately 90 minutes by car, or via ferry from Salerno to Amalfi (35 minutes)
               followed by a 25-minute taxi journey. Between June and September, Ravello is
               closed to private vehicles — all equipment transport requires coordination with
-              the local <em>Comune</em> and licensed carriers. Donato manages this logistics
-              as part of every engagement.
+              the local <em>Comune</em> and licensed carriers. All equipment transport is
+              coordinated as part of every engagement.
             </p>
             <p>
               The <em>Comune</em> of Ravello requires event notifications 30 days in advance.
               Outdoor amplification after 23:00 requires a separate <em>autorizzazione</em>.
-              Donato coordinates all permit filings on behalf of couples and their planners.
+              Permit filings are coordinated on behalf of couples and their planners.
             </p>
           </div>
         </div>
@@ -91,7 +91,7 @@ export default function LocationRavello() {
       <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(4rem,10vw,8rem)]">
         <p className="eyebrow mb-5 text-[#B8A882]">Venues</p>
         <h2 className="section-title mb-12 text-[#F9F8F7]" style={{ maxWidth: '22ch' }}>
-          Where Donato Performs<br />in Ravello
+          Venues We Know<br />by Heart
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border-t border-white/[.08]">
           {[
@@ -147,7 +147,7 @@ export default function LocationRavello() {
             {
               href: '/violin-solo',
               label: 'Violin solo for ceremony',
-              desc: '— Donato Cipriano performs the processional alone, a single voice above the Gulf of Salerno.',
+              desc: '— a single voice above the Gulf of Salerno.',
             },
             {
               href: '/trilogy-trio',

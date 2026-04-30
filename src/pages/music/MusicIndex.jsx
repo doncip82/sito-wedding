@@ -55,6 +55,7 @@ const MUSIC_OPTIONS = [
     label: 'Opera',
     sub:   'Classical Performance',
     href:  '/music/opera',
+    img:   '/images/Opera/Elisabetta%20Vilni%20Soprano.jpg',
     bg:    '#1A1E22',
   },
 ]
