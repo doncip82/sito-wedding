@@ -81,52 +81,61 @@ export default function Hero() {
       <div className="relative z-10 flex flex-col justify-start
         px-[clamp(1.5rem,6vw,5rem)] pt-[clamp(5rem,12vw,9rem)] h-full">
 
-        {/* Text backdrop — semi-transparent frosted panel behind copy */}
-        <div
-          style={{
-            opacity: 0,
-            animation: 'up .6s ease .2s forwards',
-            background: 'rgba(10,10,10,0.22)',
-            backdropFilter: 'blur(4px)',
-            WebkitBackdropFilter: 'blur(4px)',
-          }}
-          className="w-fit px-7 pt-6 pb-8 -ml-7"
-        >
-          <p className="text-[.56rem] font-normal tracking-[.28em] uppercase text-white/85
-            mb-[1.1rem]"
-            style={{ opacity: 0, animation: 'up .9s ease .3s forwards' }}>
+        <p className="text-[.56rem] font-normal tracking-[.28em] uppercase text-white/85
+          mb-[1.1rem]"
+          style={{ opacity: 0, animation: 'up .9s ease .3s forwards' }}>
+          <span style={{
+            background: 'rgba(10,10,10,0.32)',
+            boxDecorationBreak: 'clone',
+            WebkitBoxDecorationBreak: 'clone',
+            padding: '0.18em 0.5em',
+          }}>
             Bespoke Wedding Music · Southern Italy
-          </p>
+          </span>
+        </p>
 
-          <h1 id="hero-h1"
-            className="font-serif italic font-light leading-[1.02] text-[#F9F8F7]"
-            style={{
-              fontSize: 'clamp(3rem,7vw,6.5rem)',
-              maxWidth: '14ch',
-              opacity: 0,
-              animation: 'up 1s ease .55s forwards',
-            }}>
+        <h1 id="hero-h1"
+          className="font-serif italic font-light leading-[1.02] text-[#F9F8F7]"
+          style={{
+            fontSize: 'clamp(3rem,7vw,6.5rem)',
+            maxWidth: '14ch',
+            opacity: 0,
+            animation: 'up 1s ease .55s forwards',
+          }}>
+          <span style={{
+            background: 'rgba(10,10,10,0.32)',
+            boxDecorationBreak: 'clone',
+            WebkitBoxDecorationBreak: 'clone',
+            padding: '0.08em 0.3em',
+          }}>
             The Sound That Defines<br />Every Moment
-          </h1>
+          </span>
+        </h1>
 
-          <div aria-hidden="true"
-            className="w-9 h-[.5px] bg-[#B8A882] my-7"
-            style={{ opacity: 0, animation: 'up .9s ease .8s forwards' }} />
+        <div aria-hidden="true"
+          className="w-9 h-[.5px] bg-[#B8A882] my-7"
+          style={{ opacity: 0, animation: 'up .9s ease .8s forwards' }} />
 
-          <h2 className="text-[.68rem] font-normal tracking-[.14em] text-white/85 max-w-[44ch] leading-[1.95]"
-            style={{ opacity: 0, animation: 'up .9s ease 1s forwards' }}>
+        <h2 className="text-[.68rem] font-normal tracking-[.14em] text-white/85 max-w-[44ch] leading-[1.95]"
+          style={{ opacity: 0, animation: 'up .9s ease 1s forwards' }}>
+          <span style={{
+            background: 'rgba(10,10,10,0.32)',
+            boxDecorationBreak: 'clone',
+            WebkitBoxDecorationBreak: 'clone',
+            padding: '0.18em 0.5em',
+          }}>
             From weddings to proposals and private celebrations on the Amalfi Coast — every experience begins with music, carefully selected and brought to life through a curated network of artists.
-          </h2>
+          </span>
+        </h2>
 
-          <div className="flex items-center gap-10 mt-9 flex-wrap"
-            style={{ opacity: 0, animation: 'up .9s ease 1.2s forwards' }}>
-            <a href="/music"
-              className="text-[.6rem] font-light tracking-[.22em] uppercase text-[#F9F8F7]
-                pb-1 border-b border-white/45 no-underline
-                hover:text-[#B8A882] hover:border-[#B8A882] transition-all">
-              Explore our partners ↓
-            </a>
-          </div>
+        <div className="flex items-center gap-10 mt-9 flex-wrap"
+          style={{ opacity: 0, animation: 'up .9s ease 1.2s forwards' }}>
+          <a href="/music"
+            className="text-[.6rem] font-light tracking-[.22em] uppercase text-[#F9F8F7]
+              pb-1 border-b border-white/45 no-underline
+              hover:text-[#B8A882] hover:border-[#B8A882] transition-all">
+            Explore our partners ↓
+          </a>
         </div>
       </div>
 
