@@ -50,7 +50,8 @@ const MUSIC_OPTIONS = [
     label: 'Posteggia',
     sub:   'Neapolitan Tradition',
     href:  '/music/posteggia',
-    bg:    '#221E1A',
+    img:   '/images/Posteggia/Posteggia.png',
+    bg:    '#8CA5B2',
   },
   {
     label: 'Opera',
