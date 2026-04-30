@@ -57,6 +57,12 @@ const MUSIC_OPTIONS = [
     img:   '/images/Opera/Elisabetta%20Vilni%20Soprano.jpg',
     bg:    '#1A1E22',
   },
+  {
+    label: 'Piano Solo',
+    sub:   'Classical & Contemporary',
+    href:  '/music/piano',
+    bg:    '#18181C',
+  },
 ]
 
 export default function MusicIndex() {

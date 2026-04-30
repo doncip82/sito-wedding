@@ -11,4 +11,5 @@ export const routes = [
   { path: '/locations/ravello',   component: () => import('./pages/locations/Ravello.jsx')       },
   { path: '/locations/positano',  component: () => import('./pages/locations/Positano.jsx')      },
   { path: '/locations/sorrento',  component: () => import('./pages/locations/Sorrento.jsx')      },
+  { path: '/music/piano',         component: () => import('./pages/music/Piano.jsx')               },
 ]

@@ -19,6 +19,7 @@ const MusicDJ             = lazy(() => import('@/pages/music/DJ.jsx'))
 const MusicVocalist       = lazy(() => import('@/pages/music/Vocalist.jsx'))
 const MusicPosteggia      = lazy(() => import('@/pages/music/Posteggia.jsx'))
 const MusicOpera          = lazy(() => import('@/pages/music/Opera.jsx'))
+const MusicPiano          = lazy(() => import('@/pages/music/Piano.jsx'))
 
 function PageLoader() {
   return (
@@ -51,6 +52,7 @@ export default function App() {
             <Route path="/music/vocalist"         element={<MusicVocalist />} />
             <Route path="/music/posteggia"        element={<MusicPosteggia />} />
             <Route path="/music/opera"            element={<MusicOpera />} />
+            <Route path="/music/piano"            element={<MusicPiano />} />
 
           </Routes>
         </Suspense>
