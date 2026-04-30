@@ -9,7 +9,7 @@ const MUSIC_OPTIONS = [
     href:      '/evostrings',
     img:       '/images/EvoStrings/EvoStrings.jpg',
     objectFit: 'contain',
-    bg:        '#2A2520',
+    bg:        '#CECCC9',
   },
   {
     label:     'Trilogy Trio',
