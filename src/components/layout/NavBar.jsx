@@ -51,7 +51,7 @@ export default function NavBar() {
     ? 'text-[#1A1A1A] border-black/30 hover:text-[#8A7A5A] hover:border-[#8A7A5A]'
     : 'text-white/85 border-white/60 hover:text-[#B8A882] hover:border-[#B8A882]'
   const ctaWeight  = scrolled || !isHome ? 'font-light'   : 'font-normal'
-  const hamColor   = scrolled || !isHome ? 'bg-[#1A1A1A]' : 'bg-[#F9F8F7]'
+  const hamColor   = menuOpen ? 'bg-[#F9F8F7]' : (scrolled || !isHome ? 'bg-[#1A1A1A]' : 'bg-[#F9F8F7]')
 
   const NAV_TEXT = `text-[.58rem] tracking-[.2em] uppercase transition-colors duration-300 ${linkWeight} ${linkColor}`
 
@@ -89,7 +89,15 @@ export default function NavBar() {
 
   // ── Mobile ─────────────────────────────────────────────────────────────────
   const MOBILE_SERIF = `font-serif italic font-light no-underline transition-colors duration-300
-    text-[clamp(1.8rem,5.5vw,3rem)] text-white/70 hover:text-[#B8A882]`
+    text-[clamp(1.8rem,5.5vw,3rem)] text-white hover:text-[#B8A882]`
+
+  const menuHighlight = {
+    background: 'rgba(10,10,10,0.42)',
+    borderRadius: '4px',
+    boxDecorationBreak: 'clone',
+    WebkitBoxDecorationBreak: 'clone',
+    padding: '0.06em 0.28em',
+  }
 
   return (
     <>
@@ -135,11 +143,24 @@ export default function NavBar() {
         role="dialog"
         aria-label="Navigation"
         aria-modal="true"
-        className={`fixed inset-0 z-[199] bg-[#1A1A1A] overflow-y-auto
-          px-[clamp(2rem,10vw,6rem)] py-24 transition-opacity duration-500
+        className={`fixed inset-0 z-[199] overflow-hidden transition-opacity duration-500
           ${menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
       >
-        <div className="flex flex-col gap-7 justify-center min-h-full">
+        {/* Video background */}
+        <video
+          autoPlay muted playsInline loop preload="auto"
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        >
+          <source src="/videos/Sito_Wedding_-_Hero_Loop.mp4" type="video/mp4" />
+        </video>
+        {/* Dark overlay */}
+        <div aria-hidden="true" className="absolute inset-0 bg-[#0A0A0A]/65" />
+
+        {/* Content */}
+        <div className="relative z-10 flex flex-col gap-7 justify-center min-h-full overflow-y-auto
+          px-[clamp(2rem,10vw,6rem)] py-24">
+
           {NAV_ITEMS.map((item) => {
             const hasChildren = !!item.items
             const isExpanded  = mobileExpanded === item.label
@@ -151,27 +172,29 @@ export default function NavBar() {
                     onClick={() => setMobileExpanded(isExpanded ? null : item.label)}
                     className={`${MOBILE_SERIF} bg-transparent border-none cursor-pointer text-left w-full flex items-baseline gap-3`}
                   >
-                    {item.label}
-                    <span className={`text-[#B8A882]/60 text-sm font-sans font-light transition-transform duration-300 inline-block ${isExpanded ? 'rotate-45' : ''}`}>
+                    <span style={menuHighlight}>{item.label}</span>
+                    <span className={`text-[#B8A882]/80 text-sm font-sans font-light transition-transform duration-300 inline-block ${isExpanded ? 'rotate-45' : ''}`}>
                       +
                     </span>
                   </button>
                 ) : (
                   <a href={item.href} onClick={() => setMenuOpen(false)} className={`${MOBILE_SERIF} block`}>
-                    {item.label}
+                    <span style={menuHighlight}>{item.label}</span>
                   </a>
                 )}
 
                 {hasChildren && isExpanded && (
-                  <div className="mt-4 ml-1 pl-4 border-l border-white/[.08] flex flex-col gap-2.5">
+                  <div className="mt-4 ml-1 pl-4 border-l border-white/[.12] flex flex-col gap-2.5">
                     {item.items.map(({ label, href }) => (
                       <a
                         key={href}
                         href={href}
                         onClick={() => setMenuOpen(false)}
-                        className="text-[.55rem] font-light tracking-[.2em] uppercase no-underline text-white/45 hover:text-[#B8A882] transition-colors"
+                        className="text-[.55rem] font-light tracking-[.2em] uppercase no-underline text-white hover:text-[#B8A882] transition-colors"
                       >
-                        {label}
+                        <span style={{ ...menuHighlight, padding: '0.18em 0.5em', fontSize: 'inherit' }}>
+                          {label}
+                        </span>
                       </a>
                     ))}
                   </div>
@@ -185,7 +208,7 @@ export default function NavBar() {
             onClick={() => setMenuOpen(false)}
             className="font-serif italic font-light no-underline text-[clamp(1.8rem,5.5vw,3rem)] text-[#B8A882] mt-2"
           >
-            Enquire
+            <span style={menuHighlight}>Enquire</span>
           </a>
         </div>
       </div>
