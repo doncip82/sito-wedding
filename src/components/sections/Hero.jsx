@@ -86,6 +86,7 @@ export default function Hero() {
           style={{ opacity: 0, animation: 'up .9s ease .3s forwards' }}>
           <span style={{
             background: 'rgba(10,10,10,0.32)',
+            borderRadius: '4px',
             boxDecorationBreak: 'clone',
             WebkitBoxDecorationBreak: 'clone',
             padding: '0.18em 0.5em',
@@ -104,6 +105,7 @@ export default function Hero() {
           }}>
           <span style={{
             background: 'rgba(10,10,10,0.32)',
+            borderRadius: '4px',
             boxDecorationBreak: 'clone',
             WebkitBoxDecorationBreak: 'clone',
             padding: '0.08em 0.3em',
@@ -120,6 +122,7 @@ export default function Hero() {
           style={{ opacity: 0, animation: 'up .9s ease 1s forwards' }}>
           <span style={{
             background: 'rgba(10,10,10,0.32)',
+            borderRadius: '4px',
             boxDecorationBreak: 'clone',
             WebkitBoxDecorationBreak: 'clone',
             padding: '0.18em 0.5em',
