@@ -146,16 +146,35 @@ export default function NavBar() {
         className={`fixed inset-0 z-[199] overflow-hidden transition-opacity duration-500
           ${menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
       >
+        {/* SVG gamma filter — darkens midtones, same as hero */}
+        <svg width="0" height="0" className="absolute" aria-hidden="true">
+          <defs>
+            <filter id="menu-midtones">
+              <feComponentTransfer>
+                <feFuncR type="gamma" amplitude="1" exponent="1.22" offset="0" />
+                <feFuncG type="gamma" amplitude="1" exponent="1.22" offset="0" />
+                <feFuncB type="gamma" amplitude="1" exponent="1.22" offset="0" />
+              </feComponentTransfer>
+            </filter>
+          </defs>
+        </svg>
         {/* Video background */}
         <video
           autoPlay muted playsInline loop preload="auto"
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover object-center"
+          style={{ filter: 'url(#menu-midtones)' }}
         >
           <source src="/videos/Sito_Wedding_-_Hero_Loop.mp4" type="video/mp4" />
         </video>
-        {/* Dark overlay */}
-        <div aria-hidden="true" className="absolute inset-0 bg-[#0A0A0A]/65" />
+        {/* Vertical gradient — same as hero */}
+        <div aria-hidden="true" className="absolute inset-0" style={{
+          background: 'linear-gradient(to bottom, rgba(26,26,26,.18) 0%, rgba(26,26,26,.22) 45%, rgba(26,26,26,.62) 100%)',
+        }} />
+        {/* Horizontal gradient — same as hero */}
+        <div aria-hidden="true" className="absolute inset-0" style={{
+          background: 'linear-gradient(to right, rgba(26,26,26,.48) 0%, rgba(26,26,26,.12) 55%, transparent 80%)',
+        }} />
 
         {/* Content */}
         <div className="relative z-10 flex flex-col gap-7 justify-center min-h-full overflow-y-auto
