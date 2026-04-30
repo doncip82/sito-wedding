@@ -26,7 +26,7 @@ export default function Hero() {
           className="absolute inset-0"
           style={{
             background:
-              'linear-gradient(to bottom, rgba(26,26,26,.38) 0%, rgba(26,26,26,.55) 45%, rgba(26,26,26,.82) 100%)',
+              'linear-gradient(to bottom, rgba(26,26,26,.38) 0%, rgba(26,26,26,.40) 45%, rgba(26,26,26,.82) 100%)',
           }}
         />
         {/* Horizontal overlay — mobile: soft uniform veil (text spans full width) */}
@@ -35,7 +35,7 @@ export default function Hero() {
           className="absolute inset-0 sm:hidden"
           style={{
             background:
-              'linear-gradient(to right, rgba(26,26,26,.75) 0%, rgba(26,26,26,.35) 65%, transparent 100%)',
+              'linear-gradient(to right, rgba(26,26,26,.75) 0%, rgba(26,26,26,.20) 65%, transparent 100%)',
           }}
         />
         {/* Horizontal overlay — desktop: stronger left fade for text legibility */}
@@ -44,7 +44,7 @@ export default function Hero() {
           className="absolute inset-0 hidden sm:block"
           style={{
             background:
-              'linear-gradient(to right, rgba(26,26,26,.88) 0%, rgba(26,26,26,.45) 45%, transparent 75%)',
+              'linear-gradient(to right, rgba(26,26,26,.88) 0%, rgba(26,26,26,.30) 45%, transparent 75%)',
           }}
         />
       </div>
