@@ -79,7 +79,7 @@ export default function Hero() {
         <div className="flex items-center gap-10 mt-9 flex-wrap"
           style={{ opacity: 0, animation: 'up .9s ease 1.2s forwards' }}>
 
-          <a href="/#services"
+          <a href="/music"
             className="text-[.6rem] font-light tracking-[.22em] uppercase text-[#F9F8F7]
               pb-1 border-b border-white/45 no-underline
               hover:text-[#B8A882] hover:border-[#B8A882] transition-all">

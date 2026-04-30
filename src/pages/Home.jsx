@@ -2,7 +2,6 @@
 import { Helmet } from 'react-helmet-async'
 import { baseSchema } from '@/data/schema.js'
 import Hero      from '@/components/sections/Hero.jsx'
-import Services  from '@/components/sections/Services.jsx'
 import Occasions from '@/components/sections/Occasions.jsx'
 import Locations from '@/components/sections/Locations.jsx'
 import About     from '@/components/sections/About.jsx'
@@ -78,7 +77,6 @@ export default function Home() {
       </Helmet>
       <Hero />
       <GeoIntro />
-      <Services />
       <ContactStrip />
       <Occasions />
       <Locations />
