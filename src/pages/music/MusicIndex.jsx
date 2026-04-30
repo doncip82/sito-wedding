@@ -16,7 +16,6 @@ const MUSIC_OPTIONS = [
     sub:       'Violin · Cello · Piano',
     href:      '/trilogy-trio',
     img:       '/images/Trilogy%20Trio/Trilogy%20Trio.jpg',
-    objectFit: 'contain',
     bg:        '#1E2228',
   },
   {
