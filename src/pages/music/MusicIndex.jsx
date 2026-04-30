@@ -61,7 +61,8 @@ const MUSIC_OPTIONS = [
     label: 'Piano Solo',
     sub:   'Classical & Contemporary',
     href:  '/music/piano',
-    bg:    '#18181C',
+    img:   '/images/Piano%20Solo/Angelo%20Borrelli.png',
+    bg:    '#C2372A',
   },
 ]
 
