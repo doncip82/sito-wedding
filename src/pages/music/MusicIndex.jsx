@@ -36,7 +36,8 @@ const MUSIC_OPTIONS = [
     label: 'DJ',
     sub:   'Curated Sets',
     href:  '/music/dj',
-    bg:    '#241C1C',
+    img:   '/images/Dj/Dj%20Nice.jpeg',
+    bg:    '#0A0B10',
   },
   {
     label: 'Vocalist',
