@@ -109,10 +109,10 @@ export default function Hero() {
           className="w-9 h-[.5px] bg-[#B8A882] my-7"
           style={{ opacity: 0, animation: 'up .9s ease .8s forwards' }} />
 
-        <h2 className="text-[.68rem] font-normal tracking-[.14em] text-white/85 max-w-[44ch] leading-[1.95]"
-          style={{ opacity: 0, animation: 'up .9s ease 1s forwards' }}>
+        <h2 className="text-[.68rem] font-normal tracking-[.14em] text-white max-w-[44ch] leading-[1.95]"
+          style={{ opacity: 0, animation: 'up .9s ease 1s forwards', textShadow: '0 1px 10px rgba(0,0,0,0.55)' }}>
           <span style={{
-            background: 'rgba(10,10,10,0.32)',
+            background: 'rgba(10,10,10,0.44)',
             borderRadius: '4px',
             boxDecorationBreak: 'clone',
             WebkitBoxDecorationBreak: 'clone',
@@ -125,9 +125,10 @@ export default function Hero() {
         <div className="flex items-center gap-10 mt-9 flex-wrap"
           style={{ opacity: 0, animation: 'up .9s ease 1.2s forwards' }}>
           <a href="/music"
-            className="text-[.6rem] font-light tracking-[.22em] uppercase text-[#F9F8F7]
-              pb-1 border-b border-white/45 no-underline
-              hover:text-[#B8A882] hover:border-[#B8A882] transition-all">
+            className="text-[.6rem] font-light tracking-[.22em] uppercase text-white
+              pb-1 border-b border-white/60 no-underline
+              hover:text-[#B8A882] hover:border-[#B8A882] transition-all"
+            style={{ textShadow: '0 1px 8px rgba(0,0,0,0.55)' }}>
             Explore our partners ↓
           </a>
         </div>
