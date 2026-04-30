@@ -60,7 +60,7 @@ export default function MusicOpera() {
               soloists to the Ravello Festival each summer.
             </p>
             <p>
-              Donato coordinates lyric soprano and tenor voices trained in the Italian{' '}
+              The platform curates lyric soprano and tenor voices trained in the Italian{' '}
               <em>bel canto</em> tradition. Repertoire is drawn from Puccini (
               <em>O Mio Babbino Caro</em>, <em>Nessun Dorma</em>), Verdi (
               <em>La Traviata</em>, <em>Rigoletto</em>), and Neapolitan art song.
