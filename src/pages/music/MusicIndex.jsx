@@ -82,9 +82,6 @@ export default function MusicIndex() {
 
       {/* Hero */}
       <section className="pt-[120px] pb-16 px-[clamp(1.5rem,6vw,5rem)] bg-[#F9F8F7]">
-        <p className="text-[.52rem] tracking-[.28em] uppercase text-[#8A7A5A] font-light mb-5">
-          Donato Cipriano · Music Director
-        </p>
         <h1 className="font-serif italic font-light text-[clamp(2.8rem,7vw,5rem)] text-[#1A1A1A] leading-[1.1] max-w-2xl">
           Music for<br />your event
         </h1>
