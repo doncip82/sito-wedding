@@ -29,10 +29,19 @@ export default function Hero() {
               'linear-gradient(to bottom, rgba(26,26,26,.25) 0%, rgba(26,26,26,.42) 45%, rgba(26,26,26,.72) 100%)',
           }}
         />
-        {/* Gradient overlay — horizontal: opaque left for text legibility, transparent right */}
+        {/* Horizontal overlay — mobile: soft uniform veil (text spans full width) */}
         <div
           aria-hidden="true"
-          className="absolute inset-0"
+          className="absolute inset-0 sm:hidden"
+          style={{
+            background:
+              'linear-gradient(to right, rgba(26,26,26,.55) 0%, rgba(26,26,26,.20) 65%, transparent 100%)',
+          }}
+        />
+        {/* Horizontal overlay — desktop: stronger left fade for text legibility */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 hidden sm:block"
           style={{
             background:
               'linear-gradient(to right, rgba(26,26,26,.72) 0%, rgba(26,26,26,.35) 45%, transparent 75%)',
