@@ -20,13 +20,22 @@ export default function Hero() {
         >
           <source src="/videos/Sito_Wedding_-_Hero_Loop.mp4" type="video/mp4" />
         </video>
-        {/* Gradient overlay */}
+        {/* Gradient overlay — vertical */}
         <div
           aria-hidden="true"
           className="absolute inset-0"
           style={{
             background:
               'linear-gradient(to bottom, rgba(26,26,26,.25) 0%, rgba(26,26,26,.42) 45%, rgba(26,26,26,.72) 100%)',
+          }}
+        />
+        {/* Gradient overlay — horizontal: opaque left for text legibility, transparent right */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0"
+          style={{
+            background:
+              'linear-gradient(to right, rgba(26,26,26,.72) 0%, rgba(26,26,26,.35) 45%, transparent 75%)',
           }}
         />
       </div>
