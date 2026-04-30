@@ -13,10 +13,23 @@ export default function Hero() {
           File must be placed in /public/videos/
       ──────────────────────────────────────────────────────────────── */}
       <div className="absolute inset-0 overflow-hidden bg-[#1C2535]">
+        {/* SVG filter: gamma > 1 darkens midtones while preserving shadows and highlights */}
+        <svg width="0" height="0" className="absolute" aria-hidden="true">
+          <defs>
+            <filter id="hero-midtones">
+              <feComponentTransfer>
+                <feFuncR type="gamma" amplitude="1" exponent="1.22" offset="0" />
+                <feFuncG type="gamma" amplitude="1" exponent="1.22" offset="0" />
+                <feFuncB type="gamma" amplitude="1" exponent="1.22" offset="0" />
+              </feComponentTransfer>
+            </filter>
+          </defs>
+        </svg>
         <video
           autoPlay muted playsInline loop preload="auto"
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover object-center"
+          style={{ filter: 'url(#hero-midtones)' }}
         >
           <source src="/videos/Sito_Wedding_-_Hero_Loop.mp4" type="video/mp4" />
         </video>
