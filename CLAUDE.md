@@ -114,6 +114,14 @@ Villa Cimbrone · Palazzo Avino · Belmond Hotel Caruso · Villa Treville · Mon
 - Sub-label formazioni: colore #8A7A5A, font-weight 300
 - Testo corpo su bianco: #404040
 
+### Hero — copy attuale
+- **Tagline (p sopra h1):** "Bespoke Wedding Music · Amalfi Coast"
+- **H1:** "Live Wedding Music in / Ravello, Positano & Sorrento"
+- **H2 (descrizione):** "A platform for curated live music at destination weddings across the Amalfi Coast — from string quartets at Villa Cimbrone to jazz ensembles at Belmond Hotel Caruso."
+- **CTA:** "Explore the Ensembles ↓" → ancora `#music`
+
+> Copy aggiornato (2026-05) con keyword GEO/SEO esplicite: Amalfi Coast, Ravello, Positano, Sorrento, venue specifiche.
+
 ### Hero — sistema overlay
 Il video ha tre layer sovrapposti:
 1. **Filtro SVG gamma** (`exponent: 1.22`) applicato direttamente al `<video>` — abbassa i mezzi toni
