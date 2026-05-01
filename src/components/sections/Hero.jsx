@@ -82,7 +82,7 @@ export default function Hero() {
             WebkitBoxDecorationBreak: 'clone',
             padding: '0.18em 0.5em',
           }}>
-            Bespoke Wedding Music · Southern Italy
+            Bespoke Wedding Music · Amalfi Coast
           </span>
         </p>
 
@@ -90,7 +90,7 @@ export default function Hero() {
           className="font-serif italic font-light leading-[1.02] text-[#F9F8F7]"
           style={{
             fontSize: 'clamp(3rem,7vw,6.5rem)',
-            maxWidth: '14ch',
+            maxWidth: '16ch',
             opacity: 0,
             animation: 'up 1s ease .55s forwards',
           }}>
@@ -101,7 +101,7 @@ export default function Hero() {
             WebkitBoxDecorationBreak: 'clone',
             padding: '0.08em 0.3em',
           }}>
-            The Sound That Defines<br />Every Moment
+            Live Wedding Music in<br />Ravello, Positano &amp; Sorrento
           </span>
         </h1>
 
@@ -109,7 +109,7 @@ export default function Hero() {
           className="w-9 h-[.5px] bg-[#B8A882] my-7"
           style={{ opacity: 0, animation: 'up .9s ease .8s forwards' }} />
 
-        <h2 className="text-[.68rem] font-normal tracking-[.14em] text-white max-w-[44ch] leading-[1.95]"
+        <h2 className="text-[.68rem] font-normal tracking-[.14em] text-white max-w-[48ch] leading-[1.95]"
           style={{ opacity: 0, animation: 'up .9s ease 1s forwards', textShadow: '0 1px 10px rgba(0,0,0,0.55)' }}>
           <span style={{
             background: 'rgba(10,10,10,0.44)',
@@ -118,7 +118,7 @@ export default function Hero() {
             WebkitBoxDecorationBreak: 'clone',
             padding: '0.18em 0.5em',
           }}>
-            From weddings to proposals and private celebrations on the Amalfi Coast — every experience begins with music, carefully selected and brought to life through a curated network of artists.
+            A platform for curated live music at destination weddings across the Amalfi Coast — from string quartets at Villa Cimbrone to jazz ensembles at Belmond Hotel Caruso.
           </span>
         </h2>
 
@@ -129,7 +129,7 @@ export default function Hero() {
               pb-1 border-b border-white/60 no-underline
               hover:text-[#B8A882] hover:border-[#B8A882] transition-all"
             style={{ textShadow: '0 1px 8px rgba(0,0,0,0.55)' }}>
-            Explore our partners ↓
+            Explore the Ensembles ↓
           </a>
         </div>
       </div>
