@@ -44,17 +44,6 @@ const OCCASIONS = [
       { label: 'Custom Enquiry', href: '/#contact'     },
     ],
   },
-  {
-    numeral:     'V',
-    label:       'Vow Renewals',
-    description: 'Return to the beginning — with the music that says what words cannot.',
-    img:         '/images/Ceremony.png',
-    options: [
-      { label: 'Violin Solo',    href: '/violin-solo' },
-      { label: 'EvoStrings Duo', href: '/evostrings'  },
-      { label: 'Custom Enquiry', href: '/#contact'    },
-    ],
-  },
 ]
 
 function MomentStrip({ moment, dark = false }) {
