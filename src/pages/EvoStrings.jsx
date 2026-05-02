@@ -47,8 +47,8 @@ export default function EvoStrings() {
           <div className="w-9 h-[.5px] bg-[#B8A882] mb-8" />
           <p className="text-[.72rem] font-light tracking-[.06em] leading-[2]
             text-white/55 max-w-[60ch]">
-            Italy's reference string ensemble for the luxury wedding sector —
-            conceived and directed by Donato Cipriano.
+            A reference string ensemble for the luxury wedding sector on the
+            Amalfi Coast — available as string duo, trio and quartet.
           </p>
         </div>
       </section>
