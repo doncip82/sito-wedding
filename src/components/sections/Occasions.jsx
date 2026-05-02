@@ -79,25 +79,24 @@ function MomentStrip({ moment, dark = false }) {
           </p>
         </div>
 
-        <div className={`flex flex-col gap-0 border-t ${dark ? 'border-white/[.06]' : 'border-black/[.06]'}`}>
-          {moment.options.map(({ label, href }) => (
-            <a key={label} href={href}
-              className={`group/opt flex items-center justify-between
-                py-4 border-b last:border-b-0 no-underline transition-colors duration-300
-                ${dark ? 'border-white/[.06]' : 'border-black/[.06]'}`}>
-              <span className={`font-serif italic font-light text-[clamp(1rem,2vw,1.25rem)]
-                transition-colors duration-300
-                ${dark
-                  ? 'text-white/50 group-hover/opt:text-[#B8A882]'
-                  : 'text-[#1A1A1A]/70 group-hover/opt:text-[#1A1A1A]'}`}>
+        <div className="flex flex-col gap-3">
+          <span className={`text-[.47rem] font-light tracking-[.16em] uppercase
+            ${dark ? 'text-white/30' : 'text-[#B8A882]'}`}>
+            Suggested for this occasion
+          </span>
+          <div className="flex flex-wrap gap-2">
+            {moment.options.map(({ label, href }) => (
+              <a key={label} href={href}
+                className={`inline-flex items-center px-4 py-[0.45rem] border no-underline
+                  transition-all duration-300
+                  text-[.5rem] font-light tracking-[.1em] uppercase
+                  ${dark
+                    ? 'border-white/20 text-white/55 hover:border-[#B8A882] hover:text-[#B8A882]'
+                    : 'border-[#1A1A1A]/18 text-[#404040] hover:border-[#B8A882] hover:text-[#1A1A1A]'}`}>
                 {label}
-              </span>
-              <span className="text-[.46rem] tracking-[.2em] uppercase font-light
-                text-[#B8A882] opacity-0 group-hover/opt:opacity-100 transition-opacity duration-300">
-                Discover
-              </span>
-            </a>
-          ))}
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </article>
