@@ -87,7 +87,7 @@ export default function OccasionMarriageProposal() {
             <p>
               A proposal with live music requires coordination between the musician, the
               venue, and the moment — not a performance that simply happens to be present.
-              The standard approach: the musician arrives at the location 20 minutes before
+              The standard approach: the musician arrives at the location 45 minutes before
               the couple, positions discreetly (behind a terrace wall, inside a doorway, or
               among other guests at a terrace bar), and begins at a pre-agreed signal — a
               text, a hand gesture, or a specific cue from the venue contact.
@@ -98,6 +98,14 @@ export default function OccasionMarriageProposal() {
               does not announce the occasion or draw attention to the moment — the music
               is present, not performative. Venues on the Amalfi Coast with outdoor terraces
               require no PA system for violin or saxophone at this scale.
+            </p>
+            <p>
+              For a fully coordinated experience, the music engagement can be arranged
+              alongside complementary services — a vintage car transfer along the Amalfi
+              Coast road, a private boat departure from Positano harbour, or a photographer
+              positioned discreetly at the location. These elements are coordinated
+              separately with specialist providers; the enquiry process can include them
+              as part of the initial brief.
             </p>
             <p>
               All logistics — venue liaison, timing, positioning, entry — are handled
