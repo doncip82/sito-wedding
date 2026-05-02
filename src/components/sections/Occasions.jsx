@@ -4,6 +4,7 @@ const OCCASIONS = [
     numeral:     'I',
     label:       'Wedding Ceremonies & Receptions',
     description: 'From the processional at Villa Cimbrone\'s Terrazza dell\'Infinito to the final toast — each phase of the day calls for a distinct sound. String ensembles, solo violin, and operatic voice are matched to the acoustics of the venue and the arc of the celebration.',
+    pageHref:    '/occasions/wedding-ceremony',
     img:         '/images/Ceremony.png',
     options: [
       { label: 'EvoStrings',   href: '/evostrings'    },
@@ -17,6 +18,7 @@ const OCCASIONS = [
     numeral:     'II',
     label:       'Marriage Proposals',
     description: 'A violin solo on a panoramic terrace above the Gulf of Salerno, or a saxophone at golden hour along the Positano coastline. Discreetly arranged, precisely timed — music that shapes the setting without announcing itself.',
+    pageHref:    '/occasions/marriage-proposal',
     img:         '/images/Proposal.jpg',
     options: [
       { label: 'Violin Solo', href: '/violin-solo'     },
@@ -27,6 +29,7 @@ const OCCASIONS = [
     numeral:     'III',
     label:       'Birthdays & Anniversaries',
     description: 'A string quartet for a terrace dinner at Palazzo Avino, a DJ set for a sunset gathering in Positano, a saxophone for the cocktail hour — the format is selected to match the scale and mood of the occasion, not the other way round.',
+    pageHref:    '/occasions/birthdays-anniversaries',
     img:         '/images/Dinner.png',
     options: [
       { label: 'EvoStrings', href: '/evostrings'       },
@@ -39,6 +42,7 @@ const OCCASIONS = [
     numeral:     'IV',
     label:       'Exclusive Corporate Events',
     description: 'Private dinners, brand retreats, and presentations at Amalfi Coast venues. Live music — from curated DJ sets to vocal performances — selected for its capacity to establish atmosphere without competing with conversation.',
+    pageHref:    '/occasions/corporate-events',
     img:         '/images/Cocktail.png',
     options: [
       { label: 'Vocalist',     href: '/music/vocalist'  },
@@ -77,6 +81,14 @@ function MomentStrip({ moment, dark = false }) {
             ${dark ? 'text-white/45' : 'text-[#404040]'}`}>
             {moment.description}
           </p>
+          <a href={moment.pageHref}
+            className={`self-start text-[.48rem] font-light tracking-[.18em] uppercase no-underline
+              pb-[2px] border-b transition-colors duration-300
+              ${dark
+                ? 'text-[#B8A882]/60 border-[#B8A882]/25 hover:text-[#B8A882] hover:border-[#B8A882]'
+                : 'text-[#8A7A5A] border-[#8A7A5A]/35 hover:text-[#1A1A1A] hover:border-[#1A1A1A]'}`}>
+            Explore this occasion ↗
+          </a>
         </div>
 
         <div className="flex flex-col gap-3">

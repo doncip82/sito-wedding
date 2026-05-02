@@ -21,6 +21,11 @@ const MusicPosteggia      = lazy(() => import('@/pages/music/Posteggia.jsx'))
 const MusicOpera          = lazy(() => import('@/pages/music/Opera.jsx'))
 const MusicPiano          = lazy(() => import('@/pages/music/Piano.jsx'))
 
+const OccasionWeddingCeremony        = lazy(() => import('@/pages/occasions/WeddingCeremony.jsx'))
+const OccasionMarriageProposal       = lazy(() => import('@/pages/occasions/MarriageProposal.jsx'))
+const OccasionBirthdaysAnniversaries = lazy(() => import('@/pages/occasions/BirthdaysAnniversaries.jsx'))
+const OccasionCorporateEvents        = lazy(() => import('@/pages/occasions/CorporateEvents.jsx'))
+
 function PageLoader() {
   return (
     <div className="min-h-screen bg-[#F9F8F7] flex items-center justify-center">
@@ -53,7 +58,10 @@ export default function App() {
             <Route path="/music/posteggia"        element={<MusicPosteggia />} />
             <Route path="/music/opera"            element={<MusicOpera />} />
             <Route path="/music/piano"            element={<MusicPiano />} />
-
+            <Route path="/occasions/wedding-ceremony"        element={<OccasionWeddingCeremony />} />
+            <Route path="/occasions/marriage-proposal"       element={<OccasionMarriageProposal />} />
+            <Route path="/occasions/birthdays-anniversaries" element={<OccasionBirthdaysAnniversaries />} />
+            <Route path="/occasions/corporate-events"        element={<OccasionCorporateEvents />} />
           </Routes>
         </Suspense>
       </main>
