@@ -118,6 +118,12 @@ Maintain and complete the following URL structure. Each page is a self-contained
 │   ├── /positano/                → "wedding music Positano"
 │   └── /sorrento/                → "wedding music Sorrento"
 │
+├── /occasions/
+│   ├── /wedding-ceremony/        → "wedding ceremony music Amalfi Coast"
+│   ├── /marriage-proposal/       → "music for marriage proposal Amalfi Coast"
+│   ├── /birthdays-anniversaries/ → "private birthday party music Amalfi Coast"
+│   └── /corporate-events/        → "corporate event music Amalfi Coast"
+│
 └── /contact/
 ```
 
@@ -194,7 +200,7 @@ Claude Code must verify and implement the following:
 - [ ] All images have descriptive `alt` text with location context (e.g. `alt="String quartet performing at Villa Cimbrone terrace, Ravello"`)
 - [ ] No `noindex` tags on public pages
 - [ ] Page load under 2.5s on mobile (Lighthouse score)
-- [ ] `vite-ssg` pre-rendering working correctly — all pages must be static HTML at build time, not client-rendered
+- [ ] SPA routing via Vercel rewrite (`/* → /index.html`) — all routes resolve correctly in production
 
 ---
 
@@ -231,7 +237,7 @@ When generating any body copy, Claude Code must follow these rules:
 
 Work in this sequence. Complete each item before starting the next.
 
-1. **Verify vite-ssg pre-rendering** — confirm all pages generate as static HTML
+1. **Verify SPA routing** — confirm all `/occasions/` and `/locations/` routes resolve correctly via Vercel rewrite
 2. **Implement Schema.org on Homepage** (LocalBusiness + MusicGroup as above)
 3. **Write and implement `/locations/ravello/`** — full page with all 3 content blocks + Schema
 4. **Add Schema.org to all music pages** (MusicGroup type per partner)

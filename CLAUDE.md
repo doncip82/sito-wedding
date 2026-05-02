@@ -54,10 +54,13 @@ Il sito propone **esclusivamente partner musicali**. L'aggiunta di fotografi, pl
 - Deploy: Vercel (auto-deploy su push a `main`)
 
 ## Stack tecnico
-- Vite + React + Tailwind CSS + vite-ssg (Static Site Generation)
-- Ogni pagina pre-renderizzata in HTML statico per SEO/GEO
+- Vite + React + Tailwind CSS + React Router v6 (SPA, client-side routing)
+- **NON** usa vite-ssg — `main.jsx` monta con `ReactDOM.createRoot`; routing gestito da `BrowserRouter`
+- Deploy su Vercel con rewrite `/* → /index.html` (`vercel.json`) per supporto SPA
 - `src/data/schema.js` genera Schema.org JSON-LD — contiene `founder` con `sameAs` per SEO invisibile
 - `src/components/ui/PageHead.jsx` — Helmet wrapper con `<link rel="author" href="https://www.donatocipriano.com">`
+- `src/App.jsx` — routing con `React.lazy` + `Suspense` per code splitting automatico
+- `src/routes.js` — documentazione delle route (non consumato dal build, solo riferimento)
 - Hero e menu mobile: video background in loop (`public/videos/Sito_Wedding_-_Hero_Loop.mp4`)
 
 ## Struttura cartelle (stato attuale)
@@ -72,7 +75,8 @@ src/
 ├── pages/
 │   ├── Home.jsx, EvoStrings.jsx, TrilogyTrio.jsx, ViolinSolo.jsx, Contact.jsx
 │   ├── music/       MusicIndex.jsx, Saxophone.jsx, DJ.jsx, Vocalist.jsx, Opera.jsx, Posteggia.jsx, Piano.jsx
-│   └── locations/   Positano.jsx, Ravello.jsx, Sorrento.jsx
+│   ├── locations/   Positano.jsx, Ravello.jsx, Sorrento.jsx
+│   └── occasions/   WeddingCeremony.jsx, MarriageProposal.jsx, BirthdaysAnniversaries.jsx, CorporateEvents.jsx
 ├── routes.js, App.jsx, main.jsx
 └── styles/          globals.css
 
@@ -113,6 +117,18 @@ Villa Cimbrone · Palazzo Avino · Belmond Hotel Caruso · Villa Treville · Mon
 - Venue rows: layout 3 colonne con hover gold line scaleX
 - Sub-label formazioni: colore #8A7A5A, font-weight 300
 - Testo corpo su bianco: #404040
+
+### Occasions — sezione homepage + landing pages
+- Ensemble suggeriti mostrati come pill buttons orizzontali (`flex-wrap gap-2`)
+  - Border `#1A1A1A/18`, testo `#404040`, hover: `border-[#B8A882] text-[#1A1A1A]`
+  - Label sopra: `"Suggested for this occasion"` in eyebrow gold `.47rem tracking-[.16em]`
+- CTA "Explore this occasion ↗": testo `.48rem`, colore `#8A7A5A`, `border-b` gold, hover → charcoal
+- Ogni occasion ha una landing page dedicata sotto `/occasions/`:
+  - `/occasions/wedding-ceremony` — 4 momenti (Processional, Ceremony, Cocktail, Reception) in griglia 2×2
+  - `/occasions/marriage-proposal` — How It Works + 3 location in griglia 3 col (dark bg)
+  - `/occasions/birthdays-anniversaries` — 3 formati (Dinner, Cocktail, Evening Dance)
+  - `/occasions/corporate-events` — 3 formati (Private Dinner, Brand Retreat, Product Launch)
+- Tutte le landing pages seguono la struttura: Hero dark → Content light → Dark ensemble CTA → Light related links → Dark enquiry CTA
 
 ### Hero — copy attuale
 - **Tagline (p sopra h1):** "Bespoke Wedding Music · Amalfi Coast"
