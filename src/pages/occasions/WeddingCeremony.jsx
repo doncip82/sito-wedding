@@ -153,7 +153,7 @@ export default function OccasionWeddingCeremony() {
           style={{ fontSize: 'clamp(1.7rem,3.5vw,2.8rem)' }}>
           Planning a wedding<br />on the Amalfi Coast?
         </p>
-        <a href="mailto:info@donatocipriano.com"
+        <a href="mailto:info@weddingmusicravello.com"
           className="text-[.6rem] font-light tracking-[.22em] uppercase no-underline
             text-[#B8A882] border-b border-[rgba(184,168,130,.35)] pb-1 whitespace-nowrap
             hover:border-[#B8A882] transition-colors">

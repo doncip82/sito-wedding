@@ -146,9 +146,9 @@ export default function Contact() {
               </button>
               <p className="text-[.5rem] font-light tracking-[.14em] text-[#404040]/60">
                 Or write directly to{' '}
-                <a href="mailto:info@donatocipriano.com"
+                <a href="mailto:info@weddingmusicravello.com"
                   className="text-[#8A7A5A] no-underline border-b border-[#8A7A5A]/40">
-                  info@donatocipriano.com
+                  info@weddingmusicravello.com
                 </a>
               </p>
             </div>
@@ -163,7 +163,7 @@ export default function Contact() {
         {[
           { label: 'Response Time', value: 'Within 48 hours' },
           { label: 'Based In', value: 'Pompei, Campania — available across the Amalfi Coast' },
-          { label: 'Email', value: 'info@donatocipriano.com' },
+          { label: 'Email', value: 'info@weddingmusicravello.com' },
         ].map(({ label, value }) => (
           <div key={label}>
             <p className="text-[.5rem] font-light tracking-[.2em] uppercase text-[#B8A882] mb-2">

@@ -47,7 +47,7 @@ Il sito propone **esclusivamente partner musicali**. L'aggiunta di fotografi, pl
   - Scroll reveal: progressive enhancement (elementi visibili di default in CSS)
 
 ## Link ufficiali
-- Email piattaforma: info@donatocipriano.com (unica email funzionante al momento)
+- Email piattaforma: info@weddingmusicravello.com
 - Sito Donato (solo per SEO interno): https://www.donatocipriano.com/en/wedding#services
 - EvoStrings: https://www.evostrings.it/
 - GitHub: github.com/doncip82/sito-wedding
@@ -151,7 +151,6 @@ Ogni blocco testo è avvolto in uno `<span>` con:
 - Aggiungere foto reale About (sostituire placeholder `bg-[#1C2030]`)
 - Aggiungere YouTube embed ID in src/data/ensembles.js
 - Collegare form Contact.jsx a Formspree
-- Aggiungere email piattaforma dedicata (sostituire info@donatocipriano.com)
 
 ## Comandi utili
 ```
