@@ -50,7 +50,7 @@ export default function TrilogyTrio() {
           <p className="text-[.72rem] font-light tracking-[.06em] leading-[2]
             text-white/55 max-w-[60ch]">
             The ensemble where classical formation meets cinematic emotion —
-            directed by Donato Cipriano.
+            violin, cello and piano performing across the Amalfi Coast.
           </p>
         </div>
       </section>

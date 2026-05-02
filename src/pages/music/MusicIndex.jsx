@@ -73,7 +73,7 @@ export default function MusicIndex() {
   return (
     <>
       <Helmet>
-        <title>Music for Your Wedding — Donato Cipriano</title>
+        <title>Wedding Music on the Amalfi Coast | Wedding Music Ravello</title>
         <meta
           name="description"
           content="Discover the full range of live music for your wedding on the Amalfi Coast — from string ensembles to jazz saxophone, DJ, vocalist and classical opera."

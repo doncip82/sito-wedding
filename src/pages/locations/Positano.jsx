@@ -69,8 +69,8 @@ export default function LocationPositano() {
               cascades across the cliff face in a series of terraces. The sound behaviour at
               each terrace level differs: at the lowest, the sea reflects sound back; higher
               up, the open exposure requires careful positioning of acoustic instruments to
-              avoid wind interference. Donato has performed at Villa Treville and knows
-              each stage precisely.
+              avoid wind interference. The partner musicians on this platform have performed
+              at Villa Treville and know each stage precisely.
             </p>
             <p>
               The{' '}

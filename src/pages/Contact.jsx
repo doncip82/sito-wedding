@@ -53,7 +53,7 @@ export default function Contact() {
         <p className="text-[.68rem] font-light tracking-[.1em] text-white/50
           max-w-[40ch] leading-[1.95]">
           Tell us about your wedding — venue, date, and the kind of music you imagine.
-          Donato will respond personally within 48 hours.
+          We respond to all enquiries within 48 hours.
         </p>
       </section>
 
@@ -66,7 +66,7 @@ export default function Contact() {
               Thank you.
             </h2>
             <p className="text-[.72rem] font-light tracking-[.05em] leading-[2] text-[#404040]">
-              Your enquiry has been received. Donato will be in touch within 48 hours.
+              Your enquiry has been received. We will be in touch within 48 hours.
             </p>
           </div>
         ) : (

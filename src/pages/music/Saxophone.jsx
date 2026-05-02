@@ -61,7 +61,7 @@ export default function MusicSaxophone() {
               an instrument with natural projection and warmth.
             </p>
             <p>
-              Donato coordinates saxophonists who perform across jazz, bossa nova,
+              The platform presents saxophonists who perform across jazz, bossa nova,
               contemporary pop and classical crossover repertoire. Programmes are assembled
               in consultation with the couple. Common formats include: saxophone solo during
               the cocktail hour (60–90 minutes), saxophone with DJ lounge set for the

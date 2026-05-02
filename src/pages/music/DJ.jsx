@@ -60,7 +60,7 @@ export default function MusicDJ() {
               have different electrical access points and PA placement constraints.
             </p>
             <p>
-              Donato selects DJs with direct experience at these venues. The coordination
+              All DJs presented on this platform have direct experience at these venues. The coordination
               is built into the engagement — sound check, set-up logistics with the venue
               manager, and transition from the live music programme to the DJ set are handled
               as a single continuous workflow, not handed off between separate vendors.

@@ -54,7 +54,7 @@ export default function MusicVocalist() {
           <div className="w-9 h-[.5px] bg-[#B8A882] mb-8" />
           <div className="space-y-6 text-[.72rem] font-light tracking-[.05em] leading-[2] text-[#404040]">
             <p>
-              Donato coordinates vocalists with training across pop, soul, jazz and
+              The platform presents vocalists with training across pop, soul, jazz and
               contemporary Italian repertoire. For ceremony use, the vocalist performs
               a curated selection agreed with the couple in advance — typically three to
               four songs across the processional, signing, and recessional.
