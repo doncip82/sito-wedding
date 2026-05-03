@@ -24,9 +24,7 @@ A reference point in Italy’s luxury wedding scene, EvoStrings adapts seamlessl
 
 On the Terrace of Infinity at Villa Cimbrone, three strings suspend time between wedding vows; within the intimate spaces of Palazzo Avino, a smaller ensemble reshapes the atmosphere with quiet elegance.
 
-The repertoire moves effortlessly between classical rigor and contemporary sensitivity:
-Vivaldi, Morricone, Einaudi, Max Richter.
-Always curated with intention, never by chance.`,
+The repertoire moves effortlessly between classical rigor and contemporary sensitivity: Vivaldi, Morricone, Einaudi, Max Richter. EvoStrings is particularly recognised for its classical crossover arrangements — international pop repertoire reimagined through the architecture of string writing, in the tradition that the Bridgerton soundtrack brought to wider attention. Always curated with intention, never by chance.`,
     occasionDescription: `The ceremony calls for strings. EvoStrings performs processionals and recessionals with the precision of a chamber group and the warmth of a Southern Italian musical tradition. Available as a duo for the most intimate garden ceremonies in Ravello, a trio for celebrations at Villa Treville, or a full quartet for grand ceremonies in the salons of Palazzo Avino or the Belmond Hotel Caruso.`,
     occasionMoment: 'Ceremony & Cocktail Hour',
     tags: ['Ceremony', 'Cocktail Reception', 'Signing', 'Villa & Garden'],
