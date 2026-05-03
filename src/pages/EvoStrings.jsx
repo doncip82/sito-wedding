@@ -1,11 +1,26 @@
 // pages/EvoStrings.jsx
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { ensembles } from '@/data/ensembles.js'
 import { ensembleSchema } from '@/data/schema.js'
 
 const ensemble = ensembles.find(e => e.id === 'evostrings')
 
+const HERO_IMAGES = [
+  { src: '/images/EvoStrings/EvoStrings.jpg',   position: 'center 70%' },
+  { src: '/images/EvoStrings/EvoStrings 2.jpg', position: 'center 60%' },
+  { src: '/images/EvoStrings/EvoStrings 3.jpg', position: 'center 60%' },
+]
+
 export default function EvoStrings() {
+  const [current, setCurrent] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent(c => (c + 1) % HERO_IMAGES.length)
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [])
+
   useEffect(() => {
     document.title = 'String Quartet & Ensemble for Weddings | EvoStrings | Wedding Music Ravello'
     const meta = document.querySelector('meta[name="description"]') || (() => { const m = document.createElement('meta'); m.name = 'description'; document.head.appendChild(m); return m })()
@@ -28,9 +43,20 @@ export default function EvoStrings() {
   return (
     <div className="bg-[#F9F8F7] pt-[68px]">
 
-      {/* Hero — dark editorial */}
-      <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(5rem,12vw,9rem)]">
-        <div className="max-w-4xl">
+      {/* Hero — image background */}
+      <section className="relative overflow-hidden px-[clamp(1.5rem,6vw,5rem)] py-[clamp(6rem,14vw,11rem)]">
+        {HERO_IMAGES.map(({ src, position }, i) => (
+          <img
+            key={src}
+            src={src}
+            alt="EvoStrings string ensemble performing on the Amalfi Coast"
+            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-[1800ms] ease-in-out"
+            style={{ objectPosition: position, opacity: i === current ? 1 : 0 }}
+          />
+        ))}
+        <div className="absolute inset-0"
+          style={{ background: 'linear-gradient(to right, rgba(26,26,26,.82) 40%, rgba(26,26,26,.45) 100%)' }} />
+        <div className="relative z-10 max-w-4xl">
           <p className="text-[.56rem] font-light tracking-[.25em] uppercase text-[#B8A882]
             flex items-center gap-3 mb-5">
             <span className="inline-block w-[22px] h-[.5px] bg-[#B8A882]" />
@@ -50,26 +76,6 @@ export default function EvoStrings() {
             A reference string ensemble for the luxury wedding sector on the
             Amalfi Coast — available as string duo, trio and quartet.
           </p>
-        </div>
-      </section>
-
-      {/* Photo / video placeholder */}
-      <section className="w-full" style={{ height: 'clamp(8rem,14vw,12rem)', background: '#1D2535' }}>
-        {/*
-          PHOTO: Replace with:
-          <img src="/images/evostrings-hero.jpg"
-               alt="EvoStrings performing at Villa Cimbrone, Ravello"
-               className="w-full h-full object-cover" />
-
-          VIDEO: Or replace with:
-          <video autoPlay muted playsInline loop className="w-full h-full object-cover">
-            <source src="/videos/evostrings-reel.mp4" type="video/mp4" />
-          </video>
-        */}
-        <div className="w-full h-full flex items-center justify-center">
-          <span className="text-[.5rem] tracking-[.2em] uppercase text-white/15">
-            EvoStrings — hero image / video
-          </span>
         </div>
       </section>
 
@@ -180,7 +186,7 @@ export default function EvoStrings() {
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-0 border-t border-black/[.09]">
           {['Villa Cimbrone','Palazzo Avino','Belmond Hotel Caruso',
-            'Villa Treville','Monastero Santa Rosa','Villa Eva'].map(v => (
+            'Villa Treville','Convento Anantara','Villa Eva'].map(v => (
             <div key={v}
               className="py-5 px-4 border-b border-r border-black/[.09] last:border-r-0
                 hover:bg-black/[.02] transition-colors cursor-default">
