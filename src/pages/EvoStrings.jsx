@@ -6,9 +6,9 @@ import { ensembleSchema } from '@/data/schema.js'
 const ensemble = ensembles.find(e => e.id === 'evostrings')
 
 const HERO_IMAGES = [
-  { src: '/images/EvoStrings/EvoStrings.jpg',   position: 'center 70%' },
-  { src: '/images/EvoStrings/EvoStrings 2.jpg', position: 'center 60%' },
-  { src: '/images/EvoStrings/EvoStrings 3.jpg', position: 'center 60%' },
+  { src: '/images/EvoStrings/EvoStrings.jpg',   posClass: 'object-[center_70%] md:object-[center_56%]' },
+  { src: '/images/EvoStrings/EvoStrings 2.jpg', posClass: 'object-[center_60%] md:object-[center_71%]' },
+  { src: '/images/EvoStrings/EvoStrings 3.jpg', posClass: 'object-[center_60%] md:object-[center_74%]' },
 ]
 
 export default function EvoStrings() {
@@ -45,13 +45,13 @@ export default function EvoStrings() {
 
       {/* Hero — image background */}
       <section className="relative overflow-hidden px-[clamp(1.5rem,6vw,5rem)] py-[clamp(6rem,14vw,11rem)]">
-        {HERO_IMAGES.map(({ src, position }, i) => (
+        {HERO_IMAGES.map(({ src, posClass }, i) => (
           <img
             key={src}
             src={src}
             alt="EvoStrings string ensemble performing on the Amalfi Coast"
-            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-[1800ms] ease-in-out"
-            style={{ objectPosition: position, opacity: i === current ? 1 : 0 }}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1800ms] ease-in-out ${posClass}`}
+            style={{ opacity: i === current ? 1 : 0 }}
           />
         ))}
         <div className="absolute inset-0"
