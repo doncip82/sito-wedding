@@ -6,9 +6,9 @@ import { ensembleSchema } from '@/data/schema.js'
 const ensemble = ensembles.find(e => e.id === 'evostrings')
 
 const HERO_IMAGES = [
-  { src: '/images/EvoStrings/EvoStrings.jpg',   posClass: 'object-[center_70%] md:object-[center_56%]' },
-  { src: '/images/EvoStrings/EvoStrings 2.jpg', posClass: 'object-[center_60%] md:object-[center_71%]' },
-  { src: '/images/EvoStrings/EvoStrings 3.jpg', posClass: 'object-[center_60%] md:object-[center_74%]' },
+  { src: '/images/EvoStrings/EvoStrings.jpg',   posClass: 'object-[center_70%] md:object-[center_80%]' },
+  { src: '/images/EvoStrings/EvoStrings 2.jpg', posClass: 'object-[center_60%] md:object-[center_47%]' },
+  { src: '/images/EvoStrings/EvoStrings 3.jpg', posClass: 'object-[center_60%] md:object-[center_44%]' },
 ]
 
 export default function EvoStrings() {
