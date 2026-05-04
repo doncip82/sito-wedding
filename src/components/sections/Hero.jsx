@@ -53,20 +53,6 @@ export default function Hero() {
         />
       </div>
 
-      {/* Vertical editorial tag */}
-      <div
-        aria-hidden="true"
-        className="absolute right-[clamp(1.5rem,4vw,4rem)] top-1/2 -translate-y-1/2 z-10
-          hidden sm:flex flex-col items-center gap-[.9rem]"
-        style={{ opacity: 0, animation: 'up .9s ease 1.4s forwards' }}
-      >
-        <div style={{ width: '.5px', height: 52,
-          background: 'linear-gradient(to bottom, transparent, rgba(184,168,130,.45))' }} />
-        <span className="text-[.5rem] font-light tracking-[.22em] uppercase text-white/25"
-          style={{ writingMode: 'vertical-rl' }}>
-          Amalfi Coast · Est. 2008
-        </span>
-      </div>
 
       {/* Content */}
       <div className="relative z-10 flex flex-col justify-start
