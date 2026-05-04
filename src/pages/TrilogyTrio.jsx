@@ -80,57 +80,6 @@ export default function TrilogyTrio() {
         </div>
       </section>
 
-      {/* Video Section */}
-      <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(4rem,10vw,8rem)]">
-        <p className="text-[.56rem] font-light tracking-[.25em] uppercase text-[#B8A882]
-          flex items-center gap-3 mb-5">
-          <span className="inline-block w-[22px] h-[.5px] bg-[#B8A882]" />
-          Live Performances
-        </p>
-        <h2 className="font-serif italic font-light leading-[1.08] text-[#F9F8F7] mb-[clamp(2.5rem,6vw,5rem)]"
-          style={{ fontSize: 'clamp(2rem,4.5vw,3.6rem)', maxWidth: '18ch' }}>
-          Watch Trilogy Trio Live
-        </h2>
-
-        {/* Hero video */}
-        <div className="w-full mb-4 overflow-hidden rounded-sm
-          transition-shadow duration-500 hover:shadow-[0_8px_40px_rgba(0,0,0,.5)]"
-          style={{ aspectRatio: '16/9' }}>
-          <iframe
-            src="https://www.youtube.com/embed/7hp25qXj8ZU"
-            title="Trilogy Trio - Live Performance"
-            frameBorder="0"
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            className="w-full h-full"
-          />
-        </div>
-
-        {/* Two secondary videos */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {[
-            { id: 'leddQy0spuE', title: 'Trilogy Trio - Wedding Performance' },
-            { id: 'sbFM3i88IFI', title: 'Trilogy Trio - Live Music Experience' },
-          ].map(({ id, title }) => (
-            <div key={id}
-              className="overflow-hidden rounded-sm
-                transition-shadow duration-500 hover:shadow-[0_8px_40px_rgba(0,0,0,.5)]"
-              style={{ aspectRatio: '16/9' }}>
-              <iframe
-                src={`https://www.youtube.com/embed/${id}`}
-                title={title}
-                frameBorder="0"
-                loading="lazy"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              />
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* Description */}
       <section className="px-[clamp(1.5rem,6vw,5rem)] py-[clamp(4rem,10vw,8rem)]">
         <div className="grid grid-cols-1 md:grid-cols-[1fr_380px] gap-[clamp(3rem,6vw,6rem)]">
@@ -191,6 +140,57 @@ export default function TrilogyTrio() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Video Section */}
+      <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(4rem,10vw,8rem)]">
+        <p className="text-[.56rem] font-light tracking-[.25em] uppercase text-[#B8A882]
+          flex items-center gap-3 mb-5">
+          <span className="inline-block w-[22px] h-[.5px] bg-[#B8A882]" />
+          Live Performances
+        </p>
+        <h2 className="font-serif italic font-light leading-[1.08] text-[#F9F8F7] mb-[clamp(2.5rem,6vw,5rem)]"
+          style={{ fontSize: 'clamp(2rem,4.5vw,3.6rem)', maxWidth: '18ch' }}>
+          Watch Trilogy Trio Live
+        </h2>
+
+        {/* Hero video */}
+        <div className="w-full mb-4 overflow-hidden rounded-sm
+          transition-shadow duration-500 hover:shadow-[0_8px_40px_rgba(0,0,0,.5)]"
+          style={{ aspectRatio: '16/9' }}>
+          <iframe
+            src="https://www.youtube.com/embed/7hp25qXj8ZU"
+            title="Trilogy Trio - Live Performance"
+            frameBorder="0"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="w-full h-full"
+          />
+        </div>
+
+        {/* Two secondary videos */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {[
+            { id: 'leddQy0spuE', title: 'Trilogy Trio - Wedding Performance' },
+            { id: 'sbFM3i88IFI', title: 'Trilogy Trio - Live Music Experience' },
+          ].map(({ id, title }) => (
+            <div key={id}
+              className="overflow-hidden rounded-sm
+                transition-shadow duration-500 hover:shadow-[0_8px_40px_rgba(0,0,0,.5)]"
+              style={{ aspectRatio: '16/9' }}>
+              <iframe
+                src={`https://www.youtube.com/embed/${id}`}
+                title={title}
+                frameBorder="0"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
+          ))}
         </div>
       </section>
 
