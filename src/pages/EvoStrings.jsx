@@ -54,25 +54,26 @@ export default function EvoStrings() {
             style={{ objectPosition: pos, opacity: i === current ? 1 : 0 }}
           />
         ))}
-        <div className="absolute inset-0"
-          style={{ background: 'linear-gradient(to right, rgba(26,26,26,.82) 40%, rgba(26,26,26,.45) 100%)' }} />
         <div className="relative z-10 max-w-4xl">
           <p className="text-[.56rem] font-light tracking-[.25em] uppercase text-[#B8A882]
-            flex items-center gap-3 mb-5">
+            flex items-center gap-3 mb-5"
+            style={{ textShadow: '0 2px 12px rgba(0,0,0,0.9), 0 0 40px rgba(0,0,0,0.6)' }}>
             <span className="inline-block w-[22px] h-[.5px] bg-[#B8A882]" />
             String Ensemble · Amalfi Coast
           </p>
           <h1 className="font-serif italic font-light leading-[1.02] text-[#F9F8F7] mb-6"
-            style={{ fontSize: 'clamp(3rem,7vw,6rem)' }}>
+            style={{ fontSize: 'clamp(3rem,7vw,6rem)', textShadow: '0 2px 20px rgba(0,0,0,0.9), 0 0 60px rgba(0,0,0,0.6)' }}>
             EvoStrings
           </h1>
-          <p className="text-[.68rem] font-light tracking-[.14em] text-white/60
-            max-w-[44ch] leading-[1.95] mb-8">
+          <p className="text-[.68rem] font-light tracking-[.14em] text-white
+            max-w-[44ch] leading-[1.95] mb-8"
+            style={{ textShadow: '0 2px 12px rgba(0,0,0,0.9), 0 0 40px rgba(0,0,0,0.6)' }}>
             {ensemble.subLabel}
           </p>
           <div className="w-9 h-[.5px] bg-[#B8A882] mb-8" />
           <p className="text-[.72rem] font-light tracking-[.06em] leading-[2]
-            text-white/55 max-w-[60ch]">
+            text-white max-w-[60ch]"
+            style={{ textShadow: '0 2px 12px rgba(0,0,0,0.9), 0 0 40px rgba(0,0,0,0.6)' }}>
             A reference string ensemble for the luxury wedding sector on the
             Amalfi Coast — available as string duo, trio and quartet.
           </p>
