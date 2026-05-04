@@ -1,5 +1,5 @@
 // pages/EvoStrings.jsx
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { ensembles } from '@/data/ensembles.js'
 import { ensembleSchema } from '@/data/schema.js'
 
@@ -19,6 +19,14 @@ export default function EvoStrings() {
       setCurrent(c => (c + 1) % HERO_IMAGES.length)
     }, 5000)
     return () => clearInterval(timer)
+  }, [])
+
+  useEffect(() => {
+    const script = document.createElement('script')
+    script.src = 'https://w.behold.so/widget.js'
+    script.type = 'module'
+    document.head.appendChild(script)
+    return () => document.head.removeChild(script)
   }, [])
 
   useEffect(() => {
@@ -195,6 +203,30 @@ export default function EvoStrings() {
             </div>
           ))}
         </div>
+      </section>
+
+      {/* Instagram Feed */}
+      <section className="bg-[#F9F8F7] border-t border-black/[.09]
+        px-[clamp(1.5rem,6vw,5rem)] py-[clamp(4rem,8vw,6rem)]">
+        <div className="flex items-baseline justify-between gap-4 flex-wrap mb-10">
+          <div>
+            <p className="eyebrow mb-3">Instagram</p>
+            <h2 className="section-title" style={{ maxWidth: '22ch' }}>
+              @evostringslive
+            </h2>
+          </div>
+          <a
+            href="https://www.instagram.com/evostringslive"
+            target="_blank" rel="noopener noreferrer"
+            className="text-[.56rem] font-light tracking-[.22em] uppercase no-underline
+              text-[#8A7A5A] border-b border-[rgba(138,122,90,.35)] pb-[2px]
+              hover:border-[#8A7A5A] transition-colors flex-shrink-0"
+          >
+            Follow ↗
+          </a>
+        </div>
+        {/* Behold.so widget — sostituisci YOUR_FEED_ID con l'ID ottenuto su behold.so */}
+        <behold-widget feed-id="YOUR_FEED_ID" />
       </section>
 
       {/* CTA */}
