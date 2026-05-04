@@ -44,7 +44,7 @@ export default function EvoStrings() {
     <div className="bg-[#F9F8F7] pt-[68px]">
 
       {/* Hero — slideshow background */}
-      <section className="relative overflow-hidden px-[clamp(1.5rem,6vw,5rem)] py-[clamp(6rem,14vw,11rem)]">
+      <section className="relative overflow-hidden px-[clamp(1.5rem,6vw,5rem)] py-14 md:py-[clamp(6rem,14vw,11rem)]">
         {HERO_IMAGES.map(({ src, pos }, i) => (
           <img
             key={src}
