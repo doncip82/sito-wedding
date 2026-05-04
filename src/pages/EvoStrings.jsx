@@ -76,7 +76,7 @@ export default function EvoStrings() {
               {ensemble.description}
             </p>
             <div className="flex items-center gap-6 flex-wrap mt-8">
-              <a href="/contact" className="link-underline">Enquire About EvoStrings</a>
+              <a href="/contact" className="link-underline">Request a booking</a>
               <a href={ensemble.officialUrl} className="link-ext"
                 target="_blank" rel="noopener noreferrer">
                 <span>↗</span> Visit EvoStrings.it

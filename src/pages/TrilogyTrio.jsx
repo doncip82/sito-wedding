@@ -94,7 +94,7 @@ export default function TrilogyTrio() {
               {ensemble.description}
             </p>
             <div className="flex items-center gap-6 flex-wrap mt-8">
-              <a href="/contact" className="link-underline">Enquire About Trilogy Trio</a>
+              <a href="/contact" className="link-underline">Request a booking</a>
               <a href={ensemble.youtubeUrl} className="link-ext"
                 target="_blank" rel="noopener noreferrer"
                 aria-label="Watch Trilogy Trio on YouTube">
