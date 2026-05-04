@@ -1,5 +1,5 @@
 // pages/EvoStrings.jsx
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { ensembles } from '@/data/ensembles.js'
 import { ensembleSchema } from '@/data/schema.js'
 
@@ -19,14 +19,6 @@ export default function EvoStrings() {
       setCurrent(c => (c + 1) % HERO_IMAGES.length)
     }, 5000)
     return () => clearInterval(timer)
-  }, [])
-
-  useEffect(() => {
-    const script = document.createElement('script')
-    script.src = 'https://w.behold.so/widget.js'
-    script.type = 'module'
-    document.head.appendChild(script)
-    return () => document.head.removeChild(script)
   }, [])
 
   useEffect(() => {
@@ -226,7 +218,7 @@ export default function EvoStrings() {
           </a>
         </div>
         {/* Behold.so widget — sostituisci YOUR_FEED_ID con l'ID ottenuto su behold.so */}
-        <behold-widget feed-id="VAc7ccyKoWYgDthZPJpJ" />
+        <behold-widget feed-id="PqAGZx5AEigtZudpTU7m" />
       </section>
 
       {/* CTA */}
