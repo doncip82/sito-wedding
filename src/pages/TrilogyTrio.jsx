@@ -1,11 +1,26 @@
 // pages/TrilogyTrio.jsx
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { ensembles } from '@/data/ensembles.js'
 import { ensembleSchema } from '@/data/schema.js'
 
 const ensemble = ensembles.find(e => e.id === 'trilogy-trio')
 
+const HERO_IMAGES = [
+  { src: '/images/Trilogy%20Trio/Trilogy%20Trio%200.JPG', pos: 'center center' },
+  { src: '/images/Trilogy%20Trio/Trilogy%20Trio%201.jpg', pos: 'center center' },
+  { src: '/images/Trilogy%20Trio/Trilogy%20Trio%202.jpg', pos: 'center center' },
+  { src: '/images/Trilogy%20Trio/Trilogy%20Trio%203.jpg', pos: 'center center' },
+]
+
 export default function TrilogyTrio() {
+  const [current, setCurrent] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent(c => (c + 1) % HERO_IMAGES.length)
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [])
   useEffect(() => {
     document.title = 'String Trio & Piano for Weddings in Italy | Trilogy Trio | Wedding Music Ravello'
     const meta = document.querySelector('meta[name="description"]') || (() => { const m = document.createElement('meta'); m.name = 'description'; document.head.appendChild(m); return m })()
@@ -28,9 +43,19 @@ export default function TrilogyTrio() {
   return (
     <div className="bg-[#F9F8F7] pt-[68px]">
 
-      {/* Hero */}
-      <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(5rem,12vw,9rem)]">
-        <div className="max-w-4xl">
+      {/* Hero — slideshow background */}
+      <section className="relative overflow-hidden px-[clamp(1.5rem,6vw,5rem)] py-3.5 md:py-[clamp(5rem,12vw,9rem)]">
+        {HERO_IMAGES.map(({ src, pos }, i) => (
+          <img
+            key={src}
+            src={src}
+            alt="Trilogy Trio performing on the Amalfi Coast"
+            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-[1800ms] ease-in-out"
+            style={{ objectPosition: pos, opacity: i === current ? 1 : 0 }}
+          />
+        ))}
+        <div className="absolute inset-0 bg-[rgba(26,26,26,.38)]" />
+        <div className="relative z-10 max-w-4xl">
           <p className="text-[.56rem] font-light tracking-[.25em] uppercase text-[#B8A882]
             flex items-center gap-3 mb-5">
             <span className="inline-block w-[22px] h-[.5px] bg-[#B8A882]" />
