@@ -9,6 +9,7 @@ const MUSIC_OPTIONS = [
     href:      '/evostrings',
     img:       '/images/EvoStrings/EvoStrings.jpg',
     objectFit: 'contain',
+    objectPos: 'center 30%',
     bg:        '#CECCC9',
   },
   {
@@ -95,7 +96,7 @@ export default function MusicIndex() {
       {/* Grid */}
       <section className="px-[clamp(1rem,4vw,3rem)] pb-24 bg-[#F9F8F7]">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-          {MUSIC_OPTIONS.map(({ label, sub, href, bg, img, objectFit }) => (
+          {MUSIC_OPTIONS.map(({ label, sub, href, bg, img, objectFit, objectPos }) => (
             <Link
               key={label}
               to={href}
@@ -104,7 +105,8 @@ export default function MusicIndex() {
             >
               {img && (
                 <img src={img} alt={label}
-                  className={`absolute inset-0 w-full h-full ${objectFit === 'contain' ? 'object-contain' : 'object-cover'}`} />
+                  className={`absolute inset-0 w-full h-full ${objectFit === 'contain' ? 'object-contain' : 'object-cover'}`}
+                  style={objectPos ? { objectPosition: objectPos } : undefined} />
               )}
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
