@@ -143,7 +143,7 @@ export default function Hero() {
         {['Ravello','Positano','Sorrento','Praiano','Villa Cimbrone','Villa Rufolo','Amalfi']
           .map((loc, i, arr) => (
             <span key={loc} className="flex items-center gap-[1.1rem]">
-              <span className="text-[.5rem] font-light tracking-[.22em] uppercase text-white/28">
+              <span className="text-[.5rem] font-light tracking-[.22em] uppercase text-white/70">
                 {loc}
               </span>
               {i < arr.length - 1 && (
