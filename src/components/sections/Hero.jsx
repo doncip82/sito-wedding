@@ -72,18 +72,10 @@ export default function Hero() {
       <div className="relative z-10 flex flex-col justify-start
         px-[clamp(1.5rem,6vw,5rem)] pt-[clamp(5rem,12vw,9rem)] h-full">
 
-        <p className="text-[.56rem] font-normal tracking-[.28em] uppercase text-white/85
+        <p className="text-[.56rem] font-normal tracking-[.28em] uppercase text-white
           mb-[1.1rem]"
-          style={{ opacity: 0, animation: 'up .9s ease .3s forwards' }}>
-          <span style={{
-            background: 'rgba(10,10,10,0.32)',
-            borderRadius: '4px',
-            boxDecorationBreak: 'clone',
-            WebkitBoxDecorationBreak: 'clone',
-            padding: '0.18em 0.5em',
-          }}>
-            Bespoke Wedding Music · Amalfi Coast
-          </span>
+          style={{ opacity: 0, animation: 'up .9s ease .3s forwards', textShadow: '0 2px 12px rgba(0,0,0,0.9), 0 0 40px rgba(0,0,0,0.6)' }}>
+          Bespoke Wedding Music · Amalfi Coast
         </p>
 
         <h1 id="hero-h1"
@@ -93,16 +85,9 @@ export default function Hero() {
             maxWidth: '16ch',
             opacity: 0,
             animation: 'up 1s ease .55s forwards',
+            textShadow: '0 2px 20px rgba(0,0,0,0.9), 0 0 60px rgba(0,0,0,0.6)',
           }}>
-          <span style={{
-            background: 'rgba(10,10,10,0.32)',
-            borderRadius: '4px',
-            boxDecorationBreak: 'clone',
-            WebkitBoxDecorationBreak: 'clone',
-            padding: '0.08em 0.3em',
-          }}>
-            Live Wedding Music in<br />Ravello, Positano &amp; Sorrento
-          </span>
+          Live Wedding Music in<br />Ravello, Positano &amp; Sorrento
         </h1>
 
         <div aria-hidden="true"
@@ -110,16 +95,8 @@ export default function Hero() {
           style={{ opacity: 0, animation: 'up .9s ease .8s forwards' }} />
 
         <h2 className="text-[.80rem] font-normal tracking-[.14em] text-white max-w-[48ch] leading-[1.95]"
-          style={{ opacity: 0, animation: 'up .9s ease 1s forwards', textShadow: '0 1px 10px rgba(0,0,0,0.55)' }}>
-          <span style={{
-            background: 'rgba(10,10,10,0.44)',
-            borderRadius: '4px',
-            boxDecorationBreak: 'clone',
-            WebkitBoxDecorationBreak: 'clone',
-            padding: '0.18em 0.5em',
-          }}>
-            A platform for curated live music at destination weddings across the Amalfi Coast — from string quartets at Villa Cimbrone to jazz ensembles at Belmond Hotel Caruso.
-          </span>
+          style={{ opacity: 0, animation: 'up .9s ease 1s forwards', textShadow: '0 2px 12px rgba(0,0,0,0.9), 0 0 40px rgba(0,0,0,0.6)' }}>
+          A platform for curated live music at destination weddings across the Amalfi Coast — from string quartets at Villa Cimbrone to jazz ensembles at Belmond Hotel Caruso.
         </h2>
 
         <div className="flex items-center gap-10 mt-9 flex-wrap"
@@ -128,7 +105,7 @@ export default function Hero() {
             className="text-[.6rem] font-light tracking-[.22em] uppercase text-white
               pb-1 border-b border-white/60 no-underline
               hover:text-[#B8A882] hover:border-[#B8A882] transition-all"
-            style={{ textShadow: '0 1px 8px rgba(0,0,0,0.55)' }}>
+            style={{ textShadow: '0 2px 10px rgba(0,0,0,0.9)' }}>
             Explore the Ensembles ↓
           </a>
         </div>
