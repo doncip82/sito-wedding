@@ -106,13 +106,13 @@ export default function EvoStrings() {
             {[
               { label: 'Duo',     desc: 'Violin and cello. For intimate garden ceremonies and cocktail receptions in smaller venues.' },
               { label: 'Trio',    desc: 'Two violins and cello. The ideal balance of presence and delicacy for terraces and loggias.' },
-              { label: 'Quartet', desc: 'The full string quartet. For grand ceremonies in historic salons and open-air amphitheatres.' },
+              { label: 'Quartet', desc: 'The full string quartet. Ideal for those who desire an authentic classical experience, where the musical choice defines the atmosphere — not the space.' },
             ].map(({ label, desc }) => (
               <div key={label}
                 className="py-6 border-b border-black/[.09] group cursor-default">
                 <div className="flex items-start gap-4">
-                  <span className="text-[.5rem] font-light tracking-[.22em] uppercase
-                    text-[#B8A882] opacity-60 pt-[.15rem] w-12 flex-shrink-0">
+                  <span className="text-[.5rem] font-normal tracking-[.22em] uppercase
+                    text-[#B8A882] pt-[.15rem] w-12 flex-shrink-0">
                     {label}
                   </span>
                   <p className="text-[.64rem] font-light tracking-[.06em] leading-[1.95]
