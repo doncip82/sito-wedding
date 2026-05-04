@@ -109,7 +109,7 @@ export default function Hero() {
           className="w-9 h-[.5px] bg-[#B8A882] my-7"
           style={{ opacity: 0, animation: 'up .9s ease .8s forwards' }} />
 
-        <h2 className="text-[.68rem] font-normal tracking-[.14em] text-white max-w-[48ch] leading-[1.95]"
+        <h2 className="text-[.80rem] font-normal tracking-[.14em] text-white max-w-[48ch] leading-[1.95]"
           style={{ opacity: 0, animation: 'up .9s ease 1s forwards', textShadow: '0 1px 10px rgba(0,0,0,0.55)' }}>
           <span style={{
             background: 'rgba(10,10,10,0.44)',
