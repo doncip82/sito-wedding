@@ -1,25 +1,11 @@
 // pages/EvoStrings.jsx
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { ensembles } from '@/data/ensembles.js'
 import { ensembleSchema } from '@/data/schema.js'
 
 const ensemble = ensembles.find(e => e.id === 'evostrings')
 
-const HERO_IMAGES = [
-  { src: '/images/EvoStrings/EvoStrings%200.jpeg', pos: 'center 25%' },
-  { src: '/images/EvoStrings/EvoStrings 2.jpg', pos: 'center 15%' },
-  { src: '/images/EvoStrings/EvoStrings 3.jpg', pos: 'center 10%' },
-]
-
 export default function EvoStrings() {
-  const [current, setCurrent] = useState(0)
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrent(c => (c + 1) % HERO_IMAGES.length)
-    }, 5000)
-    return () => clearInterval(timer)
-  }, [])
 
   useEffect(() => {
     document.title = 'String Quartet & Ensemble for Weddings | EvoStrings | Wedding Music Ravello'
@@ -43,17 +29,15 @@ export default function EvoStrings() {
   return (
     <div className="bg-[#F9F8F7] pt-[68px]">
 
-      {/* Hero — slideshow background */}
+      {/* Hero — video background */}
       <section className="relative overflow-hidden px-[clamp(1.5rem,6vw,5rem)] py-3.5 md:py-[clamp(6rem,14vw,11rem)]">
-        {HERO_IMAGES.map(({ src, pos }, i) => (
-          <img
-            key={src}
-            src={src}
-            alt="EvoStrings string ensemble performing on the Amalfi Coast"
-            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-[1800ms] ease-in-out"
-            style={{ objectPosition: pos, opacity: i === current ? 1 : 0 }}
-          />
-        ))}
+        <video
+          autoPlay muted playsInline loop preload="auto"
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        >
+          <source src="/images/EvoStrings/Salone Margherita Sito Ravello DEF.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-[rgba(26,26,26,.38)]" />
         <div className="relative z-10 max-w-4xl">
           <p className="text-[.56rem] font-light tracking-[.25em] uppercase text-[#B8A882]
