@@ -6,7 +6,7 @@ import { ensembleSchema } from '@/data/schema.js'
 const ensemble = ensembles.find(e => e.id === 'evostrings')
 
 const HERO_IMAGES = [
-  { src: '/images/EvoStrings/EvoStrings.jpg',   pos: 'center 75%' },
+  { src: '/images/EvoStrings/EvoStrings%200.jpeg', pos: 'center 75%' },
   { src: '/images/EvoStrings/EvoStrings 2.jpg', pos: 'center 15%' },
   { src: '/images/EvoStrings/EvoStrings 3.jpg', pos: 'center 10%' },
 ]
