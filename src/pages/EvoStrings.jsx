@@ -226,7 +226,7 @@ export default function EvoStrings() {
           </a>
         </div>
         {/* Behold.so widget — sostituisci YOUR_FEED_ID con l'ID ottenuto su behold.so */}
-        <behold-widget feed-id="YOUR_FEED_ID" />
+        <behold-widget feed-id="VAc7ccyKoWYgDthZPJpJ" />
       </section>
 
       {/* CTA */}
