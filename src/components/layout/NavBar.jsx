@@ -51,7 +51,7 @@ export default function NavBar() {
     ? 'text-[#1A1A1A] border-black/30 hover:text-[#8A7A5A] hover:border-[#8A7A5A]'
     : 'text-white/85 border-white/60 hover:text-[#B8A882] hover:border-[#B8A882]'
   const ctaWeight  = scrolled || !isHome ? 'font-light'   : 'font-normal'
-  const hamColor   = menuOpen ? 'bg-[#F9F8F7]' : (scrolled || !isHome ? 'bg-[#1A1A1A]' : 'bg-[#F9F8F7]')
+  const hamColor   = menuOpen ? 'bg-white' : (scrolled || !isHome ? 'bg-[#1A1A1A]' : 'bg-white')
 
   const NAV_TEXT = `text-[.58rem] tracking-[.2em] uppercase transition-colors duration-300 ${linkWeight} ${linkColor}`
 
@@ -131,9 +131,9 @@ export default function NavBar() {
           aria-expanded={menuOpen}
           aria-controls="mobile-menu"
         >
-          <span className={`block w-5 h-[.5px] transition-all duration-300 ${hamColor} ${menuOpen ? 'translate-y-[5.5px] rotate-45'  : ''}`} />
-          <span className={`block w-5 h-[.5px] transition-all duration-300 ${hamColor} ${menuOpen ? 'opacity-0'                       : ''}`} />
-          <span className={`block w-5 h-[.5px] transition-all duration-300 ${hamColor} ${menuOpen ? '-translate-y-[5.5px] -rotate-45' : ''}`} />
+          <span className={`block w-6 h-[1.5px] transition-all duration-300 ${hamColor} ${menuOpen ? 'translate-y-[6.5px] rotate-45'  : ''}`} />
+          <span className={`block w-6 h-[1.5px] transition-all duration-300 ${hamColor} ${menuOpen ? 'opacity-0'                       : ''}`} />
+          <span className={`block w-6 h-[1.5px] transition-all duration-300 ${hamColor} ${menuOpen ? '-translate-y-[6.5px] -rotate-45' : ''}`} />
         </button>
       </nav>
 
