@@ -140,7 +140,7 @@ export default function Hero() {
         flex items-center gap-[1.1rem] flex-wrap"
         aria-label="Locations served"
         style={{ opacity: 0, animation: 'up .9s ease 1.55s forwards' }}>
-        {['Ravello','Positano','Sorrento','Praiano','Villa Cimbrone','Villa Rufolo','Amalfi']
+        {['Ravello','Positano','Praiano','Amalfi','Minori','Maiori','Sorrento','Sant\'Agnello','Vico Equense']
           .map((loc, i, arr) => (
             <span key={loc} className="flex items-center gap-[1.1rem]">
               <span className="text-[.5rem] font-normal tracking-[.22em] uppercase text-white/70">
