@@ -80,38 +80,54 @@ export default function TrilogyTrio() {
         </div>
       </section>
 
-      {/* Video embed */}
-      <section className="w-full bg-[#111]" style={{ aspectRatio: '16/9' }}>
-        {/*
-          VIDEO EMBED — Replace div with:
+      {/* Video Section */}
+      <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(4rem,10vw,8rem)]">
+        <p className="text-[.56rem] font-light tracking-[.25em] uppercase text-[#B8A882]
+          flex items-center gap-3 mb-5">
+          <span className="inline-block w-[22px] h-[.5px] bg-[#B8A882]" />
+          Live Performances
+        </p>
+        <h2 className="font-serif italic font-light leading-[1.08] text-[#F9F8F7] mb-[clamp(2.5rem,6vw,5rem)]"
+          style={{ fontSize: 'clamp(2rem,4.5vw,3.6rem)', maxWidth: '18ch' }}>
+          Watch Trilogy Trio Live
+        </h2>
+
+        {/* Hero video */}
+        <div className="w-full mb-4 overflow-hidden rounded-sm
+          transition-shadow duration-500 hover:shadow-[0_8px_40px_rgba(0,0,0,.5)]"
+          style={{ aspectRatio: '16/9' }}>
           <iframe
-            src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-            title="Trilogy Trio — Official Performance Video"
+            src="https://www.youtube.com/embed/7hp25qXj8ZU"
+            title="Trilogy Trio - Live Performance"
             frameBorder="0"
-            allow="autoplay; encrypted-media; picture-in-picture"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
             className="w-full h-full"
           />
-        */}
-        <div className="w-full h-full flex flex-col items-center justify-center gap-4">
-          <a href={ensemble.youtubeUrl}
-            target="_blank" rel="noopener noreferrer"
-            className="flex items-center gap-4 no-underline group">
-            <span className="flex items-center justify-center w-16 h-16 rounded-full
-              border border-white/30 group-hover:border-[#B8A882] transition-colors">
-              <svg width="18" height="22" viewBox="0 0 10 12" fill="none">
-                <path d="M1 1L9 6L1 11V1Z" stroke="white" strokeWidth=".8"
-                  strokeLinejoin="round" opacity=".6"/>
-              </svg>
-            </span>
-            <span className="text-[.56rem] font-light tracking-[.2em] uppercase text-white/40
-              group-hover:text-[#B8A882] transition-colors">
-              Watch on YouTube
-            </span>
-          </a>
-          <p className="text-[.46rem] tracking-[.18em] uppercase text-white/15">
-            Paste YouTube embed URL in code to activate
-          </p>
+        </div>
+
+        {/* Two secondary videos */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {[
+            { id: 'leddQy0spuE', title: 'Trilogy Trio - Wedding Performance' },
+            { id: 'sbFM3i88IFI', title: 'Trilogy Trio - Live Music Experience' },
+          ].map(({ id, title }) => (
+            <div key={id}
+              className="overflow-hidden rounded-sm
+                transition-shadow duration-500 hover:shadow-[0_8px_40px_rgba(0,0,0,.5)]"
+              style={{ aspectRatio: '16/9' }}>
+              <iframe
+                src={`https://www.youtube.com/embed/${id}`}
+                title={title}
+                frameBorder="0"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
+          ))}
         </div>
       </section>
 
