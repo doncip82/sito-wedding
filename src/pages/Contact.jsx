@@ -162,7 +162,6 @@ export default function Contact() {
         py-[clamp(3rem,6vw,5rem)] grid grid-cols-1 md:grid-cols-3 gap-10">
         {[
           { label: 'Response Time', value: 'Within 48 hours' },
-          { label: 'Based In', value: 'Pompei, Campania — available across the Amalfi Coast' },
           { label: 'Email', value: 'info@weddingmusicravello.com' },
         ].map(({ label, value }) => (
           <div key={label}>
