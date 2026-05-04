@@ -36,7 +36,7 @@ export default function EvoStrings() {
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover object-center"
         >
-          <source src="/images/EvoStrings/Salone Margherita Sito Ravello DEF.mp4" type="video/mp4" />
+          <source src="/images/EvoStrings/EvoStrings_Hero.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-[rgba(26,26,26,.38)]" />
         <div className="relative z-10 max-w-4xl">
