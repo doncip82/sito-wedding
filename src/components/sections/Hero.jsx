@@ -31,7 +31,7 @@ export default function Hero() {
           className="absolute inset-0 w-full h-full object-cover object-center"
           style={{ filter: 'url(#hero-midtones)' }}
         >
-          <source src="/videos/Sito_Wedding_-_Hero_Loop.mp4" type="video/mp4" />
+          <source src="/videos/Ravello_Loop.mp4" type="video/mp4" />
         </video>
         {/* Gradient overlay — vertical */}
         <div

@@ -165,7 +165,7 @@ export default function NavBar() {
           className="absolute inset-0 w-full h-full object-cover object-center"
           style={{ filter: 'url(#menu-midtones)' }}
         >
-          <source src="/videos/Sito_Wedding_-_Hero_Loop.mp4" type="video/mp4" />
+          <source src="/videos/Ravello_Loop.mp4" type="video/mp4" />
         </video>
         {/* Vertical gradient — same as hero */}
         <div aria-hidden="true" className="absolute inset-0" style={{
