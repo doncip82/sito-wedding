@@ -153,9 +153,9 @@ export default function TrilogyTrio() {
                 { composer: 'Hans Zimmer',      title: 'Time (Inception)' },
                 { composer: 'Ennio Morricone',  title: 'Gabriel\'s Oboe' },
                 { composer: 'Nino Rota',        title: 'The Godfather Theme' },
-                { composer: 'Radiohead',        title: 'Creep (Chamber Version)' },
+                { composer: 'John Legend',       title: 'All of Me' },
+                { composer: 'Elvis Presley',    title: 'Can\'t Help Falling in Love' },
                 { composer: 'Coldplay',         title: 'The Scientist' },
-                { composer: 'Max Richter',      title: 'On the Nature of Daylight' },
               ].map(({ composer, title }) => (
                 <div key={title}
                   className="py-4 border-b border-black/[.09] flex justify-between
