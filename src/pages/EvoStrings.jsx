@@ -217,8 +217,26 @@ export default function EvoStrings() {
             Follow ↗
           </a>
         </div>
-        {/* Behold.so widget — sostituisci YOUR_FEED_ID con l'ID ottenuto su behold.so */}
-        <behold-widget feed-id="PqAGZx5AEigtZudpTU7m" />
+        <div className="grid grid-cols-3 gap-[3px]">
+          {Array.from({ length: 6 }).map((_, i) => (
+            <a
+              key={i}
+              href="https://www.instagram.com/evostringslive"
+              target="_blank" rel="noopener noreferrer"
+              className="relative group overflow-hidden no-underline"
+              style={{ aspectRatio: '1/1', backgroundColor: '#E8E5E0' }}
+            >
+              <div className="absolute inset-0 bg-[#1A1A1A] opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                  <circle cx="12" cy="12" r="4"/>
+                  <circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/>
+                </svg>
+              </div>
+            </a>
+          ))}
+        </div>
       </section>
 
       {/* CTA */}
