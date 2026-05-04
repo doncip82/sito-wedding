@@ -81,7 +81,7 @@ export default function EvoStrings() {
 
       {/* Description */}
       <section className="px-[clamp(1.5rem,6vw,5rem)] py-[clamp(4rem,10vw,8rem)]">
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_420px] gap-[clamp(3rem,6vw,6rem)]">
+        <div className="flex flex-col gap-[clamp(3rem,6vw,5rem)]">
           <div>
             <p className="eyebrow mb-5">About the Ensemble</p>
             <h2 className="section-title mb-8" style={{ maxWidth: '20ch' }}>
