@@ -1,17 +1,25 @@
 // pages/EvoStrings.jsx
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { ensembles } from '@/data/ensembles.js'
 import { ensembleSchema } from '@/data/schema.js'
 
 const ensemble = ensembles.find(e => e.id === 'evostrings')
 
 const HERO_IMAGES = [
-  { src: '/images/EvoStrings/EvoStrings.jpg',   pos: 'center 70%' },
+  { src: '/images/EvoStrings/EvoStrings.jpg',   pos: 'center 75%' },
   { src: '/images/EvoStrings/EvoStrings 2.jpg', pos: 'center 47%' },
   { src: '/images/EvoStrings/EvoStrings 3.jpg', pos: 'center 44%' },
 ]
 
 export default function EvoStrings() {
+  const [current, setCurrent] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent(c => (c + 1) % HERO_IMAGES.length)
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [])
 
   useEffect(() => {
     document.title = 'String Quartet & Ensemble for Weddings | EvoStrings | Wedding Music Ravello'
@@ -35,27 +43,20 @@ export default function EvoStrings() {
   return (
     <div className="bg-[#F9F8F7] pt-[68px]">
 
-      {/* Hero — photo strip */}
-      <section className="relative overflow-hidden">
-        {/* 3-column responsive photo strip */}
-        <div className="grid grid-cols-3 w-full" style={{ aspectRatio: '21/9' }}>
-          {HERO_IMAGES.map(({ src, pos }) => (
-            <div key={src} className="relative overflow-hidden">
-              <img
-                src={src}
-                alt="EvoStrings string ensemble performing on the Amalfi Coast"
-                className="absolute inset-0 w-full h-full object-cover"
-                style={{ objectPosition: pos }}
-              />
-            </div>
-          ))}
-        </div>
-
-        {/* Text overlay */}
+      {/* Hero — slideshow background */}
+      <section className="relative overflow-hidden px-[clamp(1.5rem,6vw,5rem)] py-[clamp(6rem,14vw,11rem)]">
+        {HERO_IMAGES.map(({ src, pos }, i) => (
+          <img
+            key={src}
+            src={src}
+            alt="EvoStrings string ensemble performing on the Amalfi Coast"
+            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-[1800ms] ease-in-out"
+            style={{ objectPosition: pos, opacity: i === current ? 1 : 0 }}
+          />
+        ))}
         <div className="absolute inset-0"
-          style={{ background: 'linear-gradient(to right, rgba(26,26,26,.85) 35%, rgba(26,26,26,.3) 70%, transparent 100%)' }} />
-        <div className="absolute inset-0 flex items-center px-[clamp(1.5rem,6vw,5rem)]">
-        <div className="max-w-4xl">
+          style={{ background: 'linear-gradient(to right, rgba(26,26,26,.82) 40%, rgba(26,26,26,.45) 100%)' }} />
+        <div className="relative z-10 max-w-4xl">
           <p className="text-[.56rem] font-light tracking-[.25em] uppercase text-[#B8A882]
             flex items-center gap-3 mb-5">
             <span className="inline-block w-[22px] h-[.5px] bg-[#B8A882]" />
@@ -75,7 +76,6 @@ export default function EvoStrings() {
             A reference string ensemble for the luxury wedding sector on the
             Amalfi Coast — available as string duo, trio and quartet.
           </p>
-        </div>
         </div>
       </section>
 
