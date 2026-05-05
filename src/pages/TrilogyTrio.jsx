@@ -201,7 +201,7 @@ export default function TrilogyTrio() {
         <h2 className="section-title mb-10" style={{ maxWidth: '22ch' }}>
           Find Trilogy Trio Online
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-start">
 
           {/* Spotify */}
           <div className="border border-black/[.09] overflow-hidden flex flex-col">
