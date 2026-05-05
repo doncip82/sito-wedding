@@ -253,6 +253,17 @@ export default function EvoStrings() {
                 className="w-full h-full"
               />
             </div>
+            <div style={{ aspectRatio: '16/9' }}>
+              <iframe
+                src="https://www.youtube.com/embed/emeweWCEfJw"
+                title="EvoStrings on YouTube"
+                frameBorder="0"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
           </div>
 
         </div>
