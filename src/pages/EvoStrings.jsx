@@ -181,45 +181,92 @@ export default function EvoStrings() {
         </div>
       </section>
 
-      {/* Instagram Feed */}
+      {/* Social */}
       <section className="bg-[#F9F8F7] border-t border-black/[.09]
         px-[clamp(1.5rem,6vw,5rem)] py-[clamp(4rem,8vw,6rem)]">
-        <div className="flex items-baseline justify-between gap-4 flex-wrap mb-10">
-          <div>
-            <p className="eyebrow mb-3">Instagram</p>
-            <h2 className="section-title" style={{ maxWidth: '22ch' }}>
-              @evostringslive
-            </h2>
+        <p className="eyebrow mb-5">Follow</p>
+        <h2 className="section-title mb-10" style={{ maxWidth: '22ch' }}>
+          Find EvoStrings Online
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+          {/* Spotify */}
+          <div className="border border-black/[.09] overflow-hidden flex flex-col">
+            <div className="flex items-center justify-between px-4 py-3 border-b border-black/[.09]">
+              <span className="text-[.5rem] tracking-[.22em] uppercase font-light text-[#404040]">Spotify</span>
+              <a href="https://open.spotify.com/artist/5XXjv0dBUCtfD2Blqzk5UD"
+                target="_blank" rel="noopener noreferrer"
+                className="text-[.46rem] tracking-[.16em] uppercase text-[#B8A882] no-underline hover:text-[#8A7A5A] transition-colors">
+                Follow ↗
+              </a>
+            </div>
+            <iframe
+              src="https://open.spotify.com/embed/artist/5XXjv0dBUCtfD2Blqzk5UD?utm_source=generator&theme=0"
+              width="100%"
+              height="352"
+              frameBorder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+              title="EvoStrings on Spotify"
+            />
           </div>
-          <a
-            href="https://www.instagram.com/evostringslive"
-            target="_blank" rel="noopener noreferrer"
-            className="text-[.56rem] font-light tracking-[.22em] uppercase no-underline
-              text-[#8A7A5A] border-b border-[rgba(138,122,90,.35)] pb-[2px]
-              hover:border-[#8A7A5A] transition-colors flex-shrink-0"
-          >
-            Follow ↗
-          </a>
-        </div>
-        <div className="grid grid-cols-3 gap-[3px]">
-          {Array.from({ length: 6 }).map((_, i) => (
-            <a
-              key={i}
-              href="https://www.instagram.com/evostringslive"
-              target="_blank" rel="noopener noreferrer"
-              className="relative group overflow-hidden no-underline"
-              style={{ aspectRatio: '1/1', backgroundColor: '#E8E5E0' }}
-            >
-              <div className="absolute inset-0 bg-[#1A1A1A] opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5">
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                  <circle cx="12" cy="12" r="4"/>
-                  <circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/>
-                </svg>
-              </div>
-            </a>
-          ))}
+
+          {/* Instagram */}
+          <div className="border border-black/[.09] overflow-hidden flex flex-col">
+            <div className="flex items-center justify-between px-4 py-3 border-b border-black/[.09]">
+              <span className="text-[.5rem] tracking-[.22em] uppercase font-light text-[#404040]">Instagram</span>
+              <a href="https://www.instagram.com/evostringslive"
+                target="_blank" rel="noopener noreferrer"
+                className="text-[.46rem] tracking-[.16em] uppercase text-[#B8A882] no-underline hover:text-[#8A7A5A] transition-colors">
+                Follow ↗
+              </a>
+            </div>
+            <div className="px-4 py-3 border-b border-black/[.09]">
+              <p className="font-serif italic font-light text-[.9rem] text-[#1A1A1A]">@evostringslive</p>
+            </div>
+            <div className="grid grid-cols-3 gap-[2px]">
+              {Array.from({ length: 6 }).map((_, i) => (
+                <a key={i}
+                  href="https://www.instagram.com/evostringslive"
+                  target="_blank" rel="noopener noreferrer"
+                  className="relative group overflow-hidden no-underline"
+                  style={{ aspectRatio: '1/1', backgroundColor: '#E8E5E0' }}>
+                  <div className="absolute inset-0 bg-[#1A1A1A] opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5">
+                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                      <circle cx="12" cy="12" r="4"/>
+                      <circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/>
+                    </svg>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* YouTube */}
+          <div className="border border-black/[.09] overflow-hidden flex flex-col">
+            <div className="flex items-center justify-between px-4 py-3 border-b border-black/[.09]">
+              <span className="text-[.5rem] tracking-[.22em] uppercase font-light text-[#404040]">YouTube</span>
+              <a href="https://www.youtube.com/watch?v=35YL651-TtU"
+                target="_blank" rel="noopener noreferrer"
+                className="text-[.46rem] tracking-[.16em] uppercase text-[#B8A882] no-underline hover:text-[#8A7A5A] transition-colors">
+                Watch ↗
+              </a>
+            </div>
+            <div style={{ aspectRatio: '16/9' }}>
+              <iframe
+                src="https://www.youtube.com/embed/35YL651-TtU"
+                title="EvoStrings on YouTube"
+                frameBorder="0"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
+          </div>
+
         </div>
       </section>
 
