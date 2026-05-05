@@ -234,27 +234,15 @@ export default function TrilogyTrio() {
                 Follow ↗
               </a>
             </div>
-            <div className="px-4 py-3 border-b border-black/[.09]">
-              <p className="font-serif italic font-light text-[.9rem] text-[#1A1A1A]">@trilogytriolive</p>
-            </div>
-            <div className="grid grid-cols-3 gap-[2px]">
-              {Array.from({ length: 6 }).map((_, i) => (
-                <a key={i}
-                  href="https://www.instagram.com/trilogytriolive"
-                  target="_blank" rel="noopener noreferrer"
-                  className="relative group overflow-hidden no-underline"
-                  style={{ aspectRatio: '1/1', backgroundColor: '#E8E5E0' }}>
-                  <div className="absolute inset-0 bg-[#1A1A1A] opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5">
-                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                      <circle cx="12" cy="12" r="4"/>
-                      <circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/>
-                    </svg>
-                  </div>
-                </a>
-              ))}
-            </div>
+            <iframe
+              src="https://www.instagram.com/trilogytriolive/embed/"
+              title="Trilogy Trio on Instagram"
+              className="w-full"
+              height="420"
+              scrolling="no"
+              frameBorder="0"
+              loading="lazy"
+            />
           </div>
 
           {/* YouTube */}
