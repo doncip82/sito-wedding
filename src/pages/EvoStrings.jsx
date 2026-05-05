@@ -188,10 +188,10 @@ export default function EvoStrings() {
         <h2 className="section-title mb-10" style={{ maxWidth: '22ch' }}>
           Find EvoStrings Online
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
 
           {/* Spotify */}
-          <div className="border border-black/[.09] overflow-hidden flex flex-col">
+          <div className="border border-black/[.09] overflow-hidden flex flex-col rounded-xl">
             <div className="flex items-center justify-between px-4 py-3 border-b border-black/[.09]">
               <span className="text-[.5rem] tracking-[.22em] uppercase font-light text-[#404040]">Spotify</span>
               <a href="https://open.spotify.com/artist/5XXjv0dBUCtfD2Blqzk5UD"
@@ -212,7 +212,7 @@ export default function EvoStrings() {
           </div>
 
           {/* Instagram */}
-          <div className="border border-black/[.09] overflow-hidden flex flex-col">
+          <div className="border border-black/[.09] overflow-hidden flex flex-col rounded-xl">
             <div className="flex items-center justify-between px-4 py-3 border-b border-black/[.09]">
               <span className="text-[.5rem] tracking-[.22em] uppercase font-light text-[#404040]">Instagram</span>
               <a href="https://www.instagram.com/evostringslive"
@@ -233,7 +233,7 @@ export default function EvoStrings() {
           </div>
 
           {/* YouTube */}
-          <div className="border border-black/[.09] overflow-hidden flex flex-col">
+          <div className="border border-black/[.09] overflow-hidden flex flex-col rounded-xl">
             <div className="flex items-center justify-between px-4 py-3 border-b border-black/[.09]">
               <span className="text-[.5rem] tracking-[.22em] uppercase font-light text-[#404040]">YouTube</span>
               <a href="https://www.youtube.com/watch?v=35YL651-TtU"
