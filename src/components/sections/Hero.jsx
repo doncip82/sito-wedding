@@ -8,7 +8,7 @@ export default function Hero() {
       className="relative h-svh min-h-[580px] overflow-hidden grid"
     >
       {/* ── VIDEO BACKGROUND ─────────────────────────────────────────
-          Currently: Sito_Wedding_-_Hero_Loop.mp4
+          Currently: Ravello_Hero.mp4 (1080p, 24fps, no audio, ~24MB)
           To replace: change the src below to your new video filename.
           File must be placed in /public/videos/
       ──────────────────────────────────────────────────────────────── */}
@@ -31,7 +31,7 @@ export default function Hero() {
           className="absolute inset-0 w-full h-full object-cover object-center"
           style={{ filter: 'url(#hero-midtones)' }}
         >
-          <source src="/videos/Ravello_Loop.mp4" type="video/mp4" />
+          <source src="/videos/Ravello_Hero.mp4" type="video/mp4" />
         </video>
         {/* Gradient overlay — vertical */}
         <div
