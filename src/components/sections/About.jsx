@@ -36,15 +36,18 @@ export default function About() {
           </p>
         </div>
 
-        {/* Right — visual */}
+        {/* Right — visual (links to the Ravello location page) */}
         <div>
-          {/* Replace div with:
-              <img src="/images/about-visual.jpg"
-                   alt="Wedding music performance on the Amalfi Coast"
-                   className="w-full object-cover"
-                   style={{ aspectRatio: '3/4' }} />
-          */}
-          <div className="w-full bg-[#1C2030]" style={{ aspectRatio: '3/4' }} />
+          <a href="/locations/ravello" className="block overflow-hidden group"
+            aria-label="Wedding music in Ravello">
+            <img
+              src="/images/ravello-villa-rufolo.jpg"
+              alt="Villa Rufolo gardens overlooking the Gulf of Salerno, Ravello — Amalfi Coast"
+              className="w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.03]"
+              style={{ aspectRatio: '3/4' }}
+              loading="lazy"
+            />
+          </a>
         </div>
 
       </div>
