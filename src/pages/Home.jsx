@@ -1,5 +1,5 @@
 // pages/Home.jsx
-import { Helmet } from 'react-helmet-async'
+import { Head } from 'vite-react-ssg'
 import { baseSchema } from '@/data/schema.js'
 import Hero      from '@/components/sections/Hero.jsx'
 import Occasions from '@/components/sections/Occasions.jsx'
@@ -60,7 +60,7 @@ function ContactStrip() {
 export default function Home() {
   return (
     <>
-      <Helmet>
+      <Head>
         <title>Wedding Music on the Amalfi Coast | Wedding Music Ravello</title>
         <meta name="description" content="A curated selection of music artists and ensembles for luxury weddings and private events in Ravello, Positano and Sorrento. String quartets, violin, saxophone, DJ and more." />
         <link rel="canonical" href="https://www.weddingmusicravello.com/" />
@@ -74,7 +74,7 @@ export default function Home() {
         <meta name="twitter:description" content="A curated selection of music artists and ensembles for luxury weddings and private events in Ravello, Positano and Sorrento. String quartets, violin, saxophone, DJ and more." />
         <meta name="twitter:image" content="https://www.weddingmusicravello.com/images/og-cover.jpg" />
         <script type="application/ld+json">{JSON.stringify(baseSchema)}</script>
-      </Helmet>
+      </Head>
       <Hero />
       <GeoIntro />
       <ContactStrip />

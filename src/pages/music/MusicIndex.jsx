@@ -1,6 +1,6 @@
 // pages/music/MusicIndex.jsx
 import { Link } from 'react-router-dom'
-import { Helmet } from 'react-helmet-async'
+import { Head } from 'vite-react-ssg'
 
 const MUSIC_OPTIONS = [
   {
@@ -70,16 +70,42 @@ const MUSIC_OPTIONS = [
   },
 ]
 
+const musicSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Wedding Music Formats — Amalfi Coast',
+  url: 'https://www.weddingmusicravello.com/music',
+  description:
+    'The full roster of live wedding music formats for the Amalfi Coast: string ensembles, solo violin, saxophone, DJ, vocalist, Neapolitan posteggia, opera and piano.',
+  mainEntity: {
+    '@type': 'ItemList',
+    itemListElement: MUSIC_OPTIONS.map((o, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: o.label,
+      url: `https://www.weddingmusicravello.com${o.href}`,
+    })),
+  },
+}
+
 export default function MusicIndex() {
   return (
     <>
-      <Helmet>
+      <Head>
         <title>Wedding Music on the Amalfi Coast | Wedding Music Ravello</title>
         <meta
           name="description"
           content="Discover the full range of live music for your wedding on the Amalfi Coast — from string ensembles to jazz saxophone, DJ, vocalist and classical opera."
         />
-      </Helmet>
+        <link rel="canonical" href="https://www.weddingmusicravello.com/music" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.weddingmusicravello.com/music" />
+        <meta property="og:title" content="Wedding Music on the Amalfi Coast | Wedding Music Ravello" />
+        <meta property="og:description" content="Live wedding music formats for the Amalfi Coast: string ensembles, solo violin, saxophone, DJ, vocalist, Neapolitan posteggia, opera and piano." />
+        <meta property="og:image" content="https://www.weddingmusicravello.com/images/og-cover.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <script type="application/ld+json">{JSON.stringify(musicSchema)}</script>
+      </Head>
 
       {/* Hero */}
       <section className="pt-[120px] pb-16 px-[clamp(1.5rem,6vw,5rem)] bg-[#F9F8F7]">

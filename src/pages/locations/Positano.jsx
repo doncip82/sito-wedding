@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async'
+import { Head } from 'vite-react-ssg'
 
 const positanoSchema = {
   '@context': 'https://schema.org',
@@ -16,7 +16,7 @@ const positanoSchema = {
 export default function LocationPositano() {
   return (
     <div className="bg-[#F9F8F7] pt-[68px]">
-      <Helmet>
+      <Head>
         <title>Wedding Music in Positano | Amalfi Coast | Wedding Music Ravello</title>
         <meta name="description" content="Curated music for weddings and private events in Positano. String quartets, violin and saxophone at cliff-edge venues including Villa Treville and Le Sirenuse." />
         <link rel="canonical" href="https://www.weddingmusicravello.com/locations/positano" />
@@ -27,7 +27,7 @@ export default function LocationPositano() {
         <meta property="og:image" content="https://www.weddingmusicravello.com/images/og-cover.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(positanoSchema)}</script>
-      </Helmet>
+      </Head>
 
       <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(5rem,12vw,9rem)]">
         <div className="max-w-4xl">

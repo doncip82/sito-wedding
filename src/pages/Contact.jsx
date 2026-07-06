@@ -1,5 +1,6 @@
 // pages/Contact.jsx
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
+import { Head } from 'vite-react-ssg'
 
 const venues = [
   'Villa Cimbrone', 'Palazzo Avino', 'Belmond Hotel Caruso',
@@ -7,13 +8,21 @@ const venues = [
 ]
 const ensembles = ['EvoStrings', 'Trilogy Trio', 'Violino Solo', 'Not sure yet']
 
-export default function Contact() {
-  useEffect(() => {
-    document.title = 'Enquire | Wedding Music Ravello'
-    const meta = document.querySelector('meta[name="description"]') || (() => { const m = document.createElement('meta'); m.name = 'description'; document.head.appendChild(m); return m })()
-    meta.content = 'Get in touch to discuss music for your wedding or private event on the Amalfi Coast. We will respond within 48 hours.'
-  }, [])
+const contactSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  name: 'Enquire — Wedding Music Ravello',
+  url: 'https://www.weddingmusicravello.com/contact',
+  description: 'Get in touch to discuss live music for your wedding or private event on the Amalfi Coast.',
+  mainEntity: {
+    '@type': 'Organization',
+    name: 'Wedding Music Ravello',
+    email: 'info@weddingmusicravello.com',
+    areaServed: { '@type': 'AdministrativeArea', name: 'Amalfi Coast' },
+  },
+}
 
+export default function Contact() {
   const [form, setForm] = useState({
     name: '', email: '', date: '', venue: '', ensemble: '', message: '',
   })
@@ -38,6 +47,18 @@ export default function Contact() {
 
   return (
     <div className="bg-[#F9F8F7] pt-[68px]">
+      <Head>
+        <title>Enquire | Wedding Music Ravello</title>
+        <meta name="description" content="Get in touch to discuss music for your wedding or private event on the Amalfi Coast. We will respond within 48 hours." />
+        <link rel="canonical" href="https://www.weddingmusicravello.com/contact" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.weddingmusicravello.com/contact" />
+        <meta property="og:title" content="Enquire | Wedding Music Ravello" />
+        <meta property="og:description" content="Get in touch to discuss live music for your wedding or private event on the Amalfi Coast." />
+        <meta property="og:image" content="https://www.weddingmusicravello.com/images/og-cover.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <script type="application/ld+json">{JSON.stringify(contactSchema)}</script>
+      </Head>
 
       {/* Header */}
       <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(4rem,10vw,8rem)]">

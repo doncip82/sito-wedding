@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async'
+import { Head } from 'vite-react-ssg'
 
 const posteggiaSchema = {
   '@context': 'https://schema.org',
@@ -13,7 +13,7 @@ const posteggiaSchema = {
 export default function MusicPosteggia() {
   return (
     <div className="bg-[#F9F8F7] pt-[68px]">
-      <Helmet>
+      <Head>
         <title>Neapolitan Posteggia for Weddings | Amalfi Coast | Wedding Music Ravello</title>
         <meta name="description" content="Traditional Neapolitan posteggia — mandolin, guitar and voice — for wedding cocktail hours and receptions in Ravello, Positano and Sorrento." />
         <link rel="canonical" href="https://www.weddingmusicravello.com/music/posteggia" />
@@ -24,7 +24,7 @@ export default function MusicPosteggia() {
         <meta property="og:image" content="https://www.weddingmusicravello.com/images/og-cover.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(posteggiaSchema)}</script>
-      </Helmet>
+      </Head>
 
       <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(5rem,12vw,9rem)]">
         <div className="max-w-4xl">

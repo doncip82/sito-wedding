@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async'
+import { Head } from 'vite-react-ssg'
 
 const pianoSchema = {
   '@context': 'https://schema.org',
@@ -13,7 +13,7 @@ const pianoSchema = {
 export default function MusicPiano() {
   return (
     <div className="bg-[#F9F8F7] pt-[68px]">
-      <Helmet>
+      <Head>
         <title>Piano Solo for Weddings on the Amalfi Coast | Wedding Music Ravello</title>
         <meta name="description" content="Solo piano for wedding ceremonies, cocktail hours and private dinners in Ravello, Positano and Sorrento. Classical, contemporary and cinematic repertoire." />
         <link rel="canonical" href="https://www.weddingmusicravello.com/music/piano" />
@@ -24,7 +24,7 @@ export default function MusicPiano() {
         <meta property="og:image" content="https://www.weddingmusicravello.com/images/og-cover.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(pianoSchema)}</script>
-      </Helmet>
+      </Head>
 
       <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(5rem,12vw,9rem)]">
         <div className="max-w-4xl">

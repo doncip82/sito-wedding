@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async'
+import { Head } from 'vite-react-ssg'
 
 const vocalistSchema = {
   '@context': 'https://schema.org',
@@ -13,7 +13,7 @@ const vocalistSchema = {
 export default function MusicVocalist() {
   return (
     <div className="bg-[#F9F8F7] pt-[68px]">
-      <Helmet>
+      <Head>
         <title>Wedding Singer Amalfi Coast | Vocalist | Wedding Music Ravello</title>
         <meta name="description" content="Live vocal performance for weddings and private events in Ravello and Positano. Jazz, pop and classical repertoire, solo or with ensemble." />
         <link rel="canonical" href="https://www.weddingmusicravello.com/music/vocalist" />
@@ -24,7 +24,7 @@ export default function MusicVocalist() {
         <meta property="og:image" content="https://www.weddingmusicravello.com/images/og-cover.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(vocalistSchema)}</script>
-      </Helmet>
+      </Head>
 
       <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(5rem,12vw,9rem)]">
         <div className="max-w-4xl">

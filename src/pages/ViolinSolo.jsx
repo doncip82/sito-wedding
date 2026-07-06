@@ -1,32 +1,35 @@
 // pages/ViolinSolo.jsx
-import { useEffect } from 'react'
+import { Head } from 'vite-react-ssg'
 import { ensembles } from '@/data/ensembles.js'
 import { ensembleSchema } from '@/data/schema.js'
 
 const ensemble = ensembles.find(e => e.id === 'violino-solo')
 
-export default function ViolinSolo() {
-  useEffect(() => {
-    document.title = 'Violin Solo for Wedding Ceremony | Amalfi Coast | Wedding Music Ravello'
-    const meta = document.querySelector('meta[name="description"]') || (() => { const m = document.createElement('meta'); m.name = 'description'; document.head.appendChild(m); return m })()
-    meta.content = 'Solo violin for wedding ceremonies in Ravello, Positano and Sorrento. Classical and contemporary repertoire, performed without amplification at cliff-edge venues.'
-    const script = document.createElement('script')
-    script.type = 'application/ld+json'
-    script.text = JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'MusicGroup',
-      name: 'Violin Solo — Donato Cipriano',
-      description: 'Solo violin for wedding ceremonies in Ravello, Positano and Sorrento. Classical and contemporary repertoire performed without amplification at cliff-edge venues including Villa Cimbrone.',
-      genre: ['Classical', 'Contemporary'],
-      areaServed: { '@type': 'AdministrativeArea', name: 'Amalfi Coast' },
-      url: 'https://www.weddingmusicravello.com/music/violin-solo',
-    })
-    document.head.appendChild(script)
-    return () => document.head.removeChild(script)
-  }, [])
+const violinSoloSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'MusicGroup',
+  name: 'Violin Solo — Donato Cipriano',
+  description: 'Solo violin for wedding ceremonies in Ravello, Positano and Sorrento. Classical and contemporary repertoire performed without amplification at cliff-edge venues including Villa Cimbrone.',
+  genre: ['Classical', 'Contemporary'],
+  areaServed: { '@type': 'AdministrativeArea', name: 'Amalfi Coast' },
+  url: 'https://www.weddingmusicravello.com/violin-solo',
+}
 
+export default function ViolinSolo() {
   return (
     <div className="bg-[#F9F8F7] pt-[68px]">
+      <Head>
+        <title>Violin Solo for Wedding Ceremony | Amalfi Coast | Wedding Music Ravello</title>
+        <meta name="description" content="Solo violin for wedding ceremonies in Ravello, Positano and Sorrento. Classical and contemporary repertoire, performed without amplification at cliff-edge venues." />
+        <link rel="canonical" href="https://www.weddingmusicravello.com/violin-solo" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.weddingmusicravello.com/violin-solo" />
+        <meta property="og:title" content="Violin Solo for Wedding Ceremony | Amalfi Coast | Wedding Music Ravello" />
+        <meta property="og:description" content="Solo violin for wedding ceremonies in Ravello, Positano and Sorrento — classical and contemporary repertoire, performed without amplification." />
+        <meta property="og:image" content="https://www.weddingmusicravello.com/images/og-cover.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <script type="application/ld+json">{JSON.stringify(violinSoloSchema)}</script>
+      </Head>
 
       {/* Hero — minimal, text-forward */}
       <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(5rem,12vw,9rem)]">

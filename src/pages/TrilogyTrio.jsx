@@ -1,9 +1,20 @@
 // pages/TrilogyTrio.jsx
 import { useEffect, useState } from 'react'
+import { Head } from 'vite-react-ssg'
 import { ensembles } from '@/data/ensembles.js'
 import { ensembleSchema } from '@/data/schema.js'
 
 const ensemble = ensembles.find(e => e.id === 'trilogy-trio')
+
+const trilogyTrioSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'MusicGroup',
+  name: 'Trilogy Trio',
+  description: 'Violin, cello and piano trio performing cinematic, pop and classical repertoire for weddings and private events on the Amalfi Coast.',
+  genre: ['Cinematic', 'Pop', 'Classical'],
+  areaServed: { '@type': 'AdministrativeArea', name: 'Amalfi Coast' },
+  url: 'https://www.weddingmusicravello.com/trilogy-trio',
+}
 
 const HERO_IMAGES = [
   { src: '/images/Trilogy%20Trio/Trilogy%20Trio%200.JPG', pos: 'center center' },
@@ -21,27 +32,20 @@ export default function TrilogyTrio() {
     }, 5000)
     return () => clearInterval(timer)
   }, [])
-  useEffect(() => {
-    document.title = 'String Trio & Piano for Weddings in Italy | Trilogy Trio | Wedding Music Ravello'
-    const meta = document.querySelector('meta[name="description"]') || (() => { const m = document.createElement('meta'); m.name = 'description'; document.head.appendChild(m); return m })()
-    meta.content = 'Trilogy Trio — violin, cello and piano — performs cinematic, pop and classical repertoire for weddings and private events along the Amalfi Coast.'
-    const script = document.createElement('script')
-    script.type = 'application/ld+json'
-    script.text = JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'MusicGroup',
-      name: 'Trilogy Trio',
-      description: 'Violin, cello and piano trio performing cinematic, pop and classical repertoire for weddings and private events on the Amalfi Coast.',
-      genre: ['Cinematic', 'Pop', 'Classical'],
-      areaServed: { '@type': 'AdministrativeArea', name: 'Amalfi Coast' },
-      url: 'https://www.weddingmusicravello.com/music/trilogy-trio',
-    })
-    document.head.appendChild(script)
-    return () => document.head.removeChild(script)
-  }, [])
-
   return (
     <div className="bg-[#F9F8F7] pt-[68px]">
+      <Head>
+        <title>String Trio & Piano for Weddings in Italy | Trilogy Trio | Wedding Music Ravello</title>
+        <meta name="description" content="Trilogy Trio — violin, cello and piano — performs cinematic, pop and classical repertoire for weddings and private events along the Amalfi Coast." />
+        <link rel="canonical" href="https://www.weddingmusicravello.com/trilogy-trio" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.weddingmusicravello.com/trilogy-trio" />
+        <meta property="og:title" content="String Trio & Piano for Weddings in Italy | Trilogy Trio | Wedding Music Ravello" />
+        <meta property="og:description" content="Trilogy Trio — violin, cello and piano — cinematic, pop and classical repertoire for weddings and private events on the Amalfi Coast." />
+        <meta property="og:image" content="https://www.weddingmusicravello.com/images/og-cover.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <script type="application/ld+json">{JSON.stringify(trilogyTrioSchema)}</script>
+      </Head>
 
       {/* Hero — slideshow background */}
       <section className="relative overflow-hidden px-[clamp(1.5rem,6vw,5rem)] py-3.5 md:py-[clamp(5rem,12vw,9rem)]">

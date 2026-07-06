@@ -1,33 +1,35 @@
 // pages/EvoStrings.jsx
-import { useEffect } from 'react'
+import { Head } from 'vite-react-ssg'
 import { ensembles } from '@/data/ensembles.js'
 import { ensembleSchema } from '@/data/schema.js'
 
 const ensemble = ensembles.find(e => e.id === 'evostrings')
 
+const evoStringsSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'MusicGroup',
+  name: 'EvoStrings',
+  description: 'String ensemble available as duo, trio and quartet for wedding ceremonies and receptions on the Amalfi Coast. Performs at Villa Cimbrone, Palazzo Avino and Belmond Hotel Caruso in Ravello.',
+  genre: ['Classical', 'Contemporary', 'Cinematic'],
+  areaServed: { '@type': 'AdministrativeArea', name: 'Amalfi Coast' },
+  url: 'https://www.weddingmusicravello.com/evostrings',
+}
+
 export default function EvoStrings() {
-
-  useEffect(() => {
-    document.title = 'String Quartet & Ensemble for Weddings | EvoStrings | Wedding Music Ravello'
-    const meta = document.querySelector('meta[name="description"]') || (() => { const m = document.createElement('meta'); m.name = 'description'; document.head.appendChild(m); return m })()
-    meta.content = 'EvoStrings performs as duo, trio and quartet at Villa Cimbrone, Palazzo Avino and Belmond Hotel Caruso. Classical and contemporary repertoire for ceremonies and receptions on the Amalfi Coast.'
-    const script = document.createElement('script')
-    script.type = 'application/ld+json'
-    script.text = JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'MusicGroup',
-      name: 'EvoStrings',
-      description: 'String ensemble available as duo, trio and quartet for wedding ceremonies and receptions on the Amalfi Coast. Performs at Villa Cimbrone, Palazzo Avino and Belmond Hotel Caruso in Ravello.',
-      genre: ['Classical', 'Contemporary', 'Cinematic'],
-      areaServed: { '@type': 'AdministrativeArea', name: 'Amalfi Coast' },
-      url: 'https://www.weddingmusicravello.com/music/evostrings',
-    })
-    document.head.appendChild(script)
-    return () => document.head.removeChild(script)
-  }, [])
-
   return (
     <div className="bg-[#F9F8F7] pt-[68px]">
+      <Head>
+        <title>String Quartet & Ensemble for Weddings | EvoStrings | Wedding Music Ravello</title>
+        <meta name="description" content="EvoStrings performs as duo, trio and quartet at Villa Cimbrone, Palazzo Avino and Belmond Hotel Caruso. Classical and contemporary repertoire for ceremonies and receptions on the Amalfi Coast." />
+        <link rel="canonical" href="https://www.weddingmusicravello.com/evostrings" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.weddingmusicravello.com/evostrings" />
+        <meta property="og:title" content="String Quartet & Ensemble for Weddings | EvoStrings | Wedding Music Ravello" />
+        <meta property="og:description" content="EvoStrings — duo, trio and quartet for wedding ceremonies and receptions at Villa Cimbrone, Palazzo Avino and Belmond Hotel Caruso on the Amalfi Coast." />
+        <meta property="og:image" content="https://www.weddingmusicravello.com/images/og-cover.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <script type="application/ld+json">{JSON.stringify(evoStringsSchema)}</script>
+      </Head>
 
       {/* Hero — video background */}
       <section className="relative overflow-hidden px-[clamp(1.5rem,6vw,5rem)] py-3.5 md:py-[clamp(6rem,14vw,11rem)]">

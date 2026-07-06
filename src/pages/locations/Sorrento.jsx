@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async'
+import { Head } from 'vite-react-ssg'
 
 const sorrentoSchema = {
   '@context': 'https://schema.org',
@@ -16,7 +16,7 @@ const sorrentoSchema = {
 export default function LocationSorrento() {
   return (
     <div className="bg-[#F9F8F7] pt-[68px]">
-      <Helmet>
+      <Head>
         <title>Wedding Music in Sorrento | Wedding Music Ravello</title>
         <meta name="description" content="Live music for weddings and events in Sorrento and the Sorrentine Peninsula. Ensembles and soloists available for ceremonies, receptions and private celebrations." />
         <link rel="canonical" href="https://www.weddingmusicravello.com/locations/sorrento" />
@@ -27,7 +27,7 @@ export default function LocationSorrento() {
         <meta property="og:image" content="https://www.weddingmusicravello.com/images/og-cover.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(sorrentoSchema)}</script>
-      </Helmet>
+      </Head>
 
       <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(5rem,12vw,9rem)]">
         <div className="max-w-4xl">

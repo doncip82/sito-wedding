@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async'
+import { Head } from 'vite-react-ssg'
 
 const schema = {
   '@context': 'https://schema.org',
@@ -47,7 +47,7 @@ const FORMATS = [
 export default function OccasionCorporateEvents() {
   return (
     <div className="bg-[#F9F8F7] pt-[68px]">
-      <Helmet>
+      <Head>
         <title>Corporate Event Music on the Amalfi Coast | Wedding Music Ravello</title>
         <meta name="description" content="Live music for private dinners, brand retreats and product presentations at Amalfi Coast venues. Vocalist, DJ, string ensembles and piano for exclusive corporate events in Ravello and Positano." />
         <link rel="canonical" href="https://www.weddingmusicravello.com/occasions/corporate-events" />
@@ -58,7 +58,7 @@ export default function OccasionCorporateEvents() {
         <meta property="og:image" content="https://www.weddingmusicravello.com/images/og-cover.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
-      </Helmet>
+      </Head>
 
       <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(5rem,12vw,9rem)]">
         <div className="max-w-4xl">
