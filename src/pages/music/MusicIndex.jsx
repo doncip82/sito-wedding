@@ -51,7 +51,7 @@ const MUSIC_OPTIONS = [
     label: 'Posteggia',
     sub:   'Neapolitan Tradition',
     href:  '/music/posteggia',
-    img:   '/images/Posteggia/Posteggia.png',
+    img:   '/images/Posteggia/Posteggia.jpg',
     bg:    '#8CA5B2',
   },
   {
@@ -65,7 +65,7 @@ const MUSIC_OPTIONS = [
     label: 'Piano Solo',
     sub:   'Classical & Contemporary',
     href:  '/music/piano',
-    img:   '/images/Piano%20Solo/Angelo%20Borrelli.png',
+    img:   '/images/Piano%20Solo/Angelo%20Borrelli.jpg',
     bg:    '#C2372A',
   },
 ]

@@ -5,7 +5,7 @@ const OCCASIONS = [
     label:       'Wedding Ceremonies & Receptions',
     description: 'From the processional at Villa Cimbrone\'s Terrazza dell\'Infinito to the final toast — each phase of the day calls for a distinct sound. String ensembles, solo violin, and operatic voice are matched to the acoustics of the venue and the arc of the celebration.',
     pageHref:    '/occasions/wedding-ceremony',
-    img:         '/images/Ceremony.png',
+    img:         '/images/Ceremony.jpg',
     options: [
       { label: 'EvoStrings',   href: '/evostrings'    },
       { label: 'Trilogy Trio', href: '/trilogy-trio'  },
@@ -30,7 +30,7 @@ const OCCASIONS = [
     label:       'Birthdays & Anniversaries',
     description: 'A string quartet for a terrace dinner at Palazzo Avino, a DJ set for a sunset gathering in Positano, a saxophone for the cocktail hour — the format is selected to match the scale and mood of the occasion, not the other way round.',
     pageHref:    '/occasions/birthdays-anniversaries',
-    img:         '/images/Dinner.png',
+    img:         '/images/Dinner.jpg',
     options: [
       { label: 'EvoStrings', href: '/evostrings'       },
       { label: 'DJ',         href: '/music/dj'         },
@@ -43,7 +43,7 @@ const OCCASIONS = [
     label:       'Exclusive Corporate Events',
     description: 'Private dinners, brand retreats, and presentations at Amalfi Coast venues. Live music — from curated DJ sets to vocal performances — selected for its capacity to establish atmosphere without competing with conversation.',
     pageHref:    '/occasions/corporate-events',
-    img:         '/images/Cocktail.png',
+    img:         '/images/Cocktail.jpg',
     options: [
       { label: 'Vocalist',     href: '/music/vocalist'  },
       { label: 'DJ',           href: '/music/dj'        },
