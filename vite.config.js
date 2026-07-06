@@ -13,4 +13,11 @@ export default defineConfig({
       '@': '/src',
     },
   },
+  // SSG spike: prerender ONLY the home (needed as SPA fallback) and the
+  // sample page /locations/ravello. All other routes stay client-rendered.
+  ssgOptions: {
+    includedRoutes(paths) {
+      return paths.filter(p => p === '/' || p === 'locations/ravello')
+    },
+  },
 })

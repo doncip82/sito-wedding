@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async'
+import { Head } from 'vite-react-ssg'
 
 const ravelloSchema = {
   '@context': 'https://schema.org',
@@ -20,7 +20,7 @@ const ravelloSchema = {
 export default function LocationRavello() {
   return (
     <div className="bg-[#F9F8F7] pt-[68px]">
-      <Helmet>
+      <Head>
         <title>Wedding Music in Ravello | Amalfi Coast | Wedding Music Ravello</title>
         <meta name="description" content="Live music for weddings and events in Ravello — Villa Cimbrone, Palazzo Avino, Belmond Hotel Caruso and Villa Eva. String ensembles, violin, saxophone and DJ." />
         <link rel="canonical" href="https://www.weddingmusicravello.com/locations/ravello" />
@@ -31,7 +31,7 @@ export default function LocationRavello() {
         <meta property="og:image" content="https://www.weddingmusicravello.com/images/og-cover.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(ravelloSchema)}</script>
-      </Helmet>
+      </Head>
 
       {/* Hero */}
       <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(5rem,12vw,9rem)]">

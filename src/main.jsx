@@ -1,16 +1,5 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom'
-import { HelmetProvider } from 'react-helmet-async'
-import App from './App.jsx'
+import { ViteReactSSG } from 'vite-react-ssg'
+import { routes } from './App.jsx'
 import './styles/globals.css'
 
-ReactDOM.createRoot(document.getElementById('app')).render(
-  <React.StrictMode>
-    <HelmetProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </HelmetProvider>
-  </React.StrictMode>,
-)
+export const createRoot = ViteReactSSG({ routes })
