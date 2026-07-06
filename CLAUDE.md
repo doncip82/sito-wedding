@@ -51,17 +51,24 @@ Il sito propone **esclusivamente partner musicali**. L'aggiunta di fotografi, pl
 - Sito Donato (solo per SEO interno): https://www.donatocipriano.com/en/wedding#services
 - EvoStrings: https://www.evostrings.it/
 - GitHub: github.com/doncip82/sito-wedding
-- Deploy: Vercel (auto-deploy su push a `main`)
+- Deploy: Vercel (auto-deploy su push a `main`; si era scollegato ed è stato ripristinato il 2026-07-06 — link Git era "sourceless")
+
+## Documentazione di lavoro
+- `docs/superpowers/plans/` — piani (incl. `2026-07-06-ssg-migration.md`)
+- `docs/2026-07-06-session-log.md` — registro lavori (compressione video, fix auto-deploy, ottimizzazione immagini)
 
 ## Stack tecnico
-- Vite + React + Tailwind CSS + React Router v6 (SPA, client-side routing)
-- **NON** usa vite-ssg — `main.jsx` monta con `ReactDOM.createRoot`; routing gestito da `BrowserRouter`
-- Deploy su Vercel con rewrite `/* → /index.html` (`vercel.json`) per supporto SPA
-- `src/data/schema.js` genera Schema.org JSON-LD — contiene `founder` con `sameAs` per SEO invisibile
-- `src/components/ui/PageHead.jsx` — Helmet wrapper con `<link rel="author" href="https://www.donatocipriano.com">`
-- `src/App.jsx` — routing con `React.lazy` + `Suspense` per code splitting automatico
-- `src/routes.js` — documentazione delle route (non consumato dal build, solo riferimento)
-- Hero e menu mobile: video background in loop (`public/videos/Sito_Wedding_-_Hero_Loop.mp4`)
+- Vite + React + Tailwind CSS + React Router v6
+- **SSG (dal 2026-07-06):** il sito è pre-renderizzato staticamente con **`vite-react-ssg`** — NON è più una SPA client-only. Ogni route diventa un HTML statico con title, meta, canonical, contenuto e JSON-LD già nel sorgente (fondamentale per SEO/GEO).
+  - `src/main.jsx` esporta `createRoot = ViteReactSSG({ routes })`
+  - `src/App.jsx` — le route sono un array "data router" con un `Layout` (`<Outlet/>`); Home e Ravello eager, resto `React.lazy`
+  - Build: **`vite-react-ssg build`** (in `package.json`); tutte le 19 route pre-renderizzate
+  - **Head per-pagina:** ogni pagina usa il componente **`<Head>` di `vite-react-ssg`** — NON `react-helmet-async`, NON `document.title` imperativo (non verrebbero pre-renderizzati). Ogni pagina deve avere title, description, `<link rel="canonical">` e JSON-LD dentro `<Head>`.
+- Deploy su Vercel. `vercel.json` = `cleanUrls: true` + rewrite di fallback; Vercel serve prima l'HTML statico per-route (verificato). Mount id in `index.html` = **`root`**.
+- `src/data/schema.js` — schema base (home/LocalBusiness+MusicGroup, con `founder.sameAs` per SEO invisibile) + helper; molte pagine definiscono lo schema **inline** per-pagina.
+- `index.html` — niente title/meta di default (li inietta `<Head>`); contiene `<link rel="author" href="https://www.donatocipriano.com">` (autorità SEO invisibile verso Donato).
+- Hero e menu mobile: video background in loop (`public/videos/Ravello_Hero.mp4`, ~24MB).
+- ⚠️ **Codice morto:** `src/components/ui/PageHead.jsx` e `src/routes.js` non sono più usati — da rimuovere quando conviene.
 
 ## Struttura cartelle (stato attuale)
 ```
@@ -82,25 +89,29 @@ src/
 
 public/
 ├── images/
+│   ├── ravello-villa-rufolo.jpg   (About — vista Villa Rufolo, link a /locations/ravello)
+│   ├── Ceremony.jpg, Cocktail.jpg, Dinner.jpg   (Occasions — erano PNG, convertiti in JPG)
 │   ├── EvoStrings/     EvoStrings.jpg
-│   ├── Trilogy Trio/   Trilogy Trio.jpg
+│   ├── Trilogy Trio/   Trilogy Trio 0-3 + Trilogy Trio.jpg
 │   ├── Violin Solo/    immagine_donato.JPG
-│   ├── Saxophone/      Sabasax 1.jpg, Sabasax 2.jpg
+│   ├── Saxophone/      Sabasax 2.jpg  (Sabasax 1 non usato)
 │   ├── Dj/             Dj Nice.jpeg
 │   ├── Vocalist/       Momo Vocalist.jpeg
 │   ├── Opera/          Elisabetta Vilni Soprano.jpg
-│   ├── Piano Solo/     Angelo Borrelli.png
-│   └── Posteggia/      Posteggia.png
-└── videos/             Sito_Wedding_-_Hero_Loop.mp4
+│   ├── Piano Solo/     Angelo Borrelli.jpg
+│   └── Posteggia/      Posteggia.jpg
+└── videos/             Ravello_Hero.mp4   (hero + menu mobile)
 ```
+> Immagini ottimizzate il 2026-07-06 (58MB → ~8MB). Manca ancora `og-cover.jpg` (anteprima social, referenziata ma assente).
 
 ## Struttura Home page (ordine sezioni)
 Hero → GeoIntro → ContactStrip → Occasions → Locations → About → Footer
 
 ## Sezione About — stato attuale
-Manifesto curatoriale della piattaforma. Nessun nome di persona. Foto placeholder (senza caption, senza nome).
+Manifesto curatoriale della piattaforma. Nessun nome di persona.
 - Eyebrow: "Our Philosophy"
 - Titolo: "Music Selected With Intention, Not by Chance"
+- **Immagine (dal 2026-07-06):** veduta di Villa Rufolo (Ravello) — `public/images/ravello-villa-rufolo.jpg`, aspect-ratio 3/4, **cliccabile → link interno a `/locations/ravello`** (lieve zoom hover), alt SEO. Sostituisce il vecchio placeholder blu.
 - Nessun link esterno
 
 ## Footer — stato attuale
@@ -158,15 +169,17 @@ Ogni blocco testo è avvolto in uno `<span>` con:
 `box-decoration-break: clone` crea una striscia per ogni riga di testo (non un riquadro unico).
 
 ### Menu mobile — NavBar
-- Sfondo: stesso video loop dell'hero (`Sito_Wedding_-_Hero_Loop.mp4`)
+- Sfondo: stesso video loop dell'hero (`Ravello_Hero.mp4`)
 - Overlay: identici all'hero (gamma SVG + verticale + orizzontale)
 - Voci menu: stesso sistema di evidenziazione per riga dell'hero
 - Hamburger: forzato bianco (`bg-[#F9F8F7]`) quando `menuOpen === true`
 
-## To Do
-- Aggiungere foto reale About (sostituire placeholder `bg-[#1C2030]`)
-- Aggiungere YouTube embed ID in src/data/ensembles.js
-- Collegare form Contact.jsx a Formspree
+## To Do / Follow-up aperti
+- Collegare form `Contact.jsx` a un backend (es. Formspree) — ora mostra solo "Thank you", non invia email
+- Creare `public/images/og-cover.jpg` (1200×630) — anteprima social oggi mancante
+- Rifiniture editoriali: uniformare "365 m" (Home) vs "350 m" (Ravello); togliere il doppio `<h1>` in Home
+- Pulizia: rimuovere dipendenze morte (`vite-ssg-react` + polyfill in `package.json`) e i file inutilizzati `PageHead.jsx` / `routes.js`
+- **Fatti ✓ (2026-07-06):** migrazione SSG (tutte le 19 route pre-renderizzate), foto About, compressione video (171→24MB) e immagini (58→8MB), auto-deploy ripristinato
 
 ## Comandi utili
 ```
