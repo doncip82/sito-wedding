@@ -44,7 +44,7 @@ export default function About() {
               src="/images/ravello-villa-rufolo.jpg"
               alt="Villa Rufolo gardens overlooking the Gulf of Salerno, Ravello — Amalfi Coast"
               className="w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.03]"
-              style={{ aspectRatio: '3/4' }}
+              style={{ aspectRatio: '1012 / 1800' }}
               loading="lazy"
             />
           </a>
