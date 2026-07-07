@@ -48,9 +48,15 @@ export default function NavBar() {
   const linkColor  = scrolled || !isHome ? 'text-[#404040] hover:text-[#8A7A5A]'         : 'text-white/85 hover:text-[#B8A882]'
   const linkWeight = scrolled || !isHome ? 'font-light'                                   : 'font-normal'
   const ctaColor   = scrolled || !isHome
-    ? 'text-[#1A1A1A] border-black/30 hover:text-[#8A7A5A] hover:border-[#8A7A5A]'
-    : 'text-white/85 border-white/60 hover:text-[#B8A882] hover:border-[#B8A882]'
+    ? 'text-[#1A1A1A] border-black/45 hover:text-[#8A7A5A] hover:border-[#8A7A5A]'
+    : 'text-white border-white/80 hover:text-[#B8A882] hover:border-[#B8A882]'
   const ctaWeight  = scrolled || !isHome ? 'font-light'   : 'font-normal'
+  // Enquire CTA: stay legible when the mobile menu is open (dark overlay), and
+  // get a whisper of shadow over the hero video so it doesn't get lost.
+  const enquireColor  = menuOpen
+    ? 'text-white border-white/70 hover:text-[#B8A882] hover:border-[#B8A882]'
+    : ctaColor
+  const enquireShadow = (!scrolled && isHome && !menuOpen) ? '[text-shadow:0_1px_10px_rgba(0,0,0,0.35)]' : ''
   const hamColor   = menuOpen ? 'bg-white' : (scrolled || !isHome ? 'bg-[#1A1A1A]' : 'bg-white')
 
   const NAV_TEXT = `text-[.58rem] tracking-[.2em] uppercase transition-colors duration-300 ${linkWeight} ${linkColor}`
@@ -116,25 +122,28 @@ export default function NavBar() {
           {NAV_ITEMS.map(renderDesktopItem)}
         </ul>
 
-        <a
-          href="/#contact"
-          className={`hidden md:inline-block text-[.56rem] tracking-[.22em] uppercase no-underline
-            pb-[2px] border-b-[.5px] transition-all duration-300 ${ctaWeight} ${ctaColor}`}
-        >
-          Enquire
-        </a>
+        {/* Right side — Enquire always visible (desktop + mobile) + hamburger on mobile */}
+        <div className="flex items-center gap-5 md:gap-0">
+          <a
+            href="/#contact"
+            className={`inline-block text-[.6rem] tracking-[.22em] uppercase no-underline
+              pb-[2px] border-b-[.5px] transition-all duration-300 ${ctaWeight} ${enquireColor} ${enquireShadow}`}
+          >
+            Enquire
+          </a>
 
-        <button
-          className="md:hidden flex flex-col gap-[5px] cursor-pointer bg-transparent border-none p-1"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-          aria-expanded={menuOpen}
-          aria-controls="mobile-menu"
-        >
-          <span className={`block w-6 h-[1.5px] transition-all duration-300 ${hamColor} ${menuOpen ? 'translate-y-[6.5px] rotate-45'  : ''}`} />
-          <span className={`block w-6 h-[1.5px] transition-all duration-300 ${hamColor} ${menuOpen ? 'opacity-0'                       : ''}`} />
-          <span className={`block w-6 h-[1.5px] transition-all duration-300 ${hamColor} ${menuOpen ? '-translate-y-[6.5px] -rotate-45' : ''}`} />
-        </button>
+          <button
+            className="md:hidden flex flex-col gap-[5px] cursor-pointer bg-transparent border-none p-1"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
+          >
+            <span className={`block w-6 h-[1.5px] transition-all duration-300 ${hamColor} ${menuOpen ? 'translate-y-[6.5px] rotate-45'  : ''}`} />
+            <span className={`block w-6 h-[1.5px] transition-all duration-300 ${hamColor} ${menuOpen ? 'opacity-0'                       : ''}`} />
+            <span className={`block w-6 h-[1.5px] transition-all duration-300 ${hamColor} ${menuOpen ? '-translate-y-[6.5px] -rotate-45' : ''}`} />
+          </button>
+        </div>
       </nav>
 
       {/* Mobile overlay */}
