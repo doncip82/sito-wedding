@@ -6,7 +6,10 @@ const venues = [
   'Villa Cimbrone', 'Palazzo Avino', 'Belmond Hotel Caruso',
   'Villa Treville', 'Monastero Santa Rosa', 'Villa Eva', 'Other / TBD',
 ]
-const ensembles = ['EvoStrings', 'Trilogy Trio', 'Violino Solo', 'Not sure yet']
+const ensembles = [
+  'EvoStrings', 'Trilogy Trio', 'Violin Solo', 'Saxophone', 'DJ',
+  'Vocalist', 'Posteggia', 'Opera', 'Piano Solo', 'Not sure yet',
+]
 
 const contactSchema = {
   '@context': 'https://schema.org',
@@ -38,12 +41,12 @@ export default function Contact() {
     setSent(true)
   }
 
-  const inputClass = `w-full bg-transparent border-b border-black/[.15] pb-3 pt-1
-    text-[.68rem] font-light tracking-[.06em] text-[#1A1A1A] placeholder-[#404040]/50
+  const inputClass = `w-full bg-transparent border-b border-black/[.25] pb-3 pt-1
+    text-[.78rem] font-normal tracking-[.03em] text-[#1A1A1A] placeholder-[#404040]/60
     focus:outline-none focus:border-[#B8A882] transition-colors`
 
-  const labelClass = `block text-[.5rem] font-light tracking-[.2em] uppercase
-    text-[#B8A882] mb-2`
+  const labelClass = `block text-[.6rem] font-normal tracking-[.18em] uppercase
+    text-[#404040] mb-2.5`
 
   return (
     <div className="bg-[#F9F8F7] pt-[68px]">
@@ -132,21 +135,12 @@ export default function Contact() {
               <label htmlFor="ensemble" className={labelClass}>
                 Preferred Ensemble
               </label>
-              <div className="flex gap-4 flex-wrap pt-1">
-                {ensembles.map(e => (
-                  <label key={e}
-                    className="flex items-center gap-2 cursor-pointer group">
-                    <input type="radio" name="ensemble" value={e}
-                      checked={form.ensemble === e}
-                      onChange={handleChange}
-                      className="accent-[#B8A882]" />
-                    <span className="text-[.56rem] font-light tracking-[.14em] uppercase
-                      text-[#404040] group-hover:text-[#1A1A1A] transition-colors">
-                      {e}
-                    </span>
-                  </label>
-                ))}
-              </div>
+              <select id="ensemble" name="ensemble"
+                value={form.ensemble} onChange={handleChange}
+                className={`${inputClass} cursor-pointer`}>
+                <option value="">Select an ensemble…</option>
+                {ensembles.map(e => <option key={e} value={e}>{e}</option>)}
+              </select>
             </div>
 
             <div className="md:col-span-2">
