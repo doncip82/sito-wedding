@@ -130,7 +130,7 @@ export default function Locations({ light = false }) {
     <section id="locations" aria-labelledby="loc-title"
       className={`overflow-hidden px-[clamp(1.5rem,6vw,5rem)] py-[clamp(5rem,12vw,10rem)]
         ${light ? 'bg-[#F9F8F7]' : ''}`}
-      style={light ? undefined : { background: 'linear-gradient(180deg,#1B1814 0%,#141210 100%)' }}>
+      style={light ? undefined : { background: 'linear-gradient(180deg,#262019 0%,#1B1610 100%)' }}>
 
       {/* Header */}
       <div className="flex justify-between items-start gap-8 flex-wrap
