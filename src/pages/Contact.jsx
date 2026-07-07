@@ -66,13 +66,13 @@ export default function Contact() {
       {/* Header — Amalfi cliffside backdrop with dark overlays for legibility */}
       <section className="relative overflow-hidden bg-[#1A1A1A]
         px-[clamp(1.5rem,6vw,5rem)] py-[clamp(5rem,12vw,9rem)]">
-        <img src="/images/contact-amalfi-cliff.jpg" alt="" aria-hidden="true"
+        <img src="/images/ravello.jpg" alt="" aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover object-center" />
         <div aria-hidden="true" className="absolute inset-0" style={{
-          background: 'linear-gradient(to bottom, rgba(20,18,15,.30) 0%, rgba(20,18,15,.55) 100%)',
+          background: 'linear-gradient(to bottom, rgba(18,16,13,.42) 0%, rgba(18,16,13,.62) 100%)',
         }} />
         <div aria-hidden="true" className="absolute inset-0" style={{
-          background: 'linear-gradient(to right, rgba(20,18,15,.68) 0%, rgba(20,18,15,.22) 50%, transparent 80%)',
+          background: 'linear-gradient(to right, rgba(18,16,13,.82) 0%, rgba(18,16,13,.42) 52%, transparent 86%)',
         }} />
 
         <div className="relative z-10">
