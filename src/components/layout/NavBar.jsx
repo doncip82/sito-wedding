@@ -125,7 +125,7 @@ export default function NavBar() {
         {/* Right side — Enquire always visible (desktop + mobile) + hamburger on mobile */}
         <div className="flex items-center gap-5 md:gap-0">
           <a
-            href="/#contact"
+            href="/contact"
             className={`inline-block text-[.6rem] tracking-[.22em] uppercase no-underline
               pb-[2px] border-b-[.5px] transition-all duration-300 ${ctaWeight} ${enquireColor} ${enquireShadow}`}
           >
@@ -232,7 +232,7 @@ export default function NavBar() {
           })}
 
           <a
-            href="/#contact"
+            href="/contact"
             onClick={() => setMenuOpen(false)}
             className="font-serif italic font-light no-underline text-[clamp(1.8rem,5.5vw,3rem)] text-[#B8A882] mt-2"
           >

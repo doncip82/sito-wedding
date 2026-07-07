@@ -157,7 +157,7 @@ export default function ViolinSolo() {
           style={{ fontSize: 'clamp(1.7rem,3.5vw,2.8rem)' }}>
           Enquire About<br />This Performance.
         </p>
-        <a href="/#contact"
+        <a href="/contact"
           className="text-[.6rem] font-light tracking-[.22em] uppercase no-underline
             text-[#B8A882] border-b border-[rgba(184,168,130,.35)] pb-1
             hover:border-[#B8A882] transition-colors">

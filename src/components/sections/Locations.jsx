@@ -67,7 +67,7 @@ function VenueRow({ venue, index }) {
 
       {/* Right col — enquire link */}
       <div className="hidden sm:flex flex-col items-end justify-center pt-[.15rem]">
-        <a href="/#contact"
+        <a href="/contact"
           className="text-[.5rem] font-light tracking-[.2em] uppercase no-underline
             text-white/45 border-b border-transparent pb-[2px] whitespace-nowrap
             group-hover:text-[#B8A882] group-hover:border-[rgba(184,168,130,.4)] transition-all">

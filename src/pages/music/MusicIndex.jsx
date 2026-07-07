@@ -165,7 +165,7 @@ export default function MusicIndex() {
           Not sure which format is right for you?
         </p>
         <a
-          href="/#contact"
+          href="/contact"
           className="inline-block text-[.58rem] tracking-[.22em] uppercase font-light
             text-white/80 border-b-[.5px] border-white/40 pb-[2px]
             hover:text-[#B8A882] hover:border-[#B8A882] transition-all duration-300 no-underline"
