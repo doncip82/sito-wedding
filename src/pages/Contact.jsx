@@ -67,7 +67,7 @@ export default function Contact() {
       <section className="relative overflow-hidden bg-[#1A1A1A]
         px-[clamp(1.5rem,6vw,5rem)] py-[clamp(5rem,12vw,9rem)]">
         <img src="/images/ravello.jpg" alt="" aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover object-center" />
+          className="absolute inset-0 w-full h-full object-cover object-bottom" />
         <div aria-hidden="true" className="absolute inset-0" style={{
           background: 'linear-gradient(to bottom, rgba(18,16,13,.42) 0%, rgba(18,16,13,.62) 100%)',
         }} />
