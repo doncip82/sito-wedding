@@ -27,18 +27,32 @@ const contactSchema = {
 
 export default function Contact() {
   const [form, setForm] = useState({
-    name: '', email: '', date: '', venue: '', ensemble: '', message: '',
+    name: '', email: '', date: '', venue: '', ensemble: '', message: '', company: '',
   })
-  const [sent, setSent] = useState(false)
+  const [sent, setSent]       = useState(false)
+  const [sending, setSending] = useState(false)
+  const [error, setError]     = useState('')
 
   const handleChange = e =>
     setForm(prev => ({ ...prev, [e.target.name]: e.target.value }))
 
-  // Form submits to Formspree (replace YOUR_FORM_ID) or any backend
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault()
-    // Replace with: fetch('https://formspree.io/f/YOUR_FORM_ID', { method:'POST', body: JSON.stringify(form) })
-    setSent(true)
+    setSending(true)
+    setError('')
+    try {
+      const res = await fetch('/api/enquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      })
+      if (!res.ok) throw new Error('Request failed')
+      setSent(true)
+    } catch {
+      setError('Something went wrong sending your enquiry. Please email us directly at info@weddingmusicravello.com.')
+    } finally {
+      setSending(false)
+    }
   }
 
   const inputClass = `w-full bg-transparent border-b border-black/[.25] pb-3 pt-1
@@ -109,6 +123,15 @@ export default function Contact() {
           <form onSubmit={handleSubmit}
             className="max-w-2xl grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
 
+            {/* Honeypot — off-screen; real visitors never fill it, bots do */}
+            <div aria-hidden="true"
+              style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, overflow: 'hidden' }}>
+              <label>Company
+                <input type="text" name="company" tabIndex={-1} autoComplete="off"
+                  value={form.company} onChange={handleChange} />
+              </label>
+            </div>
+
             <div>
               <label htmlFor="name" className={labelClass}>Your Name</label>
               <input id="name" name="name" type="text" required
@@ -165,19 +188,26 @@ export default function Contact() {
                 className={`${inputClass} resize-none`} />
             </div>
 
-            <div className="md:col-span-2 flex items-center gap-8 flex-wrap pt-2">
-              <button type="submit"
-                className="link-underline cursor-pointer bg-transparent border-t-0
-                  border-x-0 font-sans">
-                Send Enquiry
-              </button>
-              <p className="text-[.5rem] font-light tracking-[.14em] text-[#404040]/60">
-                Or write directly to{' '}
-                <a href="mailto:info@weddingmusicravello.com"
-                  className="text-[#8A7A5A] no-underline border-b border-[#8A7A5A]/40">
-                  info@weddingmusicravello.com
-                </a>
-              </p>
+            <div className="md:col-span-2 flex flex-col gap-4 pt-2">
+              <div className="flex items-center gap-8 flex-wrap">
+                <button type="submit" disabled={sending}
+                  className="link-underline cursor-pointer bg-transparent border-t-0
+                    border-x-0 font-sans disabled:opacity-40 disabled:cursor-default">
+                  {sending ? 'Sending…' : 'Send Enquiry'}
+                </button>
+                <p className="text-[.5rem] font-light tracking-[.14em] text-[#404040]/60">
+                  Or write directly to{' '}
+                  <a href="mailto:info@weddingmusicravello.com"
+                    className="text-[#8A7A5A] no-underline border-b border-[#8A7A5A]/40">
+                    info@weddingmusicravello.com
+                  </a>
+                </p>
+              </div>
+              {error && (
+                <p className="text-[.58rem] font-light tracking-[.04em] leading-[1.8] text-[#9A4B39] max-w-[46ch]">
+                  {error}
+                </p>
+              )}
             </div>
 
           </form>
