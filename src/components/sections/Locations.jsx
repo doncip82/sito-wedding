@@ -118,7 +118,7 @@ export default function Locations({ light = false }) {
       }
     : {
         eyebrow:       'text-[#B8A882]',
-        title:         'text-white/88',
+        title:         'text-white/90',
         intro:         'text-white/55',
         listBorder:    'border-white/[.08]',
         marqueeBorder: 'border-white/[.06]',
