@@ -63,22 +63,34 @@ export default function Contact() {
         <script type="application/ld+json">{JSON.stringify(contactSchema)}</script>
       </Head>
 
-      {/* Header */}
-      <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(4rem,10vw,8rem)]">
-        <p className="text-[.56rem] font-light tracking-[.25em] uppercase text-[#B8A882]
-          flex items-center gap-3 mb-5">
-          <span className="inline-block w-[22px] h-[.5px] bg-[#B8A882]" />
-          Begin Your Enquiry
-        </p>
-        <h1 className="font-serif italic font-light text-[#F9F8F7] mb-6"
-          style={{ fontSize: 'clamp(2.5rem,5vw,5rem)', lineHeight: 1.05 }}>
-          Every celebration<br />is singular.
-        </h1>
-        <p className="text-[.68rem] font-light tracking-[.1em] text-white/50
-          max-w-[40ch] leading-[1.95]">
-          Tell us about your wedding — venue, date, and the kind of music you imagine.
-          We respond to all enquiries within 48 hours.
-        </p>
+      {/* Header — Amalfi cliffside backdrop with dark overlays for legibility */}
+      <section className="relative overflow-hidden bg-[#1A1A1A]
+        px-[clamp(1.5rem,6vw,5rem)] py-[clamp(5rem,12vw,9rem)]">
+        <img src="/images/contact-amalfi-cliff.jpg" alt="" aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover object-center" />
+        <div aria-hidden="true" className="absolute inset-0" style={{
+          background: 'linear-gradient(to bottom, rgba(20,18,15,.30) 0%, rgba(20,18,15,.55) 100%)',
+        }} />
+        <div aria-hidden="true" className="absolute inset-0" style={{
+          background: 'linear-gradient(to right, rgba(20,18,15,.68) 0%, rgba(20,18,15,.22) 50%, transparent 80%)',
+        }} />
+
+        <div className="relative z-10">
+          <p className="text-[.56rem] font-light tracking-[.25em] uppercase text-[#B8A882]
+            flex items-center gap-3 mb-5">
+            <span className="inline-block w-[22px] h-[.5px] bg-[#B8A882]" />
+            Begin Your Enquiry
+          </p>
+          <h1 className="font-serif italic font-light text-[#F9F8F7] mb-6"
+            style={{ fontSize: 'clamp(2.5rem,5vw,5rem)', lineHeight: 1.05 }}>
+            Every celebration<br />is singular.
+          </h1>
+          <p className="text-[.68rem] font-light tracking-[.1em] text-white/75
+            max-w-[40ch] leading-[1.95]">
+            Tell us about your wedding — venue, date, and the kind of music you imagine.
+            We respond to all enquiries within 48 hours.
+          </p>
+        </div>
       </section>
 
       {/* Form */}
