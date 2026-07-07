@@ -60,7 +60,7 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'Please provide your name and a valid email address.' })
   }
 
-  const from = process.env.MAIL_FROM || 'Wedding Music Ravello <onboarding@resend.dev>'
+  const from = process.env.MAIL_FROM || 'Wedding Music Ravello <info@weddingmusicravello.com>'
   const to = process.env.MAIL_TO || 'info@weddingmusicravello.com'
 
   const rows = [
