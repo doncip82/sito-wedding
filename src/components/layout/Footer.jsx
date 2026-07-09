@@ -6,6 +6,7 @@ export default function Footer() {
     { label: 'Occasions', href: '/#occasions'  },
     { label: 'Locations', href: '/#locations'  },
     { label: 'About',     href: '/#about'      },
+    { label: 'FAQ',       href: '/faq'         },
     { label: 'Enquire',   href: '/contact'     },
   ]
 
