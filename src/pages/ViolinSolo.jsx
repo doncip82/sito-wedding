@@ -54,23 +54,14 @@ export default function ViolinSolo() {
       {/* Split — photo + intro text */}
       <section className="grid grid-cols-1 md:grid-cols-2">
         {/* Photo */}
-        <div className="bg-[#1C2030]" style={{ minHeight: 480 }}>
-          {/*
-            PHOTO: Replace with:
-            <img src="/images/donato-cipriano-solo.jpg"
-                 alt="Donato Cipriano performing violin solo at golden hour, Amalfi Coast"
-                 className="w-full h-full object-cover" />
-          */}
-          <div className="w-full h-full flex items-end p-8" style={{ minHeight: 480 }}>
-            <div>
-              <span className="font-serif italic font-light text-[1.1rem] text-white/55 block mb-1">
-                Donato Cipriano
-              </span>
-              <span className="text-[.5rem] font-light tracking-[.18em] uppercase text-white/25">
-                Portrait — add photo
-              </span>
-            </div>
-          </div>
+        <div className="bg-[#1C2030] overflow-hidden" style={{ minHeight: 480 }}>
+          <img
+            src="/images/Violin%20Solo/immagine_donato.JPG"
+            alt="Donato Cipriano performing violin solo on the Amalfi Coast"
+            className="w-full object-cover object-center"
+            style={{ height: '100%', minHeight: 480 }}
+            loading="lazy"
+          />
         </div>
 
         {/* Text */}
@@ -92,23 +83,6 @@ export default function ViolinSolo() {
               <span>↗</span> Full Portfolio
             </a>
           </div>
-        </div>
-      </section>
-
-      {/* Video */}
-      <section className="w-full bg-[#111] border-t border-white/[.04]"
-        style={{ aspectRatio: '16/7' }}>
-        {/*
-          VIDEO: Replace with:
-          <iframe src="https://www.youtube.com/embed/YOUR_ID"
-            title="Donato Cipriano — Violin Solo Performance"
-            frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen
-            className="w-full h-full" />
-        */}
-        <div className="w-full h-full flex flex-col items-center justify-center gap-3">
-          <span className="text-[.5rem] tracking-[.2em] uppercase text-white/20">
-            Video performance — paste YouTube embed URL
-          </span>
         </div>
       </section>
 
