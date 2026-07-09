@@ -1,6 +1,6 @@
 // App.jsx — data routes for vite-react-ssg (SSG spike)
-import { lazy, Suspense } from 'react'
-import { Outlet } from 'react-router-dom'
+import { lazy, Suspense, useEffect } from 'react'
+import { Outlet, useLocation } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import NavBar from '@/components/layout/NavBar.jsx'
 import Footer from '@/components/layout/Footer.jsx'
@@ -40,9 +40,22 @@ function PageLoader() {
   )
 }
 
+// Reset scroll to the top on every client-side navigation — React Router keeps
+// the previous scroll position otherwise (a card opened part-way down the page).
+// Skip when there's a hash so in-page anchor links (e.g. /#occasions) still work.
+function ScrollToTop() {
+  const { pathname, hash } = useLocation()
+  useEffect(() => {
+    if (hash) return
+    window.scrollTo(0, 0)
+  }, [pathname, hash])
+  return null
+}
+
 function Layout() {
   return (
     <HelmetProvider>
+      <ScrollToTop />
       <NavBar />
       <main>
         <Suspense fallback={<PageLoader />}>
