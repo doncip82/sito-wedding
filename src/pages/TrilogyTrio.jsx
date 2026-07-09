@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { Head } from 'vite-react-ssg'
 import { ensembles } from '@/data/ensembles.js'
 import { ensembleSchema } from '@/data/schema.js'
+import ClickToLoad from '@/components/ui/ClickToLoad.jsx'
 
 const ensemble = ensembles.find(e => e.id === 'trilogy-trio')
 
@@ -164,7 +165,7 @@ export default function TrilogyTrio() {
           transition-shadow duration-500 hover:shadow-[0_8px_40px_rgba(0,0,0,.5)]"
           style={{ aspectRatio: '16/9' }}>
           <iframe
-            src="https://www.youtube.com/embed/7hp25qXj8ZU"
+            src="https://www.youtube-nocookie.com/embed/7hp25qXj8ZU"
             title="Trilogy Trio - Live Performance"
             frameBorder="0"
             loading="lazy"
@@ -185,7 +186,7 @@ export default function TrilogyTrio() {
                 transition-shadow duration-500 hover:shadow-[0_8px_40px_rgba(0,0,0,.5)]"
               style={{ aspectRatio: '16/9' }}>
               <iframe
-                src={`https://www.youtube.com/embed/${id}`}
+                src={`https://www.youtube-nocookie.com/embed/${id}`}
                 title={title}
                 frameBorder="0"
                 loading="lazy"
@@ -217,15 +218,17 @@ export default function TrilogyTrio() {
                 Follow ↗
               </a>
             </div>
-            <iframe
-              src="https://open.spotify.com/embed/artist/5fDrzYVHgAdzKgPAmJbLzD?utm_source=generator&theme=0"
-              width="100%"
-              height="352"
-              frameBorder="0"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-              title="Trilogy Trio on Spotify"
-            />
+            <ClickToLoad label="Spotify" height={352}>
+              <iframe
+                src="https://open.spotify.com/embed/artist/5fDrzYVHgAdzKgPAmJbLzD?utm_source=generator&theme=0"
+                width="100%"
+                height="352"
+                frameBorder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+                title="Trilogy Trio on Spotify"
+              />
+            </ClickToLoad>
           </div>
 
           {/* Instagram */}
@@ -238,15 +241,17 @@ export default function TrilogyTrio() {
                 Follow ↗
               </a>
             </div>
-            <iframe
-              src="https://www.instagram.com/trilogytriolive/embed/"
-              title="Trilogy Trio on Instagram"
-              className="w-full"
-              height="352"
-              scrolling="no"
-              frameBorder="0"
-              loading="lazy"
-            />
+            <ClickToLoad label="Instagram" height={352}>
+              <iframe
+                src="https://www.instagram.com/trilogytriolive/embed/"
+                title="Trilogy Trio on Instagram"
+                className="w-full"
+                height="352"
+                scrolling="no"
+                frameBorder="0"
+                loading="lazy"
+              />
+            </ClickToLoad>
           </div>
 
           {/* YouTube */}
@@ -261,7 +266,7 @@ export default function TrilogyTrio() {
             </div>
             <div className="flex-1 min-h-0">
               <iframe
-                src="https://www.youtube.com/embed/7hp25qXj8ZU"
+                src="https://www.youtube-nocookie.com/embed/7hp25qXj8ZU"
                 title="Trilogy Trio on YouTube"
                 frameBorder="0"
                 loading="lazy"
@@ -272,7 +277,7 @@ export default function TrilogyTrio() {
             </div>
             <div className="flex-1 min-h-0">
               <iframe
-                src="https://www.youtube.com/embed/leddQy0spuE"
+                src="https://www.youtube-nocookie.com/embed/leddQy0spuE"
                 title="Trilogy Trio on YouTube"
                 frameBorder="0"
                 loading="lazy"
