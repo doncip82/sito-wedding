@@ -24,7 +24,7 @@ const faqs = [
   },
   {
     q: 'Can musicians perform outdoors, without electricity?',
-    a: 'Yes. Acoustic ensembles — strings and solo violin — are designed for open-air terraces and gardens and need no power. For amplified formats such as a DJ set or saxophone with backing, power and setup are arranged with the venue in advance.',
+    a: 'Yes. Acoustic ensembles — strings and solo violin — are designed for open-air terraces and gardens and need no power at all. And for amplified formats such as a DJ set or saxophone with backing, battery-powered sound systems are now available, so a performance is possible even at venues with no mains electricity — the setup is always arranged with the venue in advance.',
   },
   {
     q: 'Can we choose the repertoire or request specific songs?',
