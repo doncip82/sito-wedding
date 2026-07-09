@@ -85,6 +85,9 @@ export default function Privacy() {
               We use your data solely to read and respond to your enquiry and to discuss music
               for your event. We do not use it for advertising, and we never sell it.
             </p>
+            <p>
+              We do not carry out automated decision-making or profiling based on your data.
+            </p>
           </Section>
 
           <Section title="Legal basis">
@@ -99,9 +102,12 @@ export default function Privacy() {
             <p>
               To run the website and deliver emails, your data is handled by trusted providers
               acting strictly on our behalf: <strong>Vercel</strong> (website hosting) and{' '}
-              <strong>Resend</strong> (email delivery). These providers may process data inside
-              or outside the EU under appropriate safeguards. We do not share your data with
-              anyone else.
+              <strong>Resend</strong> (email delivery). We do not share your data with anyone else.
+            </p>
+            <p>
+              Some of this processing may take place outside the European Economic Area (for
+              example, in the United States). Where that happens, it is covered by appropriate
+              safeguards, such as the European Commission’s Standard Contractual Clauses.
             </p>
           </Section>
 
@@ -110,6 +116,14 @@ export default function Privacy() {
               We keep your enquiry only for as long as necessary to handle your request and for
               a reasonable period afterwards, and then delete it. You can ask us to delete it
               sooner at any time.
+            </p>
+          </Section>
+
+          <Section title="How we protect your data">
+            <p>
+              Your enquiry is transmitted over an encrypted (HTTPS) connection and handled only
+              by the providers described above. We take reasonable technical and organisational
+              measures to protect it against loss, misuse or unauthorised access.
             </p>
           </Section>
 
