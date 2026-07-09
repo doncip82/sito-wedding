@@ -10,7 +10,7 @@ export const venues = [
     schemaType: 'LandmarksOrHistoricalBuildings',
     addressLocality: 'Ravello',
     tags: ['EvoStrings', 'Ceremony', 'Open Terrace'],
-    description: `A 12th-century estate set at the southernmost point of Ravello's promontory. Its Belvedere of Infinity, perched at 300m above sea level, accommodates intimate ceremonies of up to 60 guests.`,
+    description: `A 12th-century estate set at the southernmost point of Ravello's promontory. Its Belvedere of Infinity, perched at 350m above sea level, accommodates intimate ceremonies of up to 60 guests.`,
     recommendedEnsembles: ['evostrings', 'violino-solo'],
   },
   {

@@ -82,7 +82,7 @@ export default function MusicPiano() {
           style={{ fontSize: 'clamp(1.7rem,3.5vw,2.8rem)' }}>
           Add Piano Solo<br />to Your Day.
         </p>
-        <a href="mailto:info@weddingmusicravello.com"
+        <a href="/contact"
           className="text-[.6rem] font-light tracking-[.22em] uppercase no-underline
             text-[#B8A882] border-b border-[rgba(184,168,130,.35)] pb-1 whitespace-nowrap
             hover:border-[#B8A882] transition-colors">

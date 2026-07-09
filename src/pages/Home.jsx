@@ -10,10 +10,10 @@ function GeoIntro() {
   return (
     <section className="px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3rem,6vw,5rem)] bg-[#F9F8F7] border-b border-black/[.06]">
       <p className="eyebrow mb-[1.1rem]">Ravello · Città della Musica</p>
-      <h1 className="font-serif italic font-light leading-[1.08] text-[#1A1A1A] mb-6"
+      <h2 className="font-serif italic font-light leading-[1.08] text-[#1A1A1A] mb-6"
         style={{ fontSize: 'clamp(1.6rem,3vw,2.4rem)', maxWidth: '32ch' }}>
         Where Music Has Always Been the Centre of Everything
-      </h1>
+      </h2>
       <div className="flex flex-col gap-5 max-w-[65ch]">
         <p className="text-[.72rem] font-light tracking-[.05em] leading-[2] text-[#404040]">
           Ravello sits 365 metres above the Tyrrhenian Sea, on a promontory between Minori and
@@ -47,7 +47,7 @@ function ContactStrip() {
         style={{ fontSize: 'clamp(1.7rem,3.5vw,2.8rem)' }}>
         Every event is different.<br />Tell us about yours.
       </p>
-      <a href="mailto:info@weddingmusicravello.com"
+      <a href="/contact"
         className="text-[.6rem] font-light tracking-[.22em] uppercase no-underline
           text-[#B8A882] border-b border-[rgba(184,168,130,.35)] pb-1 whitespace-nowrap
           hover:border-[#B8A882] transition-colors">

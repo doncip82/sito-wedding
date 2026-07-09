@@ -4,7 +4,7 @@ const ravelloSchema = {
   '@context': 'https://schema.org',
   '@type': 'TouristDestination',
   name: 'Ravello',
-  description: 'Ravello is a hill town on the Amalfi Coast, 350 metres above sea level, UNESCO World Heritage Site since 1997. Known as the city of music, it hosted Richard Wagner in 1880 and is home to the Ravello Festival (founded 1953). Principal wedding venues include Villa Cimbrone, Palazzo Avino, Belmond Hotel Caruso and Villa Eva.',
+  description: 'Ravello is a hill town on the Amalfi Coast, 365 metres above sea level, UNESCO World Heritage Site since 1997. Known as the city of music, it hosted Richard Wagner in 1880 and is home to the Ravello Festival (founded 1953). Principal wedding venues include Villa Cimbrone, Palazzo Avino, Belmond Hotel Caruso and Villa Eva.',
   url: 'https://www.weddingmusicravello.com/locations/ravello',
   touristType: ['Wedding Couples', 'Luxury Travellers'],
   includesAttraction: [
@@ -46,7 +46,7 @@ export default function LocationRavello() {
             Wedding Music<br />in Ravello
           </h1>
           <p className="text-[.72rem] font-light tracking-[.06em] leading-[2] text-white/55 max-w-[60ch]">
-            Live music for destination weddings in Ravello — at an altitude of 350 metres
+            Live music for destination weddings in Ravello — at an altitude of 365 metres
             above the Gulf of Salerno, in venues that have defined the benchmark for the
             Italian luxury wedding for over a century.
           </p>
@@ -58,12 +58,12 @@ export default function LocationRavello() {
         <div className="max-w-[72ch]">
           <p className="eyebrow mb-5">The Setting</p>
           <h2 className="section-title mb-8" style={{ maxWidth: '24ch' }}>
-            350 Metres Above<br />the Gulf of Salerno
+            365 Metres Above<br />the Gulf of Salerno
           </h2>
           <div className="w-9 h-[.5px] bg-[#B8A882] mb-8" />
           <div className="space-y-6 text-[.72rem] font-light tracking-[.05em] leading-[2] text-[#404040]">
             <p>
-              Ravello sits at 350 metres above sea level on a promontory overlooking the Gulf
+              Ravello sits at 365 metres above sea level on a promontory overlooking the Gulf
               of Salerno. Founded in the 9th century, it was granted UNESCO World Heritage
               status as part of the Costiera Amalfitana in 1997. Richard Wagner composed part
               of <em>Parsifal</em> here in 1880, inspired by the gardens of Villa Rufolo — a
@@ -172,7 +172,7 @@ export default function LocationRavello() {
           style={{ fontSize: 'clamp(1.7rem,3.5vw,2.8rem)' }}>
           Planning a wedding<br />in Ravello?
         </p>
-        <a href="mailto:info@weddingmusicravello.com"
+        <a href="/contact"
           className="text-[.6rem] font-light tracking-[.22em] uppercase no-underline
             text-[#B8A882] border-b border-[rgba(184,168,130,.35)] pb-1 whitespace-nowrap
             hover:border-[#B8A882] transition-colors">
