@@ -57,7 +57,7 @@ The repertoire moves effortlessly between classical rigor and contemporary sensi
     id: 'violino-solo',
     slug: '/violin-solo',
     index: '03',
-    name: 'Violino Solo',
+    name: 'Violin Solo',
     subLabel: 'Solo Performance · Intimate & Ceremonial',
     officialUrl: 'https://www.donatocipriano.com/en/wedding#services',
     youtubeUrl: null,

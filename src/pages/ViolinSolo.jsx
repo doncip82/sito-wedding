@@ -41,7 +41,7 @@ export default function ViolinSolo() {
           </p>
           <h1 className="font-serif italic font-light leading-[1.02] text-[#F9F8F7] mb-6"
             style={{ fontSize: 'clamp(3rem,7vw,6rem)' }}>
-            Violino Solo
+            Violin Solo
           </h1>
           <div className="w-9 h-[.5px] bg-[#B8A882] mb-8" />
           <p className="text-[.8rem] font-serif italic font-light text-white/50
