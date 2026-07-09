@@ -14,6 +14,7 @@ const EvoStrings   = lazy(() => import('@/pages/EvoStrings.jsx'))
 const TrilogyTrio  = lazy(() => import('@/pages/TrilogyTrio.jsx'))
 const ViolinSolo   = lazy(() => import('@/pages/ViolinSolo.jsx'))
 const Contact      = lazy(() => import('@/pages/Contact.jsx'))
+const Privacy      = lazy(() => import('@/pages/Privacy.jsx'))
 const LocationPositano = lazy(() => import('@/pages/locations/Positano.jsx'))
 const LocationSorrento = lazy(() => import('@/pages/locations/Sorrento.jsx'))
 const MusicIndex     = lazy(() => import('@/pages/music/MusicIndex.jsx'))
@@ -63,6 +64,7 @@ export const routes = [
       { path: 'trilogy-trio', element: <TrilogyTrio /> },
       { path: 'violin-solo', element: <ViolinSolo /> },
       { path: 'contact', element: <Contact /> },
+      { path: 'privacy', element: <Privacy /> },
       { path: 'locations/ravello', element: <LocationRavello /> },
       { path: 'locations/positano', element: <LocationPositano /> },
       { path: 'locations/sorrento', element: <LocationSorrento /> },

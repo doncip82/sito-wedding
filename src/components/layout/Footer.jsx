@@ -48,6 +48,11 @@ export default function Footer() {
         text-[.5rem] font-light tracking-[.14em] text-white/20">
         <span>© {new Date().getFullYear()} Wedding Music Ravello. All rights reserved.</span>
         <span className="text-[#B8A882]/20" aria-hidden="true">·</span>
+        <a href="/privacy"
+          className="text-white/35 no-underline hover:text-[#B8A882] transition-colors">
+          Privacy Policy
+        </a>
+        <span className="text-[#B8A882]/20" aria-hidden="true">·</span>
         <span>Ravello, Campania, Italy</span>
       </div>
     </footer>

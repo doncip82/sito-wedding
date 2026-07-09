@@ -27,14 +27,16 @@ const contactSchema = {
 
 export default function Contact() {
   const [form, setForm] = useState({
-    name: '', email: '', date: '', venue: '', ensemble: '', message: '', company: '',
+    name: '', email: '', date: '', venue: '', ensemble: '', message: '', company: '', consent: false,
   })
   const [sent, setSent]       = useState(false)
   const [sending, setSending] = useState(false)
   const [error, setError]     = useState('')
 
-  const handleChange = e =>
-    setForm(prev => ({ ...prev, [e.target.name]: e.target.value }))
+  const handleChange = e => {
+    const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value
+    setForm(prev => ({ ...prev, [e.target.name]: value }))
+  }
 
   const handleSubmit = async e => {
     e.preventDefault()
@@ -188,7 +190,20 @@ export default function Contact() {
                 className={`${inputClass} resize-none`} />
             </div>
 
-            <div className="md:col-span-2 flex flex-col gap-4 pt-2">
+            <div className="md:col-span-2 flex flex-col gap-5 pt-2">
+              <label className="flex items-start gap-3 cursor-pointer max-w-[54ch]">
+                <input type="checkbox" name="consent" required
+                  checked={form.consent} onChange={handleChange}
+                  className="mt-[.15rem] w-[13px] h-[13px] shrink-0 accent-[#8A7A5A] cursor-pointer" />
+                <span className="text-[.56rem] font-light tracking-[.04em] leading-[1.7] text-[#404040]">
+                  I have read and agree to the{' '}
+                  <a href="/privacy" target="_blank" rel="noopener noreferrer"
+                    className="text-[#8A7A5A] no-underline border-b border-[#8A7A5A]/40 hover:border-[#8A7A5A]">
+                    Privacy Policy
+                  </a>.
+                </span>
+              </label>
+
               <div className="flex items-center gap-8 flex-wrap">
                 <button type="submit" disabled={sending}
                   className="link-underline cursor-pointer bg-transparent border-t-0
