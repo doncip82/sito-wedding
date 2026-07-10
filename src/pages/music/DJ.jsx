@@ -26,8 +26,17 @@ export default function MusicDJ() {
         <script type="application/ld+json">{JSON.stringify(djSchema)}</script>
       </Head>
 
-      <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(5rem,12vw,9rem)]">
-        <div className="max-w-4xl">
+      {/* Hero — video background */}
+      <section className="relative overflow-hidden px-[clamp(1.5rem,6vw,5rem)] py-3.5 md:py-[clamp(6rem,14vw,11rem)]">
+        <video
+          autoPlay muted playsInline loop preload="auto"
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        >
+          <source src="/videos/dj-hero.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-[rgba(26,26,26,.38)]" />
+        <div className="relative z-10 max-w-4xl">
           <p className="text-[.56rem] font-light tracking-[.25em] uppercase text-[#B8A882]
             flex items-center gap-3 mb-5">
             <span className="inline-block w-[22px] h-[.5px] bg-[#B8A882]" />
@@ -37,7 +46,8 @@ export default function MusicDJ() {
             style={{ fontSize: 'clamp(3rem,7vw,6rem)' }}>
             DJ Service
           </h1>
-          <p className="text-[.72rem] font-light tracking-[.06em] leading-[2] text-white/55 max-w-[60ch]">
+          <div className="w-9 h-[.5px] bg-[#B8A882] mb-8" />
+          <p className="text-[.72rem] font-light tracking-[.06em] leading-[2] text-white/70 max-w-[60ch]">
             Curated DJ coordination for the evening reception — selected for experience at
             the specific venues of the Amalfi Coast, not for volume of bookings.
           </p>
