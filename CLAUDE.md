@@ -66,7 +66,9 @@ Il sito propone **esclusivamente partner musicali**. L'aggiunta di fotografi, pl
   - **Head per-pagina:** ogni pagina usa il componente **`<Head>` di `vite-react-ssg`** — NON `react-helmet-async`, NON `document.title` imperativo (non verrebbero pre-renderizzati). Ogni pagina deve avere title, description, `<link rel="canonical">` e JSON-LD dentro `<Head>`.
 - Deploy su Vercel. `vercel.json` = `cleanUrls: true` + rewrite di fallback; Vercel serve prima l'HTML statico per-route (verificato). Mount id in `index.html` = **`root`**.
 - `src/data/schema.js` — schema base (home/LocalBusiness+MusicGroup, con `founder.sameAs` per SEO invisibile) + helper; molte pagine definiscono lo schema **inline** per-pagina.
-- `index.html` — niente title/meta di default (li inietta `<Head>`); contiene `<link rel="author" href="https://www.donatocipriano.com">` (autorità SEO invisibile verso Donato).
+- `index.html` — niente title/meta di default (li inietta `<Head>`); contiene `<link rel="author" href="https://www.donatocipriano.com">` (autorità SEO invisibile verso Donato) + il set completo di link favicon (path assoluti).
+- **Favicon / marchio (dal 2026-07-10):** il marchio del sito è un **monogramma a fedi intrecciate** — due anelli oro `#C6B58C` su charcoal `#1A1A1A`, motivo "wedding", leggibile fino a 16px e nitido nel cerchio dei risultati Google. Set in `public/`: `favicon.ico` (multi-size 16/32/48), `favicon-16x16.png`, `favicon-32x32.png`, `favicon.png` (512), `apple-touch-icon.png` (180), `android-chrome-192x192.png`, `site.webmanifest` (name = "Wedding Music Ravello"). *Sostituisce il vecchio marchio testuale "WMR".* Motivo del rifacimento: dopo un redirect temporaneo verso donatocipriano.com, Google mostrava ancora la favicon del sito personale + mancavano `/favicon.ico` e alcuni file (404).
+- **Immagine social ≠ favicon:** l'anteprima WhatsApp/social è `public/images/og-cover.jpg` (1200×630) servita via `og:image`/`twitter:image` per-pagina — file **separato** dalla favicon. Cambiare la favicon NON la tocca (verificato). Non sovrascriverla per errore.
 - Hero e menu mobile: video background in loop (`public/videos/Ravello_Hero.mp4`, ~24MB).
 - ⚠️ **Codice morto:** `src/components/ui/PageHead.jsx` e `src/routes.js` non sono più usati — da rimuovere quando conviene.
 
@@ -90,6 +92,7 @@ src/
 public/
 ├── images/
 │   ├── ravello-villa-rufolo.jpg   (About — vista Villa Rufolo, link a /locations/ravello)
+│   ├── og-cover.jpg               (anteprima social/WhatsApp 1200×630 — og:image, NON è la favicon)
 │   ├── Ceremony.jpg, Cocktail.jpg, Dinner.jpg   (Occasions — erano PNG, convertiti in JPG)
 │   ├── EvoStrings/     EvoStrings.jpg
 │   ├── Trilogy Trio/   Trilogy Trio 0-3 + Trilogy Trio.jpg
@@ -100,9 +103,11 @@ public/
 │   ├── Opera/          Elisabetta Vilni Soprano.jpg
 │   ├── Piano Solo/     Angelo Borrelli.jpg
 │   └── Posteggia/      Posteggia.jpg
-└── videos/             Ravello_Hero.mp4   (hero + menu mobile)
+├── videos/             Ravello_Hero.mp4   (hero + menu mobile)
+└── (root)              favicon.ico, favicon-16x16.png, favicon-32x32.png, favicon.png (512),
+                        apple-touch-icon.png, android-chrome-192x192.png, site.webmanifest   (marchio: fedi intrecciate)
 ```
-> Immagini ottimizzate il 2026-07-06 (58MB → ~8MB). Manca ancora `og-cover.jpg` (anteprima social, referenziata ma assente).
+> Immagini ottimizzate il 2026-07-06 (58MB → ~8MB). `og-cover.jpg` (1200×630, anteprima social/WhatsApp) è **presente** e servita via `og:image`.
 
 ## Struttura Home page (ordine sezioni)
 Hero → GeoIntro → ContactStrip → Occasions → Locations → About → Footer
@@ -176,10 +181,11 @@ Ogni blocco testo è avvolto in uno `<span>` con:
 
 ## To Do / Follow-up aperti
 - Collegare form `Contact.jsx` a un backend (es. Formspree) — ora mostra solo "Thank you", non invia email
-- Creare `public/images/og-cover.jpg` (1200×630) — anteprima social oggi mancante
 - Rifiniture editoriali: uniformare "365 m" (Home) vs "350 m" (Ravello); togliere il doppio `<h1>` in Home
 - Pulizia: rimuovere dipendenze morte (`vite-ssg-react` + polyfill in `package.json`) e i file inutilizzati `PageHead.jsx` / `routes.js`
+- **Favicon su Google:** dopo il deploy delle fedi, chiedere reindicizzazione della home in Search Console ("Controllo URL" → "Richiedi indicizzazione") per far aggiornare la favicon nei risultati (Google ci mette da giorni a settimane).
 - **Fatti ✓ (2026-07-06):** migrazione SSG (tutte le 19 route pre-renderizzate), foto About, compressione video (171→24MB) e immagini (58→8MB), auto-deploy ripristinato
+- **Fatti ✓ (2026-07-10):** rifatta favicon → **marchio a fedi intrecciate** (era "WMR"); set completo `favicon.ico`/16/32/512/apple-touch/android-chrome/`site.webmanifest` con path assoluti (risolto il problema della favicon donatocipriano.com in cache su Google + i 404 su `/favicon.ico`); `og-cover.jpg` (anteprima social/WhatsApp) lasciata intatta.
 
 ## Comandi utili
 ```
