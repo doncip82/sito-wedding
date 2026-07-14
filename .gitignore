@@ -5,3 +5,7 @@ dist/
 *.local
 .vercel
 .env*
+
+# Video sorgente/di lavoro — non usati dal sito, tenuti solo in locale
+public/images/EvoStrings/Salone Margherita Sito Ravello DEF.mp4
+public/videos/NICE Video.MP4

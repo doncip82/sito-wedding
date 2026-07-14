@@ -82,12 +82,14 @@ src/
 ├── data/            ensembles.js, venues.js, schema.js
 ├── hooks/           useScrollReveal.js
 ├── pages/
-│   ├── Home.jsx, EvoStrings.jsx, TrilogyTrio.jsx, ViolinSolo.jsx, Contact.jsx
+│   ├── Home.jsx, EvoStrings.jsx, TrilogyTrio.jsx, ViolinSolo.jsx, Contact.jsx, FAQ.jsx, Privacy.jsx
 │   ├── music/       MusicIndex.jsx, Saxophone.jsx, DJ.jsx, Vocalist.jsx, Opera.jsx, Posteggia.jsx, Piano.jsx
 │   ├── locations/   Positano.jsx, Ravello.jsx, Sorrento.jsx
 │   └── occasions/   WeddingCeremony.jsx, MarriageProposal.jsx, BirthdaysAnniversaries.jsx, CorporateEvents.jsx
 ├── routes.js, App.jsx, main.jsx
 └── styles/          globals.css
+
+api/                 enquiry.js   (Vercel Serverless Function — invia il form Contact via Resend)
 
 public/
 ├── images/
@@ -103,11 +105,12 @@ public/
 │   ├── Opera/          Elisabetta Vilni Soprano.jpg
 │   ├── Piano Solo/     Angelo Borrelli.jpg
 │   └── Posteggia/      Posteggia.jpg
-├── videos/             Ravello_Hero.mp4   (hero + menu mobile)
+├── videos/             Ravello_Hero.mp4 (hero + menu mobile), dj-hero.mp4 (pagina DJ)
 └── (root)              favicon.ico, favicon-16x16.png, favicon-32x32.png, favicon.png (512),
                         apple-touch-icon.png, android-chrome-192x192.png, site.webmanifest   (marchio: fedi intrecciate)
 ```
 > Immagini ottimizzate il 2026-07-06 (58MB → ~8MB). `og-cover.jpg` (1200×630, anteprima social/WhatsApp) è **presente** e servita via `og:image`.
+> **Video usati dal sito:** solo `Ravello_Hero.mp4`, `dj-hero.mp4`, `EvoStrings/EvoStrings_Hero.mp4`. Eventuali altri video (sorgente grezzo/di lavoro non referenziato nel codice) vanno **in `.gitignore`**, non committati — GitHub blocca i file >100MB. Al 2026-07-14 due sorgenti locali sono ignorati: `Salone Margherita Sito Ravello DEF.mp4` e `NICE Video.MP4`.
 
 ## Struttura Home page (ordine sezioni)
 Hero → GeoIntro → ContactStrip → Occasions → Locations → About → Footer
@@ -180,12 +183,13 @@ Ogni blocco testo è avvolto in uno `<span>` con:
 - Hamburger: forzato bianco (`bg-[#F9F8F7]`) quando `menuOpen === true`
 
 ## To Do / Follow-up aperti
-- Collegare form `Contact.jsx` a un backend (es. Formspree) — ora mostra solo "Thank you", non invia email
+- **Form Contact — verificare consegna email:** `Contact.jsx` fa `POST /api/enquiry` → funzione serverless Vercel `api/enquiry.js` che invia via **Resend** (env `RESEND_API_KEY`, `MAIL_FROM`, `MAIL_TO`). Da fare: verificare il dominio in Resend così `MAIL_FROM` non usa più il fallback `onboarding@resend.dev` (che consegna solo all'owner dell'account).
 - Rifiniture editoriali: uniformare "365 m" (Home) vs "350 m" (Ravello); togliere il doppio `<h1>` in Home
 - Pulizia: rimuovere dipendenze morte (`vite-ssg-react` + polyfill in `package.json`) e i file inutilizzati `PageHead.jsx` / `routes.js`
 - **Favicon su Google:** dopo il deploy delle fedi, chiedere reindicizzazione della home in Search Console ("Controllo URL" → "Richiedi indicizzazione") per far aggiornare la favicon nei risultati (Google ci mette da giorni a settimane).
 - **Fatti ✓ (2026-07-06):** migrazione SSG (tutte le 19 route pre-renderizzate), foto About, compressione video (171→24MB) e immagini (58→8MB), auto-deploy ripristinato
 - **Fatti ✓ (2026-07-10):** rifatta favicon → **marchio a fedi intrecciate** (era "WMR"); set completo `favicon.ico`/16/32/512/apple-touch/android-chrome/`site.webmanifest` con path assoluti (risolto il problema della favicon donatocipriano.com in cache su Google + i 404 su `/favicon.ico`); `og-cover.jpg` (anteprima social/WhatsApp) lasciata intatta.
+- **Fatti ✓:** form Contact collegato a backend reale (`api/enquiry.js`, Vercel Serverless + Resend); aggiunte pagine `FAQ.jsx` e `Privacy.jsx`.
 
 ## Comandi utili
 ```
