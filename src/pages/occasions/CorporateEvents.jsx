@@ -24,6 +24,7 @@ const ENSEMBLES = [
   { label: 'EvoStrings',   href: '/evostrings'     },
   { label: 'Trilogy Trio', href: '/trilogy-trio'   },
   { label: 'Piano Solo',   href: '/music/piano'    },
+  { label: 'Opera',        href: '/music/opera'    },
 ]
 
 const FORMATS = [
