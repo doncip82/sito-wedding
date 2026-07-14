@@ -26,7 +26,7 @@ export default function MusicOpera() {
         <script type="application/ld+json">{JSON.stringify(operaSchema)}</script>
       </Head>
 
-      <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(5rem,12vw,9rem)]">
+      <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(5rem,12vw,9rem)] pb-[calc(6rem+env(safe-area-inset-bottom))] md:pb-[clamp(5rem,12vw,9rem)]">
         <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-12 md:gap-16 items-center max-w-6xl">
           <div className="max-w-xl">
             <p className="text-[.56rem] font-light tracking-[.25em] uppercase text-[#B8A882]
