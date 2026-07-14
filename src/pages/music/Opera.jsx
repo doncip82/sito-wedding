@@ -27,21 +27,34 @@ export default function MusicOpera() {
       </Head>
 
       <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(5rem,12vw,9rem)]">
-        <div className="max-w-4xl">
-          <p className="text-[.56rem] font-light tracking-[.25em] uppercase text-[#B8A882]
-            flex items-center gap-3 mb-5">
-            <span className="inline-block w-[22px] h-[.5px] bg-[#B8A882]" />
-            Lyric Voice · Ceremony & Dinner
-          </p>
-          <h1 className="font-serif italic font-light leading-[1.02] text-[#F9F8F7] mb-6"
-            style={{ fontSize: 'clamp(3rem,7vw,6rem)' }}>
-            Opera
-          </h1>
-          <p className="text-[.72rem] font-light tracking-[.06em] leading-[2] text-white/55 max-w-[60ch]">
-            Lyric soprano and tenor, trained in the Italian <em>bel canto</em> tradition,
-            for ceremony music and dinner interludes. The stone terraces of the Amalfi Coast
-            provide natural resonance that no concert hall replicates.
-          </p>
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-12 md:gap-16 items-center max-w-6xl">
+          <div className="max-w-xl">
+            <p className="text-[.56rem] font-light tracking-[.25em] uppercase text-[#B8A882]
+              flex items-center gap-3 mb-5">
+              <span className="inline-block w-[22px] h-[.5px] bg-[#B8A882]" />
+              Lyric Voice · Ceremony & Dinner
+            </p>
+            <h1 className="font-serif italic font-light leading-[1.02] text-[#F9F8F7] mb-6"
+              style={{ fontSize: 'clamp(3rem,7vw,6rem)' }}>
+              Opera
+            </h1>
+            <p className="text-[.72rem] font-light tracking-[.06em] leading-[2] text-white/55 max-w-[60ch]">
+              Lyric soprano and tenor, trained in the Italian <em>bel canto</em> tradition,
+              for ceremony music and dinner interludes. The stone terraces of the Amalfi Coast
+              provide natural resonance that no concert hall replicates.
+            </p>
+          </div>
+          <div className="mx-auto md:mx-0 shrink-0 overflow-hidden
+            max-h-[55dvh] md:max-h-none
+            md:w-[300px] lg:w-[340px] md:aspect-[9/16]">
+            <video
+              autoPlay muted playsInline loop preload="auto"
+              aria-hidden="true"
+              className="h-full w-auto md:w-full md:h-full object-contain md:object-cover object-center mx-auto"
+            >
+              <source src="/videos/opera-hero.mp4" type="video/mp4" />
+            </video>
+          </div>
         </div>
       </section>
 
@@ -66,10 +79,14 @@ export default function MusicOpera() {
               <em>La Traviata</em>, <em>Rigoletto</em>), and Neapolitan art song.
               Each programme is discussed and confirmed with the couple in advance.
             </p>
+            <p className="eyebrow !mb-0 pt-2">Versatile Musical Formats</p>
             <p>
-              Two formats are available: a full operatic set of 30–45 minutes, suited to
-              a dinner interlude or post-ceremony concert; and single arias performed as
-              ceremony music — processional, signing, or recessional.
+              Our artists offer seamless musical accompaniment tailored to every chapter of
+              your wedding day, performing during both the wedding ceremony (religious or
+              symbolic) and the wedding dinner. The repertoire adapts beautifully to each
+              moment: sacred and liturgical music for the ceremony — such as the processional,
+              signing, or recessional — and a vibrant selection of celebrated opera arias and
+              timeless Neapolitan songs to elevate your reception dinner.
             </p>
           </div>
 
