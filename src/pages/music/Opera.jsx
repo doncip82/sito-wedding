@@ -44,7 +44,7 @@ export default function MusicOpera() {
               provide natural resonance that no concert hall replicates.
             </p>
           </div>
-          <div className="w-full md:w-[300px] lg:w-[340px] shrink-0 aspect-[9/16] overflow-hidden">
+          <div className="w-[65%] max-w-[260px] md:w-[300px] lg:w-[340px] md:max-w-none mx-auto md:mx-0 shrink-0 aspect-[9/16] overflow-hidden">
             <video
               autoPlay muted playsInline loop preload="auto"
               aria-hidden="true"
