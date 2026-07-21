@@ -1,6 +1,7 @@
 // pages/Contact.jsx
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { Head } from 'vite-react-ssg'
+import { trackGoogleAdsConversion } from '@/lib/googleTag.js'
 
 const venues = [
   'Villa Cimbrone', 'Palazzo Avino', 'Belmond Hotel Caruso',
@@ -32,6 +33,10 @@ export default function Contact() {
   const [sent, setSent]       = useState(false)
   const [sending, setSending] = useState(false)
   const [error, setError]     = useState('')
+  // Synchronous re-entrancy guard: blocks a second submit (and therefore a
+  // second conversion) if the button is clicked again before React re-renders
+  // it as disabled.
+  const submittingRef = useRef(false)
 
   const handleChange = e => {
     const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value
@@ -40,6 +45,8 @@ export default function Contact() {
 
   const handleSubmit = async e => {
     e.preventDefault()
+    if (submittingRef.current) return
+    submittingRef.current = true
     setSending(true)
     setError('')
     try {
@@ -49,11 +56,16 @@ export default function Contact() {
         body: JSON.stringify(form),
       })
       if (!res.ok) throw new Error('Request failed')
+      // Fire the Google Ads conversion only on a genuinely successful submit —
+      // reached exactly once per successful enquiry, never in the catch block
+      // and never on a plain page render. No-op if Ads env vars are unset.
+      trackGoogleAdsConversion()
       setSent(true)
     } catch {
       setError('Something went wrong sending your enquiry. Please email us directly at info@weddingmusicravello.com.')
     } finally {
       setSending(false)
+      submittingRef.current = false
     }
   }
 

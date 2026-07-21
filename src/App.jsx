@@ -4,6 +4,8 @@ import { Outlet, useLocation } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import NavBar from '@/components/layout/NavBar.jsx'
 import Footer from '@/components/layout/Footer.jsx'
+import CookieConsent from '@/components/privacy/CookieConsent.jsx'
+import { trackPageView } from '@/lib/googleTag.js'
 
 // Home and Ravello are eager so the SSG spike can prerender their full
 // content synchronously. Everything else stays lazy (client-rendered).
@@ -52,10 +54,29 @@ function ScrollToTop() {
   return null
 }
 
+// Send a Google tag page view on the first render and on every client-side
+// navigation. Keyed on pathname + search so each route change fires exactly
+// once. The gtag config uses send_page_view:false, so this is the single
+// source of page views (no double-counting of the initial view). No-op when
+// the Google tag id is not configured.
+function AnalyticsTracker() {
+  const { pathname, search } = useLocation()
+  useEffect(() => {
+    // Defer to the next frame so the per-page <Head> has committed the new
+    // document.title before we read it.
+    const id = window.requestAnimationFrame(() => {
+      trackPageView({ path: pathname + search })
+    })
+    return () => window.cancelAnimationFrame(id)
+  }, [pathname, search])
+  return null
+}
+
 function Layout() {
   return (
     <HelmetProvider>
       <ScrollToTop />
+      <AnalyticsTracker />
       <NavBar />
       <main>
         <Suspense fallback={<PageLoader />}>
@@ -63,6 +84,7 @@ function Layout() {
         </Suspense>
       </main>
       <Footer />
+      <CookieConsent />
     </HelmetProvider>
   )
 }
