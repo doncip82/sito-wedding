@@ -1,28 +1,28 @@
 // src/lib/googleTag.js
 //
-// Google tag (gtag.js) + Google Ads conversion tracking + Consent Mode v2.
+// Google tag (gtag.js) + Consent Mode v2.
 //
 // Design goals:
 //   - SSG-safe: no access to `window`/`document` at import time or during
 //     server-side pre-rendering (vite-react-ssg). Every browser API is guarded.
 //   - Load gtag.js exactly once, only in the browser.
-//   - No-op safely when the Google IDs are not configured (missing env vars):
+//   - No-op safely when the Google tag id is not configured (missing env var):
 //     the site keeps working, no runtime errors. A one-time console warning is
 //     emitted in dev only.
 //   - Consent Mode v2 (ADVANCED): consent defaults are set to `denied` BEFORE
 //     `gtag('config', …)`, so gtag.js may load but withholds cookies/identifiers
 //     until the visitor grants consent. See applyConsentState() for updates.
 //
-// Configuration (Vite env vars — set these in Vercel, not hardcoded):
-//   VITE_GOOGLE_TAG_ID               e.g. AW-XXXXXXXXXX  (the Google tag id)
-//   VITE_GOOGLE_ADS_CONVERSION_ID    e.g. AW-XXXXXXXXXX  (Ads conversion id)
-//   VITE_GOOGLE_ADS_CONVERSION_LABEL e.g. XXXXXXXXXXXX   (conversion label)
+// The Google Ads conversion is NOT fired from JS here — it is tracked by the
+// load of the /thank-you page (Ads rule: "URL contains /thank-you"). See
+// src/pages/ThankYou.jsx and src/lib/enquirySuccess.js.
+//
+// Configuration (Vite env var — set in Vercel, not hardcoded):
+//   VITE_GOOGLE_TAG_ID   e.g. AW-XXXXXXXXXX  (the Google tag id)
 
-import { readConsent, hasAdvertisingConsent } from '@/lib/consent.js'
+import { readConsent } from '@/lib/consent.js'
 
-const TAG_ID          = import.meta.env.VITE_GOOGLE_TAG_ID
-const CONVERSION_ID   = import.meta.env.VITE_GOOGLE_ADS_CONVERSION_ID
-const CONVERSION_LABEL = import.meta.env.VITE_GOOGLE_ADS_CONVERSION_LABEL
+const TAG_ID = import.meta.env.VITE_GOOGLE_TAG_ID
 
 const isBrowser = () => typeof window !== 'undefined' && typeof document !== 'undefined'
 
@@ -150,36 +150,5 @@ export function trackPageView(opts = {}) {
     page_path: path,
     page_location: window.location.href,
     page_title: title,
-  })
-}
-
-/**
- * Fire a Google Ads conversion. Call ONCE, only after a genuinely successful
- * enquiry submission. Sends the event only when:
- *   1. running in the browser,
- *   2. the Ads env vars are configured, and
- *   3. the visitor granted advertising consent.
- * Otherwise it is a safe no-op (the form still works, no runtime error).
- *
- * @param {Object} [params] extra params merged into the conversion event
- *                          (e.g. { value, currency }).
- */
-export function trackGoogleAdsConversion(params = {}) {
-  if (!isBrowser()) return
-  if (!CONVERSION_ID || !CONVERSION_LABEL) {
-    warnOnce(
-      'no-conversion',
-      'VITE_GOOGLE_ADS_CONVERSION_ID / VITE_GOOGLE_ADS_CONVERSION_LABEL not set — conversion not sent (no-op).',
-    )
-    return
-  }
-  // Respect the advertising consent choice — no conversion event without it.
-  if (!hasAdvertisingConsent()) return
-  if (!initialised) initGoogleTag()
-  if (typeof window.gtag !== 'function') return
-
-  window.gtag('event', 'conversion', {
-    send_to: `${CONVERSION_ID}/${CONVERSION_LABEL}`,
-    ...params,
   })
 }

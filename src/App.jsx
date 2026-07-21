@@ -6,6 +6,7 @@ import NavBar from '@/components/layout/NavBar.jsx'
 import Footer from '@/components/layout/Footer.jsx'
 import CookieConsent from '@/components/privacy/CookieConsent.jsx'
 import { trackPageView } from '@/lib/googleTag.js'
+import { shouldSendThankYouPageView, markThankYouPageViewSent } from '@/lib/enquirySuccess.js'
 
 // Home and Ravello are eager so the SSG spike can prerender their full
 // content synchronously. Everything else stays lazy (client-rendered).
@@ -16,6 +17,7 @@ const EvoStrings   = lazy(() => import('@/pages/EvoStrings.jsx'))
 const TrilogyTrio  = lazy(() => import('@/pages/TrilogyTrio.jsx'))
 const ViolinSolo   = lazy(() => import('@/pages/ViolinSolo.jsx'))
 const Contact      = lazy(() => import('@/pages/Contact.jsx'))
+const ThankYou     = lazy(() => import('@/pages/ThankYou.jsx'))
 const Privacy      = lazy(() => import('@/pages/Privacy.jsx'))
 const FAQ          = lazy(() => import('@/pages/FAQ.jsx'))
 const LocationPositano = lazy(() => import('@/pages/locations/Positano.jsx'))
@@ -59,13 +61,26 @@ function ScrollToTop() {
 // once. The gtag config uses send_page_view:false, so this is the single
 // source of page views (no double-counting of the initial view). No-op when
 // the Google tag id is not configured.
+//
+// /thank-you is special: it is the Google Ads conversion page, so its page view
+// must fire at most once per successful enquiry. It is sent only when a valid,
+// not-yet-counted one-time authorization exists (see src/lib/enquirySuccess.js),
+// after which it is marked as sent — so a refresh or a direct visit produces no
+// (second) page view.
 function AnalyticsTracker() {
   const { pathname, search } = useLocation()
   useEffect(() => {
     // Defer to the next frame so the per-page <Head> has committed the new
     // document.title before we read it.
     const id = window.requestAnimationFrame(() => {
-      trackPageView({ path: pathname + search })
+      if (pathname === '/thank-you') {
+        if (shouldSendThankYouPageView()) {
+          trackPageView({ path: pathname + search })
+          markThankYouPageViewSent()
+        }
+      } else {
+        trackPageView({ path: pathname + search })
+      }
     })
     return () => window.cancelAnimationFrame(id)
   }, [pathname, search])
@@ -100,6 +115,7 @@ export const routes = [
       { path: 'trilogy-trio', element: <TrilogyTrio /> },
       { path: 'violin-solo', element: <ViolinSolo /> },
       { path: 'contact', element: <Contact /> },
+      { path: 'thank-you', element: <ThankYou /> },
       { path: 'privacy', element: <Privacy /> },
       { path: 'faq', element: <FAQ /> },
       { path: 'locations/ravello', element: <LocationRavello /> },

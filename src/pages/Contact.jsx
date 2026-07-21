@@ -1,7 +1,9 @@
 // pages/Contact.jsx
 import { useState, useRef } from 'react'
 import { Head } from 'vite-react-ssg'
-import { trackGoogleAdsConversion } from '@/lib/googleTag.js'
+import { useNavigate } from 'react-router-dom'
+import { hasAdvertisingConsent } from '@/lib/consent.js'
+import { grantEnquirySuccess } from '@/lib/enquirySuccess.js'
 
 const venues = [
   'Villa Cimbrone', 'Palazzo Avino', 'Belmond Hotel Caruso',
@@ -27,6 +29,7 @@ const contactSchema = {
 }
 
 export default function Contact() {
+  const navigate = useNavigate()
   const [form, setForm] = useState({
     name: '', email: '', date: '', venue: '', ensemble: '', message: '', company: '', consent: false,
   })
@@ -34,8 +37,8 @@ export default function Contact() {
   const [sending, setSending] = useState(false)
   const [error, setError]     = useState('')
   // Synchronous re-entrancy guard: blocks a second submit (and therefore a
-  // second conversion) if the button is clicked again before React re-renders
-  // it as disabled.
+  // duplicate request/navigation) if the button is clicked again before React
+  // re-renders it as disabled.
   const submittingRef = useRef(false)
 
   const handleChange = e => {
@@ -56,11 +59,17 @@ export default function Contact() {
         body: JSON.stringify(form),
       })
       if (!res.ok) throw new Error('Request failed')
-      // Fire the Google Ads conversion only on a genuinely successful submit —
-      // reached exactly once per successful enquiry, never in the catch block
-      // and never on a plain page render. No-op if Ads env vars are unset.
-      trackGoogleAdsConversion()
-      setSent(true)
+      // Success. The Google Ads conversion is now tracked solely by the load of
+      // /thank-you (Ads rule: "URL contains /thank-you"). We only navigate there
+      // when advertising consent is granted AND a one-time authorization can be
+      // stored; otherwise we keep the confirmation inline on /contact (no
+      // navigation, no conversion). grantEnquirySuccess() is only called when
+      // consent is granted, so no authorization is written without it.
+      if (hasAdvertisingConsent() && grantEnquirySuccess()) {
+        navigate('/thank-you', { replace: true })
+      } else {
+        setSent(true)
+      }
     } catch {
       setError('Something went wrong sending your enquiry. Please email us directly at info@weddingmusicravello.com.')
     } finally {

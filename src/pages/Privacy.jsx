@@ -154,7 +154,10 @@ export default function Privacy() {
             <p>
               <strong>Analytics</strong> — measuring visits so we can understand and improve the
               site. <strong>Advertising</strong> — measuring conversions and the effectiveness of
-              our Google Ads campaigns.
+              our Google Ads campaigns. A conversion is measured when, after successfully sending
+              an enquiry, you are shown a dedicated confirmation page. If you decline advertising
+              cookies, this does not happen: your enquiry is still sent and confirmed on the same
+              page, and no advertising conversion is measured.
             </p>
             <p>
               <strong>Essential</strong> cookies (needed for the site and the enquiry form to
