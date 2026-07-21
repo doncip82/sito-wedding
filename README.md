@@ -112,6 +112,113 @@ vercel --prod
 
 ---
 
+## Analytics — Google tag & Google Ads conversion
+
+The Google tag (`gtag.js`) loads on every page and tracks React Router
+navigations as page views.
+
+The **Google Ads conversion is tracked by the load of the `/thank-you` page**,
+configured in the Ads account with the rule **"URL contains /thank-you"**. There
+is **no** manual `gtag('event','conversion', …)` call anywhere in the code — the
+page load is the single source of the conversion (no double counting).
+
+`/thank-you` is reached **only** after a genuinely successful enquiry
+(`200` from `/api/enquiry`) **and** only when advertising consent is granted.
+A one-time, short-lived authorization in `sessionStorage`
+(`wmr_enquiry_success`, see `src/lib/enquirySuccess.js`) gates it, so a direct
+visit or a refresh cannot manufacture a conversion:
+
+- direct visit / refresh **without** a valid authorization → redirected to
+  `/contact`, and **no** `/thank-you` page view is sent;
+- refresh **after** a legitimate arrival → the authorization exists but
+  `pageViewSent` is already `true` → **no second** page view;
+- a new successful submission → a fresh authorization (new conversion allowed).
+
+### Environment variables (set in Vercel)
+
+Vercel → Project → **Settings → Environment Variables** (Production + Preview):
+
+| Variable | Format | Meaning |
+|---|---|---|
+| `VITE_GOOGLE_TAG_ID` | `AW-XXXXXXXXXX` | The Google tag id |
+
+Only `VITE_GOOGLE_TAG_ID` is required. Any previous Google Ads conversion
+id/label env vars are **no longer used** — the conversion is now the
+`/thank-you` URL rule, so they can be removed from Vercel.
+
+It has the `VITE_` prefix, so it is baked into the client bundle at build time
+— **redeploy after changing it**. See `.env.example` for the template. If it is
+unset the site works normally and tracking is a safe no-op (a dev-only console
+warning appears; production stays silent).
+
+### Consent (Consent Mode v2 — Advanced)
+
+The site ships a cookie banner (`src/components/privacy/CookieConsent.jsx`) and
+**Google Consent Mode v2 in Advanced mode**:
+
+- `gtag('consent', 'default', …)` sets **all non-essential storage to `denied`**
+  *before* `gtag('config', …)`. The Google tag may load, but withholds
+  cookies/identifiers until the visitor grants consent (Advanced mode → Google
+  still receives cookieless pings while denied). Advanced was chosen so
+  navigation and modelling work from the first page load without setting cookies
+  pre-consent — as opposed to Basic mode, which blocks the tag entirely until
+  consent and loses cookieless signals.
+- **Accept all** → `analytics` + `advertising` granted. **Reject non-essential**
+  → both denied. A **Manage preferences** view toggles each category.
+- The choice is stored in `localStorage` as `wmr_cookie_consent`
+  (`{ analytics, advertising, timestamp, version }`) and re-applied on load.
+  Bump `CONSENT_VERSION` in `src/lib/consent.js` after a material privacy change
+  to re-prompt everyone.
+- **Cookie Settings** (footer, every page) re-opens the panel to change/withdraw
+  consent — no page navigation.
+- **Google tag & page views** (all ordinary pages) use Advanced Consent Mode:
+  they always call `gtag('event','page_view', …)`, and while consent is `denied`
+  Consent Mode sends **cookieless pings** (no cookies/identifiers) rather than
+  nothing.
+- The **form conversion applies a stricter, intentional rule**: when advertising
+  consent is denied, the form is still submitted and a confirmation is shown
+  **inline on `/contact`**, but the user is **not navigated to `/thank-you`** —
+  so the conversion URL is never loaded and **no conversion is generated at all**
+  (not even a cookieless one). This is enforced in our own code
+  (`hasAdvertisingConsent()` guard in `src/pages/Contact.jsx`), on top of Consent
+  Mode.
+- **Consequence (by design):** form conversions from visitors who declined
+  advertising are therefore **not** available to Google for advertiser-specific
+  conversion modelling. This is a deliberate project choice — a stricter privacy
+  posture — **not a bug**. If you later prefer to rely on Consent Mode modelling
+  instead, navigate to `/thank-you` regardless of advertising consent and let
+  Consent Mode downgrade the denied case.
+
+> This describes the **technical behaviour implemented**; it is not a statement
+> of legal compliance. Have the banner copy and privacy policy reviewed for your
+> jurisdiction before launch.
+
+### Verifying with Google Tag Assistant
+
+1. Install the **Tag Assistant** Chrome extension (or use
+   [tagassistant.google.com](https://tagassistant.google.com)).
+2. Deploy a Preview build with the env vars set and open it via Tag Assistant.
+3. Confirm the Google tag is detected **once** (no duplicate `gtag.js`) and that
+   navigating between pages emits one `page_view` per route.
+4. Open the **Consent** tab: on first load, `ad_storage`, `analytics_storage`,
+   `ad_user_data`, `ad_personalization` are all **denied** (default). After
+   **Accept all** they become **granted** via a consent `update`; after **Reject
+   non-essential** they stay **denied**.
+5. Submit the `/contact` form with valid data **and** advertising consent → the
+   browser navigates to **`/thank-you`**, which fires exactly **one** page view
+   for that URL. Configure the Ads conversion with the rule **"URL contains
+   /thank-you"**.
+6. **Refresh `/thank-you`** → no second `/thank-you` page view.
+7. Open **`/thank-you` directly** (new tab, no submission) → redirected to
+   `/contact`, **no** `/thank-you` page view.
+8. Submit with advertising **rejected** → the form still succeeds and "Thank
+   you" shows **inline on `/contact`**; the browser does **not** navigate to
+   `/thank-you`, so no conversion is generated.
+9. Confirm there is **no** manual `gtag('event','conversion', …)` in the loaded
+   scripts (the conversion is purely the `/thank-you` URL rule).
+
+---
+
 ## Design Tokens
 
 | Token       | Value     | Usage                        |

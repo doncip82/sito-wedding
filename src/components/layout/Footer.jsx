@@ -1,4 +1,5 @@
 // components/layout/Footer.jsx
+import { openCookieSettings } from '@/lib/consent.js'
 
 export default function Footer() {
   const navLinks = [
@@ -53,6 +54,12 @@ export default function Footer() {
           className="text-white/35 no-underline hover:text-[#B8A882] transition-colors">
           Privacy Policy
         </a>
+        <span className="text-[#B8A882]/20" aria-hidden="true">·</span>
+        <button type="button" onClick={openCookieSettings}
+          className="bg-transparent border-0 p-0 cursor-pointer font-light tracking-[.14em]
+            text-white/35 no-underline hover:text-[#B8A882] transition-colors">
+          Cookie Settings
+        </button>
         <span className="text-[#B8A882]/20" aria-hidden="true">·</span>
         <span>Ravello, Campania, Italy</span>
       </div>

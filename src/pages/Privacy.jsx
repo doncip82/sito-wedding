@@ -45,7 +45,7 @@ export default function Privacy() {
           Privacy Policy
         </h1>
         <p className="text-[.56rem] font-light tracking-[.16em] uppercase text-[#8A7A5A]">
-          Last updated: 9 July 2026
+          Last updated: 21 July 2026
         </p>
       </section>
 
@@ -83,7 +83,8 @@ export default function Privacy() {
           <Section title="Why we use it">
             <p>
               We use your data solely to read and respond to your enquiry and to discuss music
-              for your event. We do not use it for advertising, and we never sell it.
+              for your event. We do not use the personal information submitted through the enquiry
+              form for personalised advertising or audience targeting, and we never sell it.
             </p>
             <p>
               We do not carry out automated decision-making or profiling based on your data.
@@ -142,11 +143,54 @@ export default function Privacy() {
             </p>
           </Section>
 
-          <Section title="Cookies & third-party services">
+          <Section title="Cookies & similar technologies">
             <p>
-              This website does not use tracking or advertising cookies. It loads typefaces from
-              Google Fonts, which may receive your IP address in order to serve the fonts.
-              Technical data may be processed by our hosting provider for security and performance.
+              Beyond the cookies strictly needed to run the site, this website can use the{' '}
+              <strong>Google tag</strong> and <strong>Google Ads</strong> to measure website
+              visits and the performance of our advertising (for example, how many enquiries
+              result from a Google Ads campaign). These involve two categories of non-essential
+              cookies:
+            </p>
+            <p>
+              <strong>Analytics</strong> — measuring visits so we can understand and improve the
+              site. <strong>Advertising</strong> — measuring conversions and the effectiveness of
+              our Google Ads campaigns. A conversion is measured when, after successfully sending
+              an enquiry, you are shown a dedicated confirmation page. If you decline advertising
+              cookies, this does not happen: your enquiry is still sent and confirmed on the same
+              page, and no advertising conversion is measured.
+            </p>
+            <p>
+              <strong>Essential</strong> cookies (needed for the site and the enquiry form to
+              work) are always active. The <strong>analytics</strong> and <strong>advertising</strong>{' '}
+              cookies are used <strong>only if you allow them</strong>. On your first visit a cookie
+              banner lets you <em>Accept all</em> or <em>Reject non-essential</em> cookies, and until
+              you choose, non-essential cookies stay off (we apply Google’s Consent Mode with all
+              non-essential storage denied by default).
+            </p>
+            <p>
+              You can change or withdraw your choice at any time using the{' '}
+              <strong>“Cookie Settings”</strong> link in the footer of every page. Your preference
+              is stored on your device and kept until you change it, clear your browser storage, or
+              we make a material change to this policy (after which the banner is shown again).
+            </p>
+            <p>
+              When analytics or advertising cookies are enabled, some data may be transmitted to and
+              processed by <strong>Google</strong>, including in countries outside the European
+              Economic Area (such as the United States), under appropriate safeguards. For details on
+              how Google processes this data, see{' '}
+              <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer"
+                className="text-[#8A7A5A] no-underline border-b border-[#8A7A5A]/40 hover:border-[#8A7A5A]">
+                Google’s Privacy Policy
+              </a>{' '}and{' '}
+              <a href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener noreferrer"
+                className="text-[#8A7A5A] no-underline border-b border-[#8A7A5A]/40 hover:border-[#8A7A5A]">
+                How Google uses cookies
+              </a>.
+            </p>
+            <p>
+              The site also loads typefaces from Google Fonts, which may receive your IP address in
+              order to serve the fonts, and our hosting provider may process limited technical data
+              for security and performance.
             </p>
           </Section>
 
