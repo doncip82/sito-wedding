@@ -1,4 +1,6 @@
 import { Head } from 'vite-react-ssg'
+import EnquiryLinks from '@/components/ui/EnquiryLinks.jsx'
+import { weddingMessage } from '@/lib/contactLinks.js'
 
 const pianoSchema = {
   '@context': 'https://schema.org',
@@ -42,6 +44,7 @@ export default function MusicPiano() {
             contemporary warmth, adapted to the acoustic and emotional register of each
             venue on the Amalfi Coast.
           </p>
+          <EnquiryLinks className="mt-10" ensemble="Piano Solo" message={weddingMessage({ interest: 'solo piano' })} />
         </div>
       </section>
 
@@ -82,12 +85,7 @@ export default function MusicPiano() {
           style={{ fontSize: 'clamp(1.7rem,3.5vw,2.8rem)' }}>
           Add Piano Solo<br />to Your Day.
         </p>
-        <a href="/contact"
-          className="text-[.6rem] font-light tracking-[.22em] uppercase no-underline
-            text-[#B8A882] border-b border-[rgba(184,168,130,.35)] pb-1 whitespace-nowrap
-            hover:border-[#B8A882] transition-colors">
-          Begin Your Enquiry
-        </a>
+        <EnquiryLinks ensemble="Piano Solo" message={weddingMessage({ interest: 'solo piano' })} />
       </section>
     </div>
   )

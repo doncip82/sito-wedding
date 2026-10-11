@@ -5,6 +5,7 @@ import Hero      from '@/components/sections/Hero.jsx'
 import Occasions from '@/components/sections/Occasions.jsx'
 import Locations from '@/components/sections/Locations.jsx'
 import About     from '@/components/sections/About.jsx'
+import EnquiryLinks from '@/components/ui/EnquiryLinks.jsx'
 
 function GeoIntro() {
   return (
@@ -47,12 +48,7 @@ function ContactStrip() {
         style={{ fontSize: 'clamp(1.7rem,3.5vw,2.8rem)' }}>
         Every event is different.<br />Tell us about yours.
       </p>
-      <a href="/contact"
-        className="text-[.6rem] font-light tracking-[.22em] uppercase no-underline
-          text-[#B8A882] border-b border-[rgba(184,168,130,.35)] pb-1 whitespace-nowrap
-          hover:border-[#B8A882] transition-colors">
-        Get in touch →
-      </a>
+      <EnquiryLinks label="Get in touch →" />
     </section>
   )
 }

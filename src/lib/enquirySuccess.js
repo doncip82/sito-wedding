@@ -1,10 +1,11 @@
 // src/lib/enquirySuccess.js
 //
-// One-time, short-lived authorization that gates the /thank-you conversion page.
+// One-time, short-lived authorization that gates the /thank-you page.
 //
 // A record is written to sessionStorage ONLY after a genuinely successful
-// /api/enquiry submission (and only when advertising consent is granted). It
-// lets the visitor reach /thank-you exactly once and have its page view counted
+// /api/enquiry submission, for every visitor whatever their consent. (The Ads
+// conversion itself is sent by src/lib/enquiry.js, not by this page.) It lets
+// the visitor reach /thank-you exactly once and have its page view counted
 // exactly once:
 //   - a direct visit / refresh without a valid record → no page view,
 //     and the page redirects back to /contact;

@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react'
 import { Head } from 'vite-react-ssg'
 import { ensembles } from '@/data/ensembles.js'
 import { ensembleSchema } from '@/data/schema.js'
+import EnquiryLinks from '@/components/ui/EnquiryLinks.jsx'
+import { weddingMessage } from '@/lib/contactLinks.js'
 
 const ensemble = ensembles.find(e => e.id === 'trilogy-trio')
 
@@ -81,6 +83,7 @@ export default function TrilogyTrio() {
             The ensemble where classical formation meets cinematic emotion —
             violin, cello and piano performing across the Amalfi Coast.
           </p>
+          <EnquiryLinks className="mt-10" ensemble="Trilogy Trio" message={weddingMessage({ interest: 'Trilogy Trio' })} />
         </div>
       </section>
 
@@ -98,7 +101,7 @@ export default function TrilogyTrio() {
               {ensemble.description}
             </p>
             <div className="flex items-center gap-6 flex-wrap mt-8">
-              <a href="/contact" className="link-underline">Request a booking</a>
+              <a href="/contact?ensemble=Trilogy+Trio" className="link-underline">Request a booking</a>
               <a href={ensemble.youtubeUrl} className="link-ext"
                 target="_blank" rel="noopener noreferrer"
                 aria-label="Watch Trilogy Trio on YouTube">
@@ -293,12 +296,7 @@ export default function TrilogyTrio() {
           style={{ fontSize: 'clamp(1.7rem,3.5vw,2.8rem)' }}>
           Book Trilogy Trio<br />for Your Wedding.
         </p>
-        <a href="/contact"
-          className="text-[.6rem] font-light tracking-[.22em] uppercase no-underline
-            text-[#B8A882] border-b border-[rgba(184,168,130,.35)] pb-1
-            hover:border-[#B8A882] transition-colors">
-          Begin Your Enquiry
-        </a>
+        <EnquiryLinks ensemble="Trilogy Trio" message={weddingMessage({ interest: 'Trilogy Trio' })} />
       </section>
 
     </div>

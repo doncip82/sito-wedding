@@ -2,6 +2,8 @@
 import { Head } from 'vite-react-ssg'
 import { ensembles } from '@/data/ensembles.js'
 import { ensembleSchema } from '@/data/schema.js'
+import EnquiryLinks from '@/components/ui/EnquiryLinks.jsx'
+import { weddingMessage } from '@/lib/contactLinks.js'
 
 const ensemble = ensembles.find(e => e.id === 'violino-solo')
 
@@ -48,6 +50,7 @@ export default function ViolinSolo() {
             max-w-[36ch] leading-[1.8]">
             "There are moments within a wedding that belong to a single voice."
           </p>
+          <EnquiryLinks className="mt-10" ensemble="Violin Solo" message={weddingMessage({ interest: 'the solo violin' })} />
         </div>
       </section>
 
@@ -77,7 +80,7 @@ export default function ViolinSolo() {
             {ensemble.description}
           </p>
           <div className="flex items-center gap-6 flex-wrap mt-4">
-            <a href="/contact" className="link-underline">Enquire</a>
+            <a href="/contact?ensemble=Violin+Solo" className="link-underline">Enquire</a>
             <a href={ensemble.officialUrl} className="link-ext"
               target="_blank" rel="noopener noreferrer">
               <span>↗</span> Full Portfolio
@@ -131,12 +134,7 @@ export default function ViolinSolo() {
           style={{ fontSize: 'clamp(1.7rem,3.5vw,2.8rem)' }}>
           Enquire About<br />This Performance.
         </p>
-        <a href="/contact"
-          className="text-[.6rem] font-light tracking-[.22em] uppercase no-underline
-            text-[#B8A882] border-b border-[rgba(184,168,130,.35)] pb-1
-            hover:border-[#B8A882] transition-colors">
-          Begin Your Enquiry
-        </a>
+        <EnquiryLinks ensemble="Violin Solo" message={weddingMessage({ interest: 'the solo violin' })} />
       </section>
 
     </div>

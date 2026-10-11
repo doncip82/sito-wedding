@@ -27,6 +27,7 @@ export default function Hero() {
         </svg>
         <video
           autoPlay muted playsInline loop preload="auto"
+          poster="/videos/posters/ravello-hero.jpg"
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover object-center"
           style={{ filter: 'url(#hero-midtones)' }}

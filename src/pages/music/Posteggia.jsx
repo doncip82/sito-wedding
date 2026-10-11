@@ -1,4 +1,6 @@
 import { Head } from 'vite-react-ssg'
+import EnquiryLinks from '@/components/ui/EnquiryLinks.jsx'
+import { weddingMessage } from '@/lib/contactLinks.js'
 
 const posteggiaSchema = {
   '@context': 'https://schema.org',
@@ -84,12 +86,7 @@ export default function MusicPosteggia() {
           style={{ fontSize: 'clamp(1.7rem,3.5vw,2.8rem)' }}>
           Add Posteggia<br />to Your Day.
         </p>
-        <a href="/contact"
-          className="text-[.6rem] font-light tracking-[.22em] uppercase no-underline
-            text-[#B8A882] border-b border-[rgba(184,168,130,.35)] pb-1 whitespace-nowrap
-            hover:border-[#B8A882] transition-colors">
-          Begin Your Enquiry
-        </a>
+        <EnquiryLinks ensemble="Posteggia" message={weddingMessage({ interest: 'the Neapolitan Posteggia' })} />
       </section>
     </div>
   )

@@ -2,6 +2,8 @@
 import { Head } from 'vite-react-ssg'
 import { ensembles } from '@/data/ensembles.js'
 import { ensembleSchema } from '@/data/schema.js'
+import EnquiryLinks from '@/components/ui/EnquiryLinks.jsx'
+import { weddingMessage } from '@/lib/contactLinks.js'
 
 const ensemble = ensembles.find(e => e.id === 'evostrings')
 
@@ -32,9 +34,10 @@ export default function EvoStrings() {
       </Head>
 
       {/* Hero — video background */}
-      <section className="relative overflow-hidden px-[clamp(1.5rem,6vw,5rem)] py-3.5 md:py-[clamp(6rem,14vw,11rem)]">
+      <section className="relative overflow-hidden bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-3.5 md:py-[clamp(6rem,14vw,11rem)]">
         <video
           autoPlay muted playsInline loop preload="auto"
+          poster="/videos/posters/evostrings-hero.jpg"
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover object-center"
         >
@@ -61,6 +64,7 @@ export default function EvoStrings() {
             A reference string ensemble for the luxury wedding sector on the
             Amalfi Coast — available as string duo, trio and quartet.
           </p>
+          <EnquiryLinks className="mt-10" ensemble="EvoStrings" message={weddingMessage({ interest: 'EvoStrings' })} />
         </div>
       </section>
 
@@ -78,7 +82,7 @@ export default function EvoStrings() {
               {ensemble.description}
             </p>
             <div className="flex items-center gap-6 flex-wrap mt-8">
-              <a href="/contact" className="link-underline">Request a booking</a>
+              <a href="/contact?ensemble=EvoStrings" className="link-underline">Request a booking</a>
               <a href={ensemble.officialUrl} className="link-ext"
                 target="_blank" rel="noopener noreferrer">
                 <span>↗</span> Visit EvoStrings.it
@@ -278,12 +282,7 @@ export default function EvoStrings() {
           style={{ fontSize: 'clamp(1.7rem,3.5vw,2.8rem)' }}>
           Book EvoStrings<br />for Your Wedding.
         </p>
-        <a href="/contact"
-          className="text-[.6rem] font-light tracking-[.22em] uppercase no-underline
-            text-[#B8A882] border-b border-[rgba(184,168,130,.35)] pb-1
-            hover:border-[#B8A882] transition-colors">
-          Begin Your Enquiry
-        </a>
+        <EnquiryLinks ensemble="EvoStrings" message={weddingMessage({ interest: 'EvoStrings' })} />
       </section>
 
     </div>

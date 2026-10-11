@@ -13,14 +13,19 @@
 //     `gtag('config', …)`, so gtag.js may load but withholds cookies/identifiers
 //     until the visitor grants consent. See applyConsentState() for updates.
 //
-// The Google Ads conversion is NOT fired from JS here — it is tracked by the
-// load of the /thank-you page (Ads rule: "URL contains /thank-you"). See
-// src/pages/ThankYou.jsx and src/lib/enquirySuccess.js.
+// Google Ads conversions are explicit `conversion` events sent by
+// trackConversion(): the enquiry form after a successful submission
+// (src/lib/enquiry.js), and email / WhatsApp clicks through one delegated
+// listener (src/lib/contactTracking.js). They are sent to every visitor;
+// Consent Mode decides whether cookies are used or only a cookieless ping goes
+// out. Labels live in src/lib/conversions.js.
 //
-// Configuration (Vite env var — set in Vercel, not hardcoded):
+// Configuration (Vite env var — set in Vercel for Production only):
 //   VITE_GOOGLE_TAG_ID   e.g. AW-XXXXXXXXXX  (the Google tag id)
 
 import { readConsent } from '@/lib/consent.js'
+import { ADS_CONVERSION_LABELS } from '@/lib/conversions.js'
+import { installContactClickTracking } from '@/lib/contactTracking.js'
 
 const TAG_ID = import.meta.env.VITE_GOOGLE_TAG_ID
 
@@ -115,12 +120,50 @@ export function initGoogleTag() {
   }
 
   window.gtag('js', new Date())
+  // Settings commands — `set`, NOT keys of the `consent default` object, where
+  // they would be ignored. Both must precede `config`.
+  //   ads_data_redaction: without ad_storage consent, strip ad click ids from
+  //     requests (privacy).
+  //   url_passthrough: without consent, carry the ad click id from the landing
+  //     page to the next pages (/contact) in the URL (measurement).
+  window.gtag('set', 'ads_data_redaction', true)
+  window.gtag('set', 'url_passthrough', true)
   // send_page_view:false — page views are sent manually on every route change
   // (including the first) so SPA navigations are tracked and the initial view
   // is not double-counted.
   window.gtag('config', TAG_ID, { send_page_view: false })
 
   initialised = true
+
+  // Email / WhatsApp / phone clicks anywhere on the site → one conversion each.
+  installContactClickTracking(channel => { trackConversion(channel) })
+}
+
+/**
+ * Send one Google Ads conversion for a channel ('enquiry', 'email',
+ * 'whatsapp', 'phone'). No-op — no request at all — without a tag id or when
+ * the channel's label is still empty. Sent regardless of consent: Consent Mode
+ * turns it into a cookieless ping when ad_storage is denied.
+ * `transport_type: 'beacon'` lets the hit survive the page being left (a
+ * mailto / wa.me click usually leaves it).
+ * @param {keyof typeof ADS_CONVERSION_LABELS} channel
+ * @returns {boolean} true if the conversion event was pushed
+ */
+export function trackConversion(channel) {
+  if (!isBrowser()) return false
+  if (!TAG_ID) return false
+  const label = ADS_CONVERSION_LABELS[channel]
+  if (!label) return false
+  if (!initialised) initGoogleTag()
+  if (!initialised) return false
+
+  window.gtag('event', 'conversion', {
+    send_to: `${TAG_ID}/${label}`,
+    value: 1.0,
+    currency: 'EUR',
+    transport_type: 'beacon',
+  })
+  return true
 }
 
 /**

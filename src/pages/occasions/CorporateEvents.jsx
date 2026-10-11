@@ -1,4 +1,5 @@
 import { Head } from 'vite-react-ssg'
+import EnquiryLinks from '@/components/ui/EnquiryLinks.jsx'
 
 const schema = {
   '@context': 'https://schema.org',
@@ -148,12 +149,7 @@ export default function OccasionCorporateEvents() {
           style={{ fontSize: 'clamp(1.7rem,3.5vw,2.8rem)' }}>
           Planning a corporate event<br />on the Amalfi Coast?
         </p>
-        <a href="/contact"
-          className="text-[.6rem] font-light tracking-[.22em] uppercase no-underline
-            text-[#B8A882] border-b border-[rgba(184,168,130,.35)] pb-1 whitespace-nowrap
-            hover:border-[#B8A882] transition-colors">
-          Begin Your Enquiry
-        </a>
+        <EnquiryLinks message="Hello! We're planning a corporate event on the Amalfi Coast and would love live music. Could you send us some information?" />
       </section>
     </div>
   )

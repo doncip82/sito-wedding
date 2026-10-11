@@ -26,6 +26,9 @@ export default function NavBar() {
   const [menuOpen,       setMenuOpen]       = useState(false)
   const [openDropdown,   setOpenDropdown]   = useState(null)
   const [mobileExpanded, setMobileExpanded] = useState(null)
+  // The menu's background video (~23MB) is mounted on the first open only —
+  // with the menu closed it must not download on every page load.
+  const [menuVideo,      setMenuVideo]      = useState(false)
   const location = useLocation()
   const isHome = location.pathname === '/'
 
@@ -41,6 +44,7 @@ export default function NavBar() {
 
   useEffect(() => {
     if (!menuOpen) setMobileExpanded(null)
+    else setMenuVideo(true)
   }, [menuOpen])
 
   const navBg      = scrolled ? 'bg-[rgba(249,248,247,0.97)] backdrop-blur-sm border-b border-black/[.09]' : ''
@@ -152,7 +156,7 @@ export default function NavBar() {
         role="dialog"
         aria-label="Navigation"
         aria-modal="true"
-        className={`fixed inset-0 z-[199] overflow-hidden transition-opacity duration-500
+        className={`fixed inset-0 z-[199] overflow-hidden bg-[#1A1A1A] transition-opacity duration-500
           ${menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
       >
         {/* SVG gamma filter — darkens midtones, same as hero */}
@@ -167,15 +171,18 @@ export default function NavBar() {
             </filter>
           </defs>
         </svg>
-        {/* Video background */}
-        <video
-          autoPlay muted playsInline loop preload="auto"
-          aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover object-center"
-          style={{ filter: 'url(#menu-midtones)' }}
-        >
-          <source src="/videos/Ravello_Hero.mp4" type="video/mp4" />
-        </video>
+        {/* Video background — mounted on first open (see menuVideo) */}
+        {menuVideo && (
+          <video
+            autoPlay muted playsInline loop preload="auto"
+            poster="/videos/posters/ravello-hero.jpg"
+            aria-hidden="true"
+            className="absolute inset-0 w-full h-full object-cover object-center"
+            style={{ filter: 'url(#menu-midtones)' }}
+          >
+            <source src="/videos/Ravello_Hero.mp4" type="video/mp4" />
+          </video>
+        )}
         {/* Vertical gradient — same as hero */}
         <div aria-hidden="true" className="absolute inset-0" style={{
           background: 'linear-gradient(to bottom, rgba(26,26,26,.18) 0%, rgba(26,26,26,.22) 45%, rgba(26,26,26,.62) 100%)',

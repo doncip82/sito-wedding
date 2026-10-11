@@ -1,4 +1,6 @@
 import { Head } from 'vite-react-ssg'
+import EnquiryLinks from '@/components/ui/EnquiryLinks.jsx'
+import { weddingMessage } from '@/lib/contactLinks.js'
 
 const djSchema = {
   '@context': 'https://schema.org',
@@ -27,9 +29,10 @@ export default function MusicDJ() {
       </Head>
 
       {/* Hero — video background */}
-      <section className="relative overflow-hidden px-[clamp(1.5rem,6vw,5rem)] py-3.5 md:py-[clamp(6rem,14vw,11rem)]">
+      <section className="relative overflow-hidden bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-3.5 md:py-[clamp(6rem,14vw,11rem)]">
         <video
           autoPlay muted playsInline loop preload="auto"
+          poster="/videos/posters/dj-hero.jpg"
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover object-center"
         >
@@ -51,6 +54,7 @@ export default function MusicDJ() {
             Curated DJ coordination for the evening reception — selected for experience at
             the specific venues of the Amalfi Coast, not for volume of bookings.
           </p>
+          <EnquiryLinks className="mt-10" ensemble="DJ" message={weddingMessage({ interest: 'a DJ set' })} />
         </div>
       </section>
 
@@ -94,12 +98,7 @@ export default function MusicDJ() {
           style={{ fontSize: 'clamp(1.7rem,3.5vw,2.8rem)' }}>
           Coordinate the Full<br />Evening Programme.
         </p>
-        <a href="/contact"
-          className="text-[.6rem] font-light tracking-[.22em] uppercase no-underline
-            text-[#B8A882] border-b border-[rgba(184,168,130,.35)] pb-1 whitespace-nowrap
-            hover:border-[#B8A882] transition-colors">
-          Begin Your Enquiry
-        </a>
+        <EnquiryLinks ensemble="DJ" message={weddingMessage({ interest: 'a DJ set' })} />
       </section>
     </div>
   )

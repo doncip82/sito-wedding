@@ -2,13 +2,17 @@
 // Receives the contact form and sends the enquiry via Resend (https://resend.com).
 //
 // Required env var:  RESEND_API_KEY
-// Optional env vars: MAIL_FROM  (e.g. "Wedding Music Ravello <enquiries@weddingmusicravello.com>")
+// Optional env vars: MAIL_FROM  (defaults to "Wedding Music Ravello <info@weddingmusicravello.com>")
 //                    MAIL_TO    (defaults to info@weddingmusicravello.com)
 //
-// Until a domain is verified in Resend, MAIL_FROM falls back to Resend's shared
-// sender (onboarding@resend.dev), which can only deliver to the account owner.
+// The default sender uses the weddingmusicravello.com domain, so that domain
+// must stay verified in Resend: otherwise Resend rejects the send and the form
+// shows an error (it does not silently fall back to another sender).
 
 const RESEND_ENDPOINT = 'https://api.resend.com/emails'
+
+// Cap free-text attribution fields (they come from the URL, not the visitor).
+const clip = (value, max = 200) => String(value ?? '').slice(0, max)
 
 function escapeHtml(value = '') {
   return String(value)
@@ -47,9 +51,19 @@ export default async function handler(req, res) {
 
   const body = typeof req.body === 'string' ? JSON.parse(req.body || '{}') : (req.body || {})
   const {
-    name = '', email = '', date = '', venue = '',
+    name = '', email = '', phone = '', date = '', venue = '',
     ensemble = '', message = '', company = '',
   } = body
+  // Where the enquiry came from (src/lib/attribution.js) — informational only.
+  const source = body.source && typeof body.source === 'object' ? body.source : {}
+  const campaign = [source.utm_source, source.utm_campaign, source.utm_term]
+    .map(v => clip(v)).filter(Boolean).join(' / ')
+  const sourceRows = [
+    ['Landing page', clip(source.landing)],
+    ['Referrer', clip(source.referrer)],
+    ['Campaign', campaign],
+    ['Google Ads click', source.ad_click ? 'Yes' : ''],
+  ]
 
   // Honeypot: real visitors never fill the hidden "company" field. If it's set,
   // silently accept and send nothing.
@@ -63,26 +77,37 @@ export default async function handler(req, res) {
   const from = process.env.MAIL_FROM || 'Wedding Music Ravello <info@weddingmusicravello.com>'
   const to = process.env.MAIL_TO || 'info@weddingmusicravello.com'
 
-  const rows = [
-    ['Name', name], ['Email', email], ['Wedding date', date],
-    ['Venue', venue], ['Preferred ensemble', ensemble], ['Message', message],
-  ].map(([label, value]) =>
+  const toRows = pairs => pairs.map(([label, value]) =>
     `<tr>
        <td style="padding:5px 18px 5px 0;color:#8A7A5A;font:12px/1.6 Arial,sans-serif;white-space:nowrap;vertical-align:top">${label}</td>
        <td style="padding:5px 0;color:#1A1A1A;font:13px/1.7 Arial,sans-serif">${escapeHtml(value) || '&mdash;'}</td>
      </tr>`).join('')
+
+  const rows = toRows([
+    ['Name', name], ['Email', email], ['Phone / WhatsApp', phone], ['Wedding date', date],
+    ['Venue', venue], ['Preferred ensemble', ensemble], ['Message', message],
+  ])
+  // Reply on WhatsApp in one tap when the couple left a number.
+  const phoneDigits = String(phone).replace(/\D/g, '').replace(/^00/, '')
+  const whatsappRow = phoneDigits.length >= 8
+    ? `<p style="margin:14px 0 0;font:12px/1.6 Arial,sans-serif"><a href="https://wa.me/${phoneDigits}" style="color:#8A7A5A">Reply on WhatsApp &rarr;</a></p>`
+    : ''
 
   const notifyHtml = `
     <div style="max-width:560px;margin:0 auto">
       <p style="font:600 11px/1 Arial,sans-serif;letter-spacing:2px;text-transform:uppercase;color:#8A7A5A;margin:0">New Enquiry</p>
       <h2 style="font:400 22px Georgia,serif;color:#1A1A1A;margin:8px 0 22px">Wedding Music Ravello</h2>
       <table style="border-collapse:collapse">${rows}</table>
+      ${whatsappRow}
+      <p style="font:600 11px/1 Arial,sans-serif;letter-spacing:2px;text-transform:uppercase;color:#8A7A5A;margin:28px 0 10px">Source</p>
+      <table style="border-collapse:collapse">${toRows(sourceRows)}</table>
     </div>`
 
   const notifyText =
     `New enquiry\n\n` +
-    `Name: ${name}\nEmail: ${email}\nWedding date: ${date}\n` +
-    `Venue: ${venue}\nPreferred ensemble: ${ensemble}\n\nMessage:\n${message}\n`
+    `Name: ${name}\nEmail: ${email}\nPhone / WhatsApp: ${phone}\nWedding date: ${date}\n` +
+    `Venue: ${venue}\nPreferred ensemble: ${ensemble}\n\nMessage:\n${message}\n\n` +
+    `Source\n` + sourceRows.map(([label, value]) => `${label}: ${value || '-'}`).join('\n') + '\n'
 
   // 1) Notification to the platform — must succeed.
   try {

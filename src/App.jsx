@@ -6,6 +6,7 @@ import NavBar from '@/components/layout/NavBar.jsx'
 import Footer from '@/components/layout/Footer.jsx'
 import CookieConsent from '@/components/privacy/CookieConsent.jsx'
 import { trackPageView } from '@/lib/googleTag.js'
+import { captureAttribution } from '@/lib/attribution.js'
 import { shouldSendThankYouPageView, markThankYouPageViewSent } from '@/lib/enquirySuccess.js'
 
 // Home and Ravello are eager so the SSG spike can prerender their full
@@ -62,11 +63,12 @@ function ScrollToTop() {
 // source of page views (no double-counting of the initial view). No-op when
 // the Google tag id is not configured.
 //
-// /thank-you is special: it is the Google Ads conversion page, so its page view
-// must fire at most once per successful enquiry. It is sent only when a valid,
-// not-yet-counted one-time authorization exists (see src/lib/enquirySuccess.js),
-// after which it is marked as sent — so a refresh or a direct visit produces no
-// (second) page view.
+// /thank-you is special: its page view must fire at most once per successful
+// enquiry (the Ads conversion itself is an explicit event, see
+// src/lib/enquiry.js). It is sent only when a valid, not-yet-counted one-time
+// authorization exists (see src/lib/enquirySuccess.js), after which it is
+// marked as sent — so a refresh or a direct visit produces no (second) page
+// view.
 function AnalyticsTracker() {
   const { pathname, search } = useLocation()
   useEffect(() => {
@@ -88,6 +90,8 @@ function AnalyticsTracker() {
 }
 
 function Layout() {
+  // Remember the session's entry page / campaign for the enquiry form.
+  useEffect(() => { captureAttribution() }, [])
   return (
     <HelmetProvider>
       <ScrollToTop />
