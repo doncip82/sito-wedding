@@ -157,7 +157,8 @@ Villa Cimbrone · Palazzo Avino · Belmond Hotel Caruso · Villa Treville · Mon
 - **Tagline (p sopra h1):** "Bespoke Wedding Music · Amalfi Coast"
 - **H1:** "Live Wedding Music in / Ravello, Positano & Sorrento"
 - **H2 (descrizione):** "A platform for curated live music at destination weddings across the Amalfi Coast — from string quartets at Villa Cimbrone to jazz ensembles at Belmond Hotel Caruso."
-- **CTA:** "Explore the Ensembles ↓" → ancora `#music`
+- **CTA (dal 2026-10-11):** "Begin Your Enquiry" → `/contact` + "WhatsApp" (icona monocromatica `WhatsAppIcon.jsx` + testo, `wa.me`) sulla prima schermata; sotto, link secondario "Explore the Ensembles ↓" → `/music`
+- **Altezza:** titolo, padding e spaziature scalano anche con l'altezza (`svh`) e la fascia delle località si nasconde sotto i 700px di altezza, così le CTA restano nella prima schermata anche su laptop bassi (~650px) e telefoni piccoli (verificato 360×640 → 1920×1000).
 
 > Copy aggiornato (2026-05) con keyword GEO/SEO esplicite: Amalfi Coast, Ravello, Positano, Sorrento, venue specifiche.
 
