@@ -10,8 +10,8 @@
 // Never use ids or labels of the donatocipriano.com account (AW-1003501184).
 
 export const ADS_CONVERSION_LABELS = {
-  enquiry:  '', // "Enquiry form"   — successful POST /api/enquiry
-  email:    '', // "Email click"    — mailto: links
-  whatsapp: '', // "WhatsApp click" — wa.me links
+  enquiry:  'ZdvxCPmVpJkdEL7IyptE', // "Enquiry form"   — successful POST /api/enquiry
+  email:    'Mq0HCLvJq5kdEL7IyptE', // "Email click"    — mailto: links
+  whatsapp: 'xhM7CLazrZkdEL7IyptE', // "WhatsApp click" — wa.me links
   phone:    '', // no tel: links on the site yet
 }

@@ -188,6 +188,7 @@ Ogni blocco testo è avvolto in uno `<span>` con:
 
 ## Tracciamento conversioni (Google Ads — account `AW-18311455806`)
 - **Tag:** `VITE_GOOGLE_TAG_ID` su Vercel, **solo Production** (la copia per le anteprime è stata rimossa l'11/10/2026). Mai usare ID o etichette dell'account di donatocipriano.com (`AW-1003501184`).
+- **Account Ads:** `477-419-9225` (Wedding Music Ravello). Obiettivo "Contatti" impostato come predefinito per l'account (serve perché Email/WhatsApp click contino).
 - **Etichette nel codice, non in env:** `src/lib/conversions.js`, sotto test (`conversions.test.js` verifica che ogni etichetta decodifichi nell'ID account 18311455806). Etichetta vuota = canale spento, nessuna richiesta.
 
 | Canale | Chiave in `conversions.js` | Azione in Google Ads | Quando parte |
@@ -205,7 +206,7 @@ Ogni blocco testo è avvolto in uno `<span>` con:
 - **Verifica:** `npm test`; dopo il deploy prova reale da **Chrome desktop** (DevTools → Network → `googleadservices`). Mai cliccare i propri annunci.
 
 ## To Do / Follow-up aperti
-- **Etichette di conversione:** inserire in `src/lib/conversions.js` le etichette di Enquiry form / Email click / WhatsApp click quando create in Google Ads; poi mettere Secondaria l'azione URL `/thank-you`.
+- **Google Ads dopo il deploy delle etichette (inserite l'11/10/2026):** mettere Secondaria l'azione URL `/thank-you` (e le altre vecchie azioni "Invio modulo per i lead" dell'account 477-419-9225); controllare che le 3 azioni escano da "In attesa di conversioni".
 - Rifiniture editoriali: uniformare "365 m" (Home) vs "350 m" (Ravello); togliere il doppio `<h1>` in Home
 - Pulizia: rimuovere dipendenze morte (`vite-ssg-react` + polyfill in `package.json`) e i file inutilizzati `PageHead.jsx` / `routes.js`
 - **Favicon su Google:** dopo il deploy delle fedi, chiedere reindicizzazione della home in Search Console ("Controllo URL" → "Richiedi indicizzazione") per far aggiornare la favicon nei risultati (Google ci mette da giorni a settimane).
