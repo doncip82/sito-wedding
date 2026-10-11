@@ -103,7 +103,8 @@ public/
 ├── images/
 │   ├── ravello-villa-rufolo.jpg   (About — vista Villa Rufolo, link a /locations/ravello)
 │   ├── og-cover.jpg               (anteprima social/WhatsApp 1200×630 — og:image, NON è la favicon)
-│   ├── Ceremony.jpg, Cocktail.jpg, Dinner.jpg   (Occasions — erano PNG, convertiti in JPG)
+│   ├── Ceremony.jpg, Dinner.jpg   (Occasions — immagini generate, ricolorate al naturale il 2026-10-11)
+│   ├── Corporate.jpg              (Occasions/Corporate — fotogramma VERO dal video EvoStrings al Salone Margherita; sostituisce Cocktail.jpg)
 │   ├── EvoStrings/     EvoStrings.jpg
 │   ├── Trilogy Trio/   Trilogy Trio 0-3 + Trilogy Trio.jpg
 │   ├── Violin Solo/    immagine_donato.JPG
