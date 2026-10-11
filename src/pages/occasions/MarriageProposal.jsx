@@ -1,4 +1,5 @@
 import { Head } from 'vite-react-ssg'
+import EnquiryLinks from '@/components/ui/EnquiryLinks.jsx'
 
 const schema = {
   '@context': 'https://schema.org',
@@ -145,7 +146,7 @@ export default function OccasionMarriageProposal() {
         <div className="flex flex-wrap gap-3 mt-4">
           {ENSEMBLES.map(({ label, href }) => (
             <a key={label} href={href}
-              className="inline-flex items-center px-5 py-3 border border-[#1A1A1A]/18
+              className="inline-flex items-center px-5 py-3 border border-[#1A1A1A]/[.18]
                 no-underline transition-all duration-300
                 text-[.5rem] font-light tracking-[.1em] uppercase
                 text-[#404040] hover:border-[#B8A882] hover:text-[#1A1A1A]">
@@ -173,16 +174,11 @@ export default function OccasionMarriageProposal() {
 
       <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3rem,8vw,6rem)]
         flex items-center justify-between gap-8 flex-wrap">
-        <p className="font-serif italic font-light leading-[1.18] text-white/82 max-w-[26ch]"
+        <p className="font-serif italic font-light leading-[1.18] text-white/80 max-w-[26ch]"
           style={{ fontSize: 'clamp(1.7rem,3.5vw,2.8rem)' }}>
           Planning a proposal<br />on the Amalfi Coast?
         </p>
-        <a href="/contact"
-          className="text-[.6rem] font-light tracking-[.22em] uppercase no-underline
-            text-[#B8A882] border-b border-[rgba(184,168,130,.35)] pb-1 whitespace-nowrap
-            hover:border-[#B8A882] transition-colors">
-          Begin Your Enquiry
-        </a>
+        <EnquiryLinks message="Hello! I'm planning a marriage proposal on the Amalfi Coast and would love live music. Could you send me some information?" />
       </section>
     </div>
   )

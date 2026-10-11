@@ -45,7 +45,7 @@ export default function Privacy() {
           Privacy Policy
         </h1>
         <p className="text-[.56rem] font-light tracking-[.16em] uppercase text-[#8A7A5A]">
-          Last updated: 21 July 2026
+          Last updated: 11 October 2026
         </p>
       </section>
 
@@ -71,8 +71,19 @@ export default function Privacy() {
           <Section title="What data we collect">
             <p>
               When you submit the enquiry form, we collect the information you provide: your
-              name, email address, wedding or event date, venue, preferred ensemble and your
-              message. We collect only what you choose to send us.
+              name, email address, phone number (optional), wedding or event date, venue,
+              preferred ensemble and your message. We collect only what you choose to send us.
+            </p>
+            <p>
+              Together with the form, we receive the page through which you first arrived on the
+              site, the website that referred you, and — if you came from an online ad or campaign
+              link — the campaign it belongs to. This helps us understand which pages and campaigns
+              bring enquiries. We do not record advertising click identifiers.
+            </p>
+            <p>
+              If you contact us on <strong>WhatsApp</strong>, the conversation takes place through
+              WhatsApp (Meta) under its own terms; we use your number and messages only to reply
+              to you.
             </p>
             <p>
               Our hosting provider also automatically processes limited technical data (such as
@@ -154,10 +165,16 @@ export default function Privacy() {
             <p>
               <strong>Analytics</strong> — measuring visits so we can understand and improve the
               site. <strong>Advertising</strong> — measuring conversions and the effectiveness of
-              our Google Ads campaigns. A conversion is measured when, after successfully sending
-              an enquiry, you are shown a dedicated confirmation page. If you decline advertising
-              cookies, this does not happen: your enquiry is still sent and confirmed on the same
-              page, and no advertising conversion is measured.
+              our Google Ads campaigns. A conversion is recorded when you successfully send an
+              enquiry, or when you tap our email address or WhatsApp link.
+            </p>
+            <p>
+              If you decline these cookies, or have not made a choice yet, no analytics or
+              advertising cookies are set. Visits and conversions then reach Google only as
+              cookieless signals, without cookies or advertising identifiers (just the technical
+              information any web request carries, such as the time, the page and the browser
+              type), which Google uses to estimate the results of campaigns in aggregate. Your
+              enquiry is sent and confirmed in exactly the same way whatever you choose.
             </p>
             <p>
               <strong>Essential</strong> cookies (needed for the site and the enquiry form to

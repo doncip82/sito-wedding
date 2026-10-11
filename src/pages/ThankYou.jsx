@@ -1,9 +1,10 @@
 // pages/ThankYou.jsx
 //
-// Conversion confirmation page, reached ONLY after a genuinely successful
-// enquiry (see src/lib/enquirySuccess.js). It is the single source of the
-// Google Ads conversion, which is configured in the Ads account with the rule
-// "URL contains /thank-you".
+// Confirmation page, reached ONLY after a genuinely successful enquiry (see
+// src/lib/enquirySuccess.js). The Google Ads conversion is NOT tracked here: it
+// is an explicit event sent once by src/lib/enquiry.js right after the
+// successful submission, so a refresh or "back" here never counts again. (The
+// older URL-based Ads action "URL contains /thank-you" must be Secondary.)
 //
 // Not linked from navigation, footer, sitemap, structured data, or ordinary
 // internal links. Marked noindex,nofollow — it is deliberately NOT an SEO page.
@@ -15,6 +16,7 @@ import { useEffect } from 'react'
 import { Head, Link } from 'vite-react-ssg'
 import { useNavigate } from 'react-router-dom'
 import { hasValidEnquirySuccess } from '@/lib/enquirySuccess.js'
+import { whatsappUrl } from '@/lib/contactLinks.js'
 
 export default function ThankYou() {
   const navigate = useNavigate()
@@ -51,6 +53,11 @@ export default function ThankYou() {
             <a href="mailto:info@weddingmusicravello.com"
               className="text-[#8A7A5A] no-underline border-b border-[#8A7A5A]/40 hover:border-[#8A7A5A]">
               info@weddingmusicravello.com
+            </a>{' '}
+            or{' '}
+            <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer"
+              className="text-[#8A7A5A] no-underline border-b border-[#8A7A5A]/40 hover:border-[#8A7A5A]">
+              message us on WhatsApp
             </a>.
           </p>
           <Link to="/"

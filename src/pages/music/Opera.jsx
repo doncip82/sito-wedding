@@ -1,4 +1,6 @@
 import { Head } from 'vite-react-ssg'
+import EnquiryLinks from '@/components/ui/EnquiryLinks.jsx'
+import { weddingMessage } from '@/lib/contactLinks.js'
 
 const operaSchema = {
   '@context': 'https://schema.org',
@@ -43,12 +45,14 @@ export default function MusicOpera() {
               for ceremony music and dinner interludes. The stone terraces of the Amalfi Coast
               provide natural resonance that no concert hall replicates.
             </p>
+            <EnquiryLinks className="mt-10" ensemble="Opera" message={weddingMessage({ interest: 'an opera singer' })} />
           </div>
           <div className="mx-auto md:mx-0 shrink-0 overflow-hidden
             max-h-[55dvh] md:max-h-none
             md:w-[300px] lg:w-[340px] md:aspect-[9/16]">
             <video
               autoPlay muted playsInline loop preload="auto"
+              poster="/videos/posters/opera-hero.jpg"
               aria-hidden="true"
               className="h-full w-auto md:w-full md:h-full object-contain md:object-cover object-center mx-auto"
             >
@@ -106,16 +110,11 @@ export default function MusicOpera() {
 
       <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3rem,8vw,6rem)]
         flex items-center justify-between gap-8 flex-wrap">
-        <p className="font-serif italic font-light leading-[1.18] text-white/82 max-w-[26ch]"
+        <p className="font-serif italic font-light leading-[1.18] text-white/80 max-w-[26ch]"
           style={{ fontSize: 'clamp(1.7rem,3.5vw,2.8rem)' }}>
           Programme an Opera<br />Set for Your Wedding.
         </p>
-        <a href="/contact"
-          className="text-[.6rem] font-light tracking-[.22em] uppercase no-underline
-            text-[#B8A882] border-b border-[rgba(184,168,130,.35)] pb-1 whitespace-nowrap
-            hover:border-[#B8A882] transition-colors">
-          Begin Your Enquiry
-        </a>
+        <EnquiryLinks ensemble="Opera" message={weddingMessage({ interest: 'an opera singer' })} />
       </section>
     </div>
   )

@@ -1,9 +1,10 @@
 // pages/Contact.jsx
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Head } from 'vite-react-ssg'
 import { useNavigate } from 'react-router-dom'
-import { hasAdvertisingConsent } from '@/lib/consent.js'
 import { grantEnquirySuccess } from '@/lib/enquirySuccess.js'
+import { submitEnquiry } from '@/lib/enquiry.js'
+import { whatsappUrl } from '@/lib/contactLinks.js'
 
 const venues = [
   'Villa Cimbrone', 'Palazzo Avino', 'Belmond Hotel Caruso',
@@ -31,7 +32,7 @@ const contactSchema = {
 export default function Contact() {
   const navigate = useNavigate()
   const [form, setForm] = useState({
-    name: '', email: '', date: '', venue: '', ensemble: '', message: '', company: '', consent: false,
+    name: '', email: '', phone: '', date: '', venue: '', ensemble: '', message: '', company: '', consent: false,
   })
   const [sent, setSent]       = useState(false)
   const [sending, setSending] = useState(false)
@@ -40,6 +41,21 @@ export default function Contact() {
   // duplicate request/navigation) if the button is clicked again before React
   // re-renders it as disabled.
   const submittingRef = useRef(false)
+
+  // Pre-select the venue / ensemble a landing page linked with
+  // (/contact?ensemble=Saxophone, /contact?venue=Villa%20Cimbrone). Read in an
+  // effect — not during render — so the first client render matches the
+  // prerendered HTML (no hydration mismatch). Unknown values are ignored.
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    const venue = params.get('venue')
+    const ensemble = params.get('ensemble')
+    setForm(prev => ({
+      ...prev,
+      ...(venues.includes(venue) && { venue }),
+      ...(ensembles.includes(ensemble) && { ensemble }),
+    }))
+  }, [])
 
   const handleChange = e => {
     const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value
@@ -53,19 +69,13 @@ export default function Contact() {
     setSending(true)
     setError('')
     try {
-      const res = await fetch('/api/enquiry', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
-      })
-      if (!res.ok) throw new Error('Request failed')
-      // Success. The Google Ads conversion is now tracked solely by the load of
-      // /thank-you (Ads rule: "URL contains /thank-you"). We only navigate there
-      // when advertising consent is granted AND a one-time authorization can be
-      // stored; otherwise we keep the confirmation inline on /contact (no
-      // navigation, no conversion). grantEnquirySuccess() is only called when
-      // consent is granted, so no authorization is written without it.
-      if (hasAdvertisingConsent() && grantEnquirySuccess()) {
+      // Sends the form and, on success only, the Google Ads conversion (once).
+      await submitEnquiry(form)
+      // Everyone goes on to /thank-you, whatever their consent. The one-time
+      // authorization only keeps direct visits / refreshes out of it; if it
+      // cannot be stored (sessionStorage unavailable) the confirmation stays
+      // inline here — the conversion has already been sent either way.
+      if (grantEnquirySuccess()) {
         navigate('/thank-you', { replace: true })
       } else {
         setSent(true)
@@ -172,9 +182,17 @@ export default function Contact() {
             </div>
 
             <div>
+              <label htmlFor="phone" className={labelClass}>Phone / WhatsApp</label>
+              <input id="phone" name="phone" type="tel" autoComplete="tel"
+                placeholder="With country code, e.g. +1 212 555 0100"
+                value={form.phone} onChange={handleChange}
+                className={inputClass} />
+            </div>
+
+            <div>
               <label htmlFor="date" className={labelClass}>Wedding Date</label>
               <input id="date" name="date" type="text"
-                placeholder="September 2026"
+                placeholder="e.g. June 2027"
                 value={form.date} onChange={handleChange}
                 className={inputClass} />
             </div>
@@ -189,7 +207,7 @@ export default function Contact() {
               </select>
             </div>
 
-            <div className="md:col-span-2">
+            <div>
               <label htmlFor="ensemble" className={labelClass}>
                 Preferred Ensemble
               </label>
@@ -236,6 +254,11 @@ export default function Contact() {
                   <a href="mailto:info@weddingmusicravello.com"
                     className="text-[#8A7A5A] no-underline border-b border-[#8A7A5A]/40">
                     info@weddingmusicravello.com
+                  </a>{' '}
+                  or{' '}
+                  <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer"
+                    className="text-[#8A7A5A] no-underline border-b border-[#8A7A5A]/40">
+                    message us on WhatsApp
                   </a>
                 </p>
               </div>
@@ -256,13 +279,19 @@ export default function Contact() {
         {[
           { label: 'Response Time', value: 'Within 48 hours' },
           { label: 'Email', value: 'info@weddingmusicravello.com' },
-        ].map(({ label, value }) => (
+          { label: 'WhatsApp', value: 'Message us', href: whatsappUrl() },
+        ].map(({ label, value, href }) => (
           <div key={label}>
             <p className="text-[.5rem] font-light tracking-[.2em] uppercase text-[#B8A882] mb-2">
               {label}
             </p>
             <p className="text-[.68rem] font-light tracking-[.06em] leading-[1.8] text-[#1A1A1A]">
-              {value}
+              {href ? (
+                <a href={href} target="_blank" rel="noopener noreferrer"
+                  className="text-[#1A1A1A] no-underline border-b border-[#B8A882]/60 hover:border-[#8A7A5A]">
+                  {value}
+                </a>
+              ) : value}
             </p>
           </div>
         ))}

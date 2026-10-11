@@ -69,7 +69,7 @@ Il sito propone **esclusivamente partner musicali**. L'aggiunta di fotografi, pl
 - `index.html` — niente title/meta di default (li inietta `<Head>`); contiene `<link rel="author" href="https://www.donatocipriano.com">` (autorità SEO invisibile verso Donato) + il set completo di link favicon (path assoluti).
 - **Favicon / marchio (dal 2026-07-10):** il marchio del sito è un **monogramma a fedi intrecciate** — due anelli oro `#C6B58C` su charcoal `#1A1A1A`, motivo "wedding", leggibile fino a 16px e nitido nel cerchio dei risultati Google. Set in `public/`: `favicon.ico` (multi-size 16/32/48), `favicon-16x16.png`, `favicon-32x32.png`, `favicon.png` (512), `apple-touch-icon.png` (180), `android-chrome-192x192.png`, `site.webmanifest` (name = "Wedding Music Ravello"). *Sostituisce il vecchio marchio testuale "WMR".* Motivo del rifacimento: dopo un redirect temporaneo verso donatocipriano.com, Google mostrava ancora la favicon del sito personale + mancavano `/favicon.ico` e alcuni file (404).
 - **Immagine social ≠ favicon:** l'anteprima WhatsApp/social è `public/images/og-cover.jpg` (1200×630) servita via `og:image`/`twitter:image` per-pagina — file **separato** dalla favicon. Cambiare la favicon NON la tocca (verificato). Non sovrascriverla per errore.
-- Hero e menu mobile: video background in loop (`public/videos/Ravello_Hero.mp4`, ~24MB).
+- Hero e menu mobile: video background in loop (`public/videos/Ravello_Hero.mp4`, ~23MB). **Il video del menu mobile si monta solo alla prima apertura del menu** (stato `menuVideo` in `NavBar.jsx`): prima era sempre nel DOM con `preload="auto"` e ogni pagina scaricava 23MB. Tutti i video hero hanno un `poster` in `public/videos/posters/` (primo fotogramma; per il DJ il fotogramma a 2s, perché il video parte da nero).
 - ⚠️ **Codice morto:** `src/components/ui/PageHead.jsx` e `src/routes.js` non sono più usati — da rimuovere quando conviene.
 
 ## Struttura cartelle (stato attuale)
@@ -78,9 +78,12 @@ src/
 ├── components/
 │   ├── layout/      NavBar.jsx, Footer.jsx
 │   ├── sections/    Hero.jsx, Occasions.jsx, Locations.jsx, About.jsx
-│   └── ui/          PageHead.jsx, SectionHeader.jsx, TextLink.jsx, index.js
+│   ├── privacy/     CookieConsent.jsx
+│   └── ui/          EnquiryLinks.jsx, PageHead.jsx, SectionHeader.jsx, TextLink.jsx, index.js
 ├── data/            ensembles.js, venues.js, schema.js
 ├── hooks/           useScrollReveal.js
+├── lib/             googleTag.js, consent.js, enquirySuccess.js, conversions.js, contactTracking.js,
+│                    contactLinks.js, enquiry.js, attribution.js   (+ *.test.js, vitest)
 ├── pages/
 │   ├── Home.jsx, EvoStrings.jsx, TrilogyTrio.jsx, ViolinSolo.jsx, Contact.jsx, FAQ.jsx, Privacy.jsx
 │   ├── music/       MusicIndex.jsx, Saxophone.jsx, DJ.jsx, Vocalist.jsx, Opera.jsx, Posteggia.jsx, Piano.jsx
@@ -105,7 +108,8 @@ public/
 │   ├── Opera/          Elisabetta Vilni Soprano.jpg
 │   ├── Piano Solo/     Angelo Borrelli.jpg
 │   └── Posteggia/      Posteggia.jpg
-├── videos/             Ravello_Hero.mp4 (hero + menu mobile), dj-hero.mp4 (pagina DJ)
+├── videos/             Ravello_Hero.mp4 (hero + menu mobile), dj-hero.mp4 (pagina DJ), opera-hero.mp4
+│   └── posters/        ravello-hero.jpg, evostrings-hero.jpg, dj-hero.jpg, opera-hero.jpg
 └── (root)              favicon.ico, favicon-16x16.png, favicon-32x32.png, favicon.png (512),
                         apple-touch-icon.png, android-chrome-192x192.png, site.webmanifest   (marchio: fedi intrecciate)
 ```
@@ -153,7 +157,8 @@ Villa Cimbrone · Palazzo Avino · Belmond Hotel Caruso · Villa Treville · Mon
 - **Tagline (p sopra h1):** "Bespoke Wedding Music · Amalfi Coast"
 - **H1:** "Live Wedding Music in / Ravello, Positano & Sorrento"
 - **H2 (descrizione):** "A platform for curated live music at destination weddings across the Amalfi Coast — from string quartets at Villa Cimbrone to jazz ensembles at Belmond Hotel Caruso."
-- **CTA:** "Explore the Ensembles ↓" → ancora `#music`
+- **CTA (dal 2026-10-11):** "Begin Your Enquiry" → `/contact` + "WhatsApp" (icona monocromatica `WhatsAppIcon.jsx` + testo, `wa.me`) sulla prima schermata; sotto, link secondario "Explore the Ensembles ↓" → `/music`
+- **Altezza:** titolo, padding e spaziature scalano anche con l'altezza (`svh`) e la fascia delle località si nasconde sotto i 700px di altezza, così le CTA restano nella prima schermata anche su laptop bassi (~650px) e telefoni piccoli (verificato 360×640 → 1920×1000).
 
 > Copy aggiornato (2026-05) con keyword GEO/SEO esplicite: Amalfi Coast, Ravello, Positano, Sorrento, venue specifiche.
 
@@ -182,18 +187,39 @@ Ogni blocco testo è avvolto in uno `<span>` con:
 - Voci menu: stesso sistema di evidenziazione per riga dell'hero
 - Hamburger: forzato bianco (`bg-[#F9F8F7]`) quando `menuOpen === true`
 
+## Tracciamento conversioni (Google Ads — account `AW-18311455806`)
+- **Tag:** `VITE_GOOGLE_TAG_ID` su Vercel, **solo Production** (la copia per le anteprime è stata rimossa l'11/10/2026). Mai usare ID o etichette dell'account di donatocipriano.com (`AW-1003501184`).
+- **Account Ads:** `477-419-9225` (Wedding Music Ravello). Obiettivo "Contatti" impostato come predefinito per l'account (serve perché Email/WhatsApp click contino).
+- **Etichette nel codice, non in env:** `src/lib/conversions.js`, sotto test (`conversions.test.js` verifica che ogni etichetta decodifichi nell'ID account 18311455806). Etichetta vuota = canale spento, nessuna richiesta.
+
+| Canale | Chiave in `conversions.js` | Azione in Google Ads | Quando parte |
+|---|---|---|---|
+| Form | `enquiry` | Enquiry form (Invio modulo per i lead) | dopo `res.ok` di `POST /api/enquiry`, una volta (`src/lib/enquiry.js`) |
+| Email | `email` | Email click (Contatto) | click su `mailto:` |
+| WhatsApp | `whatsapp` | WhatsApp click (Contatto) | click su `wa.me` / `api.whatsapp.com` |
+| Telefono | `phone` | — (nessun link `tel:` sul sito) | click su `tel:` |
+
+- **Click di contatto:** un solo listener delegato su `document` in fase di cattura (`src/lib/contactTracking.js`), installato da `initGoogleTag()`. **Niente `onClick` sui singoli link.** I link della pagina `/privacy` sono esclusi.
+- **Consenso:** le conversioni partono per tutti; Consent Mode v2 (avanzato, default `denied` ovunque — scelta confermata, niente default per regione) le trasforma in ping senza cookie se manca il consenso. `ads_data_redaction` e `url_passthrough` impostati con `set` prima di `config`. La pagina Privacy lo descrive.
+- **`/thank-you`:** ci arrivano tutti dopo un invio riuscito (non dipende più dal consenso); non è più la conversione. In Ads l'azione basata sull'URL `/thank-you` va tenuta **Secondaria**.
+- **Provenienza:** `src/lib/attribution.js` salva in sessionStorage pagina d'ingresso, referrer, `utm_source/campaign/term` e se c'era un click Ads (solo presenza del gclid, mai il valore); arrivano nell'email di ogni richiesta (sezione "Source").
+- **WhatsApp:** numero della piattaforma `+39 393 213 0911` (WhatsApp Business "Wedding Music Ravello"), in `src/lib/contactLinks.js` con messaggi precompilati in inglese per pagina. CTA via `src/components/ui/EnquiryLinks.jsx` (hero delle landing + CTA finali).
+- **Verifica:** `npm test`; dopo il deploy prova reale da **Chrome desktop** (DevTools → Network → `googleadservices`). Mai cliccare i propri annunci.
+
 ## To Do / Follow-up aperti
-- **Form Contact — verificare consegna email:** `Contact.jsx` fa `POST /api/enquiry` → funzione serverless Vercel `api/enquiry.js` che invia via **Resend** (env `RESEND_API_KEY`, `MAIL_FROM`, `MAIL_TO`). Da fare: verificare il dominio in Resend così `MAIL_FROM` non usa più il fallback `onboarding@resend.dev` (che consegna solo all'owner dell'account).
+- **Google Ads dopo il deploy delle etichette (inserite l'11/10/2026):** mettere Secondaria l'azione URL `/thank-you` (e le altre vecchie azioni "Invio modulo per i lead" dell'account 477-419-9225); controllare che le 3 azioni escano da "In attesa di conversioni".
 - Rifiniture editoriali: uniformare "365 m" (Home) vs "350 m" (Ravello); togliere il doppio `<h1>` in Home
 - Pulizia: rimuovere dipendenze morte (`vite-ssg-react` + polyfill in `package.json`) e i file inutilizzati `PageHead.jsx` / `routes.js`
 - **Favicon su Google:** dopo il deploy delle fedi, chiedere reindicizzazione della home in Search Console ("Controllo URL" → "Richiedi indicizzazione") per far aggiornare la favicon nei risultati (Google ci mette da giorni a settimane).
 - **Fatti ✓ (2026-07-06):** migrazione SSG (tutte le 19 route pre-renderizzate), foto About, compressione video (171→24MB) e immagini (58→8MB), auto-deploy ripristinato
 - **Fatti ✓ (2026-07-10):** rifatta favicon → **marchio a fedi intrecciate** (era "WMR"); set completo `favicon.ico`/16/32/512/apple-touch/android-chrome/`site.webmanifest` con path assoluti (risolto il problema della favicon donatocipriano.com in cache su Google + i 404 su `/favicon.ico`); `og-cover.jpg` (anteprima social/WhatsApp) lasciata intatta.
+- **Fatti ✓ (2026-10-11):** dominio `weddingmusicravello.com` verificato in Resend e consegna confermata (il fallback di `MAIL_FROM` nel codice è `info@weddingmusicravello.com`, non `onboarding@resend.dev`: il vecchio commento era sbagliato); conversioni Ads esplicite + WhatsApp + campo telefono + provenienza nelle email + CTA nelle hero; video del menu non più scaricato su ogni pagina.
 - **Fatti ✓:** form Contact collegato a backend reale (`api/enquiry.js`, Vercel Serverless + Resend); aggiunte pagine `FAQ.jsx` e `Privacy.jsx`.
 
 ## Comandi utili
 ```
 npm run dev      # dev server localhost:5173
 npm run build    # build statico /dist
+npm test         # test (vitest)
 git add . && git commit -m "descrizione" && git push
 ```

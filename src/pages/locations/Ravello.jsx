@@ -1,4 +1,6 @@
 import { Head } from 'vite-react-ssg'
+import EnquiryLinks from '@/components/ui/EnquiryLinks.jsx'
+import { weddingMessage } from '@/lib/contactLinks.js'
 
 const ravelloSchema = {
   '@context': 'https://schema.org',
@@ -50,6 +52,7 @@ export default function LocationRavello() {
             above the Gulf of Salerno, in venues that have defined the benchmark for the
             Italian luxury wedding for over a century.
           </p>
+          <EnquiryLinks className="mt-10" message={weddingMessage({ place: 'in Ravello' })} />
         </div>
       </section>
 
@@ -168,16 +171,11 @@ export default function LocationRavello() {
       {/* CTA */}
       <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3rem,8vw,6rem)]
         flex items-center justify-between gap-8 flex-wrap">
-        <p className="font-serif italic font-light leading-[1.18] text-white/82 max-w-[26ch]"
+        <p className="font-serif italic font-light leading-[1.18] text-white/80 max-w-[26ch]"
           style={{ fontSize: 'clamp(1.7rem,3.5vw,2.8rem)' }}>
           Planning a wedding<br />in Ravello?
         </p>
-        <a href="/contact"
-          className="text-[.6rem] font-light tracking-[.22em] uppercase no-underline
-            text-[#B8A882] border-b border-[rgba(184,168,130,.35)] pb-1 whitespace-nowrap
-            hover:border-[#B8A882] transition-colors">
-          Begin Your Enquiry
-        </a>
+        <EnquiryLinks message={weddingMessage({ place: 'in Ravello' })} />
       </section>
     </div>
   )

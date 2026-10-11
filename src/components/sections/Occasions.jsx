@@ -105,7 +105,7 @@ function MomentStrip({ moment, dark = false }) {
                   text-[.5rem] font-light tracking-[.1em] uppercase
                   ${dark
                     ? 'border-white/20 text-white/55 hover:border-[#B8A882] hover:text-[#B8A882]'
-                    : 'border-[#1A1A1A]/18 text-[#404040] hover:border-[#B8A882] hover:text-[#1A1A1A]'}`}>
+                    : 'border-[#1A1A1A]/[.18] text-[#404040] hover:border-[#B8A882] hover:text-[#1A1A1A]'}`}>
                 {label}
               </a>
             ))}
