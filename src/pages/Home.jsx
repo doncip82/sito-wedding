@@ -44,7 +44,7 @@ function ContactStrip() {
       className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3rem,8vw,6rem)]
         flex items-center justify-between gap-8 flex-wrap">
       <p id="enq-head"
-        className="font-serif italic font-light leading-[1.18] text-white/82 max-w-[24ch]"
+        className="font-serif italic font-light leading-[1.18] text-white/80 max-w-[24ch]"
         style={{ fontSize: 'clamp(1.7rem,3.5vw,2.8rem)' }}>
         Every event is different.<br />Tell us about yours.
       </p>
