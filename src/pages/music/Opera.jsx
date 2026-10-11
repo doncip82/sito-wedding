@@ -31,7 +31,7 @@ export default function MusicOpera() {
       <section className="bg-[#F2EDE6] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(5rem,12vw,9rem)]">
         <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-12 md:gap-16 items-center max-w-6xl">
           <div className="max-w-xl">
-            <p className="text-[.64rem] font-light tracking-[.25em] uppercase text-[#8A7A5A]
+            <p className="text-[.64rem] font-light tracking-[.25em] uppercase text-[#6E6046]
               flex items-center gap-3 mb-5">
               <span className="inline-block w-[22px] h-[.5px] bg-[#B8A882]" />
               Lyric Voice · Ceremony & Dinner
@@ -100,7 +100,7 @@ export default function MusicOpera() {
               { label: 'Dinner Interlude', desc: 'Full operatic set — 30 to 45 minutes. Suitable for between courses at the reception.' },
             ].map(({ label, desc }) => (
               <div key={label} className="py-4 border-b border-black/[.06]">
-                <p className="text-[.6rem] font-light tracking-[.2em] uppercase text-[#B8A882] mb-2">{label}</p>
+                <p className="text-[.6rem] font-light tracking-[.2em] uppercase text-[#6E6046] mb-2">{label}</p>
                 <p className="text-[.86rem] font-light tracking-[.015em] leading-[1.85] text-[#404040]">{desc}</p>
               </div>
             ))}

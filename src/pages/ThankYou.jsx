@@ -51,12 +51,12 @@ export default function ThankYou() {
           <p className="text-[.82rem] font-light tracking-[.015em] leading-[1.85] text-[#404040] mb-10">
             In the meantime, you can write to us directly at{' '}
             <a href="mailto:info@weddingmusicravello.com"
-              className="text-[#8A7A5A] no-underline border-b border-[#8A7A5A]/40 hover:border-[#8A7A5A]">
+              className="text-[#6E6046] no-underline border-b border-[#8A7A5A]/40 hover:border-[#8A7A5A]">
               info@weddingmusicravello.com
             </a>{' '}
             or{' '}
             <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer"
-              className="text-[#8A7A5A] no-underline border-b border-[#8A7A5A]/40 hover:border-[#8A7A5A]">
+              className="text-[#6E6046] no-underline border-b border-[#8A7A5A]/40 hover:border-[#8A7A5A]">
               message us on WhatsApp
             </a>.
           </p>

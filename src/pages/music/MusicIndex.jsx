@@ -144,7 +144,7 @@ export default function MusicIndex() {
 
               {/* Content */}
               <div className="absolute bottom-0 left-0 right-0 p-5">
-                <p className="text-[.44rem] tracking-[.22em] uppercase text-[#B8A882] font-light mb-1.5">
+                <p className="text-[.56rem] tracking-[.22em] uppercase text-[#B8A882] font-light mb-1.5">
                   {sub}
                 </p>
                 <h2 className="font-serif italic font-light text-[clamp(1.1rem,3vw,1.5rem)] text-white leading-tight">
@@ -161,7 +161,7 @@ export default function MusicIndex() {
 
       {/* CTA strip */}
       <section className="py-16 px-[clamp(1.5rem,6vw,5rem)] bg-[#F2EDE6] border-t border-black/[.06] text-center">
-        <p className="text-[.6rem] tracking-[.28em] uppercase text-[#8A7A5A] font-light mb-4">
+        <p className="text-[.6rem] tracking-[.28em] uppercase text-[#6E6046] font-light mb-4">
           Not sure which format is right for you?
         </p>
         <a

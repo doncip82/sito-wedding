@@ -237,7 +237,7 @@ export default function Contact() {
                 <span className="text-[.64rem] font-light tracking-[.04em] leading-[1.7] text-[#404040]">
                   I have read and agree to the{' '}
                   <a href="/privacy" target="_blank" rel="noopener noreferrer"
-                    className="text-[#8A7A5A] no-underline border-b border-[#8A7A5A]/40 hover:border-[#8A7A5A]">
+                    className="text-[#6E6046] no-underline border-b border-[#8A7A5A]/40 hover:border-[#8A7A5A]">
                     Privacy Policy
                   </a>.
                 </span>
@@ -249,15 +249,15 @@ export default function Contact() {
                     border-x-0 font-sans disabled:opacity-40 disabled:cursor-default">
                   {sending ? 'Sending…' : 'Send Enquiry'}
                 </button>
-                <p className="text-[.6rem] font-light tracking-[.14em] text-[#404040]/60">
+                <p className="text-[.6rem] font-light tracking-[.14em] text-[#404040]">
                   Or write directly to{' '}
                   <a href="mailto:info@weddingmusicravello.com"
-                    className="text-[#8A7A5A] no-underline border-b border-[#8A7A5A]/40">
+                    className="text-[#6E6046] no-underline border-b border-[#8A7A5A]/40">
                     info@weddingmusicravello.com
                   </a>{' '}
                   or{' '}
                   <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer"
-                    className="text-[#8A7A5A] no-underline border-b border-[#8A7A5A]/40">
+                    className="text-[#6E6046] no-underline border-b border-[#8A7A5A]/40">
                     message us on WhatsApp
                   </a>
                 </p>
@@ -282,7 +282,7 @@ export default function Contact() {
           { label: 'WhatsApp', value: 'Message us', href: whatsappUrl() },
         ].map(({ label, value, href }) => (
           <div key={label}>
-            <p className="text-[.6rem] font-light tracking-[.2em] uppercase text-[#B8A882] mb-2">
+            <p className="text-[.6rem] font-light tracking-[.2em] uppercase text-[#6E6046] mb-2">
               {label}
             </p>
             <p className="text-[.9rem] font-light tracking-[.015em] leading-[1.8] text-[#1A1A1A]">

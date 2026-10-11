@@ -61,7 +61,7 @@ export default function OccasionMarriageProposal() {
       <section className="bg-[#F2EDE6] grid grid-cols-1 md:grid-cols-[minmax(0,1.08fr)_minmax(0,.92fr)]">
         <div className="px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3.5rem,8vw,7rem)] self-center">
           <div className="max-w-4xl">
-            <p className="text-[.64rem] font-light tracking-[.25em] uppercase text-[#8A7A5A]
+            <p className="text-[.64rem] font-light tracking-[.25em] uppercase text-[#6E6046]
               flex items-center gap-3 mb-5">
               <span className="inline-block w-[22px] h-[.5px] bg-[#B8A882]" />
               Occasions · Proposal
@@ -124,7 +124,7 @@ export default function OccasionMarriageProposal() {
       </section>
 
       <section className="bg-[#F2EDE6] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(4rem,10vw,8rem)]">
-        <p className="eyebrow mb-5 text-[#8A7A5A]">Locations</p>
+        <p className="eyebrow mb-5 text-[#6E6046]">Locations</p>
         <h2 className="section-title mb-12 text-[#1A1A1A]" style={{ maxWidth: '22ch' }}>
           Three Settings<br />on the Coast
         </h2>
@@ -134,7 +134,7 @@ export default function OccasionMarriageProposal() {
               className="py-8 border-b border-black/[.09]
                 [&:not(:last-child)]:md:border-r [&:not(:last-child)]:md:pr-10
                 [&:not(:first-child)]:md:pl-10">
-              <p className="text-[.6rem] font-light tracking-[.2em] uppercase text-[#8A7A5A] mb-2">
+              <p className="text-[.6rem] font-light tracking-[.2em] uppercase text-[#6E6046] mb-2">
                 {detail}
               </p>
               <h3 className="font-serif italic font-light text-[1.2rem] text-[#1A1A1A] mb-4">

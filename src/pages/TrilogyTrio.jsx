@@ -136,7 +136,7 @@ export default function TrilogyTrio() {
                     {title}
                   </span>
                   <span className="text-[.6rem] font-light tracking-[.14em] uppercase
-                    text-[#B8A882] flex-shrink-0">
+                    text-[#6E6046] flex-shrink-0">
                     {composer}
                   </span>
                 </div>
@@ -152,7 +152,7 @@ export default function TrilogyTrio() {
 
       {/* Video Section */}
       <section className="bg-[#F2EDE6] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(4rem,10vw,8rem)]">
-        <p className="text-[.64rem] font-light tracking-[.25em] uppercase text-[#8A7A5A]
+        <p className="text-[.64rem] font-light tracking-[.25em] uppercase text-[#6E6046]
           flex items-center gap-3 mb-5">
           <span className="inline-block w-[22px] h-[.5px] bg-[#B8A882]" />
           Live Performances
@@ -216,7 +216,7 @@ export default function TrilogyTrio() {
               <span className="text-[.6rem] tracking-[.22em] uppercase font-light text-[#404040]">Spotify</span>
               <a href="https://open.spotify.com/artist/5fDrzYVHgAdzKgPAmJbLzD"
                 target="_blank" rel="noopener noreferrer"
-                className="text-[.56rem] tracking-[.16em] uppercase text-[#B8A882] no-underline hover:text-[#8A7A5A] transition-colors">
+                className="text-[.6rem] tracking-[.16em] uppercase text-[#6E6046] no-underline hover:text-[#1A1A1A] transition-colors">
                 Follow ↗
               </a>
             </div>
@@ -237,7 +237,7 @@ export default function TrilogyTrio() {
               <span className="text-[.6rem] tracking-[.22em] uppercase font-light text-[#404040]">Instagram</span>
               <a href="https://www.instagram.com/trilogytriolive"
                 target="_blank" rel="noopener noreferrer"
-                className="text-[.56rem] tracking-[.16em] uppercase text-[#B8A882] no-underline hover:text-[#8A7A5A] transition-colors">
+                className="text-[.6rem] tracking-[.16em] uppercase text-[#6E6046] no-underline hover:text-[#1A1A1A] transition-colors">
                 Follow ↗
               </a>
             </div>
@@ -258,7 +258,7 @@ export default function TrilogyTrio() {
               <span className="text-[.6rem] tracking-[.22em] uppercase font-light text-[#404040]">YouTube</span>
               <a href="https://www.youtube.com/watch?v=7hp25qXj8ZU"
                 target="_blank" rel="noopener noreferrer"
-                className="text-[.56rem] tracking-[.16em] uppercase text-[#B8A882] no-underline hover:text-[#8A7A5A] transition-colors">
+                className="text-[.6rem] tracking-[.16em] uppercase text-[#6E6046] no-underline hover:text-[#1A1A1A] transition-colors">
                 Watch ↗
               </a>
             </div>

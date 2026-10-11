@@ -37,7 +37,8 @@ Il sito propone **esclusivamente partner musicali**. L'aggiunta di fotografi, pl
   - Charcoal: `#1A1A1A` (testo principale, sezioni scure)
   - Mid: `#404040` (corpo testo su bianco)
   - Gold: `#B8A882` (accenti)
-  - Gold scuro: `#8A7A5A` (sub-label, hover)
+  - Gold scuro: `#8A7A5A` (hover, bordi)
+  - Gold inchiostro: `#6E6046` (dal 2026-10 — **testo** oro piccolo su fondo chiaro: eyebrow, sub-label, etichette; contrasto ≥ 4.5). Il gold `#B8A882` resta per linee/decori e per il testo solo su fondo scuro.
   - Border: `rgba(26,26,26,0.09)`
 - **Font:** Cormorant Garamond (serif, display) + Montserrat (sans-serif, UI)
 - **Regole design:**

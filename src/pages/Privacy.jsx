@@ -44,7 +44,7 @@ export default function Privacy() {
           style={{ fontSize: 'clamp(2rem,4.5vw,3.4rem)' }}>
           Privacy Policy
         </h1>
-        <p className="text-[.64rem] font-light tracking-[.16em] uppercase text-[#8A7A5A]">
+        <p className="text-[.64rem] font-light tracking-[.16em] uppercase text-[#6E6046]">
           Last updated: 11 October 2026
         </p>
       </section>
@@ -62,7 +62,7 @@ export default function Privacy() {
               Wedding Music Ravello is a curatorial platform operated by <strong>Donato Cipriano</strong>{' '}
               (the “Data Controller”). For any question or request regarding your personal data,
               you can write to{' '}
-              <a href="mailto:info@weddingmusicravello.com" className="text-[#8A7A5A] no-underline border-b border-[#8A7A5A]/40 hover:border-[#8A7A5A]">
+              <a href="mailto:info@weddingmusicravello.com" className="text-[#6E6046] no-underline border-b border-[#8A7A5A]/40 hover:border-[#8A7A5A]">
                 info@weddingmusicravello.com
               </a>.
             </p>
@@ -144,7 +144,7 @@ export default function Privacy() {
               Under the GDPR you may request access to your data, and its correction, deletion
               or restriction; you may object to its processing, request portability, and withdraw
               your consent at any time. To exercise any of these rights, email{' '}
-              <a href="mailto:info@weddingmusicravello.com" className="text-[#8A7A5A] no-underline border-b border-[#8A7A5A]/40 hover:border-[#8A7A5A]">
+              <a href="mailto:info@weddingmusicravello.com" className="text-[#6E6046] no-underline border-b border-[#8A7A5A]/40 hover:border-[#8A7A5A]">
                 info@weddingmusicravello.com
               </a>.
             </p>
@@ -196,11 +196,11 @@ export default function Privacy() {
               Economic Area (such as the United States), under appropriate safeguards. For details on
               how Google processes this data, see{' '}
               <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer"
-                className="text-[#8A7A5A] no-underline border-b border-[#8A7A5A]/40 hover:border-[#8A7A5A]">
+                className="text-[#6E6046] no-underline border-b border-[#8A7A5A]/40 hover:border-[#8A7A5A]">
                 Google’s Privacy Policy
               </a>{' '}and{' '}
               <a href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener noreferrer"
-                className="text-[#8A7A5A] no-underline border-b border-[#8A7A5A]/40 hover:border-[#8A7A5A]">
+                className="text-[#6E6046] no-underline border-b border-[#8A7A5A]/40 hover:border-[#8A7A5A]">
                 How Google uses cookies
               </a>.
             </p>

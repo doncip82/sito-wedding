@@ -101,7 +101,7 @@ export default function EvoStrings() {
                 className="py-6 border-b border-black/[.09] group cursor-default">
                 <div className="flex items-start gap-4">
                   <span className="text-[.6rem] font-normal tracking-[.22em] uppercase
-                    text-[#B8A882] pt-[.15rem] w-12 flex-shrink-0">
+                    text-[#6E6046] pt-[.15rem] w-12 flex-shrink-0">
                     {label}
                   </span>
                   <p className="text-[.84rem] font-light tracking-[.015em] leading-[1.85]
@@ -117,7 +117,7 @@ export default function EvoStrings() {
 
       {/* Video Section */}
       <section className="bg-[#F2EDE6] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(4rem,10vw,8rem)]">
-        <p className="text-[.64rem] font-light tracking-[.25em] uppercase text-[#8A7A5A]
+        <p className="text-[.64rem] font-light tracking-[.25em] uppercase text-[#6E6046]
           flex items-center gap-3 mb-5">
           <span className="inline-block w-[22px] h-[.5px] bg-[#B8A882]" />
           Live Performances
@@ -202,7 +202,7 @@ export default function EvoStrings() {
               <span className="text-[.6rem] tracking-[.22em] uppercase font-light text-[#404040]">Spotify</span>
               <a href="https://open.spotify.com/artist/5XXjv0dBUCtfD2Blqzk5UD"
                 target="_blank" rel="noopener noreferrer"
-                className="text-[.56rem] tracking-[.16em] uppercase text-[#B8A882] no-underline hover:text-[#8A7A5A] transition-colors">
+                className="text-[.6rem] tracking-[.16em] uppercase text-[#6E6046] no-underline hover:text-[#1A1A1A] transition-colors">
                 Follow ↗
               </a>
             </div>
@@ -223,7 +223,7 @@ export default function EvoStrings() {
               <span className="text-[.6rem] tracking-[.22em] uppercase font-light text-[#404040]">Instagram</span>
               <a href="https://www.instagram.com/evostringslive"
                 target="_blank" rel="noopener noreferrer"
-                className="text-[.56rem] tracking-[.16em] uppercase text-[#B8A882] no-underline hover:text-[#8A7A5A] transition-colors">
+                className="text-[.6rem] tracking-[.16em] uppercase text-[#6E6046] no-underline hover:text-[#1A1A1A] transition-colors">
                 Follow ↗
               </a>
             </div>
@@ -244,7 +244,7 @@ export default function EvoStrings() {
               <span className="text-[.6rem] tracking-[.22em] uppercase font-light text-[#404040]">YouTube</span>
               <a href="https://www.youtube.com/watch?v=35YL651-TtU"
                 target="_blank" rel="noopener noreferrer"
-                className="text-[.56rem] tracking-[.16em] uppercase text-[#B8A882] no-underline hover:text-[#8A7A5A] transition-colors">
+                className="text-[.6rem] tracking-[.16em] uppercase text-[#6E6046] no-underline hover:text-[#1A1A1A] transition-colors">
                 Watch ↗
               </a>
             </div>

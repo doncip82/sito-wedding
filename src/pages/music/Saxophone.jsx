@@ -31,7 +31,7 @@ export default function MusicSaxophone() {
       <section className="bg-[#F2EDE6] grid grid-cols-1 md:grid-cols-[minmax(0,1.08fr)_minmax(0,.92fr)]">
         <div className="px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3.5rem,8vw,7rem)] self-center">
           <div className="max-w-4xl">
-            <p className="text-[.64rem] font-light tracking-[.25em] uppercase text-[#8A7A5A]
+            <p className="text-[.64rem] font-light tracking-[.25em] uppercase text-[#6E6046]
               flex items-center gap-3 mb-5">
               <span className="inline-block w-[22px] h-[.5px] bg-[#B8A882]" />
               Saxophone · Cocktail Hour & Ceremony

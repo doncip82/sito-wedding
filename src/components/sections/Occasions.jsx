@@ -71,7 +71,7 @@ function MomentStrip({ moment, dark = false }) {
         ${dark ? 'bg-[#111111]' : 'bg-[#F9F8F7]'}`}>
         <div className="flex flex-col gap-4">
           <span className={`font-serif italic font-light text-[.95rem] tracking-[.015em]
-            ${dark ? 'text-[#B8A882]/40' : 'text-[#B8A882]/60'}`}>
+            ${dark ? 'text-[#B8A882]/40' : 'text-[#6E6046]'}`}>
             {moment.numeral}
           </span>
           <h3 className={`font-serif italic font-light text-[clamp(2rem,4vw,3rem)]
@@ -87,14 +87,14 @@ function MomentStrip({ moment, dark = false }) {
               pb-[2px] border-b transition-colors duration-300
               ${dark
                 ? 'text-[#B8A882]/60 border-[#B8A882]/25 hover:text-[#B8A882] hover:border-[#B8A882]'
-                : 'text-[#8A7A5A] border-[#8A7A5A]/35 hover:text-[#1A1A1A] hover:border-[#1A1A1A]'}`}>
+                : 'text-[#6E6046] border-[#8A7A5A]/35 hover:text-[#1A1A1A] hover:border-[#1A1A1A]'}`}>
             Explore this occasion ↗
           </a>
         </div>
 
         <div className="flex flex-col gap-3">
           <span className={`text-[.56rem] font-light tracking-[.16em] uppercase
-            ${dark ? 'text-white/50' : 'text-[#B8A882]'}`}>
+            ${dark ? 'text-white/50' : 'text-[#6E6046]'}`}>
             Suggested for this occasion
           </span>
           <div className="flex flex-wrap gap-2">

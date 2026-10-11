@@ -62,7 +62,7 @@ function EnsembleCard({ ensemble, index }) {
           leading-[1.15] text-[#1A1A1A] mb-[.85rem]" itemProp="name">
           {ensemble.name}
         </h3>
-        <p className="text-[.64rem] font-light tracking-[.18em] uppercase text-[#8A7A5A]
+        <p className="text-[.64rem] font-light tracking-[.18em] uppercase text-[#6E6046]
           -mt-[.4rem] mb-[.6rem]">
           {ensemble.subLabel}
         </p>

@@ -35,12 +35,12 @@ function VenueRow({ venue, index }) {
       <div className="absolute left-0 bottom-[-0.5px] right-0 h-[.5px] bg-[#B8A882]
         scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" />
 
-      <span className="text-[.6rem] font-light tracking-[.2em] text-[#8A7A5A]/70 pt-[.3rem]">
+      <span className="text-[.6rem] font-light tracking-[.2em] text-[#6E6046] pt-[.3rem]">
         {venue.index}
       </span>
 
       <div className="flex flex-col gap-[.6rem]">
-        <span className="text-[.6rem] font-light tracking-[.24em] uppercase text-[#8A7A5A]">
+        <span className="text-[.6rem] font-light tracking-[.24em] uppercase text-[#6E6046]">
           {venue.location}
         </span>
         <h3 className="font-serif italic font-light text-[#1A1A1A]"
@@ -57,8 +57,8 @@ function VenueRow({ venue, index }) {
           {venue.tags.map(tag => (
             <span key={tag}
               className="text-[.56rem] font-light tracking-[.18em] uppercase
-                text-[#8A7A5A] border border-[#8A7A5A]/30 px-[.55rem] py-[.22rem]
-                group-hover:border-[#8A7A5A]/60 transition-all">
+                text-[#404040] border border-[#1A1A1A]/[.18] px-[.55rem] py-[.22rem]
+                group-hover:border-[#B8A882] transition-all">
               {tag}
             </span>
           ))}
@@ -91,7 +91,7 @@ export default function Locations() {
       <div className="flex justify-between items-start gap-8 flex-wrap
         mb-[clamp(3.5rem,8vw,6.5rem)]">
         <div>
-          <p className="text-[.64rem] font-light tracking-[.25em] uppercase text-[#8A7A5A]
+          <p className="text-[.64rem] font-light tracking-[.25em] uppercase text-[#6E6046]
             flex items-center gap-3 mb-[1.1rem]">
             <span className="inline-block w-[22px] h-[.5px] bg-[#B8A882]" />
             Our Playground
@@ -122,11 +122,11 @@ export default function Locations() {
           {marquee.map((name, i) => (
             <span key={i} className="flex items-center gap-12">
               <span className="font-serif italic font-light whitespace-nowrap
-                text-[#1A1A1A]/20 hover:text-[#8A7A5A] transition-colors cursor-default"
+                text-[#1A1A1A]/70 hover:text-[#8A7A5A] transition-colors cursor-default"
                 style={{ fontSize: 'clamp(.85rem,1.4vw,1.05rem)', letterSpacing: '.04em' }}>
                 {name}
               </span>
-              <span className="text-[#8A7A5A]/40 font-light">·</span>
+              <span className="text-[#B8A882] font-light">·</span>
             </span>
           ))}
         </div>
