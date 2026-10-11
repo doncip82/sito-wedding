@@ -33,10 +33,12 @@ Il sito propone **esclusivamente partner musicali**. L'aggiunta di fotografi, pl
 - **Tono:** Editorial Luxury — istituzionale/curatoriale — stile Vogue Weddings / Belmond / Mezzatorre
 - **Palette:**
   - Off-white: `#F9F8F7` (sfondo)
+  - Sand: `#F2EDE6` (dal 2026-10 — secondo tono chiaro: hero delle landing, sezioni alternate, fasce CTA; sostituisce le sezioni charcoal)
   - Charcoal: `#1A1A1A` (testo principale, sezioni scure)
-  - Mid: `#404040` (corpo testo su bianco)
+  - Mid: `#2B2B2B` (corpo testo su chiaro — dal 2026-10; prima `#404040`, troppo tenue col peso light)
   - Gold: `#B8A882` (accenti)
-  - Gold scuro: `#8A7A5A` (sub-label, hover)
+  - Gold scuro: `#8A7A5A` (hover, bordi)
+  - Gold inchiostro: `#6E6046` (dal 2026-10 — **testo** oro piccolo su fondo chiaro: eyebrow, sub-label, etichette; contrasto ≥ 4.5). Il gold `#B8A882` resta per linee/decori e per il testo solo su fondo scuro.
   - Border: `rgba(26,26,26,0.09)`
 - **Font:** Cormorant Garamond (serif, display) + Montserrat (sans-serif, UI)
 - **Regole design:**
@@ -45,6 +47,9 @@ Il sito propone **esclusivamente partner musicali**. L'aggiunta di fotografi, pl
   - CTA solo testo + border-bottom 0.5px
   - Tutti i link esterni: target="_blank" rel="noopener noreferrer"
   - Scroll reveal: progressive enhancement (elementi visibili di default in CSS)
+  - **Luce prima del nero (refresh 2026-10):** il charcoal resta solo nel footer e nelle hero con video/foto a tutto schermo (home, EvoStrings, Trilogy, DJ, Contact). Tutto il resto è avorio/sabbia.
+  - **Scala testo:** corpo ~15px (`text-[.95rem]`, **`font-normal` (400), non light**, tracking `.015em`, leading `1.85`, colore `#2B2B2B`); descrizioni `.84–.86rem`; etichette maiuscole `.64–.68rem`. Mai più il corpo a `.72rem`.
+  - **Opacità Tailwind solo a passi di 5** (`/60`, `/65`, `/70`…) o tra parentesi (`/[.18]`): valori come `/82` o `/62` non generano nessuna classe e il testo eredita il colore (era il bug dei titoli invisibili nelle fasce CTA scure).
 
 ## Link ufficiali
 - Email piattaforma: info@weddingmusicravello.com
@@ -139,7 +144,7 @@ Villa Cimbrone · Palazzo Avino · Belmond Hotel Caruso · Villa Treville · Mon
   - `object-cover` per tutte le altre card
 - Venue rows: layout 3 colonne con hover gold line scaleX
 - Sub-label formazioni: colore #8A7A5A, font-weight 300
-- Testo corpo su bianco: #404040
+- Testo corpo su chiaro: #2B2B2B, peso 400 (Montserrat 300 a 15px risultava poco leggibile)
 
 ### Occasions — sezione homepage + landing pages
 - Ensemble suggeriti mostrati come pill buttons orizzontali (`flex-wrap gap-2`)
@@ -151,7 +156,7 @@ Villa Cimbrone · Palazzo Avino · Belmond Hotel Caruso · Villa Treville · Mon
   - `/occasions/marriage-proposal` — How It Works + 3 location in griglia 3 col (dark bg)
   - `/occasions/birthdays-anniversaries` — 3 formati (Dinner, Cocktail, Evening Dance)
   - `/occasions/corporate-events` — 3 formati (Private Dinner, Brand Retreat, Product Launch)
-- Tutte le landing pages seguono la struttura: Hero dark → Content light → Dark ensemble CTA → Light related links → Dark enquiry CTA
+- Tutte le landing pages seguono la struttura (refresh 2026-10): Hero **sabbia diviso** (testo a sinistra, foto a destra; su mobile testo prima, foto sotto) → Content avorio → blocco ensemble/venue sabbia → link correlati avorio → fascia CTA sabbia (`EnquiryLinks tone="light"`) → footer charcoal
 
 ### Hero — copy attuale
 - **Tagline (p sopra h1):** "Bespoke Wedding Music · Amalfi Coast"

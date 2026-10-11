@@ -36,23 +36,30 @@ export default function LocationRavello() {
       </Head>
 
       {/* Hero */}
-      <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(5rem,12vw,9rem)]">
-        <div className="max-w-4xl">
-          <p className="text-[.56rem] font-light tracking-[.25em] uppercase text-[#B8A882]
-            flex items-center gap-3 mb-5">
-            <span className="inline-block w-[22px] h-[.5px] bg-[#B8A882]" />
-            Ravello · Campania · Southern Italy
-          </p>
-          <h1 className="font-serif italic font-light leading-[1.02] text-[#F9F8F7] mb-6"
-            style={{ fontSize: 'clamp(3rem,7vw,6rem)' }}>
-            Wedding Music<br />in Ravello
-          </h1>
-          <p className="text-[.72rem] font-light tracking-[.06em] leading-[2] text-white/55 max-w-[60ch]">
-            Live music for destination weddings in Ravello — at an altitude of 365 metres
-            above the Gulf of Salerno, in venues that have defined the benchmark for the
-            Italian luxury wedding for over a century.
-          </p>
-          <EnquiryLinks className="mt-10" message={weddingMessage({ place: 'in Ravello' })} />
+      <section className="bg-[#F2EDE6] grid grid-cols-1 md:grid-cols-[minmax(0,1.08fr)_minmax(0,.92fr)]">
+        <div className="px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3.5rem,8vw,7rem)] self-center">
+          <div className="max-w-4xl">
+            <p className="text-[.64rem] font-light tracking-[.25em] uppercase text-[#6E6046]
+              flex items-center gap-3 mb-5">
+              <span className="inline-block w-[22px] h-[.5px] bg-[#B8A882]" />
+              Ravello · Campania · Southern Italy
+            </p>
+            <h1 className="font-serif italic font-light leading-[1.02] text-[#1A1A1A] mb-6"
+              style={{ fontSize: 'clamp(3rem,7vw,6rem)' }}>
+              Wedding Music<br />in Ravello
+            </h1>
+            <p className="text-[.95rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B] max-w-[60ch]">
+              Live music for destination weddings in Ravello — at an altitude of 365 metres
+              above the Gulf of Salerno, in venues that have defined the benchmark for the
+              Italian luxury wedding for over a century.
+            </p>
+            <EnquiryLinks tone="light" className="mt-10" message={weddingMessage({ place: 'in Ravello' })} />
+          </div>
+        </div>
+        <div className="relative min-h-[52svh] md:min-h-[clamp(30rem,72svh,48rem)] overflow-hidden">
+          <img src="/images/ravello-villa-rufolo.jpg" alt="Villa Rufolo, Ravello, above the Gulf of Salerno" fetchpriority="high"
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ objectPosition: 'center' }} />
         </div>
       </section>
 
@@ -64,7 +71,7 @@ export default function LocationRavello() {
             365 Metres Above<br />the Gulf of Salerno
           </h2>
           <div className="w-9 h-[.5px] bg-[#B8A882] mb-8" />
-          <div className="space-y-6 text-[.72rem] font-light tracking-[.05em] leading-[2] text-[#404040]">
+          <div className="space-y-6 text-[.95rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B]">
             <p>
               Ravello sits at 365 metres above sea level on a promontory overlooking the Gulf
               of Salerno. Founded in the 9th century, it was granted UNESCO World Heritage
@@ -91,12 +98,12 @@ export default function LocationRavello() {
       </section>
 
       {/* Block B — Venue details */}
-      <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(4rem,10vw,8rem)]">
-        <p className="eyebrow mb-5 text-[#B8A882]">Venues</p>
-        <h2 className="section-title mb-12 text-[#F9F8F7]" style={{ maxWidth: '22ch' }}>
+      <section className="bg-[#F2EDE6] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(4rem,10vw,8rem)]">
+        <p className="eyebrow mb-5 text-[#6E6046]">Venues</p>
+        <h2 className="section-title mb-12 text-[#1A1A1A]" style={{ maxWidth: '22ch' }}>
           Venues We Know<br />by Heart
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border-t border-white/[.08]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border-t border-black/[.09]">
           {[
             {
               name: 'Villa Cimbrone',
@@ -120,16 +127,16 @@ export default function LocationRavello() {
             },
           ].map(({ name, detail, desc }) => (
             <div key={name}
-              className="py-8 pr-0 md:pr-12 border-b border-white/[.08]
+              className="py-8 pr-0 md:pr-12 border-b border-black/[.09]
                 [&:nth-child(odd)]:md:border-r [&:nth-child(odd)]:md:pr-12
                 [&:nth-child(even)]:md:pl-12">
-              <p className="text-[.5rem] font-light tracking-[.2em] uppercase text-[#B8A882] mb-2">
+              <p className="text-[.6rem] font-light tracking-[.2em] uppercase text-[#6E6046] mb-2">
                 {detail}
               </p>
-              <h3 className="font-serif italic font-light text-[1.4rem] text-[#F9F8F7] mb-4">
+              <h3 className="font-serif italic font-light text-[1.4rem] text-[#1A1A1A] mb-4">
                 {name}
               </h3>
-              <p className="text-[.66rem] font-light tracking-[.05em] leading-[2] text-white/50">
+              <p className="text-[.86rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B]">
                 {desc}
               </p>
             </div>
@@ -160,7 +167,7 @@ export default function LocationRavello() {
           ].map(({ href, label, desc }) => (
             <div key={href} className="flex items-start gap-6 py-5 border-b border-black/[.06] flex-wrap">
               <a href={href} className="link-underline whitespace-nowrap">{label}</a>
-              <span className="text-[.65rem] font-light text-[#404040] tracking-[.04em] leading-[2]">
+              <span className="text-[.86rem] font-normal text-[#2B2B2B] tracking-[.015em] leading-[1.85]">
                 {desc}
               </span>
             </div>
@@ -169,13 +176,13 @@ export default function LocationRavello() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3rem,8vw,6rem)]
+      <section className="bg-[#F2EDE6] border-t border-black/[.06] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3rem,8vw,6rem)]
         flex items-center justify-between gap-8 flex-wrap">
-        <p className="font-serif italic font-light leading-[1.18] text-white/80 max-w-[26ch]"
+        <p className="font-serif italic font-light leading-[1.18] text-[#1A1A1A] max-w-[26ch]"
           style={{ fontSize: 'clamp(1.7rem,3.5vw,2.8rem)' }}>
           Planning a wedding<br />in Ravello?
         </p>
-        <EnquiryLinks message={weddingMessage({ place: 'in Ravello' })} />
+        <EnquiryLinks tone="light" message={weddingMessage({ place: 'in Ravello' })} />
       </section>
     </div>
   )

@@ -7,8 +7,9 @@
 
 :root {
   --white:  #F9F8F7;
+  --sand:   #F2EDE6;   /* second light tone — alternating sections, CTA bands */
   --ink:    #1A1A1A;
-  --mid:    #404040;
+  --mid:    #2B2B2B;   /* body text on light (was #404040 — too faint at the light weight) */
   --gold:   #B8A882;
   --gold-dark: #8A7A5A;
   --border: rgba(26, 26, 26, 0.09);
@@ -28,7 +29,7 @@ body {
 
 /* Section eyebrow */
 .eyebrow {
-  font-size: 0.56rem;
+  font-size: 0.64rem;
   font-weight: 300;
   letter-spacing: 0.25em;
   text-transform: uppercase;
@@ -57,7 +58,7 @@ body {
 
 /* Text link — underline style */
 .link-underline {
-  font-size: 0.58rem;
+  font-size: 0.66rem;
   font-weight: 300;
   letter-spacing: 0.20em;
   text-transform: uppercase;
@@ -72,8 +73,8 @@ body {
 
 /* External link */
 .link-ext {
-  font-size: 0.54rem;
-  font-weight: 200;
+  font-size: 0.62rem;
+  font-weight: 300;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   text-decoration: none;

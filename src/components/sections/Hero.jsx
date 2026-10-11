@@ -20,9 +20,9 @@ export default function Hero() {
           <defs>
             <filter id="hero-midtones">
               <feComponentTransfer>
-                <feFuncR type="gamma" amplitude="1" exponent="1.22" offset="0" />
-                <feFuncG type="gamma" amplitude="1" exponent="1.22" offset="0" />
-                <feFuncB type="gamma" amplitude="1" exponent="1.22" offset="0" />
+                <feFuncR type="gamma" amplitude="1" exponent="1.08" offset="0" />
+                <feFuncG type="gamma" amplitude="1" exponent="1.08" offset="0" />
+                <feFuncB type="gamma" amplitude="1" exponent="1.08" offset="0" />
               </feComponentTransfer>
             </filter>
           </defs>
@@ -42,7 +42,7 @@ export default function Hero() {
           className="absolute inset-0"
           style={{
             background:
-              'linear-gradient(to bottom, rgba(26,26,26,.18) 0%, rgba(26,26,26,.22) 45%, rgba(26,26,26,.62) 100%)',
+              'linear-gradient(to bottom, rgba(26,26,26,.12) 0%, rgba(26,26,26,.12) 45%, rgba(26,26,26,.5) 100%)',
           }}
         />
         {/* Horizontal overlay — left fade for text legibility */}
@@ -51,7 +51,7 @@ export default function Hero() {
           className="absolute inset-0"
           style={{
             background:
-              'linear-gradient(to right, rgba(26,26,26,.48) 0%, rgba(26,26,26,.12) 55%, transparent 80%)',
+              'linear-gradient(to right, rgba(26,26,26,.42) 0%, rgba(26,26,26,.08) 55%, transparent 80%)',
           }}
         />
       </div>
@@ -61,9 +61,9 @@ export default function Hero() {
           so the contact CTAs stay on the first screen on short laptops
           (~650px) and small phones; tall screens are essentially unchanged. */}
       <div className="relative z-10 flex flex-col justify-start
-        px-[clamp(1.5rem,6vw,5rem)] pt-[clamp(4.75rem,min(12vw,15svh),9rem)] h-full">
+        px-[clamp(1.5rem,6vw,5rem)] pt-[clamp(4.75rem,min(12vw,13svh),9rem)] h-full">
 
-        <p className="text-[.56rem] font-normal tracking-[.28em] uppercase text-white
+        <p className="text-[.64rem] font-normal tracking-[.28em] uppercase text-white
           mb-[1.1rem]"
           style={{ opacity: 0, animation: 'up .9s ease .3s forwards', textShadow: '0 2px 12px rgba(0,0,0,0.9), 0 0 40px rgba(0,0,0,0.6)' }}>
           Bespoke Wedding Music · Amalfi Coast
@@ -72,7 +72,7 @@ export default function Hero() {
         <h1 id="hero-h1"
           className="font-serif italic font-light leading-[1.02] text-[#F9F8F7]"
           style={{
-            fontSize: 'clamp(min(3rem,6.2svh),min(7vw,10.5svh),6.5rem)',
+            fontSize: 'clamp(min(3rem,6.2svh),min(7vw,10svh),6.5rem)',
             maxWidth: '16ch',
             opacity: 0,
             animation: 'up 1s ease .55s forwards',
@@ -85,7 +85,7 @@ export default function Hero() {
           className="w-9 h-[.5px] bg-[#B8A882] my-[clamp(.9rem,3.5svh,1.75rem)]"
           style={{ opacity: 0, animation: 'up .9s ease .8s forwards' }} />
 
-        <h2 className="text-[.80rem] font-normal tracking-[.14em] text-white max-w-[48ch] leading-[1.95]"
+        <h2 className="text-[.92rem] font-normal tracking-[.14em] text-white max-w-[48ch] leading-[1.85]"
           style={{ opacity: 0, animation: 'up .9s ease 1s forwards', textShadow: '0 2px 12px rgba(0,0,0,0.9), 0 0 40px rgba(0,0,0,0.6)' }}>
           A platform for curated live music at destination weddings across the Amalfi Coast — from string quartets at Villa Cimbrone to jazz ensembles at Belmond Hotel Caruso.
         </h2>
@@ -95,14 +95,14 @@ export default function Hero() {
         <div className="flex items-center gap-x-10 gap-y-5 mt-[clamp(1.1rem,4.5svh,2.25rem)] flex-wrap"
           style={{ opacity: 0, animation: 'up .9s ease 1.2s forwards' }}>
           <a href="/contact"
-            className="text-[.6rem] font-light tracking-[.22em] uppercase text-white
+            className="text-[.68rem] font-light tracking-[.22em] uppercase text-white
               pb-1 border-b border-white/60 no-underline whitespace-nowrap
               hover:text-[#B8A882] hover:border-[#B8A882] transition-all"
             style={{ textShadow: '0 2px 10px rgba(0,0,0,0.9)' }}>
             Begin Your Enquiry
           </a>
           <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer"
-            className="inline-flex items-center gap-[.55rem] text-[.6rem] font-light tracking-[.22em]
+            className="inline-flex items-center gap-[.55rem] text-[.68rem] font-light tracking-[.22em]
               uppercase text-white pb-1 border-b border-white/60 no-underline whitespace-nowrap
               hover:text-[#B8A882] hover:border-[#B8A882] transition-all"
             style={{ textShadow: '0 2px 10px rgba(0,0,0,0.9)' }}>
@@ -112,7 +112,7 @@ export default function Hero() {
         </div>
 
         <a href="/music"
-          className="self-start mt-[clamp(.75rem,2.8svh,1.5rem)] text-[.56rem] font-light tracking-[.2em] uppercase text-white/75
+          className="self-start mt-[clamp(.75rem,2.8svh,1.5rem)] text-[.64rem] font-light tracking-[.2em] uppercase text-white/75
             no-underline hover:text-[#B8A882] transition-colors"
           style={{ opacity: 0, animation: 'up .9s ease 1.35s forwards', textShadow: '0 2px 10px rgba(0,0,0,0.9)' }}>
           Explore the Ensembles ↓
@@ -128,7 +128,7 @@ export default function Hero() {
         {['Ravello','Positano','Praiano','Amalfi','Minori','Maiori','Sorrento','Sant\'Agnello','Vico Equense']
           .map((loc, i, arr) => (
             <span key={loc} className="flex items-center gap-[1.1rem]">
-              <span className="text-[.5rem] font-normal tracking-[.22em] uppercase text-white/70">
+              <span className="text-[.6rem] font-normal tracking-[.22em] uppercase text-white/70">
                 {loc}
               </span>
               {i < arr.length - 1 && (

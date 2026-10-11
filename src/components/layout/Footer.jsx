@@ -27,7 +27,7 @@ export default function Footer() {
               text-white/75 no-underline block mb-2 hover:text-[#B8A882] transition-colors">
             Wedding Music Ravello
           </a>
-          <p className="text-[.52rem] font-light tracking-[.16em] uppercase text-white/25 leading-[1.7]">
+          <p className="text-[.6rem] font-light tracking-[.16em] uppercase text-white/45 leading-[1.7]">
             Bespoke Wedding Music · Amalfi Coast · Southern Italy
           </p>
         </div>
@@ -36,8 +36,8 @@ export default function Footer() {
         <nav aria-label="Footer navigation" className="flex flex-col gap-3">
           {navLinks.map(({ label, href }) => (
             <a key={label} href={href}
-              className="text-[.56rem] font-light tracking-[.18em] uppercase no-underline
-                text-white/40 hover:text-[#B8A882] transition-colors">
+              className="text-[.64rem] font-light tracking-[.18em] uppercase no-underline
+                text-white/60 hover:text-[#B8A882] transition-colors">
               {label}
             </a>
           ))}
@@ -47,17 +47,17 @@ export default function Footer() {
 
       {/* Legal */}
       <div className="flex items-center gap-4 flex-wrap
-        text-[.5rem] font-light tracking-[.14em] text-white/20">
+        text-[.6rem] font-light tracking-[.14em] text-white/40">
         <span>© {new Date().getFullYear()} Wedding Music Ravello. All rights reserved.</span>
         <span className="text-[#B8A882]/20" aria-hidden="true">·</span>
         <a href="/privacy"
-          className="text-white/35 no-underline hover:text-[#B8A882] transition-colors">
+          className="text-white/55 no-underline hover:text-[#B8A882] transition-colors">
           Privacy Policy
         </a>
         <span className="text-[#B8A882]/20" aria-hidden="true">·</span>
         <button type="button" onClick={openCookieSettings}
           className="bg-transparent border-0 p-0 cursor-pointer font-light tracking-[.14em]
-            text-white/35 no-underline hover:text-[#B8A882] transition-colors">
+            text-white/55 no-underline hover:text-[#B8A882] transition-colors">
           Cookie Settings
         </button>
         <span className="text-[#B8A882]/20" aria-hidden="true">·</span>

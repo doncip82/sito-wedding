@@ -17,8 +17,8 @@ const NAV_ITEMS = [
   { label: 'About', href: '/#about' },
 ]
 
-const DROPDOWN_LINK = `block px-5 py-2.5 text-[.52rem] tracking-[.18em] uppercase
-  text-[#404040] hover:text-[#8A7A5A] no-underline transition-colors
+const DROPDOWN_LINK = `block px-5 py-2.5 text-[.6rem] tracking-[.18em] uppercase
+  text-[#2B2B2B] hover:text-[#8A7A5A] no-underline transition-colors
   border-b border-black/[.05] last:border-b-0 font-light`
 
 export default function NavBar() {
@@ -49,7 +49,7 @@ export default function NavBar() {
 
   const navBg      = scrolled ? 'bg-[rgba(249,248,247,0.97)] backdrop-blur-sm border-b border-black/[.09]' : ''
   const logoColor  = scrolled || !isHome ? 'text-[#1A1A1A]'                              : 'text-[#F9F8F7]'
-  const linkColor  = scrolled || !isHome ? 'text-[#404040] hover:text-[#8A7A5A]'         : 'text-white/85 hover:text-[#B8A882]'
+  const linkColor  = scrolled || !isHome ? 'text-[#2B2B2B] hover:text-[#8A7A5A]'         : 'text-white/85 hover:text-[#B8A882]'
   const linkWeight = scrolled || !isHome ? 'font-light'                                   : 'font-normal'
   const ctaColor   = scrolled || !isHome
     ? 'text-[#1A1A1A] border-black/45 hover:text-[#8A7A5A] hover:border-[#8A7A5A]'
@@ -63,7 +63,7 @@ export default function NavBar() {
   const enquireShadow = (!scrolled && isHome && !menuOpen) ? '[text-shadow:0_1px_10px_rgba(0,0,0,0.35)]' : ''
   const hamColor   = menuOpen ? 'bg-white' : (scrolled || !isHome ? 'bg-[#1A1A1A]' : 'bg-white')
 
-  const NAV_TEXT = `text-[.58rem] tracking-[.2em] uppercase transition-colors duration-300 ${linkWeight} ${linkColor}`
+  const NAV_TEXT = `text-[.66rem] tracking-[.2em] uppercase transition-colors duration-300 ${linkWeight} ${linkColor}`
 
   // ── Desktop ────────────────────────────────────────────────────────────────
   const renderDesktopItem = (item) => {
@@ -130,7 +130,7 @@ export default function NavBar() {
         <div className="flex items-center gap-5 md:gap-0">
           <a
             href="/contact"
-            className={`inline-block text-[.6rem] tracking-[.22em] uppercase no-underline
+            className={`inline-block text-[.68rem] tracking-[.22em] uppercase no-underline
               pb-[2px] border-b-[.5px] transition-all duration-300 ${ctaWeight} ${enquireColor} ${enquireShadow}`}
           >
             Enquire

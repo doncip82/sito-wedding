@@ -34,23 +34,23 @@ export default function ViolinSolo() {
       </Head>
 
       {/* Hero — minimal, text-forward */}
-      <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(5rem,12vw,9rem)]">
+      <section className="bg-[#F2EDE6] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(5rem,12vw,9rem)]">
         <div className="max-w-3xl">
-          <p className="text-[.56rem] font-light tracking-[.25em] uppercase text-[#B8A882]
+          <p className="text-[.64rem] font-light tracking-[.25em] uppercase text-[#6E6046]
             flex items-center gap-3 mb-5">
             <span className="inline-block w-[22px] h-[.5px] bg-[#B8A882]" />
             Solo Performance · Donato Cipriano
           </p>
-          <h1 className="font-serif italic font-light leading-[1.02] text-[#F9F8F7] mb-6"
+          <h1 className="font-serif italic font-light leading-[1.02] text-[#1A1A1A] mb-6"
             style={{ fontSize: 'clamp(3rem,7vw,6rem)' }}>
             Violin Solo
           </h1>
           <div className="w-9 h-[.5px] bg-[#B8A882] mb-8" />
-          <p className="text-[.8rem] font-serif italic font-light text-white/50
+          <p className="text-[.92rem] font-serif italic font-light text-[#2B2B2B]
             max-w-[36ch] leading-[1.8]">
             "There are moments within a wedding that belong to a single voice."
           </p>
-          <EnquiryLinks className="mt-10" ensemble="Violin Solo" message={weddingMessage({ interest: 'the solo violin' })} />
+          <EnquiryLinks tone="light" className="mt-10" ensemble="Violin Solo" message={weddingMessage({ interest: 'the solo violin' })} />
         </div>
       </section>
 
@@ -75,8 +75,8 @@ export default function ViolinSolo() {
             One Instrument.<br />Every Emotion.
           </h2>
           <div className="w-9 h-[.5px] bg-[#B8A882] mb-6" />
-          <p className="text-[.72rem] font-light tracking-[.05em] leading-[2]
-            text-[#404040] mb-6">
+          <p className="text-[.95rem] font-normal tracking-[.015em] leading-[1.85]
+            text-[#2B2B2B] mb-6">
             {ensemble.description}
           </p>
           <div className="flex items-center gap-6 flex-wrap mt-4">
@@ -118,8 +118,8 @@ export default function ViolinSolo() {
               <h3 className="font-serif italic font-light text-[1.1rem] text-[#1A1A1A] mb-3">
                 {moment}
               </h3>
-              <p className="text-[.63rem] font-light tracking-[.06em] leading-[1.95]
-                text-[#404040]">
+              <p className="text-[.84rem] font-normal tracking-[.015em] leading-[1.85]
+                text-[#2B2B2B]">
                 {desc}
               </p>
             </div>
@@ -128,13 +128,13 @@ export default function ViolinSolo() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3rem,8vw,6rem)]
+      <section className="bg-[#F2EDE6] border-t border-black/[.06] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3rem,8vw,6rem)]
         flex items-center justify-between gap-8 flex-wrap">
-        <p className="font-serif italic font-light leading-[1.18] text-white/80 max-w-[24ch]"
+        <p className="font-serif italic font-light leading-[1.18] text-[#1A1A1A] max-w-[24ch]"
           style={{ fontSize: 'clamp(1.7rem,3.5vw,2.8rem)' }}>
           Enquire About<br />This Performance.
         </p>
-        <EnquiryLinks ensemble="Violin Solo" message={weddingMessage({ interest: 'the solo violin' })} />
+        <EnquiryLinks tone="light" ensemble="Violin Solo" message={weddingMessage({ interest: 'the solo violin' })} />
       </section>
 
     </div>

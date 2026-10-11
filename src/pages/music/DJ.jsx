@@ -40,7 +40,7 @@ export default function MusicDJ() {
         </video>
         <div className="absolute inset-0 bg-[rgba(26,26,26,.38)]" />
         <div className="relative z-10 max-w-4xl">
-          <p className="text-[.56rem] font-light tracking-[.25em] uppercase text-[#B8A882]
+          <p className="text-[.64rem] font-light tracking-[.25em] uppercase text-[#B8A882]
             flex items-center gap-3 mb-5">
             <span className="inline-block w-[22px] h-[.5px] bg-[#B8A882]" />
             DJ · Evening Reception
@@ -50,7 +50,7 @@ export default function MusicDJ() {
             DJ Service
           </h1>
           <div className="w-9 h-[.5px] bg-[#B8A882] mb-8" />
-          <p className="text-[.72rem] font-light tracking-[.06em] leading-[2] text-white/70 max-w-[60ch]">
+          <p className="text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-white/70 max-w-[60ch]">
             Curated DJ coordination for the evening reception — selected for experience at
             the specific venues of the Amalfi Coast, not for volume of bookings.
           </p>
@@ -65,7 +65,7 @@ export default function MusicDJ() {
             Editorial Selection,<br />Not a Directory
           </h2>
           <div className="w-9 h-[.5px] bg-[#B8A882] mb-8" />
-          <div className="space-y-6 text-[.72rem] font-light tracking-[.05em] leading-[2] text-[#404040]">
+          <div className="space-y-6 text-[.95rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B]">
             <p>
               Outdoor amplification in Ravello requires a separate <em>autorizzazione</em>
               from the local <em>Comune</em> for events running past 23:00. DJ set-up at
@@ -92,13 +92,13 @@ export default function MusicDJ() {
         </div>
       </section>
 
-      <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3rem,8vw,6rem)]
+      <section className="bg-[#F2EDE6] border-t border-black/[.06] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3rem,8vw,6rem)]
         flex items-center justify-between gap-8 flex-wrap">
-        <p className="font-serif italic font-light leading-[1.18] text-white/80 max-w-[26ch]"
+        <p className="font-serif italic font-light leading-[1.18] text-[#1A1A1A] max-w-[26ch]"
           style={{ fontSize: 'clamp(1.7rem,3.5vw,2.8rem)' }}>
           Coordinate the Full<br />Evening Programme.
         </p>
-        <EnquiryLinks ensemble="DJ" message={weddingMessage({ interest: 'a DJ set' })} />
+        <EnquiryLinks tone="light" ensemble="DJ" message={weddingMessage({ interest: 'a DJ set' })} />
       </section>
     </div>
   )

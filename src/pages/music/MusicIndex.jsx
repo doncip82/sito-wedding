@@ -112,7 +112,7 @@ export default function MusicIndex() {
         <h1 className="font-serif italic font-light text-[clamp(2.8rem,7vw,5rem)] text-[#1A1A1A] leading-[1.1] max-w-2xl">
           Music for<br />your event
         </h1>
-        <p className="mt-6 text-[.8rem] font-light tracking-[.06em] text-[#404040] max-w-lg leading-relaxed">
+        <p className="mt-6 text-[.92rem] font-normal tracking-[.015em] text-[#2B2B2B] max-w-lg leading-relaxed">
           Choose from a curated selection of live music — from intimate string duos
           to full ensembles, jazz, opera and beyond. Every format is personally
           directed and tailored to your ceremony.
@@ -144,7 +144,7 @@ export default function MusicIndex() {
 
               {/* Content */}
               <div className="absolute bottom-0 left-0 right-0 p-5">
-                <p className="text-[.44rem] tracking-[.22em] uppercase text-[#B8A882] font-light mb-1.5">
+                <p className="text-[.56rem] tracking-[.22em] uppercase text-[#B8A882] font-light mb-1.5">
                   {sub}
                 </p>
                 <h2 className="font-serif italic font-light text-[clamp(1.1rem,3vw,1.5rem)] text-white leading-tight">
@@ -160,15 +160,15 @@ export default function MusicIndex() {
       </section>
 
       {/* CTA strip */}
-      <section className="py-16 px-[clamp(1.5rem,6vw,5rem)] bg-[#1A1A1A] text-center">
-        <p className="text-[.52rem] tracking-[.28em] uppercase text-[#B8A882] font-light mb-4">
+      <section className="py-16 px-[clamp(1.5rem,6vw,5rem)] bg-[#F2EDE6] border-t border-black/[.06] text-center">
+        <p className="text-[.6rem] tracking-[.28em] uppercase text-[#6E6046] font-light mb-4">
           Not sure which format is right for you?
         </p>
         <a
           href="/contact"
-          className="inline-block text-[.58rem] tracking-[.22em] uppercase font-light
-            text-white/80 border-b-[.5px] border-white/40 pb-[2px]
-            hover:text-[#B8A882] hover:border-[#B8A882] transition-all duration-300 no-underline"
+          className="inline-block text-[.66rem] tracking-[.22em] uppercase font-light
+            text-[#1A1A1A] border-b-[.5px] border-[#1A1A1A]/60 pb-[2px]
+            hover:text-[#8A7A5A] hover:border-[#8A7A5A] transition-all duration-300 no-underline"
         >
           Enquire
         </a>

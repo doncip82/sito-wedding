@@ -81,7 +81,7 @@ export default function FAQ() {
           style={{ fontSize: 'clamp(2rem,4.5vw,3.4rem)', maxWidth: '20ch' }}>
           Frequently Asked Questions
         </h1>
-        <p className="text-[.72rem] font-light tracking-[.05em] leading-[1.95] text-[#404040] max-w-[54ch]">
+        <p className="text-[.95rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B] max-w-[54ch]">
           Live wedding music on the Amalfi Coast — ensembles, venues, booking and repertoire.
           If your question isn&rsquo;t here, we&rsquo;re a message away.
         </p>
@@ -97,7 +97,7 @@ export default function FAQ() {
                 style={{ fontSize: 'clamp(1.15rem,2.2vw,1.55rem)', maxWidth: '40ch' }}>
                 {q}
               </h2>
-              <p className="text-[.72rem] font-light tracking-[.04em] leading-[1.95] text-[#404040] max-w-[68ch]">
+              <p className="text-[.95rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B] max-w-[68ch]">
                 {a}
               </p>
             </div>
@@ -106,13 +106,13 @@ export default function FAQ() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3rem,8vw,6rem)]
+      <section className="bg-[#F2EDE6] border-t border-black/[.06] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3rem,8vw,6rem)]
         flex items-center justify-between gap-8 flex-wrap">
-        <p className="font-serif italic font-light leading-[1.18] text-white/80 max-w-[26ch]"
+        <p className="font-serif italic font-light leading-[1.18] text-[#1A1A1A] max-w-[26ch]"
           style={{ fontSize: 'clamp(1.7rem,3.5vw,2.8rem)' }}>
           Still have a question?
         </p>
-        <EnquiryLinks />
+        <EnquiryLinks tone="light" />
       </section>
     </div>
   )

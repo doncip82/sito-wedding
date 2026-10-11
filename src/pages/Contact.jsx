@@ -89,11 +89,11 @@ export default function Contact() {
   }
 
   const inputClass = `w-full bg-transparent border-b border-black/[.25] pb-3 pt-1
-    text-[.78rem] font-normal tracking-[.03em] text-[#1A1A1A] placeholder-[#404040]/60
+    text-[.95rem] font-normal tracking-[.03em] text-[#1A1A1A] placeholder-[#404040]/60
     focus:outline-none focus:border-[#B8A882] transition-colors`
 
-  const labelClass = `block text-[.6rem] font-normal tracking-[.18em] uppercase
-    text-[#404040] mb-2.5`
+  const labelClass = `block text-[.68rem] font-normal tracking-[.18em] uppercase
+    text-[#2B2B2B] mb-2.5`
 
   return (
     <div className="bg-[#F9F8F7] pt-[68px]">
@@ -123,7 +123,7 @@ export default function Contact() {
         }} />
 
         <div className="relative z-10">
-          <p className="text-[.56rem] font-light tracking-[.25em] uppercase text-[#B8A882]
+          <p className="text-[.64rem] font-light tracking-[.25em] uppercase text-[#B8A882]
             flex items-center gap-3 mb-5">
             <span className="inline-block w-[22px] h-[.5px] bg-[#B8A882]" />
             Begin Your Enquiry
@@ -132,8 +132,8 @@ export default function Contact() {
             style={{ fontSize: 'clamp(2.5rem,5vw,5rem)', lineHeight: 1.05 }}>
             Every celebration<br />is singular.
           </h1>
-          <p className="text-[.68rem] font-light tracking-[.1em] text-white/75
-            max-w-[40ch] leading-[1.95]">
+          <p className="text-[.9rem] font-light tracking-[.1em] text-white/75
+            max-w-[40ch] leading-[1.85]">
             Tell us about your wedding — venue, date, and the kind of music you imagine.
             We respond to all enquiries within 48 hours.
           </p>
@@ -148,7 +148,7 @@ export default function Contact() {
             <h2 className="font-serif italic font-light text-[2.5rem] text-[#1A1A1A] mb-4">
               Thank you.
             </h2>
-            <p className="text-[.72rem] font-light tracking-[.05em] leading-[2] text-[#404040]">
+            <p className="text-[.95rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B]">
               Your enquiry has been received. We will be in touch within 48 hours.
             </p>
           </div>
@@ -234,10 +234,10 @@ export default function Contact() {
                 <input type="checkbox" name="consent" required
                   checked={form.consent} onChange={handleChange}
                   className="mt-[.15rem] w-[13px] h-[13px] shrink-0 accent-[#8A7A5A] cursor-pointer" />
-                <span className="text-[.56rem] font-light tracking-[.04em] leading-[1.7] text-[#404040]">
+                <span className="text-[.64rem] font-light tracking-[.04em] leading-[1.7] text-[#2B2B2B]">
                   I have read and agree to the{' '}
                   <a href="/privacy" target="_blank" rel="noopener noreferrer"
-                    className="text-[#8A7A5A] no-underline border-b border-[#8A7A5A]/40 hover:border-[#8A7A5A]">
+                    className="text-[#6E6046] no-underline border-b border-[#8A7A5A]/40 hover:border-[#8A7A5A]">
                     Privacy Policy
                   </a>.
                 </span>
@@ -249,21 +249,21 @@ export default function Contact() {
                     border-x-0 font-sans disabled:opacity-40 disabled:cursor-default">
                   {sending ? 'Sending…' : 'Send Enquiry'}
                 </button>
-                <p className="text-[.5rem] font-light tracking-[.14em] text-[#404040]/60">
+                <p className="text-[.6rem] font-light tracking-[.14em] text-[#2B2B2B]">
                   Or write directly to{' '}
                   <a href="mailto:info@weddingmusicravello.com"
-                    className="text-[#8A7A5A] no-underline border-b border-[#8A7A5A]/40">
+                    className="text-[#6E6046] no-underline border-b border-[#8A7A5A]/40">
                     info@weddingmusicravello.com
                   </a>{' '}
                   or{' '}
                   <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer"
-                    className="text-[#8A7A5A] no-underline border-b border-[#8A7A5A]/40">
+                    className="text-[#6E6046] no-underline border-b border-[#8A7A5A]/40">
                     message us on WhatsApp
                   </a>
                 </p>
               </div>
               {error && (
-                <p className="text-[.58rem] font-light tracking-[.04em] leading-[1.8] text-[#9A4B39] max-w-[46ch]">
+                <p className="text-[.66rem] font-light tracking-[.04em] leading-[1.8] text-[#9A4B39] max-w-[46ch]">
                   {error}
                 </p>
               )}
@@ -282,10 +282,10 @@ export default function Contact() {
           { label: 'WhatsApp', value: 'Message us', href: whatsappUrl() },
         ].map(({ label, value, href }) => (
           <div key={label}>
-            <p className="text-[.5rem] font-light tracking-[.2em] uppercase text-[#B8A882] mb-2">
+            <p className="text-[.6rem] font-light tracking-[.2em] uppercase text-[#6E6046] mb-2">
               {label}
             </p>
-            <p className="text-[.68rem] font-light tracking-[.06em] leading-[1.8] text-[#1A1A1A]">
+            <p className="text-[.9rem] font-normal tracking-[.015em] leading-[1.8] text-[#1A1A1A]">
               {href ? (
                 <a href={href} target="_blank" rel="noopener noreferrer"
                   className="text-[#1A1A1A] no-underline border-b border-[#B8A882]/60 hover:border-[#8A7A5A]">

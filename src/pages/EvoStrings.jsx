@@ -45,7 +45,7 @@ export default function EvoStrings() {
         </video>
         <div className="absolute inset-0 bg-[rgba(26,26,26,.38)]" />
         <div className="relative z-10 max-w-4xl">
-          <p className="text-[.56rem] font-light tracking-[.25em] uppercase text-[#B8A882]
+          <p className="text-[.64rem] font-light tracking-[.25em] uppercase text-[#B8A882]
             flex items-center gap-3 mb-5">
             <span className="inline-block w-[22px] h-[.5px] bg-[#B8A882]" />
             String Ensemble · Amalfi Coast
@@ -54,12 +54,12 @@ export default function EvoStrings() {
             style={{ fontSize: 'clamp(3rem,7vw,6rem)' }}>
             EvoStrings
           </h1>
-          <p className="text-[.68rem] font-light tracking-[.14em] text-white/80
-            max-w-[44ch] leading-[1.95] mb-8">
+          <p className="text-[.9rem] font-light tracking-[.14em] text-white/80
+            max-w-[44ch] leading-[1.85] mb-8">
             {ensemble.subLabel}
           </p>
           <div className="w-9 h-[.5px] bg-[#B8A882] mb-8" />
-          <p className="text-[.72rem] font-light tracking-[.06em] leading-[2]
+          <p className="text-[.95rem] font-light tracking-[.015em] leading-[1.85]
             text-white/70 max-w-[60ch]">
             A reference string ensemble for the luxury wedding sector on the
             Amalfi Coast — available as string duo, trio and quartet.
@@ -77,8 +77,8 @@ export default function EvoStrings() {
               Three Voices,<br />One Silence Broken
             </h2>
             <div className="w-9 h-[.5px] bg-[#B8A882] mb-8" />
-            <p className="text-[.72rem] font-light tracking-[.05em] leading-[2]
-              text-[#404040] max-w-[58ch] mb-6">
+            <p className="text-[.95rem] font-normal tracking-[.015em] leading-[1.85]
+              text-[#2B2B2B] max-w-[58ch] mb-6">
               {ensemble.description}
             </p>
             <div className="flex items-center gap-6 flex-wrap mt-8">
@@ -100,12 +100,12 @@ export default function EvoStrings() {
               <div key={label}
                 className="py-6 border-b border-black/[.09] group cursor-default">
                 <div className="flex items-start gap-4">
-                  <span className="text-[.5rem] font-normal tracking-[.22em] uppercase
-                    text-[#B8A882] pt-[.15rem] w-12 flex-shrink-0">
+                  <span className="text-[.6rem] font-normal tracking-[.22em] uppercase
+                    text-[#6E6046] pt-[.15rem] w-12 flex-shrink-0">
                     {label}
                   </span>
-                  <p className="text-[.64rem] font-light tracking-[.06em] leading-[1.95]
-                    text-[#404040] group-hover:text-[#1A1A1A] transition-colors">
+                  <p className="text-[.84rem] font-normal tracking-[.015em] leading-[1.85]
+                    text-[#2B2B2B] group-hover:text-[#1A1A1A] transition-colors">
                     {desc}
                   </p>
                 </div>
@@ -116,13 +116,13 @@ export default function EvoStrings() {
       </section>
 
       {/* Video Section */}
-      <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(4rem,10vw,8rem)]">
-        <p className="text-[.56rem] font-light tracking-[.25em] uppercase text-[#B8A882]
+      <section className="bg-[#F2EDE6] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(4rem,10vw,8rem)]">
+        <p className="text-[.64rem] font-light tracking-[.25em] uppercase text-[#6E6046]
           flex items-center gap-3 mb-5">
           <span className="inline-block w-[22px] h-[.5px] bg-[#B8A882]" />
           Live Performances
         </p>
-        <h2 className="font-serif italic font-light leading-[1.08] text-[#F9F8F7] mb-[clamp(2.5rem,6vw,5rem)]"
+        <h2 className="font-serif italic font-light leading-[1.08] text-[#1A1A1A] mb-[clamp(2.5rem,6vw,5rem)]"
           style={{ fontSize: 'clamp(2rem,4.5vw,3.6rem)', maxWidth: '18ch' }}>
           Watch EvoStrings Live
         </h2>
@@ -199,10 +199,10 @@ export default function EvoStrings() {
           {/* Spotify */}
           <div className="border border-black/[.09] overflow-hidden flex flex-col rounded-xl">
             <div className="flex items-center justify-between px-4 py-3 border-b border-black/[.09]">
-              <span className="text-[.5rem] tracking-[.22em] uppercase font-light text-[#404040]">Spotify</span>
+              <span className="text-[.6rem] tracking-[.22em] uppercase font-light text-[#2B2B2B]">Spotify</span>
               <a href="https://open.spotify.com/artist/5XXjv0dBUCtfD2Blqzk5UD"
                 target="_blank" rel="noopener noreferrer"
-                className="text-[.46rem] tracking-[.16em] uppercase text-[#B8A882] no-underline hover:text-[#8A7A5A] transition-colors">
+                className="text-[.6rem] tracking-[.16em] uppercase text-[#6E6046] no-underline hover:text-[#1A1A1A] transition-colors">
                 Follow ↗
               </a>
             </div>
@@ -220,10 +220,10 @@ export default function EvoStrings() {
           {/* Instagram */}
           <div className="border border-black/[.09] overflow-hidden flex flex-col rounded-xl">
             <div className="flex items-center justify-between px-4 py-3 border-b border-black/[.09]">
-              <span className="text-[.5rem] tracking-[.22em] uppercase font-light text-[#404040]">Instagram</span>
+              <span className="text-[.6rem] tracking-[.22em] uppercase font-light text-[#2B2B2B]">Instagram</span>
               <a href="https://www.instagram.com/evostringslive"
                 target="_blank" rel="noopener noreferrer"
-                className="text-[.46rem] tracking-[.16em] uppercase text-[#B8A882] no-underline hover:text-[#8A7A5A] transition-colors">
+                className="text-[.6rem] tracking-[.16em] uppercase text-[#6E6046] no-underline hover:text-[#1A1A1A] transition-colors">
                 Follow ↗
               </a>
             </div>
@@ -241,10 +241,10 @@ export default function EvoStrings() {
           {/* YouTube */}
           <div className="border border-black/[.09] overflow-hidden flex flex-col rounded-xl">
             <div className="flex items-center justify-between px-4 py-3 border-b border-black/[.09]">
-              <span className="text-[.5rem] tracking-[.22em] uppercase font-light text-[#404040]">YouTube</span>
+              <span className="text-[.6rem] tracking-[.22em] uppercase font-light text-[#2B2B2B]">YouTube</span>
               <a href="https://www.youtube.com/watch?v=35YL651-TtU"
                 target="_blank" rel="noopener noreferrer"
-                className="text-[.46rem] tracking-[.16em] uppercase text-[#B8A882] no-underline hover:text-[#8A7A5A] transition-colors">
+                className="text-[.6rem] tracking-[.16em] uppercase text-[#6E6046] no-underline hover:text-[#1A1A1A] transition-colors">
                 Watch ↗
               </a>
             </div>
@@ -276,13 +276,13 @@ export default function EvoStrings() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3rem,8vw,6rem)]
+      <section className="bg-[#F2EDE6] border-t border-black/[.06] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3rem,8vw,6rem)]
         flex items-center justify-between gap-8 flex-wrap">
-        <p className="font-serif italic font-light leading-[1.18] text-white/80 max-w-[24ch]"
+        <p className="font-serif italic font-light leading-[1.18] text-[#1A1A1A] max-w-[24ch]"
           style={{ fontSize: 'clamp(1.7rem,3.5vw,2.8rem)' }}>
           Book EvoStrings<br />for Your Wedding.
         </p>
-        <EnquiryLinks ensemble="EvoStrings" message={weddingMessage({ interest: 'EvoStrings' })} />
+        <EnquiryLinks tone="light" ensemble="EvoStrings" message={weddingMessage({ interest: 'EvoStrings' })} />
       </section>
 
     </div>

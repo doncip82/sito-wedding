@@ -58,22 +58,29 @@ export default function OccasionMarriageProposal() {
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
       </Head>
 
-      <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(5rem,12vw,9rem)]">
-        <div className="max-w-4xl">
-          <p className="text-[.56rem] font-light tracking-[.25em] uppercase text-[#B8A882]
-            flex items-center gap-3 mb-5">
-            <span className="inline-block w-[22px] h-[.5px] bg-[#B8A882]" />
-            Occasions · Proposal
-          </p>
-          <h1 className="font-serif italic font-light leading-[1.02] text-[#F9F8F7] mb-6"
-            style={{ fontSize: 'clamp(3rem,7vw,6rem)' }}>
-            Marriage<br />Proposals
-          </h1>
-          <p className="text-[.72rem] font-light tracking-[.06em] leading-[2] text-white/55 max-w-[60ch]">
-            A violin solo on a panoramic terrace above the Gulf of Salerno, or a saxophone
-            at golden hour along the Positano coastline. Discreetly arranged, precisely
-            timed — music that shapes the setting without announcing itself.
-          </p>
+      <section className="bg-[#F2EDE6] grid grid-cols-1 md:grid-cols-[minmax(0,1.08fr)_minmax(0,.92fr)]">
+        <div className="px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3.5rem,8vw,7rem)] self-center">
+          <div className="max-w-4xl">
+            <p className="text-[.64rem] font-light tracking-[.25em] uppercase text-[#6E6046]
+              flex items-center gap-3 mb-5">
+              <span className="inline-block w-[22px] h-[.5px] bg-[#B8A882]" />
+              Occasions · Proposal
+            </p>
+            <h1 className="font-serif italic font-light leading-[1.02] text-[#1A1A1A] mb-6"
+              style={{ fontSize: 'clamp(3rem,7vw,6rem)' }}>
+              Marriage<br />Proposals
+            </h1>
+            <p className="text-[.95rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B] max-w-[60ch]">
+              A violin solo on a panoramic terrace above the Gulf of Salerno, or a saxophone
+              at golden hour along the Positano coastline. Discreetly arranged, precisely
+              timed — music that shapes the setting without announcing itself.
+            </p>
+          </div>
+        </div>
+        <div className="relative min-h-[52svh] md:min-h-[clamp(30rem,72svh,48rem)] overflow-hidden">
+          <img src="/images/Proposal.jpg" alt="Marriage proposal on the Amalfi Coast" fetchpriority="high"
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ objectPosition: 'center' }} />
         </div>
       </section>
 
@@ -84,7 +91,7 @@ export default function OccasionMarriageProposal() {
             Coordinated With<br />the Setting in Mind
           </h2>
           <div className="w-9 h-[.5px] bg-[#B8A882] mb-8" />
-          <div className="space-y-6 text-[.72rem] font-light tracking-[.05em] leading-[2] text-[#404040]">
+          <div className="space-y-6 text-[.95rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B]">
             <p>
               A proposal with live music requires coordination between the musician, the
               venue, and the moment — not a performance that simply happens to be present.
@@ -116,24 +123,24 @@ export default function OccasionMarriageProposal() {
         </div>
       </section>
 
-      <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(4rem,10vw,8rem)]">
-        <p className="eyebrow mb-5 text-[#B8A882]">Locations</p>
-        <h2 className="section-title mb-12 text-[#F9F8F7]" style={{ maxWidth: '22ch' }}>
+      <section className="bg-[#F2EDE6] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(4rem,10vw,8rem)]">
+        <p className="eyebrow mb-5 text-[#6E6046]">Locations</p>
+        <h2 className="section-title mb-12 text-[#1A1A1A]" style={{ maxWidth: '22ch' }}>
           Three Settings<br />on the Coast
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border-t border-white/[.08]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border-t border-black/[.09]">
           {LOCATIONS.map(({ name, detail, desc }) => (
             <div key={name}
-              className="py-8 border-b border-white/[.08]
+              className="py-8 border-b border-black/[.09]
                 [&:not(:last-child)]:md:border-r [&:not(:last-child)]:md:pr-10
                 [&:not(:first-child)]:md:pl-10">
-              <p className="text-[.5rem] font-light tracking-[.2em] uppercase text-[#B8A882] mb-2">
+              <p className="text-[.6rem] font-light tracking-[.2em] uppercase text-[#6E6046] mb-2">
                 {detail}
               </p>
-              <h3 className="font-serif italic font-light text-[1.2rem] text-[#F9F8F7] mb-4">
+              <h3 className="font-serif italic font-light text-[1.2rem] text-[#1A1A1A] mb-4">
                 {name}
               </h3>
-              <p className="text-[.66rem] font-light tracking-[.05em] leading-[2] text-white/50">
+              <p className="text-[.86rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B]">
                 {desc}
               </p>
             </div>
@@ -148,8 +155,8 @@ export default function OccasionMarriageProposal() {
             <a key={label} href={href}
               className="inline-flex items-center px-5 py-3 border border-[#1A1A1A]/[.18]
                 no-underline transition-all duration-300
-                text-[.5rem] font-light tracking-[.1em] uppercase
-                text-[#404040] hover:border-[#B8A882] hover:text-[#1A1A1A]">
+                text-[.6rem] font-light tracking-[.1em] uppercase
+                text-[#2B2B2B] hover:border-[#B8A882] hover:text-[#1A1A1A]">
               {label}
             </a>
           ))}
@@ -166,19 +173,19 @@ export default function OccasionMarriageProposal() {
           ].map(({ href, label, desc }) => (
             <div key={href} className="flex items-start gap-6 py-5 border-b border-black/[.06] flex-wrap">
               <a href={href} className="link-underline whitespace-nowrap">{label}</a>
-              <span className="text-[.65rem] font-light text-[#404040] tracking-[.04em] leading-[2]">{desc}</span>
+              <span className="text-[.86rem] font-normal text-[#2B2B2B] tracking-[.015em] leading-[1.85]">{desc}</span>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3rem,8vw,6rem)]
+      <section className="bg-[#F2EDE6] border-t border-black/[.06] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3rem,8vw,6rem)]
         flex items-center justify-between gap-8 flex-wrap">
-        <p className="font-serif italic font-light leading-[1.18] text-white/80 max-w-[26ch]"
+        <p className="font-serif italic font-light leading-[1.18] text-[#1A1A1A] max-w-[26ch]"
           style={{ fontSize: 'clamp(1.7rem,3.5vw,2.8rem)' }}>
           Planning a proposal<br />on the Amalfi Coast?
         </p>
-        <EnquiryLinks message="Hello! I'm planning a marriage proposal on the Amalfi Coast and would love live music. Could you send me some information?" />
+        <EnquiryLinks tone="light" message="Hello! I'm planning a marriage proposal on the Amalfi Coast and would love live music. Could you send me some information?" />
       </section>
     </div>
   )

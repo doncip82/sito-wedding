@@ -38,7 +38,7 @@ const OccasionCorporateEvents        = lazy(() => import('@/pages/occasions/Corp
 function PageLoader() {
   return (
     <div className="min-h-screen bg-[#F9F8F7] flex items-center justify-center">
-      <span className="text-[.56rem] font-light tracking-[.25em] uppercase text-[#B8A882]">
+      <span className="text-[.64rem] font-light tracking-[.25em] uppercase text-[#6E6046]">
         Loading…
       </span>
     </div>

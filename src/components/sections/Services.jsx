@@ -47,28 +47,28 @@ function EnsembleCard({ ensemble, index }) {
       ──────────────────────────────────────────────────────────────── */}
       <button className="flex items-center gap-3 px-7 py-[.85rem]
         border-t border-black/[.09] hover:bg-[rgba(184,168,130,.06)] transition-colors text-left">
-        <span className="text-[.7rem] text-[#B8A882] opacity-70">▷</span>
-        <span className="text-[.54rem] font-light tracking-[.16em] uppercase text-[#404040]">
+        <span className="text-[.92rem] text-[#B8A882] opacity-70">▷</span>
+        <span className="text-[.62rem] font-light tracking-[.16em] uppercase text-[#2B2B2B]">
           Watch {ensemble.name} in Performance
         </span>
       </button>
 
       {/* Copy */}
       <div className="px-7 pt-6 pb-8 flex flex-col flex-1">
-        <span className="text-[.5rem] font-light tracking-[.25em] text-[#B8A882] mb-[.85rem]">
+        <span className="text-[.6rem] font-light tracking-[.25em] text-[#B8A882] mb-[.85rem]">
           {ensemble.index}
         </span>
         <h3 className="font-serif italic font-light text-[clamp(1.4rem,2.2vw,1.9rem)]
           leading-[1.15] text-[#1A1A1A] mb-[.85rem]" itemProp="name">
           {ensemble.name}
         </h3>
-        <p className="text-[.56rem] font-light tracking-[.18em] uppercase text-[#8A7A5A]
+        <p className="text-[.64rem] font-light tracking-[.18em] uppercase text-[#6E6046]
           -mt-[.4rem] mb-[.6rem]">
           {ensemble.subLabel}
         </p>
 
         {ensemble.viralBadge && (
-          <p className="flex items-center gap-[.55rem] text-[.56rem] font-[500]
+          <p className="flex items-center gap-[.55rem] text-[.64rem] font-[500]
             tracking-[.14em] uppercase text-[#6B5C3A] mb-[.5rem]">
             <span className="w-[5px] h-[5px] rounded-full bg-[#6B5C3A] flex-shrink-0
               animate-pulse" />
@@ -76,8 +76,8 @@ function EnsembleCard({ ensemble, index }) {
           </p>
         )}
 
-        <p className="text-[.64rem] font-light tracking-[.06em] leading-[1.95]
-          text-[#404040] flex-1 mb-6">
+        <p className="text-[.84rem] font-normal tracking-[.015em] leading-[1.85]
+          text-[#2B2B2B] flex-1 mb-6">
           {ensemble.description}
         </p>
 
@@ -129,7 +129,7 @@ export default function Services() {
             A Curated Selection<br />of Artists
           </h2>
         </div>
-        <p className="text-[.64rem] font-light tracking-[.1em] leading-[1.95] text-[#404040]
+        <p className="text-[.84rem] font-normal tracking-[.1em] leading-[1.85] text-[#2B2B2B]
           max-w-[30ch] self-end text-right">
           Each ensemble and artist represented here has been selected for their ability to read
           a room, adapt to a venue, and shape the emotional arc of an event — not merely to perform.

@@ -5,8 +5,9 @@ export default {
     extend: {
       colors: {
         white:  '#F9F8F7',
+        sand:   '#F2EDE6',
         ink:    '#1A1A1A',
-        mid:    '#404040',
+        mid:    '#2B2B2B',
         gold:   '#B8A882',
         'gold-dark': '#8A7A5A',
         sage:   '#A8B09E',
@@ -17,10 +18,10 @@ export default {
         sans:  ['Montserrat', 'system-ui', 'sans-serif'],
       },
       fontSize: {
-        'eye':   ['0.56rem', { letterSpacing: '0.25em' }],
-        'label': ['0.58rem', { letterSpacing: '0.20em' }],
-        'body':  ['0.72rem', { lineHeight: '2',   letterSpacing: '0.05em' }],
-        'desc':  ['0.64rem', { lineHeight: '1.95', letterSpacing: '0.06em' }],
+        'eye':   ['0.64rem', { letterSpacing: '0.25em' }],
+        'label': ['0.66rem', { letterSpacing: '0.20em' }],
+        'body':  ['0.95rem', { lineHeight: '1.85', letterSpacing: '0.015em' }],
+        'desc':  ['0.84rem', { lineHeight: '1.85', letterSpacing: '0.02em' }],
       },
     },
   },
