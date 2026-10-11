@@ -48,7 +48,7 @@ function EnsembleCard({ ensemble, index }) {
       <button className="flex items-center gap-3 px-7 py-[.85rem]
         border-t border-black/[.09] hover:bg-[rgba(184,168,130,.06)] transition-colors text-left">
         <span className="text-[.92rem] text-[#B8A882] opacity-70">▷</span>
-        <span className="text-[.62rem] font-light tracking-[.16em] uppercase text-[#404040]">
+        <span className="text-[.62rem] font-light tracking-[.16em] uppercase text-[#2B2B2B]">
           Watch {ensemble.name} in Performance
         </span>
       </button>
@@ -76,8 +76,8 @@ function EnsembleCard({ ensemble, index }) {
           </p>
         )}
 
-        <p className="text-[.84rem] font-light tracking-[.015em] leading-[1.85]
-          text-[#404040] flex-1 mb-6">
+        <p className="text-[.84rem] font-normal tracking-[.015em] leading-[1.85]
+          text-[#2B2B2B] flex-1 mb-6">
           {ensemble.description}
         </p>
 
@@ -129,7 +129,7 @@ export default function Services() {
             A Curated Selection<br />of Artists
           </h2>
         </div>
-        <p className="text-[.84rem] font-light tracking-[.1em] leading-[1.85] text-[#404040]
+        <p className="text-[.84rem] font-normal tracking-[.1em] leading-[1.85] text-[#2B2B2B]
           max-w-[30ch] self-end text-right">
           Each ensemble and artist represented here has been selected for their ability to read
           a room, adapt to a venue, and shape the emotional arc of an event — not merely to perform.

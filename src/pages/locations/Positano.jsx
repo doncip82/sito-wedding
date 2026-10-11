@@ -42,7 +42,7 @@ export default function LocationPositano() {
             style={{ fontSize: 'clamp(3rem,7vw,6rem)' }}>
             Wedding Music<br />in Positano
           </h1>
-          <p className="text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-[#404040] max-w-[60ch]">
+          <p className="text-[.95rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B] max-w-[60ch]">
             Positano is built vertically into the cliff face above the Tyrrhenian Sea.
             Its wedding venues — Villa Treville, Le Sirenuse, and a network of private
             cliff-edge properties — require a musician who understands the logistical and
@@ -58,7 +58,7 @@ export default function LocationPositano() {
             Cliff Architecture<br />and Acoustic Precision
           </h2>
           <div className="w-9 h-[.5px] bg-[#B8A882] mb-8" />
-          <div className="space-y-6 text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-[#404040]">
+          <div className="space-y-6 text-[.95rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B]">
             <p>
               Positano's principal venues are inaccessible to standard vehicles during summer.
               The SS163 Amalfitana has width restrictions that prohibit most transport above

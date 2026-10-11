@@ -40,7 +40,7 @@ export default function MusicOpera() {
               style={{ fontSize: 'clamp(3rem,7vw,6rem)' }}>
               Opera
             </h1>
-            <p className="text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-[#404040] max-w-[60ch]">
+            <p className="text-[.95rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B] max-w-[60ch]">
               Lyric soprano and tenor, trained in the Italian <em>bel canto</em> tradition,
               for ceremony music and dinner interludes. The stone terraces of the Amalfi Coast
               provide natural resonance that no concert hall replicates.
@@ -69,7 +69,7 @@ export default function MusicOpera() {
             The Acoustic Advantage<br />of Stone Terraces
           </h2>
           <div className="w-9 h-[.5px] bg-[#B8A882] mb-8" />
-          <div className="space-y-6 text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-[#404040]">
+          <div className="space-y-6 text-[.95rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B]">
             <p>
               The stone terraces and natural amphitheatre topography of Ravello provide
               acoustic resonance that complements unamplified operatic voice — the same quality
@@ -101,7 +101,7 @@ export default function MusicOpera() {
             ].map(({ label, desc }) => (
               <div key={label} className="py-4 border-b border-black/[.06]">
                 <p className="text-[.6rem] font-light tracking-[.2em] uppercase text-[#6E6046] mb-2">{label}</p>
-                <p className="text-[.86rem] font-light tracking-[.015em] leading-[1.85] text-[#404040]">{desc}</p>
+                <p className="text-[.86rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B]">{desc}</p>
               </div>
             ))}
           </div>

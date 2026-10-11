@@ -79,7 +79,7 @@ export default function OccasionWeddingCeremony() {
               style={{ fontSize: 'clamp(3rem,7vw,6rem)' }}>
               Wedding Ceremonies<br />&amp; Receptions
             </h1>
-            <p className="text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-[#404040] max-w-[60ch]">
+            <p className="text-[.95rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B] max-w-[60ch]">
               From the first note of the processional to the last dance of the evening —
               a complete musical programme for destination weddings on the Amalfi Coast.
               String ensembles, solo violin, piano, and operatic voice, matched to the
@@ -115,7 +115,7 @@ export default function OccasionWeddingCeremony() {
               <h3 className="font-serif italic font-light text-[1.4rem] text-[#1A1A1A] mb-4">
                 {moment}
               </h3>
-              <p className="text-[.86rem] font-light tracking-[.015em] leading-[1.85] text-[#404040]">
+              <p className="text-[.86rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B]">
                 {desc}
               </p>
             </div>
@@ -134,7 +134,7 @@ export default function OccasionWeddingCeremony() {
               className="inline-flex items-center px-5 py-3 border border-[#1A1A1A]/[.18]
                 no-underline transition-all duration-300
                 text-[.6rem] font-light tracking-[.1em] uppercase
-                text-[#404040] hover:border-[#B8A882] hover:text-[#1A1A1A]">
+                text-[#2B2B2B] hover:border-[#B8A882] hover:text-[#1A1A1A]">
               {label}
             </a>
           ))}
@@ -151,7 +151,7 @@ export default function OccasionWeddingCeremony() {
           ].map(({ href, label, desc }) => (
             <div key={href} className="flex items-start gap-6 py-5 border-b border-black/[.06] flex-wrap">
               <a href={href} className="link-underline whitespace-nowrap">{label}</a>
-              <span className="text-[.86rem] font-light text-[#404040] tracking-[.015em] leading-[1.85]">{desc}</span>
+              <span className="text-[.86rem] font-normal text-[#2B2B2B] tracking-[.015em] leading-[1.85]">{desc}</span>
             </div>
           ))}
         </div>

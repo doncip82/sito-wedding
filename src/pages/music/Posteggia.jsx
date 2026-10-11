@@ -40,7 +40,7 @@ export default function MusicPosteggia() {
               style={{ fontSize: 'clamp(3rem,7vw,6rem)' }}>
               Posteggia
             </h1>
-            <p className="text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-[#404040] max-w-[60ch]">
+            <p className="text-[.95rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B] max-w-[60ch]">
               A Neapolitan street-serenade tradition performed at your wedding cocktail hour
               on the Amalfi Coast — where it was born.
             </p>
@@ -60,7 +60,7 @@ export default function MusicPosteggia() {
             A Tradition That<br />Moves Between Tables
           </h2>
           <div className="w-9 h-[.5px] bg-[#B8A882] mb-8" />
-          <div className="space-y-6 text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-[#404040]">
+          <div className="space-y-6 text-[.95rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B]">
             <p>
               <em>Posteggia</em> is a Neapolitan street-serenade tradition dating to the late
               19th century, in which a small ensemble — typically mandolin, guitar and voice —

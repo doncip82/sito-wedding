@@ -19,7 +19,7 @@ const tones = {
   },
   light: {
     primary:   `${base} font-normal text-[#1A1A1A] border-[#1A1A1A]/60 hover:text-[#8A7A5A] hover:border-[#8A7A5A]`,
-    secondary: `${base} font-light text-[#404040] border-[#8A7A5A]/50 hover:text-[#8A7A5A] hover:border-[#8A7A5A]`,
+    secondary: `${base} font-light text-[#2B2B2B] border-[#8A7A5A]/50 hover:text-[#8A7A5A] hover:border-[#8A7A5A]`,
   },
 }
 

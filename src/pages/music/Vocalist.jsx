@@ -40,7 +40,7 @@ export default function MusicVocalist() {
               style={{ fontSize: 'clamp(3rem,7vw,6rem)' }}>
               Vocalist
             </h1>
-            <p className="text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-[#404040] max-w-[60ch]">
+            <p className="text-[.95rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B] max-w-[60ch]">
               A professional vocalist for ceremony and reception — pop, soul, contemporary
               and Italian repertoire, selected for voice quality and direct experience
               performing on the Amalfi Coast.
@@ -62,7 +62,7 @@ export default function MusicVocalist() {
             Voice as the Primary<br />Instrument of the Day
           </h2>
           <div className="w-9 h-[.5px] bg-[#B8A882] mb-8" />
-          <div className="space-y-6 text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-[#404040]">
+          <div className="space-y-6 text-[.95rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B]">
             <p>
               The platform presents vocalists with training across pop, soul, jazz and
               contemporary Italian repertoire. For ceremony use, the vocalist performs

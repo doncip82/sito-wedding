@@ -9,7 +9,7 @@
   --white:  #F9F8F7;
   --sand:   #F2EDE6;   /* second light tone — alternating sections, CTA bands */
   --ink:    #1A1A1A;
-  --mid:    #404040;
+  --mid:    #2B2B2B;   /* body text on light (was #404040 — too faint at the light weight) */
   --gold:   #B8A882;
   --gold-dark: #8A7A5A;
   --border: rgba(26, 26, 26, 0.09);

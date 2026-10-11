@@ -48,8 +48,8 @@ function VenueRow({ venue, index }) {
           itemProp="name">
           {venue.name}
         </h3>
-        <p className="text-[.84rem] font-light tracking-[.015em] leading-[1.85]
-          text-[#404040] max-w-[58ch]"
+        <p className="text-[.84rem] font-normal tracking-[.015em] leading-[1.85]
+          text-[#2B2B2B] max-w-[58ch]"
           itemProp="description">
           {venue.description}
         </p>
@@ -57,7 +57,7 @@ function VenueRow({ venue, index }) {
           {venue.tags.map(tag => (
             <span key={tag}
               className="text-[.56rem] font-light tracking-[.18em] uppercase
-                text-[#404040] border border-[#1A1A1A]/[.18] px-[.55rem] py-[.22rem]
+                text-[#2B2B2B] border border-[#1A1A1A]/[.18] px-[.55rem] py-[.22rem]
                 group-hover:border-[#B8A882] transition-all">
               {tag}
             </span>
@@ -69,7 +69,7 @@ function VenueRow({ venue, index }) {
       <div className="hidden sm:flex flex-col items-end justify-center pt-[.15rem]">
         <a href={enquiryHref({ venue: venue.name })}
           className="text-[.6rem] font-light tracking-[.2em] uppercase no-underline
-            text-[#404040] border-b border-[#1A1A1A]/25 pb-[2px] whitespace-nowrap
+            text-[#2B2B2B] border-b border-[#1A1A1A]/25 pb-[2px] whitespace-nowrap
             hover:text-[#8A7A5A] group-hover:border-[#8A7A5A] transition-all">
           Enquire →
         </a>
@@ -102,8 +102,8 @@ export default function Locations() {
             The Venues We Know<br />by Heart
           </h2>
         </div>
-        <p className="text-[.86rem] font-light tracking-[.015em] leading-[1.85]
-          text-[#404040] max-w-[34ch] self-end">
+        <p className="text-[.86rem] font-normal tracking-[.015em] leading-[1.85]
+          text-[#2B2B2B] max-w-[34ch] self-end">
           Each venue on the Amalfi Coast has its own acoustic signature, its own logistical
           constraints, its own light at golden hour. We know them all.
         </p>

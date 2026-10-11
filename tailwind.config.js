@@ -7,7 +7,7 @@ export default {
         white:  '#F9F8F7',
         sand:   '#F2EDE6',
         ink:    '#1A1A1A',
-        mid:    '#404040',
+        mid:    '#2B2B2B',
         gold:   '#B8A882',
         'gold-dark': '#8A7A5A',
         sage:   '#A8B09E',

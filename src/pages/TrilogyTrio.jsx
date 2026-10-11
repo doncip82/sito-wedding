@@ -96,8 +96,8 @@ export default function TrilogyTrio() {
               Three Instruments,<br />One Unexpected Conversation
             </h2>
             <div className="w-9 h-[.5px] bg-[#B8A882] mb-8" />
-            <p className="text-[.95rem] font-light tracking-[.015em] leading-[1.85]
-              text-[#404040] max-w-[58ch] mb-6">
+            <p className="text-[.95rem] font-normal tracking-[.015em] leading-[1.85]
+              text-[#2B2B2B] max-w-[58ch] mb-6">
               {ensemble.description}
             </p>
             <div className="flex items-center gap-6 flex-wrap mt-8">
@@ -141,7 +141,7 @@ export default function TrilogyTrio() {
                   </span>
                 </div>
               ))}
-              <p className="text-[.6rem] font-light tracking-[.12em] uppercase text-[#404040]
+              <p className="text-[.6rem] font-light tracking-[.12em] uppercase text-[#2B2B2B]
                 pt-4 opacity-60">
                 Full repertoire available on request
               </p>
@@ -213,7 +213,7 @@ export default function TrilogyTrio() {
           {/* Spotify */}
           <div className="border border-black/[.09] overflow-hidden flex flex-col rounded-xl">
             <div className="flex items-center justify-between px-4 py-3 border-b border-black/[.09]">
-              <span className="text-[.6rem] tracking-[.22em] uppercase font-light text-[#404040]">Spotify</span>
+              <span className="text-[.6rem] tracking-[.22em] uppercase font-light text-[#2B2B2B]">Spotify</span>
               <a href="https://open.spotify.com/artist/5fDrzYVHgAdzKgPAmJbLzD"
                 target="_blank" rel="noopener noreferrer"
                 className="text-[.6rem] tracking-[.16em] uppercase text-[#6E6046] no-underline hover:text-[#1A1A1A] transition-colors">
@@ -234,7 +234,7 @@ export default function TrilogyTrio() {
           {/* Instagram */}
           <div className="border border-black/[.09] overflow-hidden flex flex-col rounded-xl">
             <div className="flex items-center justify-between px-4 py-3 border-b border-black/[.09]">
-              <span className="text-[.6rem] tracking-[.22em] uppercase font-light text-[#404040]">Instagram</span>
+              <span className="text-[.6rem] tracking-[.22em] uppercase font-light text-[#2B2B2B]">Instagram</span>
               <a href="https://www.instagram.com/trilogytriolive"
                 target="_blank" rel="noopener noreferrer"
                 className="text-[.6rem] tracking-[.16em] uppercase text-[#6E6046] no-underline hover:text-[#1A1A1A] transition-colors">
@@ -255,7 +255,7 @@ export default function TrilogyTrio() {
           {/* YouTube */}
           <div className="border border-black/[.09] overflow-hidden flex flex-col rounded-xl">
             <div className="flex items-center justify-between px-4 py-3 border-b border-black/[.09]">
-              <span className="text-[.6rem] tracking-[.22em] uppercase font-light text-[#404040]">YouTube</span>
+              <span className="text-[.6rem] tracking-[.22em] uppercase font-light text-[#2B2B2B]">YouTube</span>
               <a href="https://www.youtube.com/watch?v=7hp25qXj8ZU"
                 target="_blank" rel="noopener noreferrer"
                 className="text-[.6rem] tracking-[.16em] uppercase text-[#6E6046] no-underline hover:text-[#1A1A1A] transition-colors">

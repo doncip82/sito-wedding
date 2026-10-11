@@ -48,7 +48,7 @@ export default function LocationRavello() {
               style={{ fontSize: 'clamp(3rem,7vw,6rem)' }}>
               Wedding Music<br />in Ravello
             </h1>
-            <p className="text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-[#404040] max-w-[60ch]">
+            <p className="text-[.95rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B] max-w-[60ch]">
               Live music for destination weddings in Ravello — at an altitude of 365 metres
               above the Gulf of Salerno, in venues that have defined the benchmark for the
               Italian luxury wedding for over a century.
@@ -71,7 +71,7 @@ export default function LocationRavello() {
             365 Metres Above<br />the Gulf of Salerno
           </h2>
           <div className="w-9 h-[.5px] bg-[#B8A882] mb-8" />
-          <div className="space-y-6 text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-[#404040]">
+          <div className="space-y-6 text-[.95rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B]">
             <p>
               Ravello sits at 365 metres above sea level on a promontory overlooking the Gulf
               of Salerno. Founded in the 9th century, it was granted UNESCO World Heritage
@@ -136,7 +136,7 @@ export default function LocationRavello() {
               <h3 className="font-serif italic font-light text-[1.4rem] text-[#1A1A1A] mb-4">
                 {name}
               </h3>
-              <p className="text-[.86rem] font-light tracking-[.015em] leading-[1.85] text-[#404040]">
+              <p className="text-[.86rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B]">
                 {desc}
               </p>
             </div>
@@ -167,7 +167,7 @@ export default function LocationRavello() {
           ].map(({ href, label, desc }) => (
             <div key={href} className="flex items-start gap-6 py-5 border-b border-black/[.06] flex-wrap">
               <a href={href} className="link-underline whitespace-nowrap">{label}</a>
-              <span className="text-[.86rem] font-light text-[#404040] tracking-[.015em] leading-[1.85]">
+              <span className="text-[.86rem] font-normal text-[#2B2B2B] tracking-[.015em] leading-[1.85]">
                 {desc}
               </span>
             </div>

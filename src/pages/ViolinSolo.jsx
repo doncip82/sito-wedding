@@ -46,7 +46,7 @@ export default function ViolinSolo() {
             Violin Solo
           </h1>
           <div className="w-9 h-[.5px] bg-[#B8A882] mb-8" />
-          <p className="text-[.92rem] font-serif italic font-light text-[#404040]
+          <p className="text-[.92rem] font-serif italic font-light text-[#2B2B2B]
             max-w-[36ch] leading-[1.8]">
             "There are moments within a wedding that belong to a single voice."
           </p>
@@ -75,8 +75,8 @@ export default function ViolinSolo() {
             One Instrument.<br />Every Emotion.
           </h2>
           <div className="w-9 h-[.5px] bg-[#B8A882] mb-6" />
-          <p className="text-[.95rem] font-light tracking-[.015em] leading-[1.85]
-            text-[#404040] mb-6">
+          <p className="text-[.95rem] font-normal tracking-[.015em] leading-[1.85]
+            text-[#2B2B2B] mb-6">
             {ensemble.description}
           </p>
           <div className="flex items-center gap-6 flex-wrap mt-4">
@@ -118,8 +118,8 @@ export default function ViolinSolo() {
               <h3 className="font-serif italic font-light text-[1.1rem] text-[#1A1A1A] mb-3">
                 {moment}
               </h3>
-              <p className="text-[.84rem] font-light tracking-[.015em] leading-[1.85]
-                text-[#404040]">
+              <p className="text-[.84rem] font-normal tracking-[.015em] leading-[1.85]
+                text-[#2B2B2B]">
                 {desc}
               </p>
             </div>

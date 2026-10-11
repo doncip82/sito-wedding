@@ -15,7 +15,7 @@ function Section({ title, children }) {
         style={{ fontSize: 'clamp(1.15rem,2.2vw,1.5rem)' }}>
         {title}
       </h2>
-      <div className="space-y-3 text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-[#404040]">
+      <div className="space-y-3 text-[.95rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B]">
         {children}
       </div>
     </section>
@@ -52,7 +52,7 @@ export default function Privacy() {
       {/* Body */}
       <section className="px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3rem,7vw,5rem)]">
         <div className="max-w-[70ch]">
-          <p className="text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-[#404040] mb-9">
+          <p className="text-[.95rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B] mb-9">
             This Privacy Policy explains how your personal data is collected, used and protected
             when you contact us through this website. We keep it deliberately short and clear.
           </p>

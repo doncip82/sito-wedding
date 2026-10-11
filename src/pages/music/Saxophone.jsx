@@ -40,7 +40,7 @@ export default function MusicSaxophone() {
               style={{ fontSize: 'clamp(3rem,7vw,6rem)' }}>
               Saxophone
             </h1>
-            <p className="text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-[#404040] max-w-[60ch]">
+            <p className="text-[.95rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B] max-w-[60ch]">
               A professional saxophonist for the cocktail hour or ceremony — solo, or paired
               with a DJ backing track for a contemporary format that suits terrace receptions
               above the Amalfi Coast.
@@ -62,7 +62,7 @@ export default function MusicSaxophone() {
             Contemporary Warmth<br />for Terrace Receptions
           </h2>
           <div className="w-9 h-[.5px] bg-[#B8A882] mb-8" />
-          <div className="space-y-6 text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-[#404040]">
+          <div className="space-y-6 text-[.95rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B]">
             <p>
               The saxophone occupies a sonic register that carries naturally across an open
               terrace without amplification — a quality that matters at venues such as Villa

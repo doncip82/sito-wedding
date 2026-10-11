@@ -40,7 +40,7 @@ export default function MusicPiano() {
               style={{ fontSize: 'clamp(3rem,7vw,6rem)' }}>
               Piano Solo
             </h1>
-            <p className="text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-[#404040] max-w-[60ch]">
+            <p className="text-[.95rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B] max-w-[60ch]">
               Solo piano for ceremony, cocktail hour and dinner — classical purity or
               contemporary warmth, adapted to the acoustic and emotional register of each
               venue on the Amalfi Coast.
@@ -62,7 +62,7 @@ export default function MusicPiano() {
             A Single Instrument<br />That Fills Any Room
           </h2>
           <div className="w-9 h-[.5px] bg-[#B8A882] mb-8" />
-          <div className="space-y-6 text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-[#404040]">
+          <div className="space-y-6 text-[.95rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B]">
             <p>
               Solo piano carries a particular authority in enclosed spaces — the interior
               salons of Palazzo Avino, the loggia of Villa Cimbrone, the dining rooms of

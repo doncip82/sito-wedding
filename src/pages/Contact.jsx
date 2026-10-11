@@ -93,7 +93,7 @@ export default function Contact() {
     focus:outline-none focus:border-[#B8A882] transition-colors`
 
   const labelClass = `block text-[.68rem] font-normal tracking-[.18em] uppercase
-    text-[#404040] mb-2.5`
+    text-[#2B2B2B] mb-2.5`
 
   return (
     <div className="bg-[#F9F8F7] pt-[68px]">
@@ -148,7 +148,7 @@ export default function Contact() {
             <h2 className="font-serif italic font-light text-[2.5rem] text-[#1A1A1A] mb-4">
               Thank you.
             </h2>
-            <p className="text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-[#404040]">
+            <p className="text-[.95rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B]">
               Your enquiry has been received. We will be in touch within 48 hours.
             </p>
           </div>
@@ -234,7 +234,7 @@ export default function Contact() {
                 <input type="checkbox" name="consent" required
                   checked={form.consent} onChange={handleChange}
                   className="mt-[.15rem] w-[13px] h-[13px] shrink-0 accent-[#8A7A5A] cursor-pointer" />
-                <span className="text-[.64rem] font-light tracking-[.04em] leading-[1.7] text-[#404040]">
+                <span className="text-[.64rem] font-light tracking-[.04em] leading-[1.7] text-[#2B2B2B]">
                   I have read and agree to the{' '}
                   <a href="/privacy" target="_blank" rel="noopener noreferrer"
                     className="text-[#6E6046] no-underline border-b border-[#8A7A5A]/40 hover:border-[#8A7A5A]">
@@ -249,7 +249,7 @@ export default function Contact() {
                     border-x-0 font-sans disabled:opacity-40 disabled:cursor-default">
                   {sending ? 'Sending…' : 'Send Enquiry'}
                 </button>
-                <p className="text-[.6rem] font-light tracking-[.14em] text-[#404040]">
+                <p className="text-[.6rem] font-light tracking-[.14em] text-[#2B2B2B]">
                   Or write directly to{' '}
                   <a href="mailto:info@weddingmusicravello.com"
                     className="text-[#6E6046] no-underline border-b border-[#8A7A5A]/40">
@@ -285,7 +285,7 @@ export default function Contact() {
             <p className="text-[.6rem] font-light tracking-[.2em] uppercase text-[#6E6046] mb-2">
               {label}
             </p>
-            <p className="text-[.9rem] font-light tracking-[.015em] leading-[1.8] text-[#1A1A1A]">
+            <p className="text-[.9rem] font-normal tracking-[.015em] leading-[1.8] text-[#1A1A1A]">
               {href ? (
                 <a href={href} target="_blank" rel="noopener noreferrer"
                   className="text-[#1A1A1A] no-underline border-b border-[#B8A882]/60 hover:border-[#8A7A5A]">

@@ -65,7 +65,7 @@ export default function MusicDJ() {
             Editorial Selection,<br />Not a Directory
           </h2>
           <div className="w-9 h-[.5px] bg-[#B8A882] mb-8" />
-          <div className="space-y-6 text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-[#404040]">
+          <div className="space-y-6 text-[.95rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B]">
             <p>
               Outdoor amplification in Ravello requires a separate <em>autorizzazione</em>
               from the local <em>Comune</em> for events running past 23:00. DJ set-up at

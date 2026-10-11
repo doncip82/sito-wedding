@@ -81,7 +81,7 @@ export default function FAQ() {
           style={{ fontSize: 'clamp(2rem,4.5vw,3.4rem)', maxWidth: '20ch' }}>
           Frequently Asked Questions
         </h1>
-        <p className="text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-[#404040] max-w-[54ch]">
+        <p className="text-[.95rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B] max-w-[54ch]">
           Live wedding music on the Amalfi Coast — ensembles, venues, booking and repertoire.
           If your question isn&rsquo;t here, we&rsquo;re a message away.
         </p>
@@ -97,7 +97,7 @@ export default function FAQ() {
                 style={{ fontSize: 'clamp(1.15rem,2.2vw,1.55rem)', maxWidth: '40ch' }}>
                 {q}
               </h2>
-              <p className="text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-[#404040] max-w-[68ch]">
+              <p className="text-[.95rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B] max-w-[68ch]">
                 {a}
               </p>
             </div>

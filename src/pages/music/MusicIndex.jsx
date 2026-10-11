@@ -112,7 +112,7 @@ export default function MusicIndex() {
         <h1 className="font-serif italic font-light text-[clamp(2.8rem,7vw,5rem)] text-[#1A1A1A] leading-[1.1] max-w-2xl">
           Music for<br />your event
         </h1>
-        <p className="mt-6 text-[.92rem] font-light tracking-[.015em] text-[#404040] max-w-lg leading-relaxed">
+        <p className="mt-6 text-[.92rem] font-normal tracking-[.015em] text-[#2B2B2B] max-w-lg leading-relaxed">
           Choose from a curated selection of live music — from intimate string duos
           to full ensembles, jazz, opera and beyond. Every format is personally
           directed and tailored to your ceremony.

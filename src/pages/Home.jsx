@@ -16,7 +16,7 @@ function GeoIntro() {
         Where Music Has Always Been the Centre of Everything
       </h2>
       <div className="flex flex-col gap-5 max-w-[65ch]">
-        <p className="text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-[#404040]">
+        <p className="text-[.95rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B]">
           Ravello sits 365 metres above the Tyrrhenian Sea, on a promontory between Minori and
           Atrani along the Amalfi Coast — a UNESCO World Heritage Site since 1997. It is one of
           the few places in the world where music is not an ornament but a founding principle.
@@ -25,7 +25,7 @@ function GeoIntro() {
           1953 on the clifftop stage of Villa Rufolo, has hosted conductors and soloists from
           across the world.
         </p>
-        <p className="text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-[#404040]">
+        <p className="text-[.95rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B]">
           This history is not incidental. It shapes the way music is chosen, placed, and
           performed here. Wedding Music Ravello was built on that same principle: that the right
           music, in the right space, at the right moment, does not accompany an event — it

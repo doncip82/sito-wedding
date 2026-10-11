@@ -79,7 +79,7 @@ function MomentStrip({ moment, dark = false }) {
             {moment.label}
           </h3>
           <p className={`text-[.84rem] font-light tracking-[.015em] leading-[1.85] max-w-[42ch]
-            ${dark ? 'text-white/65' : 'text-[#404040]'}`}>
+            ${dark ? 'text-white/65' : 'text-[#2B2B2B]'}`}>
             {moment.description}
           </p>
           <a href={moment.pageHref}
@@ -105,7 +105,7 @@ function MomentStrip({ moment, dark = false }) {
                   text-[.6rem] font-light tracking-[.1em] uppercase
                   ${dark
                     ? 'border-white/20 text-white/75 hover:border-[#B8A882] hover:text-[#B8A882]'
-                    : 'border-[#1A1A1A]/[.18] text-[#404040] hover:border-[#B8A882] hover:text-[#1A1A1A]'}`}>
+                    : 'border-[#1A1A1A]/[.18] text-[#2B2B2B] hover:border-[#B8A882] hover:text-[#1A1A1A]'}`}>
                 {label}
               </a>
             ))}
@@ -128,7 +128,7 @@ export default function Occasions() {
             Music for Every Kind<br />of Celebration
           </h2>
         </div>
-        <p className="text-[.84rem] font-light tracking-[.015em] leading-[1.85] text-[#404040] max-w-[34ch] text-right">
+        <p className="text-[.84rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B] max-w-[34ch] text-right">
           Just as Ravello captures the essence of the Amalfi Coast, music lies at the heart
           of every event — from the ceremony to a sunset toast, to the most intimate and
           unforgettable experiences.

@@ -70,7 +70,7 @@ export default function OccasionMarriageProposal() {
               style={{ fontSize: 'clamp(3rem,7vw,6rem)' }}>
               Marriage<br />Proposals
             </h1>
-            <p className="text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-[#404040] max-w-[60ch]">
+            <p className="text-[.95rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B] max-w-[60ch]">
               A violin solo on a panoramic terrace above the Gulf of Salerno, or a saxophone
               at golden hour along the Positano coastline. Discreetly arranged, precisely
               timed — music that shapes the setting without announcing itself.
@@ -91,7 +91,7 @@ export default function OccasionMarriageProposal() {
             Coordinated With<br />the Setting in Mind
           </h2>
           <div className="w-9 h-[.5px] bg-[#B8A882] mb-8" />
-          <div className="space-y-6 text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-[#404040]">
+          <div className="space-y-6 text-[.95rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B]">
             <p>
               A proposal with live music requires coordination between the musician, the
               venue, and the moment — not a performance that simply happens to be present.
@@ -140,7 +140,7 @@ export default function OccasionMarriageProposal() {
               <h3 className="font-serif italic font-light text-[1.2rem] text-[#1A1A1A] mb-4">
                 {name}
               </h3>
-              <p className="text-[.86rem] font-light tracking-[.015em] leading-[1.85] text-[#404040]">
+              <p className="text-[.86rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B]">
                 {desc}
               </p>
             </div>
@@ -156,7 +156,7 @@ export default function OccasionMarriageProposal() {
               className="inline-flex items-center px-5 py-3 border border-[#1A1A1A]/[.18]
                 no-underline transition-all duration-300
                 text-[.6rem] font-light tracking-[.1em] uppercase
-                text-[#404040] hover:border-[#B8A882] hover:text-[#1A1A1A]">
+                text-[#2B2B2B] hover:border-[#B8A882] hover:text-[#1A1A1A]">
               {label}
             </a>
           ))}
@@ -173,7 +173,7 @@ export default function OccasionMarriageProposal() {
           ].map(({ href, label, desc }) => (
             <div key={href} className="flex items-start gap-6 py-5 border-b border-black/[.06] flex-wrap">
               <a href={href} className="link-underline whitespace-nowrap">{label}</a>
-              <span className="text-[.86rem] font-light text-[#404040] tracking-[.015em] leading-[1.85]">{desc}</span>
+              <span className="text-[.86rem] font-normal text-[#2B2B2B] tracking-[.015em] leading-[1.85]">{desc}</span>
             </div>
           ))}
         </div>
