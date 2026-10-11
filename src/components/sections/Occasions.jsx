@@ -43,7 +43,7 @@ const OCCASIONS = [
     label:       'Exclusive Corporate Events',
     description: 'Private dinners, brand retreats, and presentations at Amalfi Coast venues. Live music — from curated DJ sets to vocal performances — selected for its capacity to establish atmosphere without competing with conversation.',
     pageHref:    '/occasions/corporate-events',
-    img:         '/images/Cocktail.jpg',
+    img:         '/images/Corporate.jpg',
     options: [
       { label: 'Vocalist',     href: '/music/vocalist'  },
       { label: 'DJ',           href: '/music/dj'        },

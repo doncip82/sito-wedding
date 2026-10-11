@@ -82,7 +82,7 @@ export default function OccasionCorporateEvents() {
           </div>
         </div>
         <div className="relative min-h-[52svh] md:min-h-[clamp(30rem,72svh,48rem)] overflow-hidden">
-          <img src="/images/Cocktail.jpg" alt="Corporate cocktail event with live music on the Amalfi Coast" fetchpriority="high"
+          <img src="/images/Corporate.jpg" alt="Corporate gala with live music in a historic domed hall" fetchpriority="high"
             className="absolute inset-0 w-full h-full object-cover"
             style={{ objectPosition: 'center' }} />
         </div>
