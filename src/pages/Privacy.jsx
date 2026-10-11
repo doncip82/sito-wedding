@@ -15,7 +15,7 @@ function Section({ title, children }) {
         style={{ fontSize: 'clamp(1.15rem,2.2vw,1.5rem)' }}>
         {title}
       </h2>
-      <div className="space-y-3 text-[.72rem] font-light tracking-[.04em] leading-[1.95] text-[#404040]">
+      <div className="space-y-3 text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-[#404040]">
         {children}
       </div>
     </section>
@@ -44,7 +44,7 @@ export default function Privacy() {
           style={{ fontSize: 'clamp(2rem,4.5vw,3.4rem)' }}>
           Privacy Policy
         </h1>
-        <p className="text-[.56rem] font-light tracking-[.16em] uppercase text-[#8A7A5A]">
+        <p className="text-[.64rem] font-light tracking-[.16em] uppercase text-[#8A7A5A]">
           Last updated: 11 October 2026
         </p>
       </section>
@@ -52,7 +52,7 @@ export default function Privacy() {
       {/* Body */}
       <section className="px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3rem,7vw,5rem)]">
         <div className="max-w-[70ch]">
-          <p className="text-[.72rem] font-light tracking-[.04em] leading-[1.95] text-[#404040] mb-9">
+          <p className="text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-[#404040] mb-9">
             This Privacy Policy explains how your personal data is collected, used and protected
             when you contact us through this website. We keep it deliberately short and clear.
           </p>

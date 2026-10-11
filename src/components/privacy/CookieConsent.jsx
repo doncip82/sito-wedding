@@ -89,11 +89,11 @@ export default function CookieConsent() {
 
         {/* Copy */}
         <div className="max-w-[62ch]">
-          <p className="text-[.5rem] font-light tracking-[.22em] uppercase text-[#B8A882] mb-2.5">
+          <p className="text-[.6rem] font-light tracking-[.22em] uppercase text-[#B8A882] mb-2.5">
             Cookies &amp; Privacy
           </p>
           <p id="cookie-consent-desc"
-            className="text-[.68rem] font-light tracking-[.03em] leading-[1.85] text-white/70">
+            className="text-[.9rem] font-light tracking-[.015em] leading-[1.85] text-white/70">
             We use cookies and similar technologies to measure website activity and advertising
             performance. You can accept or reject non-essential cookies. You can change your
             choice at any time.{' '}
@@ -111,7 +111,7 @@ export default function CookieConsent() {
               <label className="flex items-start gap-3 opacity-70 cursor-not-allowed">
                 <input type="checkbox" checked readOnly disabled
                   className="mt-[.15rem] w-[13px] h-[13px] shrink-0 accent-[#8A7A5A]" />
-                <span className="text-[.6rem] font-light tracking-[.04em] leading-[1.6] text-white/70">
+                <span className="text-[.68rem] font-light tracking-[.04em] leading-[1.6] text-white/70">
                   <span className="uppercase tracking-[.14em] text-white/80">Essential</span>
                   {' '}— always on. Required for the site and the enquiry form to work.
                 </span>
@@ -121,7 +121,7 @@ export default function CookieConsent() {
                 <input type="checkbox" name="analytics"
                   checked={analytics} onChange={e => setAnalytics(e.target.checked)}
                   className="mt-[.15rem] w-[13px] h-[13px] shrink-0 accent-[#8A7A5A] cursor-pointer" />
-                <span className="text-[.6rem] font-light tracking-[.04em] leading-[1.6] text-white/70">
+                <span className="text-[.68rem] font-light tracking-[.04em] leading-[1.6] text-white/70">
                   <span className="uppercase tracking-[.14em] text-white/80">Analytics</span>
                   {' '}— helps us measure visits to improve the site.
                 </span>
@@ -131,7 +131,7 @@ export default function CookieConsent() {
                 <input type="checkbox" name="advertising"
                   checked={advertising} onChange={e => setAdvertising(e.target.checked)}
                   className="mt-[.15rem] w-[13px] h-[13px] shrink-0 accent-[#8A7A5A] cursor-pointer" />
-                <span className="text-[.6rem] font-light tracking-[.04em] leading-[1.6] text-white/70">
+                <span className="text-[.68rem] font-light tracking-[.04em] leading-[1.6] text-white/70">
                   <span className="uppercase tracking-[.14em] text-white/80">Advertising</span>
                   {' '}— measures the performance of our Google Ads campaigns.
                 </span>
@@ -144,14 +144,14 @@ export default function CookieConsent() {
         <div className="flex flex-col gap-3 shrink-0 md:min-w-[210px]">
           <button type="button" onClick={acceptAll}
             className="cursor-pointer text-center bg-[#B8A882] text-[#1A1A1A]
-              text-[.56rem] font-normal tracking-[.18em] uppercase
+              text-[.64rem] font-normal tracking-[.18em] uppercase
               px-6 py-3 border border-[#B8A882] hover:bg-transparent hover:text-[#B8A882]
               transition-colors">
             Accept all
           </button>
           <button type="button" onClick={rejectAll}
             className="cursor-pointer text-center bg-transparent text-white/80
-              text-[.56rem] font-normal tracking-[.18em] uppercase
+              text-[.64rem] font-normal tracking-[.18em] uppercase
               px-6 py-3 border border-white/30 hover:border-[#B8A882] hover:text-[#B8A882]
               transition-colors">
             Reject non-essential
@@ -159,7 +159,7 @@ export default function CookieConsent() {
 
           {manage ? (
             <button type="button" onClick={savePreferences}
-              className="cursor-pointer text-center text-[.52rem] font-light tracking-[.16em]
+              className="cursor-pointer text-center text-[.6rem] font-light tracking-[.16em]
                 uppercase text-[#B8A882] underline-offset-4 hover:underline pt-1">
               Save preferences
             </button>
@@ -170,8 +170,8 @@ export default function CookieConsent() {
               setAdvertising(stored ? stored.advertising : false)
               setManage(true)
             }}
-              className="cursor-pointer text-center text-[.52rem] font-light tracking-[.16em]
-                uppercase text-white/45 underline-offset-4 hover:underline hover:text-white/70 pt-1">
+              className="cursor-pointer text-center text-[.6rem] font-light tracking-[.16em]
+                uppercase text-white/65 underline-offset-4 hover:underline hover:text-white/70 pt-1">
               Manage preferences
             </button>
           )}

@@ -28,23 +28,30 @@ export default function MusicVocalist() {
         <script type="application/ld+json">{JSON.stringify(vocalistSchema)}</script>
       </Head>
 
-      <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(5rem,12vw,9rem)]">
-        <div className="max-w-4xl">
-          <p className="text-[.56rem] font-light tracking-[.25em] uppercase text-[#B8A882]
-            flex items-center gap-3 mb-5">
-            <span className="inline-block w-[22px] h-[.5px] bg-[#B8A882]" />
-            Vocalist · Ceremony & Reception
-          </p>
-          <h1 className="font-serif italic font-light leading-[1.02] text-[#F9F8F7] mb-6"
-            style={{ fontSize: 'clamp(3rem,7vw,6rem)' }}>
-            Vocalist
-          </h1>
-          <p className="text-[.72rem] font-light tracking-[.06em] leading-[2] text-white/55 max-w-[60ch]">
-            A professional vocalist for ceremony and reception — pop, soul, contemporary
-            and Italian repertoire, selected for voice quality and direct experience
-            performing on the Amalfi Coast.
-          </p>
-          <EnquiryLinks className="mt-10" ensemble="Vocalist" message={weddingMessage({ interest: 'a vocalist' })} />
+      <section className="bg-[#F2EDE6] grid grid-cols-1 md:grid-cols-[minmax(0,1.08fr)_minmax(0,.92fr)]">
+        <div className="px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3.5rem,8vw,7rem)] self-center">
+          <div className="max-w-4xl">
+            <p className="text-[.64rem] font-light tracking-[.25em] uppercase text-[#8A7A5A]
+              flex items-center gap-3 mb-5">
+              <span className="inline-block w-[22px] h-[.5px] bg-[#B8A882]" />
+              Vocalist · Ceremony & Reception
+            </p>
+            <h1 className="font-serif italic font-light leading-[1.02] text-[#1A1A1A] mb-6"
+              style={{ fontSize: 'clamp(3rem,7vw,6rem)' }}>
+              Vocalist
+            </h1>
+            <p className="text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-[#404040] max-w-[60ch]">
+              A professional vocalist for ceremony and reception — pop, soul, contemporary
+              and Italian repertoire, selected for voice quality and direct experience
+              performing on the Amalfi Coast.
+            </p>
+            <EnquiryLinks tone="light" className="mt-10" ensemble="Vocalist" message={weddingMessage({ interest: 'a vocalist' })} />
+          </div>
+        </div>
+        <div className="relative min-h-[52svh] md:min-h-[clamp(30rem,72svh,48rem)] overflow-hidden">
+          <img src="/images/Vocalist/Momo%20Vocalist.jpeg" alt="Wedding vocalist performing live on the Amalfi Coast" fetchpriority="high"
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ objectPosition: 'center' }} />
         </div>
       </section>
 
@@ -55,7 +62,7 @@ export default function MusicVocalist() {
             Voice as the Primary<br />Instrument of the Day
           </h2>
           <div className="w-9 h-[.5px] bg-[#B8A882] mb-8" />
-          <div className="space-y-6 text-[.72rem] font-light tracking-[.05em] leading-[2] text-[#404040]">
+          <div className="space-y-6 text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-[#404040]">
             <p>
               The platform presents vocalists with training across pop, soul, jazz and
               contemporary Italian repertoire. For ceremony use, the vocalist performs
@@ -79,13 +86,13 @@ export default function MusicVocalist() {
         </div>
       </section>
 
-      <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3rem,8vw,6rem)]
+      <section className="bg-[#F2EDE6] border-t border-black/[.06] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3rem,8vw,6rem)]
         flex items-center justify-between gap-8 flex-wrap">
-        <p className="font-serif italic font-light leading-[1.18] text-white/82 max-w-[26ch]"
+        <p className="font-serif italic font-light leading-[1.18] text-[#1A1A1A] max-w-[26ch]"
           style={{ fontSize: 'clamp(1.7rem,3.5vw,2.8rem)' }}>
           Add a Vocalist<br />to Your Day.
         </p>
-        <EnquiryLinks ensemble="Vocalist" message={weddingMessage({ interest: 'a vocalist' })} />
+        <EnquiryLinks tone="light" ensemble="Vocalist" message={weddingMessage({ interest: 'a vocalist' })} />
       </section>
     </div>
   )

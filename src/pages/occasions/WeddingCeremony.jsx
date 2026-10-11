@@ -67,24 +67,31 @@ export default function OccasionWeddingCeremony() {
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
       </Head>
 
-      <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(5rem,12vw,9rem)]">
-        <div className="max-w-4xl">
-          <p className="text-[.56rem] font-light tracking-[.25em] uppercase text-[#B8A882]
-            flex items-center gap-3 mb-5">
-            <span className="inline-block w-[22px] h-[.5px] bg-[#B8A882]" />
-            Occasions · Wedding Day
-          </p>
-          <h1 className="font-serif italic font-light leading-[1.02] text-[#F9F8F7] mb-6"
-            style={{ fontSize: 'clamp(3rem,7vw,6rem)' }}>
-            Wedding Ceremonies<br />&amp; Receptions
-          </h1>
-          <p className="text-[.72rem] font-light tracking-[.06em] leading-[2] text-white/55 max-w-[60ch]">
-            From the first note of the processional to the last dance of the evening —
-            a complete musical programme for destination weddings on the Amalfi Coast.
-            String ensembles, solo violin, piano, and operatic voice, matched to the
-            acoustics of each venue and the arc of the day.
-          </p>
-          <EnquiryLinks className="mt-10" message={weddingMessage({ interest: 'music for our ceremony and reception' })} />
+      <section className="bg-[#F2EDE6] grid grid-cols-1 md:grid-cols-[minmax(0,1.08fr)_minmax(0,.92fr)]">
+        <div className="px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3.5rem,8vw,7rem)] self-center">
+          <div className="max-w-4xl">
+            <p className="text-[.64rem] font-light tracking-[.25em] uppercase text-[#8A7A5A]
+              flex items-center gap-3 mb-5">
+              <span className="inline-block w-[22px] h-[.5px] bg-[#B8A882]" />
+              Occasions · Wedding Day
+            </p>
+            <h1 className="font-serif italic font-light leading-[1.02] text-[#1A1A1A] mb-6"
+              style={{ fontSize: 'clamp(3rem,7vw,6rem)' }}>
+              Wedding Ceremonies<br />&amp; Receptions
+            </h1>
+            <p className="text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-[#404040] max-w-[60ch]">
+              From the first note of the processional to the last dance of the evening —
+              a complete musical programme for destination weddings on the Amalfi Coast.
+              String ensembles, solo violin, piano, and operatic voice, matched to the
+              acoustics of each venue and the arc of the day.
+            </p>
+            <EnquiryLinks tone="light" className="mt-10" message={weddingMessage({ interest: 'music for our ceremony and reception' })} />
+          </div>
+        </div>
+        <div className="relative min-h-[52svh] md:min-h-[clamp(30rem,72svh,48rem)] overflow-hidden">
+          <img src="/images/Ceremony.jpg" alt="Wedding ceremony with live music on the Amalfi Coast" fetchpriority="high"
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ objectPosition: 'center' }} />
         </div>
       </section>
 
@@ -102,13 +109,13 @@ export default function OccasionWeddingCeremony() {
               className="py-8 pr-0 md:pr-12 border-b border-black/[.06]
                 [&:nth-child(odd)]:md:border-r [&:nth-child(odd)]:md:pr-12
                 [&:nth-child(even)]:md:pl-12">
-              <p className="text-[.5rem] font-light tracking-[.2em] uppercase text-[#B8A882] mb-2">
+              <p className="text-[.6rem] font-light tracking-[.2em] uppercase text-[#B8A882] mb-2">
                 {detail}
               </p>
               <h3 className="font-serif italic font-light text-[1.4rem] text-[#1A1A1A] mb-4">
                 {moment}
               </h3>
-              <p className="text-[.66rem] font-light tracking-[.05em] leading-[2] text-[#404040]">
+              <p className="text-[.86rem] font-light tracking-[.015em] leading-[1.85] text-[#404040]">
                 {desc}
               </p>
             </div>
@@ -116,18 +123,18 @@ export default function OccasionWeddingCeremony() {
         </div>
       </section>
 
-      <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(4rem,10vw,8rem)]">
-        <p className="eyebrow mb-5 text-[#B8A882]">Suggested for this occasion</p>
-        <h2 className="section-title mb-10 text-[#F9F8F7]" style={{ maxWidth: '24ch' }}>
+      <section className="bg-[#F2EDE6] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(4rem,10vw,8rem)]">
+        <p className="eyebrow mb-5 text-[#8A7A5A]">Suggested for this occasion</p>
+        <h2 className="section-title mb-10 text-[#1A1A1A]" style={{ maxWidth: '24ch' }}>
           Music Partners<br />for the Wedding Day
         </h2>
         <div className="flex flex-wrap gap-3">
           {ENSEMBLES.map(({ label, href }) => (
             <a key={label} href={href}
-              className="inline-flex items-center px-5 py-3 border border-white/20
+              className="inline-flex items-center px-5 py-3 border border-[#1A1A1A]/[.18]
                 no-underline transition-all duration-300
-                text-[.5rem] font-light tracking-[.1em] uppercase
-                text-white/55 hover:border-[#B8A882] hover:text-[#B8A882]">
+                text-[.6rem] font-light tracking-[.1em] uppercase
+                text-[#404040] hover:border-[#B8A882] hover:text-[#1A1A1A]">
               {label}
             </a>
           ))}
@@ -144,19 +151,19 @@ export default function OccasionWeddingCeremony() {
           ].map(({ href, label, desc }) => (
             <div key={href} className="flex items-start gap-6 py-5 border-b border-black/[.06] flex-wrap">
               <a href={href} className="link-underline whitespace-nowrap">{label}</a>
-              <span className="text-[.65rem] font-light text-[#404040] tracking-[.04em] leading-[2]">{desc}</span>
+              <span className="text-[.86rem] font-light text-[#404040] tracking-[.015em] leading-[1.85]">{desc}</span>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3rem,8vw,6rem)]
+      <section className="bg-[#F2EDE6] border-t border-black/[.06] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3rem,8vw,6rem)]
         flex items-center justify-between gap-8 flex-wrap">
-        <p className="font-serif italic font-light leading-[1.18] text-white/82 max-w-[26ch]"
+        <p className="font-serif italic font-light leading-[1.18] text-[#1A1A1A] max-w-[26ch]"
           style={{ fontSize: 'clamp(1.7rem,3.5vw,2.8rem)' }}>
           Planning a wedding<br />on the Amalfi Coast?
         </p>
-        <EnquiryLinks message={weddingMessage({ interest: 'music for our ceremony and reception' })} />
+        <EnquiryLinks tone="light" message={weddingMessage({ interest: 'music for our ceremony and reception' })} />
       </section>
     </div>
   )

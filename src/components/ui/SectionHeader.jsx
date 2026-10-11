@@ -8,7 +8,7 @@ export default function SectionHeader({ eyebrow, title, note }) {
           dangerouslySetInnerHTML={{ __html: title }} />
       </div>
       {note && (
-        <p className="text-[.64rem] font-light tracking-[.1em] leading-[1.95] text-[#404040]
+        <p className="text-[.84rem] font-light tracking-[.1em] leading-[1.85] text-[#404040]
           max-w-[30ch] self-end text-right"
           dangerouslySetInnerHTML={{ __html: note }} />
       )}

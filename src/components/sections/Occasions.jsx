@@ -70,7 +70,7 @@ function MomentStrip({ moment, dark = false }) {
         flex flex-col justify-between gap-8
         ${dark ? 'bg-[#111111]' : 'bg-[#F9F8F7]'}`}>
         <div className="flex flex-col gap-4">
-          <span className={`font-serif italic font-light text-[.95rem] tracking-[.06em]
+          <span className={`font-serif italic font-light text-[.95rem] tracking-[.015em]
             ${dark ? 'text-[#B8A882]/40' : 'text-[#B8A882]/60'}`}>
             {moment.numeral}
           </span>
@@ -78,12 +78,12 @@ function MomentStrip({ moment, dark = false }) {
             leading-[1.1] ${dark ? 'text-[#F9F8F7]' : 'text-[#1A1A1A]'}`}>
             {moment.label}
           </h3>
-          <p className={`text-[.63rem] font-light tracking-[.06em] leading-[2] max-w-[42ch]
-            ${dark ? 'text-white/45' : 'text-[#404040]'}`}>
+          <p className={`text-[.84rem] font-light tracking-[.015em] leading-[1.85] max-w-[42ch]
+            ${dark ? 'text-white/65' : 'text-[#404040]'}`}>
             {moment.description}
           </p>
           <a href={moment.pageHref}
-            className={`self-start text-[.48rem] font-light tracking-[.18em] uppercase no-underline
+            className={`self-start text-[.58rem] font-light tracking-[.18em] uppercase no-underline
               pb-[2px] border-b transition-colors duration-300
               ${dark
                 ? 'text-[#B8A882]/60 border-[#B8A882]/25 hover:text-[#B8A882] hover:border-[#B8A882]'
@@ -93,8 +93,8 @@ function MomentStrip({ moment, dark = false }) {
         </div>
 
         <div className="flex flex-col gap-3">
-          <span className={`text-[.47rem] font-light tracking-[.16em] uppercase
-            ${dark ? 'text-white/30' : 'text-[#B8A882]'}`}>
+          <span className={`text-[.56rem] font-light tracking-[.16em] uppercase
+            ${dark ? 'text-white/50' : 'text-[#B8A882]'}`}>
             Suggested for this occasion
           </span>
           <div className="flex flex-wrap gap-2">
@@ -102,10 +102,10 @@ function MomentStrip({ moment, dark = false }) {
               <a key={label} href={href}
                 className={`inline-flex items-center px-4 py-[0.45rem] border no-underline
                   transition-all duration-300
-                  text-[.5rem] font-light tracking-[.1em] uppercase
+                  text-[.6rem] font-light tracking-[.1em] uppercase
                   ${dark
-                    ? 'border-white/20 text-white/55 hover:border-[#B8A882] hover:text-[#B8A882]'
-                    : 'border-[#1A1A1A]/18 text-[#404040] hover:border-[#B8A882] hover:text-[#1A1A1A]'}`}>
+                    ? 'border-white/20 text-white/75 hover:border-[#B8A882] hover:text-[#B8A882]'
+                    : 'border-[#1A1A1A]/[.18] text-[#404040] hover:border-[#B8A882] hover:text-[#1A1A1A]'}`}>
                 {label}
               </a>
             ))}
@@ -128,7 +128,7 @@ export default function Occasions() {
             Music for Every Kind<br />of Celebration
           </h2>
         </div>
-        <p className="text-[.63rem] font-light tracking-[.08em] leading-[2] text-[#404040] max-w-[34ch] text-right">
+        <p className="text-[.84rem] font-light tracking-[.015em] leading-[1.85] text-[#404040] max-w-[34ch] text-right">
           Just as Ravello captures the essence of the Amalfi Coast, music lies at the heart
           of every event — from the ceremony to a sunset toast, to the most intimate and
           unforgettable experiences.

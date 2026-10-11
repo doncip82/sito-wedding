@@ -33,6 +33,7 @@ Il sito propone **esclusivamente partner musicali**. L'aggiunta di fotografi, pl
 - **Tono:** Editorial Luxury — istituzionale/curatoriale — stile Vogue Weddings / Belmond / Mezzatorre
 - **Palette:**
   - Off-white: `#F9F8F7` (sfondo)
+  - Sand: `#F2EDE6` (dal 2026-10 — secondo tono chiaro: hero delle landing, sezioni alternate, fasce CTA; sostituisce le sezioni charcoal)
   - Charcoal: `#1A1A1A` (testo principale, sezioni scure)
   - Mid: `#404040` (corpo testo su bianco)
   - Gold: `#B8A882` (accenti)
@@ -45,6 +46,9 @@ Il sito propone **esclusivamente partner musicali**. L'aggiunta di fotografi, pl
   - CTA solo testo + border-bottom 0.5px
   - Tutti i link esterni: target="_blank" rel="noopener noreferrer"
   - Scroll reveal: progressive enhancement (elementi visibili di default in CSS)
+  - **Luce prima del nero (refresh 2026-10):** il charcoal resta solo nel footer e nelle hero con video/foto a tutto schermo (home, EvoStrings, Trilogy, DJ, Contact). Tutto il resto è avorio/sabbia.
+  - **Scala testo:** corpo ~15px (`text-[.95rem]`, tracking `.015em`, leading `1.85`); descrizioni `.84–.86rem`; etichette maiuscole `.64–.68rem`. Mai più il corpo a `.72rem`.
+  - **Opacità Tailwind solo a passi di 5** (`/60`, `/65`, `/70`…) o tra parentesi (`/[.18]`): valori come `/82` o `/62` non generano nessuna classe e il testo eredita il colore (era il bug dei titoli invisibili nelle fasce CTA scure).
 
 ## Link ufficiali
 - Email piattaforma: info@weddingmusicravello.com
@@ -151,7 +155,7 @@ Villa Cimbrone · Palazzo Avino · Belmond Hotel Caruso · Villa Treville · Mon
   - `/occasions/marriage-proposal` — How It Works + 3 location in griglia 3 col (dark bg)
   - `/occasions/birthdays-anniversaries` — 3 formati (Dinner, Cocktail, Evening Dance)
   - `/occasions/corporate-events` — 3 formati (Private Dinner, Brand Retreat, Product Launch)
-- Tutte le landing pages seguono la struttura: Hero dark → Content light → Dark ensemble CTA → Light related links → Dark enquiry CTA
+- Tutte le landing pages seguono la struttura (refresh 2026-10): Hero **sabbia diviso** (testo a sinistra, foto a destra; su mobile testo prima, foto sotto) → Content avorio → blocco ensemble/venue sabbia → link correlati avorio → fascia CTA sabbia (`EnquiryLinks tone="light"`) → footer charcoal
 
 ### Hero — copy attuale
 - **Tagline (p sopra h1):** "Bespoke Wedding Music · Amalfi Coast"

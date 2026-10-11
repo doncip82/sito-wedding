@@ -62,22 +62,29 @@ export default function OccasionCorporateEvents() {
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
       </Head>
 
-      <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(5rem,12vw,9rem)]">
-        <div className="max-w-4xl">
-          <p className="text-[.56rem] font-light tracking-[.25em] uppercase text-[#B8A882]
-            flex items-center gap-3 mb-5">
-            <span className="inline-block w-[22px] h-[.5px] bg-[#B8A882]" />
-            Occasions · Corporate
-          </p>
-          <h1 className="font-serif italic font-light leading-[1.02] text-[#F9F8F7] mb-6"
-            style={{ fontSize: 'clamp(3rem,7vw,6rem)' }}>
-            Exclusive<br />Corporate Events
-          </h1>
-          <p className="text-[.72rem] font-light tracking-[.06em] leading-[2] text-white/55 max-w-[60ch]">
-            Private dinners, brand retreats, and presentations at Amalfi Coast venues.
-            Live music — from curated DJ sets to vocal performances — selected for its
-            capacity to establish atmosphere without competing with conversation.
-          </p>
+      <section className="bg-[#F2EDE6] grid grid-cols-1 md:grid-cols-[minmax(0,1.08fr)_minmax(0,.92fr)]">
+        <div className="px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3.5rem,8vw,7rem)] self-center">
+          <div className="max-w-4xl">
+            <p className="text-[.64rem] font-light tracking-[.25em] uppercase text-[#8A7A5A]
+              flex items-center gap-3 mb-5">
+              <span className="inline-block w-[22px] h-[.5px] bg-[#B8A882]" />
+              Occasions · Corporate
+            </p>
+            <h1 className="font-serif italic font-light leading-[1.02] text-[#1A1A1A] mb-6"
+              style={{ fontSize: 'clamp(3rem,7vw,6rem)' }}>
+              Exclusive<br />Corporate Events
+            </h1>
+            <p className="text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-[#404040] max-w-[60ch]">
+              Private dinners, brand retreats, and presentations at Amalfi Coast venues.
+              Live music — from curated DJ sets to vocal performances — selected for its
+              capacity to establish atmosphere without competing with conversation.
+            </p>
+          </div>
+        </div>
+        <div className="relative min-h-[52svh] md:min-h-[clamp(30rem,72svh,48rem)] overflow-hidden">
+          <img src="/images/Cocktail.jpg" alt="Corporate cocktail event with live music on the Amalfi Coast" fetchpriority="high"
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ objectPosition: 'center' }} />
         </div>
       </section>
 
@@ -95,13 +102,13 @@ export default function OccasionCorporateEvents() {
               className="py-8 border-b border-black/[.06]
                 [&:not(:last-child)]:md:border-r [&:not(:last-child)]:md:pr-10
                 [&:not(:first-child)]:md:pl-10">
-              <p className="text-[.5rem] font-light tracking-[.2em] uppercase text-[#B8A882] mb-2">
+              <p className="text-[.6rem] font-light tracking-[.2em] uppercase text-[#B8A882] mb-2">
                 {detail}
               </p>
               <h3 className="font-serif italic font-light text-[1.2rem] text-[#1A1A1A] mb-4">
                 {title}
               </h3>
-              <p className="text-[.66rem] font-light tracking-[.05em] leading-[2] text-[#404040]">
+              <p className="text-[.86rem] font-light tracking-[.015em] leading-[1.85] text-[#404040]">
                 {desc}
               </p>
             </div>
@@ -109,18 +116,18 @@ export default function OccasionCorporateEvents() {
         </div>
       </section>
 
-      <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(4rem,10vw,8rem)]">
-        <p className="eyebrow mb-5 text-[#B8A882]">Suggested for this occasion</p>
-        <h2 className="section-title mb-10 text-[#F9F8F7]" style={{ maxWidth: '24ch' }}>
+      <section className="bg-[#F2EDE6] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(4rem,10vw,8rem)]">
+        <p className="eyebrow mb-5 text-[#8A7A5A]">Suggested for this occasion</p>
+        <h2 className="section-title mb-10 text-[#1A1A1A]" style={{ maxWidth: '24ch' }}>
           Music Partners<br />for Corporate Events
         </h2>
         <div className="flex flex-wrap gap-3">
           {ENSEMBLES.map(({ label, href }) => (
             <a key={label} href={href}
-              className="inline-flex items-center px-5 py-3 border border-white/20
+              className="inline-flex items-center px-5 py-3 border border-[#1A1A1A]/[.18]
                 no-underline transition-all duration-300
-                text-[.5rem] font-light tracking-[.1em] uppercase
-                text-white/55 hover:border-[#B8A882] hover:text-[#B8A882]">
+                text-[.6rem] font-light tracking-[.1em] uppercase
+                text-[#404040] hover:border-[#B8A882] hover:text-[#1A1A1A]">
               {label}
             </a>
           ))}
@@ -137,19 +144,19 @@ export default function OccasionCorporateEvents() {
           ].map(({ href, label, desc }) => (
             <div key={href} className="flex items-start gap-6 py-5 border-b border-black/[.06] flex-wrap">
               <a href={href} className="link-underline whitespace-nowrap">{label}</a>
-              <span className="text-[.65rem] font-light text-[#404040] tracking-[.04em] leading-[2]">{desc}</span>
+              <span className="text-[.86rem] font-light text-[#404040] tracking-[.015em] leading-[1.85]">{desc}</span>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3rem,8vw,6rem)]
+      <section className="bg-[#F2EDE6] border-t border-black/[.06] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3rem,8vw,6rem)]
         flex items-center justify-between gap-8 flex-wrap">
-        <p className="font-serif italic font-light leading-[1.18] text-white/82 max-w-[26ch]"
+        <p className="font-serif italic font-light leading-[1.18] text-[#1A1A1A] max-w-[26ch]"
           style={{ fontSize: 'clamp(1.7rem,3.5vw,2.8rem)' }}>
           Planning a corporate event<br />on the Amalfi Coast?
         </p>
-        <EnquiryLinks message="Hello! We're planning a corporate event on the Amalfi Coast and would love live music. Could you send us some information?" />
+        <EnquiryLinks tone="light" message="Hello! We're planning a corporate event on the Amalfi Coast and would love live music. Could you send us some information?" />
       </section>
     </div>
   )

@@ -16,7 +16,7 @@ function GeoIntro() {
         Where Music Has Always Been the Centre of Everything
       </h2>
       <div className="flex flex-col gap-5 max-w-[65ch]">
-        <p className="text-[.72rem] font-light tracking-[.05em] leading-[2] text-[#404040]">
+        <p className="text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-[#404040]">
           Ravello sits 365 metres above the Tyrrhenian Sea, on a promontory between Minori and
           Atrani along the Amalfi Coast — a UNESCO World Heritage Site since 1997. It is one of
           the few places in the world where music is not an ornament but a founding principle.
@@ -25,7 +25,7 @@ function GeoIntro() {
           1953 on the clifftop stage of Villa Rufolo, has hosted conductors and soloists from
           across the world.
         </p>
-        <p className="text-[.72rem] font-light tracking-[.05em] leading-[2] text-[#404040]">
+        <p className="text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-[#404040]">
           This history is not incidental. It shapes the way music is chosen, placed, and
           performed here. Wedding Music Ravello was built on that same principle: that the right
           music, in the right space, at the right moment, does not accompany an event — it
@@ -41,14 +41,14 @@ function GeoIntro() {
 function ContactStrip() {
   return (
     <section id="contact" aria-labelledby="enq-head"
-      className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3rem,8vw,6rem)]
+      className="bg-[#F2EDE6] border-y border-black/[.06] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3rem,8vw,6rem)]
         flex items-center justify-between gap-8 flex-wrap">
       <p id="enq-head"
-        className="font-serif italic font-light leading-[1.18] text-white/82 max-w-[24ch]"
+        className="font-serif italic font-light leading-[1.18] text-[#1A1A1A] max-w-[24ch]"
         style={{ fontSize: 'clamp(1.7rem,3.5vw,2.8rem)' }}>
         Every event is different.<br />Tell us about yours.
       </p>
-      <EnquiryLinks label="Get in touch →" />
+      <EnquiryLinks tone="light" label="Get in touch →" />
     </section>
   )
 }

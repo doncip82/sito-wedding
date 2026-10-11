@@ -31,18 +31,18 @@ export default function LocationSorrento() {
         <script type="application/ld+json">{JSON.stringify(sorrentoSchema)}</script>
       </Head>
 
-      <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(5rem,12vw,9rem)]">
+      <section className="bg-[#F2EDE6] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(5rem,12vw,9rem)]">
         <div className="max-w-4xl">
-          <p className="text-[.56rem] font-light tracking-[.25em] uppercase text-[#B8A882]
+          <p className="text-[.64rem] font-light tracking-[.25em] uppercase text-[#8A7A5A]
             flex items-center gap-3 mb-5">
             <span className="inline-block w-[22px] h-[.5px] bg-[#B8A882]" />
             Sorrento · Campania · Southern Italy
           </p>
-          <h1 className="font-serif italic font-light leading-[1.02] text-[#F9F8F7] mb-6"
+          <h1 className="font-serif italic font-light leading-[1.02] text-[#1A1A1A] mb-6"
             style={{ fontSize: 'clamp(3rem,7vw,6rem)' }}>
             Wedding Music<br />in Sorrento
           </h1>
-          <p className="text-[.72rem] font-light tracking-[.06em] leading-[2] text-white/55 max-w-[60ch]">
+          <p className="text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-[#404040] max-w-[60ch]">
             Sorrento faces north across the Bay of Naples toward Vesuvius — the only major
             resort on the peninsula where the volcano forms the visual backdrop to every
             ceremony. A carefully selected roster of artists performs at the clifftop
@@ -58,7 +58,7 @@ export default function LocationSorrento() {
             Vesuvius on the Horizon,<br />Strings on the Terrace
           </h2>
           <div className="w-9 h-[.5px] bg-[#B8A882] mb-8" />
-          <div className="space-y-6 text-[.72rem] font-light tracking-[.05em] leading-[2] text-[#404040]">
+          <div className="space-y-6 text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-[#404040]">
             <p>
               The Grand Hotel Excelsior Vittoria has occupied its clifftop position above the
               port of Sorrento since 1834. Its terrace garden — at 50 metres above sea level —
@@ -84,13 +84,13 @@ export default function LocationSorrento() {
         </div>
       </section>
 
-      <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3rem,8vw,6rem)]
+      <section className="bg-[#F2EDE6] border-t border-black/[.06] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3rem,8vw,6rem)]
         flex items-center justify-between gap-8 flex-wrap">
-        <p className="font-serif italic font-light leading-[1.18] text-white/82 max-w-[26ch]"
+        <p className="font-serif italic font-light leading-[1.18] text-[#1A1A1A] max-w-[26ch]"
           style={{ fontSize: 'clamp(1.7rem,3.5vw,2.8rem)' }}>
           Planning a wedding<br />in Sorrento?
         </p>
-        <EnquiryLinks message={weddingMessage({ place: 'in Sorrento' })} />
+        <EnquiryLinks tone="light" message={weddingMessage({ place: 'in Sorrento' })} />
       </section>
     </div>
   )

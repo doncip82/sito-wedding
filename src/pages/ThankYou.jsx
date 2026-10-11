@@ -45,10 +45,10 @@ export default function ThankYou() {
           <h1 className="font-serif italic font-light text-[2.5rem] text-[#1A1A1A] mb-4">
             Thank you.
           </h1>
-          <p className="text-[.72rem] font-light tracking-[.05em] leading-[2] text-[#404040] mb-8">
+          <p className="text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-[#404040] mb-8">
             Your enquiry has been received. We will be in touch within 48 hours.
           </p>
-          <p className="text-[.62rem] font-light tracking-[.06em] leading-[1.9] text-[#404040] mb-10">
+          <p className="text-[.82rem] font-light tracking-[.015em] leading-[1.85] text-[#404040] mb-10">
             In the meantime, you can write to us directly at{' '}
             <a href="mailto:info@weddingmusicravello.com"
               className="text-[#8A7A5A] no-underline border-b border-[#8A7A5A]/40 hover:border-[#8A7A5A]">
@@ -61,7 +61,7 @@ export default function ThankYou() {
             </a>.
           </p>
           <Link to="/"
-            className="link-underline no-underline text-[.56rem] font-normal tracking-[.18em]
+            className="link-underline no-underline text-[.64rem] font-normal tracking-[.18em]
               uppercase text-[#1A1A1A]">
             Return to homepage
           </Link>

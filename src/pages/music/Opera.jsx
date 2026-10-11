@@ -28,24 +28,24 @@ export default function MusicOpera() {
         <script type="application/ld+json">{JSON.stringify(operaSchema)}</script>
       </Head>
 
-      <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(5rem,12vw,9rem)]">
+      <section className="bg-[#F2EDE6] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(5rem,12vw,9rem)]">
         <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-12 md:gap-16 items-center max-w-6xl">
           <div className="max-w-xl">
-            <p className="text-[.56rem] font-light tracking-[.25em] uppercase text-[#B8A882]
+            <p className="text-[.64rem] font-light tracking-[.25em] uppercase text-[#8A7A5A]
               flex items-center gap-3 mb-5">
               <span className="inline-block w-[22px] h-[.5px] bg-[#B8A882]" />
               Lyric Voice · Ceremony & Dinner
             </p>
-            <h1 className="font-serif italic font-light leading-[1.02] text-[#F9F8F7] mb-6"
+            <h1 className="font-serif italic font-light leading-[1.02] text-[#1A1A1A] mb-6"
               style={{ fontSize: 'clamp(3rem,7vw,6rem)' }}>
               Opera
             </h1>
-            <p className="text-[.72rem] font-light tracking-[.06em] leading-[2] text-white/55 max-w-[60ch]">
+            <p className="text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-[#404040] max-w-[60ch]">
               Lyric soprano and tenor, trained in the Italian <em>bel canto</em> tradition,
               for ceremony music and dinner interludes. The stone terraces of the Amalfi Coast
               provide natural resonance that no concert hall replicates.
             </p>
-            <EnquiryLinks className="mt-10" ensemble="Opera" message={weddingMessage({ interest: 'an opera singer' })} />
+            <EnquiryLinks tone="light" className="mt-10" ensemble="Opera" message={weddingMessage({ interest: 'an opera singer' })} />
           </div>
           <div className="mx-auto md:mx-0 shrink-0 overflow-hidden
             max-h-[55dvh] md:max-h-none
@@ -69,7 +69,7 @@ export default function MusicOpera() {
             The Acoustic Advantage<br />of Stone Terraces
           </h2>
           <div className="w-9 h-[.5px] bg-[#B8A882] mb-8" />
-          <div className="space-y-6 text-[.72rem] font-light tracking-[.05em] leading-[2] text-[#404040]">
+          <div className="space-y-6 text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-[#404040]">
             <p>
               The stone terraces and natural amphitheatre topography of Ravello provide
               acoustic resonance that complements unamplified operatic voice — the same quality
@@ -100,21 +100,21 @@ export default function MusicOpera() {
               { label: 'Dinner Interlude', desc: 'Full operatic set — 30 to 45 minutes. Suitable for between courses at the reception.' },
             ].map(({ label, desc }) => (
               <div key={label} className="py-4 border-b border-black/[.06]">
-                <p className="text-[.5rem] font-light tracking-[.2em] uppercase text-[#B8A882] mb-2">{label}</p>
-                <p className="text-[.66rem] font-light tracking-[.05em] leading-[2] text-[#404040]">{desc}</p>
+                <p className="text-[.6rem] font-light tracking-[.2em] uppercase text-[#B8A882] mb-2">{label}</p>
+                <p className="text-[.86rem] font-light tracking-[.015em] leading-[1.85] text-[#404040]">{desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3rem,8vw,6rem)]
+      <section className="bg-[#F2EDE6] border-t border-black/[.06] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3rem,8vw,6rem)]
         flex items-center justify-between gap-8 flex-wrap">
-        <p className="font-serif italic font-light leading-[1.18] text-white/82 max-w-[26ch]"
+        <p className="font-serif italic font-light leading-[1.18] text-[#1A1A1A] max-w-[26ch]"
           style={{ fontSize: 'clamp(1.7rem,3.5vw,2.8rem)' }}>
           Programme an Opera<br />Set for Your Wedding.
         </p>
-        <EnquiryLinks ensemble="Opera" message={weddingMessage({ interest: 'an opera singer' })} />
+        <EnquiryLinks tone="light" ensemble="Opera" message={weddingMessage({ interest: 'an opera singer' })} />
       </section>
     </div>
   )

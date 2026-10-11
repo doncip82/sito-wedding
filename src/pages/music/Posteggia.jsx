@@ -28,21 +28,28 @@ export default function MusicPosteggia() {
         <script type="application/ld+json">{JSON.stringify(posteggiaSchema)}</script>
       </Head>
 
-      <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(5rem,12vw,9rem)]">
-        <div className="max-w-4xl">
-          <p className="text-[.56rem] font-light tracking-[.25em] uppercase text-[#B8A882]
-            flex items-center gap-3 mb-5">
-            <span className="inline-block w-[22px] h-[.5px] bg-[#B8A882]" />
-            Neapolitan Tradition · Cocktail Hour
-          </p>
-          <h1 className="font-serif italic font-light leading-[1.02] text-[#F9F8F7] mb-6"
-            style={{ fontSize: 'clamp(3rem,7vw,6rem)' }}>
-            Posteggia
-          </h1>
-          <p className="text-[.72rem] font-light tracking-[.06em] leading-[2] text-white/55 max-w-[60ch]">
-            A Neapolitan street-serenade tradition performed at your wedding cocktail hour
-            on the Amalfi Coast — where it was born.
-          </p>
+      <section className="bg-[#F2EDE6] grid grid-cols-1 md:grid-cols-[minmax(0,1.08fr)_minmax(0,.92fr)]">
+        <div className="px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3.5rem,8vw,7rem)] self-center">
+          <div className="max-w-4xl">
+            <p className="text-[.64rem] font-light tracking-[.25em] uppercase text-[#8A7A5A]
+              flex items-center gap-3 mb-5">
+              <span className="inline-block w-[22px] h-[.5px] bg-[#B8A882]" />
+              Neapolitan Tradition · Cocktail Hour
+            </p>
+            <h1 className="font-serif italic font-light leading-[1.02] text-[#1A1A1A] mb-6"
+              style={{ fontSize: 'clamp(3rem,7vw,6rem)' }}>
+              Posteggia
+            </h1>
+            <p className="text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-[#404040] max-w-[60ch]">
+              A Neapolitan street-serenade tradition performed at your wedding cocktail hour
+              on the Amalfi Coast — where it was born.
+            </p>
+          </div>
+        </div>
+        <div className="relative min-h-[52svh] md:min-h-[clamp(30rem,72svh,48rem)] overflow-hidden">
+          <img src="/images/Posteggia/Posteggia.jpg" alt="Posteggia, the Neapolitan musical tradition, at a wedding" fetchpriority="high"
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ objectPosition: 'center 35%' }} />
         </div>
       </section>
 
@@ -53,7 +60,7 @@ export default function MusicPosteggia() {
             A Tradition That<br />Moves Between Tables
           </h2>
           <div className="w-9 h-[.5px] bg-[#B8A882] mb-8" />
-          <div className="space-y-6 text-[.72rem] font-light tracking-[.05em] leading-[2] text-[#404040]">
+          <div className="space-y-6 text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-[#404040]">
             <p>
               <em>Posteggia</em> is a Neapolitan street-serenade tradition dating to the late
               19th century, in which a small ensemble — typically mandolin, guitar and voice —
@@ -80,13 +87,13 @@ export default function MusicPosteggia() {
         </div>
       </section>
 
-      <section className="bg-[#1A1A1A] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3rem,8vw,6rem)]
+      <section className="bg-[#F2EDE6] border-t border-black/[.06] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3rem,8vw,6rem)]
         flex items-center justify-between gap-8 flex-wrap">
-        <p className="font-serif italic font-light leading-[1.18] text-white/82 max-w-[26ch]"
+        <p className="font-serif italic font-light leading-[1.18] text-[#1A1A1A] max-w-[26ch]"
           style={{ fontSize: 'clamp(1.7rem,3.5vw,2.8rem)' }}>
           Add Posteggia<br />to Your Day.
         </p>
-        <EnquiryLinks ensemble="Posteggia" message={weddingMessage({ interest: 'the Neapolitan Posteggia' })} />
+        <EnquiryLinks tone="light" ensemble="Posteggia" message={weddingMessage({ interest: 'the Neapolitan Posteggia' })} />
       </section>
     </div>
   )
