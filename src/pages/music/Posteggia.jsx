@@ -1,5 +1,6 @@
 import { Head } from 'vite-react-ssg'
 import EnquiryLinks from '@/components/ui/EnquiryLinks.jsx'
+import LoopVideo from '@/components/ui/LoopVideo.jsx'
 import { weddingMessage } from '@/lib/contactLinks.js'
 
 const posteggiaSchema = {
@@ -28,9 +29,10 @@ export default function MusicPosteggia() {
         <script type="application/ld+json">{JSON.stringify(posteggiaSchema)}</script>
       </Head>
 
-      <section className="bg-[#F2EDE6] grid grid-cols-1 md:grid-cols-[minmax(0,1.08fr)_minmax(0,.92fr)]">
-        <div className="px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3.5rem,8vw,7rem)] self-center">
-          <div className="max-w-4xl">
+      {/* Hero — text + vertical performance clip (like the Opera page) */}
+      <section className="bg-[#F2EDE6] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(4rem,10vw,8rem)]">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-12 md:gap-16 items-center max-w-6xl">
+          <div className="max-w-xl">
             <p className="text-[.64rem] font-light tracking-[.25em] uppercase text-[#6E6046]
               flex items-center gap-3 mb-5">
               <span className="inline-block w-[22px] h-[.5px] bg-[#B8A882]" />
@@ -45,11 +47,12 @@ export default function MusicPosteggia() {
               on the Amalfi Coast — where it was born.
             </p>
           </div>
-        </div>
-        <div className="relative min-h-[52svh] md:min-h-[clamp(30rem,72svh,48rem)] overflow-hidden">
-          <img src="/images/Posteggia/Posteggia.jpg" alt="Posteggia, the Neapolitan musical tradition, at a wedding" fetchpriority="high"
-            className="absolute inset-0 w-full h-full object-cover"
-            style={{ objectPosition: 'center 45%' }} />
+          <LoopVideo
+            src="/videos/posteggia-hero.mp4"
+            poster="/videos/posters/posteggia-hero.jpg"
+            label="The posteggia playing among the tables at a wedding dinner on the Amalfi Coast"
+            className="mx-auto md:mx-0 shrink-0 aspect-[9/16]
+              w-full max-w-[calc(60svh*9/16)] md:max-w-none md:w-[300px] lg:w-[340px]" />
         </div>
       </section>
 
