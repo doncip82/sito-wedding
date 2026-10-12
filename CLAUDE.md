@@ -105,7 +105,9 @@ public/
 │   ├── sorrento-cliffs.jpg        (hero /locations/sorrento, dal 2026-10-12 — Unsplash, Antonio Cangianiello: unsplash.com/photos/0CLELVY4rrU)
 │   │                              (Unsplash License: uso commerciale libero, credito non obbligatorio)
 │   ├── og-cover.jpg               (anteprima social/WhatsApp 1200×630 — og:image, NON è la favicon)
-│   ├── Ceremony.jpg, Dinner.jpg   (Occasions — immagini generate, ricolorate al naturale il 2026-10-11)
+│   ├── Ceremony.jpg               (Occasions/Cerimonia — immagine generata, ricolorata al naturale il 2026-10-11)
+│   ├── private-dinner-candlelight.jpg (Occasions/Birthdays — dal 2026-10-12: foto vera Unsplash di Michael Fousert, licenza Unsplash
+│   │                                   libera anche commerciale, id cGZ-X0nAUgY; sostituisce Dinner.jpg generata)
 │   ├── Corporate.jpg              (Occasions/Corporate — fotogramma VERO dal video EvoStrings al Salone Margherita; sostituisce Cocktail.jpg)
 │   ├── EvoStrings/     EvoStrings.jpg
 │   ├── Trilogy Trio/   Trilogy Trio 0-3 + Trilogy Trio.jpg
@@ -218,7 +220,7 @@ Ogni blocco testo è avvolto in uno `<span>` con:
 
 ## To Do / Follow-up aperti
 - **Google Ads:** controllare che Enquiry form / Email click / WhatsApp click escano da "Non attiva" (create l'11/10/2026); poi si può riattivare la campagna "Search | Wedding Music Ravello | Leads | EN" (account 477-419-9225). Le campagne "Ravello Weddings" dell'account di donatocipriano.com restano in pausa.
-- **Foto da sostituire con materiale vero:** violinista donna nella foto della cerimonia (`Ceremony.jpg`, generata) → idealmente Donato, da foto vera o con Higgsfield (serve ricaricare crediti); `Dinner.jpg` (Birthdays, generata, solo ricolorata) → foto vera di una cena/festa.
+- **Foto da sostituire con materiale vero:** violinista donna nella foto della cerimonia (`Ceremony.jpg`, generata) → idealmente Donato, da foto vera o con Higgsfield (serve ricaricare crediti). (Birthdays sostituita il 2026-10-12 con una foto stock vera; resta da rimpiazzare con una foto di un evento nostro, quando c'è.)
 - **Velocità:** ricomprimere `opera-hero.mp4` (15,6 MB), `dj-hero.mp4` (15,1 MB), `EvoStrings_Hero.mp4` (21,6 MB) come `posteggia-hero.mp4` (~3–5 MB, nessuna differenza visibile). Font Google → ospitarli sul sito per eliminare il CLS (~0,15).
 - **Proposte non applicate (PR #2):** title/H1 delle landing più vicini agli annunci (es. "Wedding Saxophonist · Amalfi Coast").
 - Rifiniture editoriali: uniformare "365 m" (Home) vs "350 m" (Ravello); togliere il doppio `<h1>` in Home
