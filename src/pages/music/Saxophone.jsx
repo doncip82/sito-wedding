@@ -87,9 +87,9 @@ export default function MusicSaxophone() {
           </div>
         </div>
         <div className="relative min-h-[52svh] md:min-h-[clamp(30rem,72svh,48rem)] overflow-hidden">
-          <img src="/images/Saxophone/Sabasax%202.jpg" alt="Wedding saxophonist performing on the Amalfi Coast" fetchpriority="high"
+          <img src="/images/Saxophone/wedding-saxophonist-amalfi-coast.jpg" alt="Wedding saxophonist performing on the Amalfi Coast" fetchpriority="high"
             className="absolute inset-0 w-full h-full object-cover"
-            style={{ objectPosition: 'center 30%' }} />
+            style={{ objectPosition: 'center top' }} />
         </div>
       </section>
 
