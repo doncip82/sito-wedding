@@ -49,7 +49,7 @@ export default function MusicPosteggia() {
         <div className="relative min-h-[52svh] md:min-h-[clamp(30rem,72svh,48rem)] overflow-hidden">
           <img src="/images/Posteggia/Posteggia.jpg" alt="Posteggia, the Neapolitan musical tradition, at a wedding" fetchpriority="high"
             className="absolute inset-0 w-full h-full object-cover"
-            style={{ objectPosition: 'center 35%' }} />
+            style={{ objectPosition: 'center 45%' }} />
         </div>
       </section>
 
