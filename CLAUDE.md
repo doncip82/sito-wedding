@@ -100,7 +100,10 @@ api/                 enquiry.js   (Vercel Serverless Function — invia il form 
 
 public/
 ├── images/
-│   ├── ravello-villa-rufolo.jpg   (About — vista Villa Rufolo, link a /locations/ravello)
+│   ├── ravello-villa-rufolo.jpg   (About — vista Villa Rufolo, link a /locations/ravello; anche hero di /locations/ravello)
+│   ├── positano-sunset.jpg        (hero /locations/positano, dal 2026-10-12 — Unsplash, Reiseuhu: unsplash.com/photos/Qw-K23N1V4s)
+│   ├── sorrento-cliffs.jpg        (hero /locations/sorrento, dal 2026-10-12 — Unsplash, Antonio Cangianiello: unsplash.com/photos/0CLELVY4rrU)
+│   │                              (Unsplash License: uso commerciale libero, credito non obbligatorio)
 │   ├── og-cover.jpg               (anteprima social/WhatsApp 1200×630 — og:image, NON è la favicon)
 │   ├── Ceremony.jpg, Dinner.jpg   (Occasions — immagini generate, ricolorate al naturale il 2026-10-11)
 │   ├── Corporate.jpg              (Occasions/Corporate — fotogramma VERO dal video EvoStrings al Salone Margherita; sostituisce Cocktail.jpg)
