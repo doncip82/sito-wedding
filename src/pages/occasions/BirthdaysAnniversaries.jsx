@@ -79,9 +79,9 @@ export default function OccasionBirthdaysAnniversaries() {
           </div>
         </div>
         <div className="relative min-h-[52svh] md:min-h-[clamp(30rem,72svh,48rem)] overflow-hidden">
-          <img src="/images/Dinner.jpg" alt="Private dinner celebration with live music on the Amalfi Coast" fetchpriority="high"
+          <img src="/images/private-dinner-candlelight.jpg" alt="Candlelit table laid for a private birthday or anniversary dinner" fetchpriority="high"
             className="absolute inset-0 w-full h-full object-cover"
-            style={{ objectPosition: 'center' }} />
+            style={{ objectPosition: '25% center' }} />
         </div>
       </section>
 

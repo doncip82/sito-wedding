@@ -30,7 +30,7 @@ const OCCASIONS = [
     label:       'Birthdays & Anniversaries',
     description: 'A string quartet for a terrace dinner at Palazzo Avino, a DJ set for a sunset gathering in Positano, a saxophone for the cocktail hour — the format is selected to match the scale and mood of the occasion, not the other way round.',
     pageHref:    '/occasions/birthdays-anniversaries',
-    img:         '/images/Dinner.jpg',
+    img:         '/images/private-dinner-candlelight.jpg',
     options: [
       { label: 'EvoStrings', href: '/evostrings'       },
       { label: 'DJ & Vocalist', href: '/music/dj'      },
