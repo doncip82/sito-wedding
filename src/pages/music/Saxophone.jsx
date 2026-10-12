@@ -1,6 +1,35 @@
 import { Head } from 'vite-react-ssg'
 import EnquiryLinks from '@/components/ui/EnquiryLinks.jsx'
+import LoopVideo from '@/components/ui/LoopVideo.jsx'
 import { weddingMessage } from '@/lib/contactLinks.js'
+
+const SITE = 'https://www.weddingmusicravello.com'
+
+// One wedding cocktail at Hotel Marincanto, Positano (18 Sept 2026) —
+// moonlight first, then blue hour and sunset (order chosen by Donato).
+const saxClips = [
+  {
+    slug: 'night',
+    title: 'Moonlight',
+    time: '8:00 pm',
+    duration: 'PT26S',
+    label: 'Moonlight over the sea and the wedding cocktail on the terrace of Hotel Marincanto, Positano, at night',
+  },
+  {
+    slug: 'blue-hour',
+    title: 'Blue Hour',
+    time: '7:30 pm',
+    duration: 'PT15S',
+    label: 'Wedding guests on the terrace of Hotel Marincanto at blue hour, with Positano lighting up behind them',
+  },
+  {
+    slug: 'golden-hour',
+    title: 'Golden Hour',
+    time: '7:15 pm',
+    duration: 'PT27S',
+    label: 'Saxophonist playing at sunset during a wedding cocktail on the terrace of Hotel Marincanto, Positano',
+  },
+]
 
 const saxophoneSchema = {
   '@context': 'https://schema.org',
@@ -10,6 +39,15 @@ const saxophoneSchema = {
   genre: ['Jazz', 'Soul', 'Contemporary'],
   areaServed: { '@type': 'AdministrativeArea', name: 'Amalfi Coast' },
   url: 'https://www.weddingmusicravello.com/music/saxophone',
+  subjectOf: saxClips.map((clip) => ({
+    '@type': 'VideoObject',
+    name: `Wedding Saxophone in Positano — ${clip.title}`,
+    description: clip.label,
+    thumbnailUrl: `${SITE}/videos/posters/sax-positano-${clip.slug}.jpg`,
+    contentUrl: `${SITE}/videos/sax-positano-${clip.slug}.mp4`,
+    uploadDate: '2026-10-12',
+    duration: clip.duration,
+  })),
 }
 
 export default function MusicSaxophone() {
@@ -84,6 +122,45 @@ export default function MusicSaxophone() {
               is the most requested format for aperitivo on the Amalfi terraces.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Live clips — 3 columns on desktop, swipeable row on mobile */}
+      <section className="pb-[clamp(4rem,10vw,8rem)]">
+        <div className="px-[clamp(1.5rem,6vw,5rem)] max-w-[72ch] box-content mb-12">
+          <p className="eyebrow mb-5">Live at Hotel Marincanto · Positano</p>
+          <h2 className="section-title mb-8" style={{ maxWidth: '26ch' }}>
+            One Evening<br />on the Terrace
+          </h2>
+          <div className="w-9 h-[.5px] bg-[#B8A882] mb-8" />
+          <p className="text-[.95rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B]">
+            Three moments from one wedding cocktail on the terrace of Hotel Marincanto,
+            filmed as the evening turned from sunset to night above Positano.
+            Turn the sound on to hear the saxophone.
+          </p>
+        </div>
+        <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory
+          px-[clamp(1.5rem,6vw,5rem)] scroll-px-[clamp(1.5rem,6vw,5rem)]
+          [scrollbar-width:none] [&::-webkit-scrollbar]:hidden
+          md:grid md:grid-cols-3 md:gap-6 md:overflow-visible md:max-w-5xl md:box-content">
+          {saxClips.map((clip) => (
+            <figure key={clip.slug} className="snap-start shrink-0 w-[72vw] max-w-[320px] md:w-auto md:max-w-none">
+              <LoopVideo
+                playInView
+                src={`/videos/sax-positano-${clip.slug}.mp4`}
+                poster={`/videos/posters/sax-positano-${clip.slug}.jpg`}
+                label={clip.label}
+                className="aspect-[9/16] w-full bg-[#1A1A1A]" />
+              <figcaption className="mt-4 flex items-baseline justify-between gap-4">
+                <span className="font-serif italic font-light text-[1.4rem] leading-tight text-[#1A1A1A]">
+                  {clip.title}
+                </span>
+                <span className="text-[.66rem] font-normal tracking-[.18em] uppercase text-[#6E6046]">
+                  {clip.time}
+                </span>
+              </figcaption>
+            </figure>
+          ))}
         </div>
       </section>
 

@@ -3,7 +3,13 @@
 // "Sound on / Sound off" text toggle — for performance clips where the sound is
 // the point (e.g. the Posteggia). Text control with a hairline underline, per
 // the design rules; a soft bottom shade keeps it legible over any frame.
-import { useRef, useState } from 'react'
+//
+// `playInView`: for clips further down the page (e.g. the Saxophone gallery) —
+// nothing is downloaded until the clip scrolls into view, and it pauses again
+// when it leaves. Only one clip on the page plays with sound at a time.
+import { useEffect, useRef, useState } from 'react'
+
+const SOUND_EVENT = 'loopvideo:sound'
 
 function SpeakerIcon({ muted }) {
   return (
@@ -18,15 +24,39 @@ function SpeakerIcon({ muted }) {
   )
 }
 
-export default function LoopVideo({ src, poster, label, className = '' }) {
+export default function LoopVideo({ src, poster, label, playInView = false, className = '' }) {
   const videoRef = useRef(null)
   const [muted, setMuted] = useState(true)
+
+  // Another clip turned its sound on → this one goes quiet.
+  useEffect(() => {
+    const onSound = (e) => {
+      const video = videoRef.current
+      if (!video || e.detail === video || video.muted) return
+      video.muted = true
+      setMuted(true)
+    }
+    window.addEventListener(SOUND_EVENT, onSound)
+    return () => window.removeEventListener(SOUND_EVENT, onSound)
+  }, [])
+
+  useEffect(() => {
+    const video = videoRef.current
+    if (!playInView || !video || !('IntersectionObserver' in window)) return
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) video.play().catch(() => {})
+      else video.pause()
+    }, { threshold: 0.35 })
+    observer.observe(video)
+    return () => observer.disconnect()
+  }, [playInView])
 
   const toggleSound = () => {
     const video = videoRef.current
     if (!video) return
     video.muted = !video.muted
     setMuted(video.muted)
+    if (!video.muted) window.dispatchEvent(new CustomEvent(SOUND_EVENT, { detail: video }))
     if (video.paused) video.play().catch(() => {})
   }
 
@@ -34,7 +64,8 @@ export default function LoopVideo({ src, poster, label, className = '' }) {
     <div className={`relative overflow-hidden ${className}`}>
       <video
         ref={videoRef}
-        autoPlay muted playsInline loop preload="metadata"
+        autoPlay={!playInView} muted playsInline loop
+        preload={playInView ? 'none' : 'metadata'}
         poster={poster}
         aria-label={label}
         className="absolute inset-0 w-full h-full object-cover"
