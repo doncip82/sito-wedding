@@ -109,6 +109,10 @@ public/
 │   ├── private-dinner-candlelight.jpg (Occasions/Birthdays — dal 2026-10-12: foto vera Unsplash di Michael Fousert, licenza Unsplash
 │   │                                   libera anche commerciale, id cGZ-X0nAUgY; sostituisce Dinner.jpg generata)
 │   ├── Corporate.jpg              (Occasions/Corporate — fotogramma VERO dal video EvoStrings al Salone Margherita; sostituisce Cocktail.jpg)
+│   ├── Proposal.jpg               (Occasions/Proposta + hero /occasions/marriage-proposal — foto vera, terrazza su Positano con
+│   │                               violinista a destra; dal 2026-10-12 ritagliata più stretta (meno auto, violinista più grande),
+│   │                               1920×1620, 1,2 MB → 435 KB; `objectPosition: 'right center'` così il violinista resta
+│   │                               nell'inquadratura anche quando la foto viene tagliata)
 │   ├── EvoStrings/     EvoStrings.jpg
 │   ├── Trilogy Trio/   Trilogy Trio 0-3 + Trilogy Trio.jpg
 │   ├── Violin Solo/    immagine_donato.JPG
@@ -228,7 +232,7 @@ Ogni blocco testo è avvolto in uno `<span>` con:
 - **Favicon su Google:** dopo il deploy delle fedi, chiedere reindicizzazione della home in Search Console ("Controllo URL" → "Richiedi indicizzazione") per far aggiornare la favicon nei risultati (Google ci mette da giorni a settimane).
 - **Fatti ✓ (2026-07-06):** migrazione SSG (tutte le 19 route pre-renderizzate), foto About, compressione video (171→24MB) e immagini (58→8MB), auto-deploy ripristinato
 - **Fatti ✓ (2026-07-10):** rifatta favicon → **marchio a fedi intrecciate** (era "WMR"); set completo `favicon.ico`/16/32/512/apple-touch/android-chrome/`site.webmanifest` con path assoluti (risolto il problema della favicon donatocipriano.com in cache su Google + i 404 su `/favicon.ico`); `og-cover.jpg` (anteprima social/WhatsApp) lasciata intatta.
-- **Fatti ✓ (2026-10-11/12):** azioni Ads vecchie `/thank-you` rese Secondarie; design chiaro (PR #3); foto Occasions (Corporate vera, cerimonia e Birthdays ricolorate); Posteggia con foto e video veri + pulsante "Sound on"; pagine DJ e Vocalist unite in "DJ & Vocalist" (`/music/vocalist` → redirect); pagina Sax con 3 video veri del Marincanto (Positano).
+- **Fatti ✓ (2026-10-11/12):** azioni Ads vecchie `/thank-you` rese Secondarie; design chiaro (PR #3); foto Occasions (Corporate vera, cerimonia e Birthdays ricolorate); Posteggia con foto e video veri + pulsante "Sound on"; pagine DJ e Vocalist unite in "DJ & Vocalist" (`/music/vocalist` → redirect); pagina Sax con 3 video veri del Marincanto (Positano); foto della Proposta ritagliata e centrata sul violinista (home + landing).
 - **Fatti ✓ (2026-10-11):** dominio `weddingmusicravello.com` verificato in Resend e consegna confermata (il fallback di `MAIL_FROM` nel codice è `info@weddingmusicravello.com`, non `onboarding@resend.dev`: il vecchio commento era sbagliato); conversioni Ads esplicite + WhatsApp + campo telefono + provenienza nelle email + CTA nelle hero; video del menu non più scaricato su ogni pagina.
 - **Fatti ✓:** form Contact collegato a backend reale (`api/enquiry.js`, Vercel Serverless + Resend); aggiunte pagine `FAQ.jsx` e `Privacy.jsx`.
 
