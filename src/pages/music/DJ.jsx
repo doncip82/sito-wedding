@@ -23,7 +23,7 @@ export default function MusicDJ() {
     <div className="bg-[#F9F8F7] pt-[68px]">
       <Head>
         <title>Wedding DJ & Vocalist Amalfi Coast | Wedding Music Ravello</title>
-        <meta name="description" content="A DJ and a vocalist-MC who perform together for wedding receptions and private celebrations on the Amalfi Coast. Curated sets and a host who leads the dance floor at luxury venues in Ravello, Positano and Sorrento." />
+        <meta name="description" content="A DJ and a vocalist-MC who perform together for wedding receptions and private celebrations on the Amalfi Coast. Curated sets and a host who keeps the dance floor full at luxury venues in Ravello, Positano and Sorrento." />
         <link rel="canonical" href="https://www.weddingmusicravello.com/music/dj" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.weddingmusicravello.com/music/dj" />
@@ -58,8 +58,8 @@ export default function MusicDJ() {
           <div className="w-9 h-[.5px] bg-[#B8A882] mb-8" />
           <p className="text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-white/70 max-w-[60ch]">
             A DJ and a vocalist who work as one act — curated sets, and a host who leads the
-            evening and lifts the dance floor. Selected for experience at the specific venues
-            of the Amalfi Coast, not for volume of bookings.
+            evening and keeps the dance floor full. Chosen for their experience at the venues
+            of the Amalfi Coast, not for the number of bookings they take.
           </p>
           <EnquiryLinks className="mt-10" ensemble="DJ & Vocalist" message={ENQUIRY_MESSAGE} />
         </div>
@@ -77,20 +77,21 @@ export default function MusicDJ() {
             <div className="space-y-6 text-[.95rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B]">
               <p>
                 The DJ chooses and mixes the music; the vocalist is the voice of the evening —
-                an MC and entertainer who introduces the key moments, involves the guests and
-                keeps the energy on the dance floor, now and then singing the main hooks over
-                the DJ&apos;s tracks. Together they turn the reception into a show rather than
+                an MC and entertainer who introduces the key moments, gets the guests involved
+                and keeps the energy high on the dance floor, now and then singing the hooks
+                over the DJ&apos;s tracks. Together they turn the reception into a show rather than
                 a playlist.
               </p>
               <p>
                 The music is agreed with the couple in advance — pop, dance, house and Italian
-                classics — and adapted live to the mood of the room.
+                classics — and adjusted on the night to the mood of the room.
               </p>
               <p>
                 For the reception, the duo — joined, if you wish, by a{' '}
                 <a href="/music/saxophone" className="link-underline">saxophone</a>{' '}
-                playing over the DJ set — bridges the end of dinner and the open dancing: a
-                transition that, on a Ravello terrace after midnight, feels entirely natural.
+                playing over the DJ set — carries the evening from the end of dinner onto the
+                dance floor: a transition that, on a Ravello terrace after midnight, feels
+                entirely natural.
               </p>
               <p>
                 Both are selected for demonstrated experience at luxury venue events, not for
