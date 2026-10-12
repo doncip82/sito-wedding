@@ -107,19 +107,20 @@ public/
 │   ├── EvoStrings/     EvoStrings.jpg
 │   ├── Trilogy Trio/   Trilogy Trio 0-3 + Trilogy Trio.jpg
 │   ├── Violin Solo/    immagine_donato.JPG
-│   ├── Saxophone/      Sabasax 2.jpg  (Sabasax 1 non usato)
+│   ├── Saxophone/      Sabasax 2.jpg  (Sabasax 1 non usato; i 3 .mov grezzi del Marincanto sono in .gitignore)
 │   ├── Dj/             Dj Nice.jpeg
 │   ├── Vocalist/       Momo Vocalist.jpeg
 │   ├── Opera/          Elisabetta Vilni Soprano.jpg
 │   ├── Piano Solo/     Angelo Borrelli.jpg
 │   └── Posteggia/      Posteggia.jpg
-├── videos/             Ravello_Hero.mp4 (hero + menu mobile), dj-hero.mp4 (pagina DJ), opera-hero.mp4
+├── videos/             Ravello_Hero.mp4 (hero + menu mobile), dj-hero.mp4 (pagina DJ), opera-hero.mp4,
+│                       posteggia-hero.mp4, sax-positano-{golden-hour,blue-hour,night}.mp4 (galleria Sax)
 │   └── posters/        ravello-hero.jpg, evostrings-hero.jpg, dj-hero.jpg, opera-hero.jpg
 └── (root)              favicon.ico, favicon-16x16.png, favicon-32x32.png, favicon.png (512),
                         apple-touch-icon.png, android-chrome-192x192.png, site.webmanifest   (marchio: fedi intrecciate)
 ```
 > Immagini ottimizzate il 2026-07-06 (58MB → ~8MB). `og-cover.jpg` (1200×630, anteprima social/WhatsApp) è **presente** e servita via `og:image`.
-> **Video usati dal sito:** `Ravello_Hero.mp4`, `dj-hero.mp4`, `opera-hero.mp4`, `posteggia-hero.mp4` (dal 2026-10-12: hero della Posteggia, 11s verticale con pulsante "Sound on" — componente `src/components/ui/LoopVideo.jsx`), `EvoStrings/EvoStrings_Hero.mp4`. I video grezzi di Donato (Posteggia, sax…) stanno su **iCloud Drive → matrimonio/** e non vanno nel repo: si estraggono solo spezzoni/fotogrammi ottimizzati. Eventuali altri video (sorgente grezzo/di lavoro non referenziato nel codice) vanno **in `.gitignore`**, non committati — GitHub blocca i file >100MB. Al 2026-07-14 due sorgenti locali sono ignorati: `Salone Margherita Sito Ravello DEF.mp4` e `NICE Video.MP4`.
+> **Video usati dal sito:** `Ravello_Hero.mp4`, `dj-hero.mp4`, `opera-hero.mp4`, `posteggia-hero.mp4` (dal 2026-10-12: hero della Posteggia, 11s verticale con pulsante "Sound on" — componente `src/components/ui/LoopVideo.jsx`), `sax-positano-golden-hour.mp4` / `-blue-hour.mp4` / `-night.mp4` (dal 2026-10-12: galleria "From Golden Hour to Moonlight" nella pagina Sax — cocktail di matrimonio all'Hotel Marincanto, Positano, 18/09/2026; 720×1280, 3–7 MB l'uno, GPS rimosso; `LoopVideo playInView`: si scaricano solo quando entrano nello schermo, un solo video con audio alla volta), `EvoStrings/EvoStrings_Hero.mp4`. I video grezzi di Donato (Posteggia, sax…) stanno su **iCloud Drive → matrimonio/** e non vanno nel repo: si estraggono solo spezzoni/fotogrammi ottimizzati. Eventuali altri video (sorgente grezzo/di lavoro non referenziato nel codice) vanno **in `.gitignore`**, non committati — GitHub blocca i file >100MB. Al 2026-07-14 due sorgenti locali sono ignorati: `Salone Margherita Sito Ravello DEF.mp4` e `NICE Video.MP4`.
 
 ## Struttura Home page (ordine sezioni)
 Hero → GeoIntro → ContactStrip → Occasions → Locations → About → Footer
@@ -213,7 +214,7 @@ Ogni blocco testo è avvolto in uno `<span>` con:
 
 ## To Do / Follow-up aperti
 - **Google Ads:** controllare che Enquiry form / Email click / WhatsApp click escano da "Non attiva" (create l'11/10/2026); poi si può riattivare la campagna "Search | Wedding Music Ravello | Leads | EN" (account 477-419-9225). Le campagne "Ravello Weddings" dell'account di donatocipriano.com restano in pausa.
-- **Foto da sostituire con materiale vero:** violinista donna nella foto della cerimonia (`Ceremony.jpg`, generata) → idealmente Donato, da foto vera o con Higgsfield (serve ricaricare crediti); `Dinner.jpg` (Birthdays, generata, solo ricolorata) → foto vera di una cena/festa. Video del sassofonista attesi su iCloud Drive → `matrimonio/` per ricavarne fotogrammi.
+- **Foto da sostituire con materiale vero:** violinista donna nella foto della cerimonia (`Ceremony.jpg`, generata) → idealmente Donato, da foto vera o con Higgsfield (serve ricaricare crediti); `Dinner.jpg` (Birthdays, generata, solo ricolorata) → foto vera di una cena/festa.
 - **Velocità:** ricomprimere `opera-hero.mp4` (15,6 MB), `dj-hero.mp4` (15,1 MB), `EvoStrings_Hero.mp4` (21,6 MB) come `posteggia-hero.mp4` (~3–5 MB, nessuna differenza visibile). Font Google → ospitarli sul sito per eliminare il CLS (~0,15).
 - **Proposte non applicate (PR #2):** title/H1 delle landing più vicini agli annunci (es. "Wedding Saxophonist · Amalfi Coast").
 - Rifiniture editoriali: uniformare "365 m" (Home) vs "350 m" (Ravello); togliere il doppio `<h1>` in Home
@@ -221,7 +222,7 @@ Ogni blocco testo è avvolto in uno `<span>` con:
 - **Favicon su Google:** dopo il deploy delle fedi, chiedere reindicizzazione della home in Search Console ("Controllo URL" → "Richiedi indicizzazione") per far aggiornare la favicon nei risultati (Google ci mette da giorni a settimane).
 - **Fatti ✓ (2026-07-06):** migrazione SSG (tutte le 19 route pre-renderizzate), foto About, compressione video (171→24MB) e immagini (58→8MB), auto-deploy ripristinato
 - **Fatti ✓ (2026-07-10):** rifatta favicon → **marchio a fedi intrecciate** (era "WMR"); set completo `favicon.ico`/16/32/512/apple-touch/android-chrome/`site.webmanifest` con path assoluti (risolto il problema della favicon donatocipriano.com in cache su Google + i 404 su `/favicon.ico`); `og-cover.jpg` (anteprima social/WhatsApp) lasciata intatta.
-- **Fatti ✓ (2026-10-11/12):** azioni Ads vecchie `/thank-you` rese Secondarie; design chiaro (PR #3); foto Occasions (Corporate vera, cerimonia e Birthdays ricolorate); Posteggia con foto e video veri + pulsante "Sound on"; pagine DJ e Vocalist unite in "DJ & Vocalist" (`/music/vocalist` → redirect).
+- **Fatti ✓ (2026-10-11/12):** azioni Ads vecchie `/thank-you` rese Secondarie; design chiaro (PR #3); foto Occasions (Corporate vera, cerimonia e Birthdays ricolorate); Posteggia con foto e video veri + pulsante "Sound on"; pagine DJ e Vocalist unite in "DJ & Vocalist" (`/music/vocalist` → redirect); pagina Sax con 3 video veri del Marincanto (Positano).
 - **Fatti ✓ (2026-10-11):** dominio `weddingmusicravello.com` verificato in Resend e consegna confermata (il fallback di `MAIL_FROM` nel codice è `info@weddingmusicravello.com`, non `onboarding@resend.dev`: il vecchio commento era sbagliato); conversioni Ads esplicite + WhatsApp + campo telefono + provenienza nelle email + CTA nelle hero; video del menu non più scaricato su ogni pagina.
 - **Fatti ✓:** form Contact collegato a backend reale (`api/enquiry.js`, Vercel Serverless + Resend); aggiunte pagine `FAQ.jsx` e `Privacy.jsx`.
 
