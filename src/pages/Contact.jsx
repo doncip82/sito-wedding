@@ -11,8 +11,8 @@ const venues = [
   'Villa Treville', 'Monastero Santa Rosa', 'Villa Eva', 'Other / TBD',
 ]
 const ensembles = [
-  'EvoStrings', 'Trilogy Trio', 'Violin Solo', 'Saxophone', 'DJ',
-  'Vocalist', 'Posteggia', 'Opera', 'Piano Solo', 'Not sure yet',
+  'EvoStrings', 'Trilogy Trio', 'Violin Solo', 'Saxophone', 'DJ & Vocalist',
+  'Posteggia', 'Opera', 'Piano Solo', 'Not sure yet',
 ]
 
 const contactSchema = {

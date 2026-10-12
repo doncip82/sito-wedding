@@ -26,7 +26,6 @@ const LocationSorrento = lazy(() => import('@/pages/locations/Sorrento.jsx'))
 const MusicIndex     = lazy(() => import('@/pages/music/MusicIndex.jsx'))
 const MusicSaxophone = lazy(() => import('@/pages/music/Saxophone.jsx'))
 const MusicDJ        = lazy(() => import('@/pages/music/DJ.jsx'))
-const MusicVocalist  = lazy(() => import('@/pages/music/Vocalist.jsx'))
 const MusicPosteggia = lazy(() => import('@/pages/music/Posteggia.jsx'))
 const MusicOpera     = lazy(() => import('@/pages/music/Opera.jsx'))
 const MusicPiano     = lazy(() => import('@/pages/music/Piano.jsx'))
@@ -128,7 +127,6 @@ export const routes = [
       { path: 'music', element: <MusicIndex /> },
       { path: 'music/saxophone', element: <MusicSaxophone /> },
       { path: 'music/dj', element: <MusicDJ /> },
-      { path: 'music/vocalist', element: <MusicVocalist /> },
       { path: 'music/posteggia', element: <MusicPosteggia /> },
       { path: 'music/opera', element: <MusicOpera /> },
       { path: 'music/piano', element: <MusicPiano /> },
