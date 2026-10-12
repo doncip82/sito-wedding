@@ -107,7 +107,8 @@ public/
 │   ├── EvoStrings/     EvoStrings.jpg
 │   ├── Trilogy Trio/   Trilogy Trio 0-3 + Trilogy Trio.jpg
 │   ├── Violin Solo/    immagine_donato.JPG
-│   ├── Saxophone/      Sabasax 2.jpg  (Sabasax 1 non usato; i 3 .mov grezzi del Marincanto sono in .gitignore)
+│   ├── Saxophone/      wedding-saxophonist-amalfi-coast.jpg (card pagina Musica, dal 2026-10-12), Sabasax 2.jpg (hero pagina Sax)
+│   │                   (Sabasax 1 non usato; i .mov grezzi del Marincanto sono su iCloud → matrimonio/Video SAX)
 │   ├── Dj/             Dj Nice.jpeg
 │   ├── Vocalist/       Momo Vocalist.jpeg
 │   ├── Opera/          Elisabetta Vilni Soprano.jpg

@@ -30,8 +30,9 @@ const MUSIC_OPTIONS = [
     label: 'Saxophone',
     sub:   'Jazz & Contemporary',
     href:  '/music/saxophone',
-    img:   '/images/Saxophone/Sabasax%202.jpg',
-    bg:    '#1C2420',
+    img:   '/images/Saxophone/wedding-saxophonist-amalfi-coast.jpg',
+    objectPos: 'center top',
+    bg:    '#1C1A18',
   },
   {
     label: 'DJ & Vocalist',
