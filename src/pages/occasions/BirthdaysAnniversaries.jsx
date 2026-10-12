@@ -21,9 +21,8 @@ const schema = {
 
 const ENSEMBLES = [
   { label: 'EvoStrings', href: '/evostrings'      },
-  { label: 'DJ',         href: '/music/dj'        },
+  { label: 'DJ & Vocalist', href: '/music/dj'     },
   { label: 'Saxophone',  href: '/music/saxophone' },
-  { label: 'Vocalist',   href: '/music/vocalist'  },
 ]
 
 const FORMATS = [
@@ -138,7 +137,7 @@ export default function OccasionBirthdaysAnniversaries() {
           {[
             { href: '/locations/positano', label: 'Wedding music in Positano', desc: '— clifftop terraces and sunset venues for private events.' },
             { href: '/evostrings',         label: 'EvoStrings string quartet', desc: '— string quartet and trio for dinner service and garden parties.' },
-            { href: '/music/dj',           label: 'DJ for private events',     desc: '— curated sets for dancing on outdoor terraces.' },
+            { href: '/music/dj',           label: 'DJ & vocalist for private events', desc: '— curated sets and live voice for dancing on outdoor terraces.' },
           ].map(({ href, label, desc }) => (
             <div key={href} className="flex items-start gap-6 py-5 border-b border-black/[.06] flex-wrap">
               <a href={href} className="link-underline whitespace-nowrap">{label}</a>

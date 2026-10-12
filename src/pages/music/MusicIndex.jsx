@@ -34,18 +34,11 @@ const MUSIC_OPTIONS = [
     bg:    '#1C2420',
   },
   {
-    label: 'DJ',
-    sub:   'Curated Sets',
+    label: 'DJ & Vocalist',
+    sub:   'Curated Sets & Live Voice',
     href:  '/music/dj',
     img:   '/images/Dj/Dj%20Nice.jpeg',
     bg:    '#0A0B10',
-  },
-  {
-    label: 'Vocalist',
-    sub:   'Live Voice',
-    href:  '/music/vocalist',
-    img:   '/images/Vocalist/Momo%20Vocalist.jpeg',
-    bg:    '#160F1A',
   },
   {
     label: 'Posteggia',

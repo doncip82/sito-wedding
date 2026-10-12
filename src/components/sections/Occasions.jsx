@@ -33,9 +33,8 @@ const OCCASIONS = [
     img:         '/images/Dinner.jpg',
     options: [
       { label: 'EvoStrings', href: '/evostrings'       },
-      { label: 'DJ',         href: '/music/dj'         },
+      { label: 'DJ & Vocalist', href: '/music/dj'      },
       { label: 'Saxophone',  href: '/music/saxophone'  },
-      { label: 'Vocalist',   href: '/music/vocalist'   },
     ],
   },
   {
@@ -45,8 +44,7 @@ const OCCASIONS = [
     pageHref:    '/occasions/corporate-events',
     img:         '/images/Corporate.jpg',
     options: [
-      { label: 'Vocalist',     href: '/music/vocalist'  },
-      { label: 'DJ',           href: '/music/dj'        },
+      { label: 'DJ & Vocalist', href: '/music/dj'       },
       { label: 'EvoStrings',   href: '/evostrings'      },
       { label: 'Trilogy Trio', href: '/trilogy-trio'    },
       { label: 'Piano Solo',   href: '/music/piano'     },

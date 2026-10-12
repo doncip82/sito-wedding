@@ -18,8 +18,7 @@
 - Trilogy Trio — Violino, Violoncello, Pianoforte (Pop/Rock/Cinematic)
 - Violino Solo — Donato Cipriano (unica presenza visibile di Donato)
 - Sassofono — Jazz & Contemporary
-- Vocalist — Live Voice
-- DJ — Curated Sets
+- DJ & Vocalist — Curated Sets & Live Voice (dal 2026-10: un'unica pagina `/music/dj`, perché DJ e vocalist lavorano insieme; `/music/vocalist` fa redirect 301 in `vercel.json`)
 - Posteggia — Tradizione Napoletana
 - Opera — Classical Performance
 - Piano Solo — Classical & Contemporary
@@ -91,7 +90,7 @@ src/
 │                    contactLinks.js, enquiry.js, attribution.js   (+ *.test.js, vitest)
 ├── pages/
 │   ├── Home.jsx, EvoStrings.jsx, TrilogyTrio.jsx, ViolinSolo.jsx, Contact.jsx, FAQ.jsx, Privacy.jsx
-│   ├── music/       MusicIndex.jsx, Saxophone.jsx, DJ.jsx, Vocalist.jsx, Opera.jsx, Posteggia.jsx, Piano.jsx
+│   ├── music/       MusicIndex.jsx, Saxophone.jsx, DJ.jsx (DJ & Vocalist), Opera.jsx, Posteggia.jsx, Piano.jsx
 │   ├── locations/   Positano.jsx, Ravello.jsx, Sorrento.jsx
 │   └── occasions/   WeddingCeremony.jsx, MarriageProposal.jsx, BirthdaysAnniversaries.jsx, CorporateEvents.jsx
 ├── routes.js, App.jsx, main.jsx
