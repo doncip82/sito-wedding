@@ -18,7 +18,7 @@
 - Trilogy Trio — Violino, Violoncello, Pianoforte (Pop/Rock/Cinematic)
 - Violino Solo — Donato Cipriano (unica presenza visibile di Donato)
 - Sassofono — Jazz & Contemporary
-- DJ & Vocalist — Curated Sets & Live Voice (dal 2026-10: un'unica pagina `/music/dj`, perché DJ e vocalist lavorano insieme; `/music/vocalist` fa redirect 301 in `vercel.json`)
+- DJ & Vocalist — Curated Sets & MC (dal 2026-10: un'unica pagina `/music/dj`, perché lavorano insieme; `/music/vocalist` fa redirect 301 in `vercel.json`). **Il vocalist non è un cantante**: è lo speaker-intrattenitore (MC) del DJ, anima la serata e ogni tanto canta i ritornelli — non descriverlo come cantante né proporlo per la cerimonia o con il pianoforte.
 - Posteggia — Tradizione Napoletana
 - Opera — Classical Performance
 - Piano Solo — Classical & Contemporary

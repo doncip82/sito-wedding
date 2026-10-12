@@ -35,7 +35,7 @@ const MUSIC_OPTIONS = [
   },
   {
     label: 'DJ & Vocalist',
-    sub:   'Curated Sets & Live Voice',
+    sub:   'Curated Sets & MC',
     href:  '/music/dj',
     img:   '/images/Dj/Dj%20Nice.jpeg',
     bg:    '#0A0B10',

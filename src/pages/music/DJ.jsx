@@ -2,15 +2,16 @@ import { Head } from 'vite-react-ssg'
 import EnquiryLinks from '@/components/ui/EnquiryLinks.jsx'
 import { weddingMessage } from '@/lib/contactLinks.js'
 
-// DJ & Vocalist — one act (the DJ and the vocalist perform together).
+// DJ & Vocalist — one act. The "vocalist" is the DJ's MC / entertainer (speaker
+// who leads the evening and now and then sings the hooks), not a singer.
 // The former /music/vocalist page redirects here (vercel.json).
 
 const djVocalistSchema = {
   '@context': 'https://schema.org',
   '@type': 'MusicGroup',
   name: 'DJ & Vocalist — Wedding Music Ravello',
-  description: 'A DJ and a live vocalist who perform together for wedding receptions and private celebrations at luxury venues in Ravello, Positano and Sorrento.',
-  genre: ['Pop', 'Soul', 'Dance', 'Electronic', 'Italian'],
+  description: 'A DJ and a vocalist-MC who perform together for wedding receptions and private celebrations at luxury venues in Ravello, Positano and Sorrento.',
+  genre: ['Pop', 'Dance', 'House', 'Electronic', 'Italian'],
   areaServed: { '@type': 'AdministrativeArea', name: 'Amalfi Coast' },
   url: 'https://www.weddingmusicravello.com/music/dj',
 }
@@ -22,12 +23,12 @@ export default function MusicDJ() {
     <div className="bg-[#F9F8F7] pt-[68px]">
       <Head>
         <title>Wedding DJ & Vocalist Amalfi Coast | Wedding Music Ravello</title>
-        <meta name="description" content="A DJ and a live vocalist who perform together for wedding receptions and private celebrations on the Amalfi Coast. Curated sets and live voice for luxury venues in Ravello, Positano and Sorrento." />
+        <meta name="description" content="A DJ and a vocalist-MC who perform together for wedding receptions and private celebrations on the Amalfi Coast. Curated sets and a host who leads the dance floor at luxury venues in Ravello, Positano and Sorrento." />
         <link rel="canonical" href="https://www.weddingmusicravello.com/music/dj" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.weddingmusicravello.com/music/dj" />
         <meta property="og:title" content="Wedding DJ & Vocalist Amalfi Coast | Wedding Music Ravello" />
-        <meta property="og:description" content="A DJ and a live vocalist who perform together for wedding receptions and private celebrations on the Amalfi Coast." />
+        <meta property="og:description" content="A DJ and a vocalist-MC who perform together for wedding receptions and private celebrations on the Amalfi Coast." />
         <meta property="og:image" content="https://www.weddingmusicravello.com/images/og-cover.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(djVocalistSchema)}</script>
@@ -56,9 +57,9 @@ export default function MusicDJ() {
           </h1>
           <div className="w-9 h-[.5px] bg-[#B8A882] mb-8" />
           <p className="text-[.95rem] font-light tracking-[.015em] leading-[1.85] text-white/70 max-w-[60ch]">
-            A DJ and a live vocalist who perform as one act — curated sets and live voice
-            for the evening reception, selected for experience at the specific venues of the
-            Amalfi Coast, not for volume of bookings.
+            A DJ and a vocalist who work as one act — curated sets, and a host who leads the
+            evening and lifts the dance floor. Selected for experience at the specific venues
+            of the Amalfi Coast, not for volume of bookings.
           </p>
           <EnquiryLinks className="mt-10" ensemble="DJ & Vocalist" message={ENQUIRY_MESSAGE} />
         </div>
@@ -75,34 +76,31 @@ export default function MusicDJ() {
             <div className="w-9 h-[.5px] bg-[#B8A882] mb-8" />
             <div className="space-y-6 text-[.95rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B]">
               <p>
-                The DJ and the vocalist work together as a single act: live voice over the
-                DJ&apos;s set turns the reception into a performance rather than a playlist.
-                The repertoire spans pop, soul, dance and contemporary Italian, agreed with
-                the couple in advance.
+                The DJ chooses and mixes the music; the vocalist is the voice of the evening —
+                an MC and entertainer who introduces the key moments, involves the guests and
+                keeps the energy on the dance floor, now and then singing the main hooks over
+                the DJ&apos;s tracks. Together they turn the reception into a show rather than
+                a playlist.
               </p>
               <p>
-                For the ceremony, the vocalist can also perform on their own — a curated
-                selection of three to four songs across the processional, the signing and
-                the recessional.
+                The music is agreed with the couple in advance — pop, dance, house and Italian
+                classics — and adapted live to the mood of the room.
               </p>
               <p>
-                For the reception, voice and DJ set — joined, if you wish, by a{' '}
+                For the reception, the duo — joined, if you wish, by a{' '}
                 <a href="/music/saxophone" className="link-underline">saxophone</a>{' '}
-                or by{' '}
-                <a href="/trilogy-trio" className="link-underline">Trilogy Trio</a>{' '}
-                — bridge the formal dinner and the open dancing: a transition that, on a
-                Ravello terrace after midnight, feels entirely natural.
+                playing over the DJ set — bridges the end of dinner and the open dancing: a
+                transition that, on a Ravello terrace after midnight, feels entirely natural.
               </p>
               <p>
-                Both are selected for quality and demonstrated experience at luxury venue
-                events, not for profile or social media presence. Audio and video samples
-                are available on request.
+                Both are selected for demonstrated experience at luxury venue events, not for
+                profile or social media presence. Video samples are available on request.
               </p>
             </div>
           </div>
         </div>
         <div className="relative min-h-[60svh] md:min-h-0 overflow-hidden">
-          <img src="/images/Vocalist/Momo%20Vocalist.jpeg" alt="The vocalist singing live at an evening wedding reception on the Amalfi Coast"
+          <img src="/images/Vocalist/Momo%20Vocalist.jpeg" alt="The vocalist and MC with a vintage microphone at an evening wedding reception on the Amalfi Coast"
             loading="lazy"
             className="absolute inset-0 w-full h-full object-cover"
             style={{ objectPosition: 'center 30%' }} />

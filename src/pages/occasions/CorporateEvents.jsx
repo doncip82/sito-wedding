@@ -139,7 +139,7 @@ export default function OccasionCorporateEvents() {
           {[
             { href: '/locations/ravello',  label: 'Corporate venues in Ravello',   desc: '— Belmond Hotel Caruso, Palazzo Avino and Villa Cimbrone.' },
             { href: '/trilogy-trio',       label: 'Trilogy Trio in Positano',       desc: '— violin, cello and piano for the dinner reception.' },
-            { href: '/music/dj',           label: 'DJ & vocalist for corporate events', desc: '— live voice and curated sets for the evening programme.' },
+            { href: '/music/dj',           label: 'DJ & vocalist for corporate events', desc: '— curated sets and an MC to lead the evening programme.' },
           ].map(({ href, label, desc }) => (
             <div key={href} className="flex items-start gap-6 py-5 border-b border-black/[.06] flex-wrap">
               <a href={href} className="link-underline whitespace-nowrap">{label}</a>

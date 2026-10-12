@@ -77,8 +77,6 @@ export default function MusicPiano() {
             </p>
             <p>
               Piano solo is also available in combination with{' '}
-              <a href="/music/dj" className="link-underline">vocalist</a>
-              {' '}or{' '}
               <a href="/violin-solo" className="link-underline">violin</a>
               {' '}for a fuller sound without the logistical complexity of a full ensemble.
             </p>
