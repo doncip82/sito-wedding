@@ -5,15 +5,15 @@ import { weddingMessage } from '@/lib/contactLinks.js'
 
 const SITE = 'https://www.weddingmusicravello.com'
 
-// One wedding cocktail at Hotel Marincanto, Positano (18 Sept 2026), in the
-// order it was filmed — sunset, blue hour, night.
+// One wedding cocktail at Hotel Marincanto, Positano (18 Sept 2026) —
+// moonlight first, then blue hour and sunset (order chosen by Donato).
 const saxClips = [
   {
-    slug: 'golden-hour',
-    title: 'Golden Hour',
-    time: '7:15 pm',
-    duration: 'PT27S',
-    label: 'Saxophonist playing at sunset during a wedding cocktail on the terrace of Hotel Marincanto, Positano',
+    slug: 'night',
+    title: 'Moonlight',
+    time: '8:00 pm',
+    duration: 'PT26S',
+    label: 'Moonlight over the sea and the wedding cocktail on the terrace of Hotel Marincanto, Positano, at night',
   },
   {
     slug: 'blue-hour',
@@ -23,11 +23,11 @@ const saxClips = [
     label: 'Wedding guests on the terrace of Hotel Marincanto at blue hour, with Positano lighting up behind them',
   },
   {
-    slug: 'night',
-    title: 'Moonlight',
-    time: '8:00 pm',
-    duration: 'PT26S',
-    label: 'Moonlight over the sea and the wedding cocktail on the terrace of Hotel Marincanto, Positano, at night',
+    slug: 'golden-hour',
+    title: 'Golden Hour',
+    time: '7:15 pm',
+    duration: 'PT27S',
+    label: 'Saxophonist playing at sunset during a wedding cocktail on the terrace of Hotel Marincanto, Positano',
   },
 ]
 
@@ -130,7 +130,7 @@ export default function MusicSaxophone() {
         <div className="px-[clamp(1.5rem,6vw,5rem)] max-w-[72ch] box-content mb-12">
           <p className="eyebrow mb-5">Live at Hotel Marincanto · Positano</p>
           <h2 className="section-title mb-8" style={{ maxWidth: '26ch' }}>
-            From Golden Hour<br />to Moonlight
+            One Evening<br />on the Terrace
           </h2>
           <div className="w-9 h-[.5px] bg-[#B8A882] mb-8" />
           <p className="text-[.95rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B]">
