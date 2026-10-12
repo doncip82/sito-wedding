@@ -31,23 +31,32 @@ export default function LocationSorrento() {
         <script type="application/ld+json">{JSON.stringify(sorrentoSchema)}</script>
       </Head>
 
-      <section className="bg-[#F2EDE6] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(5rem,12vw,9rem)]">
-        <div className="max-w-4xl">
-          <p className="text-[.64rem] font-light tracking-[.25em] uppercase text-[#6E6046]
-            flex items-center gap-3 mb-5">
-            <span className="inline-block w-[22px] h-[.5px] bg-[#B8A882]" />
-            Sorrento · Campania · Southern Italy
-          </p>
-          <h1 className="font-serif italic font-light leading-[1.02] text-[#1A1A1A] mb-6"
-            style={{ fontSize: 'clamp(3rem,7vw,6rem)' }}>
-            Wedding Music<br />in Sorrento
-          </h1>
-          <p className="text-[.95rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B] max-w-[60ch]">
-            Sorrento faces north across the Bay of Naples toward Vesuvius — the only major
-            resort on the peninsula where the volcano forms the visual backdrop to every
-            ceremony. A carefully selected roster of artists performs at the clifftop
-            hotels and private villas of the Sorrentine coast.
-          </p>
+      {/* Hero */}
+      <section className="bg-[#F2EDE6] grid grid-cols-1 md:grid-cols-[minmax(0,1.08fr)_minmax(0,.92fr)]">
+        <div className="px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3.5rem,8vw,7rem)] self-center">
+          <div className="max-w-4xl">
+            <p className="text-[.64rem] font-light tracking-[.25em] uppercase text-[#6E6046]
+              flex items-center gap-3 mb-5">
+              <span className="inline-block w-[22px] h-[.5px] bg-[#B8A882]" />
+              Sorrento · Campania · Southern Italy
+            </p>
+            <h1 className="font-serif italic font-light leading-[1.02] text-[#1A1A1A] mb-6"
+              style={{ fontSize: 'clamp(3rem,7vw,6rem)' }}>
+              Wedding Music<br />in Sorrento
+            </h1>
+            <p className="text-[.95rem] font-normal tracking-[.015em] leading-[1.85] text-[#2B2B2B] max-w-[60ch]">
+              Sorrento faces north across the Bay of Naples toward Vesuvius — the only major
+              resort on the peninsula where the volcano forms the visual backdrop to every
+              ceremony. A carefully selected roster of artists performs at the clifftop
+              hotels and private villas of the Sorrentine coast.
+            </p>
+            <EnquiryLinks tone="light" className="mt-10" message={weddingMessage({ place: 'in Sorrento' })} />
+          </div>
+        </div>
+        <div className="relative min-h-[52svh] md:min-h-[clamp(30rem,72svh,48rem)] overflow-hidden">
+          <img src="/images/sorrento-cliffs.jpg" alt="Clifftop terraces of Sorrento above the Bay of Naples at golden hour" fetchpriority="high"
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ objectPosition: 'center 60%' }} />
         </div>
       </section>
 
