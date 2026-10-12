@@ -119,7 +119,7 @@ public/
                         apple-touch-icon.png, android-chrome-192x192.png, site.webmanifest   (marchio: fedi intrecciate)
 ```
 > Immagini ottimizzate il 2026-07-06 (58MB → ~8MB). `og-cover.jpg` (1200×630, anteprima social/WhatsApp) è **presente** e servita via `og:image`.
-> **Video usati dal sito:** solo `Ravello_Hero.mp4`, `dj-hero.mp4`, `EvoStrings/EvoStrings_Hero.mp4`. Eventuali altri video (sorgente grezzo/di lavoro non referenziato nel codice) vanno **in `.gitignore`**, non committati — GitHub blocca i file >100MB. Al 2026-07-14 due sorgenti locali sono ignorati: `Salone Margherita Sito Ravello DEF.mp4` e `NICE Video.MP4`.
+> **Video usati dal sito:** `Ravello_Hero.mp4`, `dj-hero.mp4`, `opera-hero.mp4`, `posteggia-hero.mp4` (dal 2026-10-12: hero della Posteggia, 11s verticale con pulsante "Sound on" — componente `src/components/ui/LoopVideo.jsx`), `EvoStrings/EvoStrings_Hero.mp4`. I video grezzi di Donato (Posteggia, sax…) stanno su **iCloud Drive → matrimonio/** e non vanno nel repo: si estraggono solo spezzoni/fotogrammi ottimizzati. Eventuali altri video (sorgente grezzo/di lavoro non referenziato nel codice) vanno **in `.gitignore`**, non committati — GitHub blocca i file >100MB. Al 2026-07-14 due sorgenti locali sono ignorati: `Salone Margherita Sito Ravello DEF.mp4` e `NICE Video.MP4`.
 
 ## Struttura Home page (ordine sezioni)
 Hero → GeoIntro → ContactStrip → Occasions → Locations → About → Footer
