@@ -206,12 +206,14 @@ Ogni blocco testo è avvolto in uno `<span>` con:
 ## Tracciamento conversioni (Google Ads — account `AW-18311455806`)
 - **Tag:** `VITE_GOOGLE_TAG_ID` su Vercel, **solo Production** (la copia per le anteprime è stata rimossa l'11/10/2026). Mai usare ID o etichette dell'account di donatocipriano.com (`AW-1003501184`).
 - **Account Ads:** `477-419-9225` (Wedding Music Ravello). Obiettivo "Contatti" impostato come predefinito per l'account (serve perché Email/WhatsApp click contino).
+- **Azioni principali (dal 2026-10-13):** solo **Enquiry form** e **WhatsApp click** (+ "Indicazioni stradali", automatica di Google). **Email click è Secondaria**: il click su `mailto:` è un segnale debole (apre solo la posta) e con un budget piccolo falserebbe l'apprendimento; resta visibile in "Tutte le conv.". Il sito continua a inviarla (etichetta invariata). Le 3 azioni `/thank-you` restano Secondarie.
+- **Doppioni rimossi (2026-10-13):** un brief scritto fuori da Claude Code (`TRACCIAMENTO_CONVERSIONI_WMR.md`, non nel repo) credeva l'account senza conversioni e ne aveva fatte creare due nuove ("Invio modulo per i lead (1)" `4HqVCL…`, "Whatsapp" `O5HQCO…`), doppioni delle azioni dell'11/10. Rimosse nella UI: **non usare quelle etichette.** Le etichette valide sono solo quelle in `conversions.js`.
 - **Etichette nel codice, non in env:** `src/lib/conversions.js`, sotto test (`conversions.test.js` verifica che ogni etichetta decodifichi nell'ID account 18311455806). Etichetta vuota = canale spento, nessuna richiesta.
 
 | Canale | Chiave in `conversions.js` | Azione in Google Ads | Quando parte |
 |---|---|---|---|
 | Form | `enquiry` | Enquiry form (Invio modulo per i lead) | dopo `res.ok` di `POST /api/enquiry`, una volta (`src/lib/enquiry.js`) |
-| Email | `email` | Email click (Contatto) | click su `mailto:` |
+| Email | `email` | Email click (Contatto, **Secondaria** dal 13/10) | click su `mailto:` |
 | WhatsApp | `whatsapp` | WhatsApp click (Contatto) | click su `wa.me` / `api.whatsapp.com` |
 | Telefono | `phone` | — (nessun link `tel:` sul sito) | click su `tel:` |
 
@@ -223,7 +225,7 @@ Ogni blocco testo è avvolto in uno `<span>` con:
 - **Verifica:** `npm test`; dopo il deploy prova reale da **Chrome desktop** (DevTools → Network → `googleadservices`). Mai cliccare i propri annunci.
 
 ## To Do / Follow-up aperti
-- **Google Ads:** controllare che Enquiry form / Email click / WhatsApp click escano da "Non attiva" (create l'11/10/2026); poi si può riattivare la campagna "Search | Wedding Music Ravello | Leads | EN" (account 477-419-9225). Le campagne "Ravello Weddings" dell'account di donatocipriano.com restano in pausa.
+- **Google Ads:** controllare che Enquiry form / WhatsApp click ricevano le prime conversioni (al 13/10 tutte "In attesa di conversioni"); correggere nella UI il sitelink che punta a `/musi` → `/music`; poi si può riattivare la campagna "Search | Wedding Music Ravello | Leads | EN" (account 477-419-9225). Le campagne "Ravello Weddings" dell'account di donatocipriano.com restano in pausa.
 - **Foto da sostituire con materiale vero:** violinista donna nella foto della cerimonia (`Ceremony.jpg`, generata) → idealmente Donato, da foto vera o con Higgsfield (serve ricaricare crediti). (Birthdays sostituita il 2026-10-12 con una foto stock vera; resta da rimpiazzare con una foto di un evento nostro, quando c'è.)
 - **Velocità:** ricomprimere `opera-hero.mp4` (15,6 MB), `dj-hero.mp4` (15,1 MB), `EvoStrings_Hero.mp4` (21,6 MB) come `posteggia-hero.mp4` (~3–5 MB, nessuna differenza visibile). Font Google → ospitarli sul sito per eliminare il CLS (~0,15).
 - **Proposte non applicate (PR #2):** title/H1 delle landing più vicini agli annunci (es. "Wedding Saxophonist · Amalfi Coast").
