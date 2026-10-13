@@ -109,6 +109,10 @@ public/
 │   ├── private-dinner-candlelight.jpg (Occasions/Birthdays — dal 2026-10-12: foto vera Unsplash di Michael Fousert, licenza Unsplash
 │   │                                   libera anche commerciale, id cGZ-X0nAUgY; sostituisce Dinner.jpg generata)
 │   ├── Corporate.jpg              (Occasions/Corporate — fotogramma VERO dal video EvoStrings al Salone Margherita; sostituisce Cocktail.jpg)
+│   ├── Proposal.jpg               (Occasions/Proposta + hero /occasions/marriage-proposal — foto vera, terrazza su Positano con
+│   │                               violinista a destra; dal 2026-10-12 ritagliata più stretta (meno auto, violinista più grande),
+│   │                               1920×1620, 1,2 MB → 435 KB; `objectPosition: 'right center'` così il violinista resta
+│   │                               nell'inquadratura anche quando la foto viene tagliata)
 │   ├── EvoStrings/     EvoStrings.jpg
 │   ├── Trilogy Trio/   Trilogy Trio 0-3 + Trilogy Trio.jpg
 │   ├── Violin Solo/    immagine_donato.JPG
@@ -202,12 +206,14 @@ Ogni blocco testo è avvolto in uno `<span>` con:
 ## Tracciamento conversioni (Google Ads — account `AW-18311455806`)
 - **Tag:** `VITE_GOOGLE_TAG_ID` su Vercel, **solo Production** (la copia per le anteprime è stata rimossa l'11/10/2026). Mai usare ID o etichette dell'account di donatocipriano.com (`AW-1003501184`).
 - **Account Ads:** `477-419-9225` (Wedding Music Ravello). Obiettivo "Contatti" impostato come predefinito per l'account (serve perché Email/WhatsApp click contino).
+- **Azioni principali (dal 2026-10-13):** solo **Enquiry form** e **WhatsApp click** (+ "Indicazioni stradali", automatica di Google). **Email click è Secondaria**: il click su `mailto:` è un segnale debole (apre solo la posta) e con un budget piccolo falserebbe l'apprendimento; resta visibile in "Tutte le conv.". Il sito continua a inviarla (etichetta invariata). Le 3 azioni `/thank-you` restano Secondarie.
+- **Doppioni rimossi (2026-10-13):** un brief scritto fuori da Claude Code (`TRACCIAMENTO_CONVERSIONI_WMR.md`, non nel repo) credeva l'account senza conversioni e ne aveva fatte creare due nuove ("Invio modulo per i lead (1)" `4HqVCL…`, "Whatsapp" `O5HQCO…`), doppioni delle azioni dell'11/10. Rimosse nella UI: **non usare quelle etichette.** Le etichette valide sono solo quelle in `conversions.js`.
 - **Etichette nel codice, non in env:** `src/lib/conversions.js`, sotto test (`conversions.test.js` verifica che ogni etichetta decodifichi nell'ID account 18311455806). Etichetta vuota = canale spento, nessuna richiesta.
 
 | Canale | Chiave in `conversions.js` | Azione in Google Ads | Quando parte |
 |---|---|---|---|
 | Form | `enquiry` | Enquiry form (Invio modulo per i lead) | dopo `res.ok` di `POST /api/enquiry`, una volta (`src/lib/enquiry.js`) |
-| Email | `email` | Email click (Contatto) | click su `mailto:` |
+| Email | `email` | Email click (Contatto, **Secondaria** dal 13/10) | click su `mailto:` |
 | WhatsApp | `whatsapp` | WhatsApp click (Contatto) | click su `wa.me` / `api.whatsapp.com` |
 | Telefono | `phone` | — (nessun link `tel:` sul sito) | click su `tel:` |
 
@@ -219,7 +225,7 @@ Ogni blocco testo è avvolto in uno `<span>` con:
 - **Verifica:** `npm test`; dopo il deploy prova reale da **Chrome desktop** (DevTools → Network → `googleadservices`). Mai cliccare i propri annunci.
 
 ## To Do / Follow-up aperti
-- **Google Ads:** controllare che Enquiry form / Email click / WhatsApp click escano da "Non attiva" (create l'11/10/2026); poi si può riattivare la campagna "Search | Wedding Music Ravello | Leads | EN" (account 477-419-9225). Le campagne "Ravello Weddings" dell'account di donatocipriano.com restano in pausa.
+- **Google Ads:** controllare che Enquiry form / WhatsApp click ricevano le prime conversioni (al 13/10 tutte "In attesa di conversioni"); verificare che il sitelink "Wedding Music Ensembles" (URL corretto da `/musi` a `/music` il 13/10, era "Non idoneo — destinazione non funzionante") torni "Idoneo"; poi si può riattivare la campagna "Search | Wedding Music Ravello | Leads | EN" (account 477-419-9225). Le campagne "Ravello Weddings" dell'account di donatocipriano.com restano in pausa.
 - **Foto da sostituire con materiale vero:** violinista donna nella foto della cerimonia (`Ceremony.jpg`, generata) → idealmente Donato, da foto vera o con Higgsfield (serve ricaricare crediti). (Birthdays sostituita il 2026-10-12 con una foto stock vera; resta da rimpiazzare con una foto di un evento nostro, quando c'è.)
 - **Velocità:** ricomprimere `opera-hero.mp4` (15,6 MB), `dj-hero.mp4` (15,1 MB), `EvoStrings_Hero.mp4` (21,6 MB) come `posteggia-hero.mp4` (~3–5 MB, nessuna differenza visibile). Font Google → ospitarli sul sito per eliminare il CLS (~0,15).
 - **Proposte non applicate (PR #2):** title/H1 delle landing più vicini agli annunci (es. "Wedding Saxophonist · Amalfi Coast").
@@ -228,7 +234,7 @@ Ogni blocco testo è avvolto in uno `<span>` con:
 - **Favicon su Google:** dopo il deploy delle fedi, chiedere reindicizzazione della home in Search Console ("Controllo URL" → "Richiedi indicizzazione") per far aggiornare la favicon nei risultati (Google ci mette da giorni a settimane).
 - **Fatti ✓ (2026-07-06):** migrazione SSG (tutte le 19 route pre-renderizzate), foto About, compressione video (171→24MB) e immagini (58→8MB), auto-deploy ripristinato
 - **Fatti ✓ (2026-07-10):** rifatta favicon → **marchio a fedi intrecciate** (era "WMR"); set completo `favicon.ico`/16/32/512/apple-touch/android-chrome/`site.webmanifest` con path assoluti (risolto il problema della favicon donatocipriano.com in cache su Google + i 404 su `/favicon.ico`); `og-cover.jpg` (anteprima social/WhatsApp) lasciata intatta.
-- **Fatti ✓ (2026-10-11/12):** azioni Ads vecchie `/thank-you` rese Secondarie; design chiaro (PR #3); foto Occasions (Corporate vera, cerimonia e Birthdays ricolorate); Posteggia con foto e video veri + pulsante "Sound on"; pagine DJ e Vocalist unite in "DJ & Vocalist" (`/music/vocalist` → redirect); pagina Sax con 3 video veri del Marincanto (Positano).
+- **Fatti ✓ (2026-10-11/12):** azioni Ads vecchie `/thank-you` rese Secondarie; design chiaro (PR #3); foto Occasions (Corporate vera, cerimonia e Birthdays ricolorate); Posteggia con foto e video veri + pulsante "Sound on"; pagine DJ e Vocalist unite in "DJ & Vocalist" (`/music/vocalist` → redirect); pagina Sax con 3 video veri del Marincanto (Positano); foto della Proposta ritagliata e centrata sul violinista (home + landing); pulizia conversioni Ads (13/10: doppioni rimossi, Email click Secondaria) e sitelink `/musi` → `/music`.
 - **Fatti ✓ (2026-10-11):** dominio `weddingmusicravello.com` verificato in Resend e consegna confermata (il fallback di `MAIL_FROM` nel codice è `info@weddingmusicravello.com`, non `onboarding@resend.dev`: il vecchio commento era sbagliato); conversioni Ads esplicite + WhatsApp + campo telefono + provenienza nelle email + CTA nelle hero; video del menu non più scaricato su ogni pagina.
 - **Fatti ✓:** form Contact collegato a backend reale (`api/enquiry.js`, Vercel Serverless + Resend); aggiunte pagine `FAQ.jsx` e `Privacy.jsx`.
 

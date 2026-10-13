@@ -80,7 +80,7 @@ export default function OccasionMarriageProposal() {
         <div className="relative min-h-[52svh] md:min-h-[clamp(30rem,72svh,48rem)] overflow-hidden">
           <img src="/images/Proposal.jpg" alt="Marriage proposal on the Amalfi Coast" fetchpriority="high"
             className="absolute inset-0 w-full h-full object-cover"
-            style={{ objectPosition: 'center' }} />
+            style={{ objectPosition: 'right center' }} />
         </div>
       </section>
 

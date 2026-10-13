@@ -20,6 +20,7 @@ const OCCASIONS = [
     description: 'A violin solo on a panoramic terrace above the Gulf of Salerno, or a saxophone at golden hour along the Positano coastline. Discreetly arranged, precisely timed — music that shapes the setting without announcing itself.',
     pageHref:    '/occasions/marriage-proposal',
     img:         '/images/Proposal.jpg',
+    imgPosition: 'right center',   // the violinist stands at the right edge of the photo
     options: [
       { label: 'Violin Solo', href: '/violin-solo'     },
       { label: 'Saxophone',   href: '/music/saxophone' },
@@ -58,7 +59,8 @@ function MomentStrip({ moment, dark = false }) {
     <article className="group flex flex-col md:flex-row border-b border-black/[.06] last:border-b-0">
       <div className="md:w-[38%] min-h-[240px] md:min-h-[320px] flex-shrink-0 overflow-hidden bg-[#1A1A1A]">
         {moment.img ? (
-          <img src={moment.img} alt={moment.label} className="w-full h-full object-cover" />
+          <img src={moment.img} alt={moment.label} className="w-full h-full object-cover"
+            style={{ objectPosition: moment.imgPosition ?? 'center' }} />
         ) : (
           <div className={`w-full h-full bg-gradient-to-br ${moment.gradient}`} />
         )}
