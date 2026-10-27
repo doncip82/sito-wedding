@@ -1,6 +1,7 @@
 // pages/music/MusicIndex.jsx
 import { Link } from 'react-router-dom'
 import { Head } from 'vite-react-ssg'
+import EnquiryLinks from '@/components/ui/EnquiryLinks.jsx'
 
 const MUSIC_OPTIONS = [
   {
@@ -111,6 +112,7 @@ export default function MusicIndex() {
           to full ensembles, jazz, opera and beyond. Every format is personally
           directed and tailored to your ceremony.
         </p>
+        <EnquiryLinks tone="light" className="mt-10" />
       </section>
 
       {/* Grid */}
@@ -153,19 +155,14 @@ export default function MusicIndex() {
         </div>
       </section>
 
-      {/* CTA strip */}
-      <section className="py-16 px-[clamp(1.5rem,6vw,5rem)] bg-[#F2EDE6] border-t border-black/[.06] text-center">
-        <p className="text-[.6rem] tracking-[.28em] uppercase text-[#6E6046] font-light mb-4">
-          Not sure which format is right for you?
+      {/* CTA */}
+      <section className="bg-[#F2EDE6] border-t border-black/[.06] px-[clamp(1.5rem,6vw,5rem)] py-[clamp(3rem,8vw,6rem)]
+        flex items-center justify-between gap-8 flex-wrap">
+        <p className="font-serif italic font-light leading-[1.18] text-[#1A1A1A] max-w-[26ch]"
+          style={{ fontSize: 'clamp(1.7rem,3.5vw,2.8rem)' }}>
+          Not sure which format<br />is right for you?
         </p>
-        <a
-          href="/contact"
-          className="inline-block text-[.66rem] tracking-[.22em] uppercase font-light
-            text-[#1A1A1A] border-b-[.5px] border-[#1A1A1A]/60 pb-[2px]
-            hover:text-[#8A7A5A] hover:border-[#8A7A5A] transition-all duration-300 no-underline"
-        >
-          Enquire
-        </a>
+        <EnquiryLinks tone="light" />
       </section>
     </>
   )
