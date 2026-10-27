@@ -157,6 +157,9 @@ Villa Cimbrone · Palazzo Avino · Belmond Hotel Caruso · Villa Treville · Mon
 - Sub-label formazioni: colore #8A7A5A, font-weight 300
 - Testo corpo su chiaro: #2B2B2B, peso 400 (Montserrat 300 a 15px risultava poco leggibile)
 
+### Pagina `/music` (MusicIndex) — pagina di arrivo di TUTTI gli annunci (dal 14/10)
+- Dal 2026-10-27 ha i due contatti (`EnquiryLinks tone="light"`: "Begin Your Enquiry" + "Chat on WhatsApp") sotto il titolo e nella fascia finale sabbia ("Not sure which format is right for you?"). Prima aveva solo un link "Enquire" in fondo e **nessun WhatsApp**: con 45 click dagli annunci (16–27/10) nessun contatto.
+
 ### Occasions — sezione homepage + landing pages
 - Ensemble suggeriti mostrati come pill buttons orizzontali (`flex-wrap gap-2`)
   - Border `#1A1A1A/18`, testo `#404040`, hover: `border-[#B8A882] text-[#1A1A1A]`
