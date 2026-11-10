@@ -15,7 +15,7 @@ export const baseSchema = {
   founder: {
     '@type': 'Person',
     name: 'Donato Cipriano',
-    sameAs: 'https://www.donatocipriano.com',
+    sameAs: 'https://donatocipriano.com',
   },
   areaServed: [
     { '@type': 'City', name: 'Ravello' },
@@ -75,6 +75,6 @@ export const ensembleSchema = (ensemble) => ({
     '@type': 'Person',
     name: 'Donato Cipriano',
     jobTitle: 'Professional Violinist',
-    url: 'https://www.donatocipriano.com/en/wedding#services',
+    url: 'https://donatocipriano.com/en/weddings#services',
   },
 })

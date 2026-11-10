@@ -52,7 +52,7 @@ Il sito propone **esclusivamente partner musicali**. L'aggiunta di fotografi, pl
 
 ## Link ufficiali
 - Email piattaforma: info@weddingmusicravello.com
-- Sito Donato (solo per SEO interno): https://www.donatocipriano.com/en/wedding#services
+- Sito Donato (solo per SEO interno): https://donatocipriano.com/en/weddings#services
 - EvoStrings: https://www.evostrings.it/
 - GitHub: github.com/doncip82/sito-wedding
 - Deploy: Vercel (auto-deploy su push a `main`; si era scollegato ed è stato ripristinato il 2026-07-06 — link Git era "sourceless")
@@ -70,7 +70,7 @@ Il sito propone **esclusivamente partner musicali**. L'aggiunta di fotografi, pl
   - **Head per-pagina:** ogni pagina usa il componente **`<Head>` di `vite-react-ssg`** — NON `react-helmet-async`, NON `document.title` imperativo (non verrebbero pre-renderizzati). Ogni pagina deve avere title, description, `<link rel="canonical">` e JSON-LD dentro `<Head>`.
 - Deploy su Vercel. `vercel.json` = `cleanUrls: true` + rewrite di fallback; Vercel serve prima l'HTML statico per-route (verificato). Mount id in `index.html` = **`root`**.
 - `src/data/schema.js` — schema base (home/LocalBusiness+MusicGroup, con `founder.sameAs` per SEO invisibile) + helper; molte pagine definiscono lo schema **inline** per-pagina.
-- `index.html` — niente title/meta di default (li inietta `<Head>`); contiene `<link rel="author" href="https://www.donatocipriano.com">` (autorità SEO invisibile verso Donato) + il set completo di link favicon (path assoluti).
+- `index.html` — niente title/meta di default (li inietta `<Head>`); contiene `<link rel="author" href="https://donatocipriano.com">` (autorità SEO invisibile verso Donato) + il set completo di link favicon (path assoluti).
 - **Favicon / marchio (dal 2026-07-10):** il marchio del sito è un **monogramma a fedi intrecciate** — due anelli oro `#C6B58C` su charcoal `#1A1A1A`, motivo "wedding", leggibile fino a 16px e nitido nel cerchio dei risultati Google. Set in `public/`: `favicon.ico` (multi-size 16/32/48), `favicon-16x16.png`, `favicon-32x32.png`, `favicon.png` (512), `apple-touch-icon.png` (180), `android-chrome-192x192.png`, `site.webmanifest` (name = "Wedding Music Ravello"). *Sostituisce il vecchio marchio testuale "WMR".* Motivo del rifacimento: dopo un redirect temporaneo verso donatocipriano.com, Google mostrava ancora la favicon del sito personale + mancavano `/favicon.ico` e alcuni file (404).
 - **Immagine social ≠ favicon:** l'anteprima WhatsApp/social è `public/images/og-cover.jpg` (1200×630) servita via `og:image`/`twitter:image` per-pagina — file **separato** dalla favicon. Cambiare la favicon NON la tocca (verificato). Non sovrascriverla per errore.
 - Hero e menu mobile: video background in loop (`public/videos/Ravello_Hero.mp4`, ~23MB). **Il video del menu mobile si monta solo alla prima apertura del menu** (stato `menuVideo` in `NavBar.jsx`): prima era sempre nel DOM con `preload="auto"` e ogni pagina scaricava 23MB. Tutti i video hero hanno un `poster` in `public/videos/posters/` (primo fotogramma; per il DJ il fotogramma a 2s, perché il video parte da nero).

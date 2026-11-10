@@ -42,7 +42,7 @@ Claude Code must ensure the following Schema.org types are implemented correctly
   "founder": {
     "@type": "Person",
     "name": "Donato Cipriano",
-    "sameAs": "https://www.donatocipriano.com"
+    "sameAs": "https://donatocipriano.com"
   },
   "areaServed": [
     { "@type": "City", "name": "Ravello" },
